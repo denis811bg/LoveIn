@@ -8,8 +8,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.material3.*
-import androidx.compose.runtime.*
-import androidx.compose.runtime.snapshots.SnapshotStateList
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.State
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -21,9 +23,9 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.lovein.common.models.NoRippleTheme
 import com.example.lovein.common.data.EroZone
 import com.example.lovein.common.data.Gender
+import com.example.lovein.common.models.NoRippleTheme
 import com.example.lovein.common.models.Player
 import com.example.lovein.ui.theme.BackgroundEroZoneUnselectColor
 import com.example.lovein.ui.theme.BackgroundLightBlueColor
@@ -39,8 +41,6 @@ fun EroZoneListCard(
     rotateX: State<Float>,
     alpha: State<Float>
 ) {
-    val selectedEroZones: SnapshotStateList<EroZone> = remember { player.value.selectedEroZones }
-
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -97,7 +97,6 @@ fun EroZoneListCard(
                             )
                         },
                         onClick = {
-                            selectedEroZones.clear()
                             player.value.selectedEroZones.clear()
                         },
                         containerColor = Color.Transparent,
@@ -121,7 +120,7 @@ fun EroZoneListCard(
                         Row(
                             modifier = Modifier
                                 .background(
-                                    color = if (selectedEroZones.contains(erogenousZone)) {
+                                    color = if (player.value.selectedEroZones.contains(erogenousZone)) {
                                         if (player.value.gender.value == Gender.MALE)
                                             BackgroundLightBlueColor
                                         else
@@ -131,11 +130,9 @@ fun EroZoneListCard(
                                     shape = RoundedCornerShape(8.dp)
                                 )
                                 .clickable {
-                                    if (selectedEroZones.contains(erogenousZone)) {
-                                        selectedEroZones.remove(erogenousZone)
+                                    if (player.value.selectedEroZones.contains(erogenousZone)) {
                                         player.value.selectedEroZones.remove(erogenousZone)
                                     } else {
-                                        selectedEroZones.add(erogenousZone)
                                         player.value.selectedEroZones.add(erogenousZone)
                                     }
                                 },
