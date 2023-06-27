@@ -52,7 +52,7 @@ enum class EroZone(val gender: List<Gender>, val label: String, val actionList: 
         listOf(Action.KISS, Action.MASSAGE, Action.LICK, Action.BITE)
     ),
     NIPPLES(
-        listOf(Gender.MALE, Gender.FEMALE),
+        listOf(Gender.MALE),
         "Nipples",
         Action.values().toList()
     ),

@@ -1,7 +1,10 @@
 package com.example.lovein.erozoneexplorer
 
-import androidx.compose.animation.*
+import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PlayCircle
@@ -30,11 +33,10 @@ import com.example.lovein.ui.theme.MaleColor
 private const val ACTION = "Action"
 private const val ERO_ZONE = "Ero zone"
 
-@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun EroZoneExplorerScreen(
-    playerDTOList: List<PlayerDTO>,
-    navController: NavController
+    navController: NavController,
+    playerDTOList: List<PlayerDTO>
 ) {
     val activePlayerIndex: MutableIntState = remember { mutableStateOf(0) }
     val activePlayer: MutableState<PlayerDTO> =
@@ -42,12 +44,12 @@ fun EroZoneExplorerScreen(
     val passivePlayer: MutableState<PlayerDTO> =
         remember { mutableStateOf(playerDTOList[(activePlayerIndex.intValue + 1) % playerDTOList.size]) }
     val passivePlayerRandomEroZone: MutableState<EroZone> =
-        remember { mutableStateOf(passivePlayer.value.selectedEroZones.random()) }
+        remember { mutableStateOf(passivePlayer.value.selectedEroZoneList.random()) }
     val nextActivePlayer: MutableState<PlayerDTO> = passivePlayer
     val nextPassivePlayer: MutableState<PlayerDTO> =
         remember { mutableStateOf(playerDTOList[(activePlayerIndex.intValue + 2) % playerDTOList.size]) }
     val nextPassivePlayerRandomEroZone: MutableState<EroZone> =
-        remember { mutableStateOf(nextPassivePlayer.value.selectedEroZones.random()) }
+        remember { mutableStateOf(nextPassivePlayer.value.selectedEroZoneList.random()) }
     val actionCards: MutableList<Card> = remember {
         mutableListOf(
             createCard(
@@ -99,7 +101,7 @@ fun EroZoneExplorerScreen(
                     AnimatedContent(
                         targetState = activePlayer.value.name,
                         transitionSpec = {
-                            fadeIn(tween(3000)) with fadeOut(tween(3000))
+                            fadeIn(tween(3000)) togetherWith fadeOut(tween(3000))
                         }
                     ) { targetActivePlayerName ->
                         Text(
@@ -124,7 +126,7 @@ fun EroZoneExplorerScreen(
                     AnimatedContent(
                         targetState = passivePlayer.value.name,
                         transitionSpec = {
-                            fadeIn(tween(3000)) with fadeOut(tween(3000))
+                            fadeIn(tween(3000)) togetherWith fadeOut(tween(3000))
                         }
                     ) { targetPassivePlayerName ->
                         Text(
@@ -159,7 +161,7 @@ fun EroZoneExplorerScreen(
 
                     nextActivePlayer.value = passivePlayer.value
                     nextPassivePlayer.value = playerDTOList[(++activePlayerIndex.intValue + 2) % playerDTOList.size]
-                    nextPassivePlayerRandomEroZone.value = nextPassivePlayer.value.selectedEroZones.random()
+                    nextPassivePlayerRandomEroZone.value = nextPassivePlayer.value.selectedEroZoneList.random()
 
                     actionCards.add(
                         createCard(

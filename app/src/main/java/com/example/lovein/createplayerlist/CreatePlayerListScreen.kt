@@ -40,12 +40,13 @@ import com.example.lovein.createplayerlist.components.PlayerInputRow
 import com.example.lovein.ui.theme.helveticaFontFamily
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun CreatePlayerListScreen(navController: NavController) {
+fun CreatePlayerListScreen(
+    navController: NavController,
+    players: MutableList<MutableState<Player>>
+) {
     val scrollState: ScrollState = rememberScrollState()
     val coroutineScope: CoroutineScope = rememberCoroutineScope()
     var scrollToBottom: Boolean by remember { mutableStateOf(false) }
@@ -53,9 +54,6 @@ fun CreatePlayerListScreen(navController: NavController) {
     val isAlertDialogOpen: MutableState<Boolean> = remember { mutableStateOf(false) }
     val alertDialogTitle: MutableState<String> = remember { mutableStateOf("") }
     val alertDialogText: MutableState<String> = remember { mutableStateOf("") }
-
-    val players: MutableList<MutableState<Player>> =
-        remember { mutableStateListOf(mutableStateOf(Player(Gender.MALE))) }
 
     CommonContainer(navController = navController) {
         Column(
@@ -154,20 +152,12 @@ fun CreatePlayerListScreen(navController: NavController) {
                         alertDialogTitle.value = "Add player ero zones"
                         alertDialogText.value = "You need to add player erogenous zones to launch the game."
                     } else {
-                        val playerDTOList = players
-                            .map { player ->
-                                PlayerDTO(
-                                    name = player.value.name.value,
-                                    gender = player.value.gender.value,
-                                    selectedEroZones = player.value.selectedEroZones.toSet()
-                                )
-                            }
-                            .toList()
-
-                        navController.navigate(
-                            route = NavigationScreens.ERO_ZONE_EXPLORER_SCREEN.name + "/" +
-                                    Json.encodeToString(playerDTOList)
+                        navController.currentBackStackEntry?.savedStateHandle?.set(
+                            key = "playerDTOList",
+                            value = convertPlayersToPlayerDTOList(players)
                         )
+
+                        navController.navigate(route = NavigationScreens.ERO_ZONE_EXPLORER_SCREEN.name)
                     }
                 },
                 modifier = Modifier
@@ -193,4 +183,16 @@ fun CreatePlayerListScreen(navController: NavController) {
             Spacer(modifier = Modifier.windowInsetsBottomHeight(WindowInsets.navigationBars))
         }
     }
+}
+
+private fun convertPlayersToPlayerDTOList(players: MutableList<MutableState<Player>>): List<PlayerDTO> {
+    return players
+        .map { player ->
+            PlayerDTO(
+                name = player.value.name.value,
+                gender = player.value.gender.value,
+                selectedEroZoneList = player.value.selectedEroZones.toList()
+            )
+        }
+        .toList()
 }

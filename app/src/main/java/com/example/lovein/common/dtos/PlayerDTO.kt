@@ -1,12 +1,13 @@
 package com.example.lovein.common.dtos
 
+import android.os.Parcelable
 import com.example.lovein.common.data.EroZone
 import com.example.lovein.common.data.Gender
-import kotlinx.serialization.Serializable
+import kotlinx.parcelize.Parcelize
 
-@Serializable
+@Parcelize
 data class PlayerDTO(
     val name: String,
     val gender: Gender,
-    val selectedEroZones: Set<EroZone>
-)
+    val selectedEroZoneList: List<EroZone>
+): Parcelable
