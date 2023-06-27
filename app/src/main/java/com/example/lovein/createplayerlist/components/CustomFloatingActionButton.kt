@@ -17,8 +17,8 @@ fun CustomFloatingActionButton(
     onClick: () -> Unit,
     leftShape: Boolean,
     rightShape: Boolean,
-    containerColor: MutableState<Color>,
-    icon: MutableState<ImageVector>,
+    containerColor: Color,
+    icon: ImageVector,
     iconContentDescriptor: String
 ) {
     FloatingActionButton(
@@ -30,11 +30,11 @@ fun CustomFloatingActionButton(
             bottomStart = if (leftShape) 8.dp else 0.dp,
             bottomEnd = if (rightShape) 8.dp else 0.dp
         ),
-        containerColor = containerColor.value,
+        containerColor = containerColor,
         contentColor = Color.White
     ) {
         Icon(
-            imageVector = icon.value,
+            imageVector = icon,
             contentDescription = iconContentDescriptor,
             modifier = Modifier.size(32.dp),
         )

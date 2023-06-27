@@ -7,8 +7,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.DeleteForever
-import androidx.compose.material.icons.filled.ExpandCircleDown
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
@@ -59,8 +58,8 @@ fun PlayerInputRow(
             },
             leftShape = true,
             rightShape = false,
-            containerColor = player.value.color,
-            icon = player.value.icon,
+            containerColor = player.value.color.value,
+            icon = player.value.icon.value,
             iconContentDescriptor = "male_female_icon"
         )
 
@@ -106,20 +105,27 @@ fun PlayerInputRow(
         )
 
         CustomFloatingActionButton(
-            onClick = { isExpanded.value = !isExpanded.value },
+            onClick = {
+                isExpanded.value = !isExpanded.value
+                keyboardController?.hide()
+                focusManager.clearFocus()
+            },
             leftShape = false,
             rightShape = false,
-            containerColor = player.value.color,
-            icon = remember { mutableStateOf(Icons.Default.ExpandCircleDown) },
-            iconContentDescriptor = "expand_circle_down_icon"
+            containerColor = player.value.color.value,
+            icon = if (isExpanded.value)
+                Icons.Default.ExpandLess
+            else
+                Icons.Default.ExpandMore,
+            iconContentDescriptor = "expand_less_more_icon"
         )
 
         CustomFloatingActionButton(
             onClick = { if (playerList.size > 1) playerList.remove(player) },
             leftShape = false,
             rightShape = true,
-            containerColor = player.value.color,
-            icon = remember { mutableStateOf(Icons.Default.DeleteForever) },
+            containerColor = player.value.color.value,
+            icon = Icons.Default.DeleteForever,
             iconContentDescriptor = "delete_forever_icon"
         )
 
