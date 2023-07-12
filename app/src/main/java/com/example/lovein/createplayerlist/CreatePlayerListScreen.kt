@@ -1,14 +1,14 @@
 package com.example.lovein.createplayerlist
 
-import android.annotation.SuppressLint
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.GroupAdd
 import androidx.compose.material.icons.filled.PlayCircle
@@ -41,44 +41,39 @@ import com.example.lovein.ui.theme.helveticaFontFamily
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun CreatePlayerListScreen(
     navController: NavController,
     players: MutableList<MutableState<Player>>
 ) {
-    val scrollState: ScrollState = rememberScrollState()
     val coroutineScope: CoroutineScope = rememberCoroutineScope()
-    var scrollToBottom: Boolean by remember { mutableStateOf(false) }
+    val listState: LazyListState = rememberLazyListState()
 
     val isAlertDialogOpen: MutableState<Boolean> = remember { mutableStateOf(false) }
     val alertDialogTitle: MutableState<String> = remember { mutableStateOf("") }
     val alertDialogText: MutableState<String> = remember { mutableStateOf("") }
 
-    CommonContainer(navController = navController) {
+    CommonContainer(navController = navController) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(
                     start = 16.dp,
-                    top = 56.dp,
+                    top = innerPadding.calculateTopPadding(),
                     end = 16.dp,
                     bottom = 16.dp
                 ),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Spacer(modifier = Modifier.windowInsetsTopHeight(WindowInsets.systemBars))
-
-            Column(
+            LazyColumn(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 16.dp)
                     .weight(1f)
-                    .clip(RoundedCornerShape(8.dp))
-                    .verticalScroll(scrollState),
-                horizontalAlignment = Alignment.CenterHorizontally,
+                    .clip(RoundedCornerShape(size = 8.dp)),
+                state = listState,
+                verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                players.forEachIndexed { index, _ ->
+                itemsIndexed(items = players) { index, player ->
                     val isExpanded: MutableState<Boolean> = remember { mutableStateOf(false) }
                     val alpha = animateFloatAsState(
                         targetValue = if (isExpanded.value) 1f else 0f,
@@ -97,40 +92,45 @@ fun CreatePlayerListScreen(
 
                     AnimatedVisibility(visible = isExpanded.value) {
                         EroZoneListCard(
-                            player = players[index],
+                            player = player,
                             rotateX = rotateX,
                             alpha = alpha
                         )
                     }
                 }
 
-                CompositionLocalProvider(LocalRippleTheme provides NoRippleTheme()) {
-                    ExtendedFloatingActionButton(
-                        text = {
-                            Text(
-                                text = "Add next player",
-                                color = Color.White,
-                                fontSize = 16.sp,
-                                fontStyle = FontStyle.Italic,
-                                fontWeight = FontWeight.Bold,
-                                fontFamily = helveticaFontFamily
-                            )
-                        },
-                        icon = {
-                            Icon(
-                                imageVector = Icons.Default.GroupAdd,
-                                contentDescription = "group_add_icon",
-                                tint = Color.White
-                            )
-                        },
-                        onClick = {
-                            players.add(mutableStateOf(Player(Gender.MALE)))
-                            scrollToBottom = true
-                        },
-                        modifier = Modifier.align(alignment = Alignment.Start),
-                        containerColor = Color.Transparent,
-                        elevation = FloatingActionButtonDefaults.bottomAppBarFabElevation()
-                    )
+                item {
+                    CompositionLocalProvider(LocalRippleTheme provides NoRippleTheme()) {
+                        ExtendedFloatingActionButton(
+                            text = {
+                                Text(
+                                    text = "Add next player",
+                                    color = Color.White,
+                                    fontSize = 16.sp,
+                                    fontStyle = FontStyle.Italic,
+                                    fontWeight = FontWeight.Bold,
+                                    fontFamily = helveticaFontFamily
+                                )
+                            },
+                            icon = {
+                                Icon(
+                                    imageVector = Icons.Default.GroupAdd,
+                                    contentDescription = "group_add_icon",
+                                    tint = Color.White
+                                )
+                            },
+                            onClick = {
+                                players.add(mutableStateOf(Player(Gender.MALE)))
+
+                                coroutineScope.launch {
+                                    listState.animateScrollToItem(players.size - 1)
+                                }
+                            },
+                            modifier = Modifier.align(alignment = Alignment.Start),
+                            containerColor = Color.Transparent,
+                            elevation = FloatingActionButtonDefaults.bottomAppBarFabElevation()
+                        )
+                    }
                 }
             }
 
@@ -161,6 +161,8 @@ fun CreatePlayerListScreen(
                     }
                 },
                 modifier = Modifier
+                    .padding(top = 16.dp)
+                    .imePadding()
             )
 
             if (isAlertDialogOpen.value) {
@@ -170,17 +172,6 @@ fun CreatePlayerListScreen(
                     text = alertDialogText.value
                 )
             }
-
-            LaunchedEffect(scrollToBottom) {
-                if (scrollToBottom) {
-                    coroutineScope.launch {
-                        scrollState.animateScrollTo(scrollState.maxValue, tween(500))
-                    }
-                    scrollToBottom = false
-                }
-            }
-
-            Spacer(modifier = Modifier.windowInsetsBottomHeight(WindowInsets.navigationBars))
         }
     }
 }

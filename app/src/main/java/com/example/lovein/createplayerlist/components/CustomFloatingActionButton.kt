@@ -1,6 +1,5 @@
 package com.example.lovein.createplayerlist.components
 
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.FloatingActionButton
@@ -22,7 +21,6 @@ fun CustomFloatingActionButton(
 ) {
     FloatingActionButton(
         onClick = onClick,
-        modifier = Modifier.padding(top = 8.dp),
         shape = RoundedCornerShape(
             topStart = if (leftShape) 8.dp else 0.dp,
             topEnd = if (rightShape) 8.dp else 0.dp,

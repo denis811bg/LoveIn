@@ -2,23 +2,22 @@ package com.example.lovein.createplayerlist.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.filled.DeleteForever
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.FocusManager
-import androidx.compose.ui.focus.FocusRequester
-import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.platform.SoftwareKeyboardController
 import androidx.compose.ui.text.TextStyle
@@ -39,9 +38,6 @@ fun PlayerInputRow(
     isExpanded: MutableState<Boolean>
 ) {
     val keyboardController: SoftwareKeyboardController? = LocalSoftwareKeyboardController.current
-    val focusManager: FocusManager = LocalFocusManager.current
-
-    val focusRequester: FocusRequester = remember { FocusRequester() }
 
     var player: MutableState<Player> = playerList[index]
 
@@ -66,12 +62,9 @@ fun PlayerInputRow(
         TextField(
             value = player.value.name.value,
             onValueChange = {
-                if (it.length <= 20) player.value.name.value = it
+                if (it.length <= 15) player.value.name.value = it
             },
-            modifier = Modifier
-                .weight(0.7f)
-                .padding(top = 8.dp)
-                .focusRequester(focusRequester),
+            modifier = Modifier.weight(0.7f),
             textStyle = TextStyle.Default.copy(
                 fontSize = 16.sp,
                 fontFamily = helveticaFontFamily
@@ -88,10 +81,7 @@ fun PlayerInputRow(
                 keyboardType = KeyboardType.Text,
                 imeAction = ImeAction.Done
             ),
-            keyboardActions = KeyboardActions(onDone = {
-                keyboardController?.hide()
-                focusManager.clearFocus()
-            }),
+            keyboardActions = KeyboardActions(onDone = { keyboardController?.hide() }),
             maxLines = 1,
             shape = RoundedCornerShape(0.dp),
             colors = TextFieldDefaults.colors(
@@ -108,7 +98,6 @@ fun PlayerInputRow(
             onClick = {
                 isExpanded.value = !isExpanded.value
                 keyboardController?.hide()
-                focusManager.clearFocus()
             },
             leftShape = false,
             rightShape = false,
@@ -128,9 +117,5 @@ fun PlayerInputRow(
             icon = Icons.Default.DeleteForever,
             iconContentDescriptor = "delete_forever_icon"
         )
-
-        LaunchedEffect(Unit) {
-            focusRequester.requestFocus()
-        }
     }
 }

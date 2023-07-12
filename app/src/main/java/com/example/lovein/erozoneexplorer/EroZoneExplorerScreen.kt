@@ -79,11 +79,16 @@ fun EroZoneExplorerScreen(
         )
     }
 
-    CommonContainer(navController = navController) {
+    CommonContainer(navController = navController) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp),
+                .padding(
+                    start = 16.dp,
+                    top = innerPadding.calculateTopPadding(),
+                    end = 16.dp,
+                    bottom = 16.dp
+                ),
         ) {
             Spacer(modifier = Modifier.weight(1f))
 

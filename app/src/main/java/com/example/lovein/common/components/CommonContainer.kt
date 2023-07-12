@@ -1,9 +1,10 @@
 package com.example.lovein.common.components
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
@@ -19,12 +20,11 @@ import com.example.lovein.ui.theme.BackgroundDarkPinkColor
 import com.example.lovein.ui.theme.BackgroundLightBlueColor
 import com.example.lovein.ui.theme.BackgroundLightPinkColor
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CommonContainer(
     navController: NavController,
-    content: @Composable () -> Unit
+    content: @Composable (contentPadding: PaddingValues) -> Unit
 ) {
     Box(modifier = Modifier.fillMaxSize()) {
         Canvas(modifier = Modifier.fillMaxSize()) {
@@ -58,7 +58,9 @@ fun CommonContainer(
         }
 
         Scaffold(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize()
+                .systemBarsPadding(),
             topBar = {
                 CenterAlignedTopAppBar(
                     title = { Text(text = "") },
@@ -77,8 +79,8 @@ fun CommonContainer(
                 )
             },
             containerColor = Color.Transparent
-        ) {
-            content()
+        ) { innerPadding ->
+            content(innerPadding)
         }
     }
 }
