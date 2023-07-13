@@ -36,4 +36,10 @@
     <string name="anus">항문</string>
     <string name="action">액션</string>
     <string name="ero_zone">에로 존</string>
+    <string name="not_enough_players_alert_title">플레이어가 충분하지 않습니다</string>
+    <string name="not_enough_players_alert_description">게임을 시작하려면 적어도 2 명의 플레이어가 필요합니다.</string>
+    <string name="add_player_names_alert_title">플레이어 이름을 추가하세요</string>
+    <string name="add_player_names_alert_description">게임을 시작하려면 플레이어 이름을 추가해야 합니다.</string>
+    <string name="add_player_ero_zones_alert_title">플레이어의 성감대를 추가하세요</string>
+    <string name="add_player_ero_zones_alert_description">게임을 시작하려면 플레이어의 성감대를 추가해야 합니다.</string>
 </resources>

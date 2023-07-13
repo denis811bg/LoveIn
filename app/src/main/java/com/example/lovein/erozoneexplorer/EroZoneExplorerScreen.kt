@@ -51,12 +51,18 @@ fun EroZoneExplorerScreen(
         mutableListOf(
             createCard(
                 cardFrontContent = passivePlayerRandomEroZone.value.actionList.random().label,
-                cardBackContent = LocalizationManager.getLocalizedString(context, R.string.action),
+                cardBackContent = LocalizationManager.getLocalizedString(
+                    context = context,
+                    resourceId = R.string.action
+                ),
                 gender = passivePlayer.value.gender
             ),
             createCard(
                 cardFrontContent = nextPassivePlayerRandomEroZone.value.actionList.random().label,
-                cardBackContent = LocalizationManager.getLocalizedString(context, R.string.action),
+                cardBackContent = LocalizationManager.getLocalizedString(
+                    context = context,
+                    resourceId = R.string.action
+                ),
                 gender = nextPassivePlayer.value.gender
             )
         )
@@ -65,18 +71,24 @@ fun EroZoneExplorerScreen(
         mutableListOf(
             createCard(
                 cardFrontContent = LocalizationManager.getLocalizedString(
-                    context,
-                    passivePlayerRandomEroZone.value.resourceId
+                    context = context,
+                    resourceId = passivePlayerRandomEroZone.value.resourceId
                 ),
-                cardBackContent = LocalizationManager.getLocalizedString(context, R.string.ero_zone),
+                cardBackContent = LocalizationManager.getLocalizedString(
+                    context = context,
+                    resourceId = R.string.ero_zone
+                ),
                 gender = passivePlayer.value.gender
             ),
             createCard(
                 cardFrontContent = LocalizationManager.getLocalizedString(
-                    context,
-                    nextPassivePlayerRandomEroZone.value.resourceId
+                    context = context,
+                    resourceId = nextPassivePlayerRandomEroZone.value.resourceId
                 ),
-                cardBackContent = LocalizationManager.getLocalizedString(context, R.string.ero_zone),
+                cardBackContent = LocalizationManager.getLocalizedString(
+                    context = context,
+                    resourceId = R.string.ero_zone
+                ),
                 gender = nextPassivePlayer.value.gender
             )
         )
@@ -130,7 +142,10 @@ fun EroZoneExplorerScreen(
                         .weight(1f)
                 ) {
                     CommonNavigationButton(
-                        text = LocalizationManager.getLocalizedString(context, R.string.play_button),
+                        text = LocalizationManager.getLocalizedString(
+                            context = context,
+                            resourceId = R.string.play_button
+                        ),
                         icon = Icons.Default.PlayCircle,
                         iconContentDescription = "play_circle_icon",
                         onClick = {
@@ -146,19 +161,22 @@ fun EroZoneExplorerScreen(
                             actionCards.add(
                                 createCard(
                                     cardFrontContent = nextPassivePlayerRandomEroZone.value.actionList.random().label,
-                                    cardBackContent = LocalizationManager.getLocalizedString(context, R.string.action),
+                                    cardBackContent = LocalizationManager.getLocalizedString(
+                                        context = context,
+                                        resourceId = R.string.action
+                                    ),
                                     gender = nextPassivePlayer.value.gender
                                 )
                             )
                             eroZonesCards.add(
                                 createCard(
                                     cardFrontContent = LocalizationManager.getLocalizedString(
-                                        context,
-                                        nextPassivePlayerRandomEroZone.value.resourceId
+                                        context = context,
+                                        resourceId = nextPassivePlayerRandomEroZone.value.resourceId
                                     ),
                                     cardBackContent = LocalizationManager.getLocalizedString(
-                                        context,
-                                        R.string.ero_zone
+                                        context = context,
+                                        resourceId = R.string.ero_zone
                                     ),
                                     gender = nextPassivePlayer.value.gender
                                 )

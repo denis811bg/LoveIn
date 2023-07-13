@@ -36,4 +36,10 @@
     <string name="anus">肛門</string>
     <string name="action">アクション</string>
     <string name="ero_zone">エロゾーン</string>
+    <string name="not_enough_players_alert_title">プレーヤーが不足しています</string>
+    <string name="not_enough_players_alert_description">ゲームを開始するには少なくとも2人のプレーヤーが必要です。</string>
+    <string name="add_player_names_alert_title">プレーヤーの名前を追加してください</string>
+    <string name="add_player_names_alert_description">ゲームを開始するにはプレーヤーの名前を追加する必要があります。</string>
+    <string name="add_player_ero_zones_alert_title">プレーヤーの性感帯を追加してください</string>
+    <string name="add_player_ero_zones_alert_description">ゲームを開始するにはプレーヤーの性感帯を追加する必要があります。</string>
 </resources>

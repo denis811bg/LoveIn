@@ -110,7 +110,10 @@ fun CreatePlayerListScreen(
                         ExtendedFloatingActionButton(
                             text = {
                                 Text(
-                                    text = LocalizationManager.getLocalizedString(context, R.string.add_next_player),
+                                    text = LocalizationManager.getLocalizedString(
+                                        context = context,
+                                        resourceId = R.string.add_next_player
+                                    ),
                                     color = Color.White,
                                     fontSize = 16.sp,
                                     fontStyle = FontStyle.Italic,
@@ -141,22 +144,43 @@ fun CreatePlayerListScreen(
             }
 
             CommonNavigationButton(
-                text = LocalizationManager.getLocalizedString(context, R.string.play_button),
+                text = LocalizationManager.getLocalizedString(
+                    context = context,
+                    resourceId = R.string.play_button
+                ),
                 icon = Icons.Default.PlayCircle,
                 iconContentDescription = "play_circle_icon",
                 onClick = {
                     if (players.size < 2) {
                         isAlertDialogOpen.value = true
-                        alertDialogTitle.value = "Not enough players"
-                        alertDialogText.value = "You need at least 2 players to launch the game."
+                        alertDialogTitle.value = LocalizationManager.getLocalizedString(
+                            context = context,
+                            resourceId = R.string.not_enough_players_alert_title
+                        )
+                        alertDialogText.value = LocalizationManager.getLocalizedString(
+                            context = context,
+                            resourceId = R.string.not_enough_players_alert_description
+                        )
                     } else if (players.any { player -> player.value.name.value == "" }) {
                         isAlertDialogOpen.value = true
-                        alertDialogTitle.value = "Add player names"
-                        alertDialogText.value = "You need to add player names to launch the game."
+                        alertDialogTitle.value = LocalizationManager.getLocalizedString(
+                            context = context,
+                            resourceId = R.string.add_player_names_alert_title
+                        )
+                        alertDialogText.value = LocalizationManager.getLocalizedString(
+                            context = context,
+                            resourceId = R.string.add_player_names_alert_description
+                        )
                     } else if (players.any { player -> player.value.selectedEroZones.isEmpty() }) {
                         isAlertDialogOpen.value = true
-                        alertDialogTitle.value = "Add player ero zones"
-                        alertDialogText.value = "You need to add player erogenous zones to launch the game."
+                        alertDialogTitle.value = LocalizationManager.getLocalizedString(
+                            context = context,
+                            resourceId = R.string.add_player_ero_zones_alert_title
+                        )
+                        alertDialogText.value = LocalizationManager.getLocalizedString(
+                            context = context,
+                            resourceId = R.string.add_player_ero_zones_alert_description
+                        )
                     } else {
                         navController.currentBackStackEntry?.savedStateHandle?.set(
                             key = "playerDTOList",

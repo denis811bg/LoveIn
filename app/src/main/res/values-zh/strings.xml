@@ -36,4 +36,10 @@
     <string name="anus">肛门</string>
     <string name="action">行动</string>
     <string name="ero_zone">情趣区</string>
+    <string name="not_enough_players_alert_title">玩家不足</string>
+    <string name="not_enough_players_alert_description">您需要至少2名玩家才能开始游戏。</string>
+    <string name="add_player_names_alert_title">添加玩家姓名</string>
+    <string name="add_player_names_alert_description">您需要添加玩家姓名才能开始游戏。</string>
+    <string name="add_player_ero_zones_alert_title">添加玩家性感区域</string>
+    <string name="add_player_ero_zones_alert_description">您需要添加玩家性感区域才能开始游戏。</string>
 </resources>

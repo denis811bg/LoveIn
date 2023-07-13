@@ -36,4 +36,12 @@
     <string name="anus">Anüs</string>
     <string name="action">Aksiyon</string>
     <string name="ero_zone">Ero bölge</string>
+    <string name="not_enough_players_alert_title">Yetersiz oyuncu sayısı</string>
+    <string name="not_enough_players_alert_description">Oyunu başlatmak için en az 2 oyuncuya ihtiyacınız var.</string>
+    <string name="add_player_names_alert_title">Oyuncu isimleri ekleyin</string>
+    <string name="add_player_names_alert_description">Oyunu başlatmak için oyuncu isimleri eklemeniz gerekiyor.</string>
+    <string name="add_player_ero_zones_alert_title">Oyuncu erojen bölgeleri ekleyin</string>
+    <string name="add_player_ero_zones_alert_description">Oyunu başlatmak için oyuncu erojen bölgeleri eklemeniz
+        gerekiyor.
+    </string>
 </resources>

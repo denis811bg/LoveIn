@@ -36,4 +36,13 @@
     <string name="anus">Ano</string>
     <string name="action">Azione</string>
     <string name="ero_zone">Zona erotica</string>
+    <string name="not_enough_players_alert_title">Giocatori insufficienti</string>
+    <string name="not_enough_players_alert_description">È necessario almeno 2 giocatori per avviare il gioco.</string>
+    <string name="add_player_names_alert_title">Aggiungi i nomi dei giocatori</string>
+    <string name="add_player_names_alert_description">Devi aggiungere i nomi dei giocatori per avviare il gioco.
+    </string>
+    <string name="add_player_ero_zones_alert_title">Aggiungi le zone erogene dei giocatori</string>
+    <string name="add_player_ero_zones_alert_description">Devi aggiungere le zone erogene dei giocatori per avviare il
+        gioco.
+    </string>
 </resources>

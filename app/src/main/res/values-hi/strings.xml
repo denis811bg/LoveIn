@@ -36,4 +36,16 @@
     <string name="anus">गुदा</string>
     <string name="action">क्रिया</string>
     <string name="ero_zone">इरो ज़ोन</string>
+    <string name="not_enough_players_alert_title">पर्याप्त खिलाड़ी नहीं हैं।</string>
+    <string name="not_enough_players_alert_description">आपको खेल शुरू करने के लिए कम से कम 2 खिलाड़ी की आवश्यकता होती
+        है।
+    </string>
+    <string name="add_player_names_alert_title">खिलाड़ी नाम जोड़ें।</string>
+    <string name="add_player_names_alert_description">आपको खेल शुरू करने के लिए खिलाड़ी नाम जोड़ने की आवश्यकता होती
+        है।
+    </string>
+    <string name="add_player_ero_zones_alert_title">खिलाड़ी संवेदनशील क्षेत्र जोड़ें।</string>
+    <string name="add_player_ero_zones_alert_description">आपको खेल शुरू करने के लिए खिलाड़ी संवेदनशील क्षेत्र जोड़ने की
+        आवश्यकता होती है।
+    </string>
 </resources>

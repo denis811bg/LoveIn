@@ -76,7 +76,10 @@ fun EroZoneListCard(
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
-                    text = LocalizationManager.getLocalizedString(context, R.string.erogenous_zones),
+                    text = LocalizationManager.getLocalizedString(
+                        context = context,
+                        resourceId = R.string.erogenous_zones
+                    ),
                     color = Color.White,
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
@@ -87,7 +90,10 @@ fun EroZoneListCard(
                     ExtendedFloatingActionButton(
                         text = {
                             Text(
-                                text = LocalizationManager.getLocalizedString(context, R.string.clear),
+                                text = LocalizationManager.getLocalizedString(
+                                    context = context,
+                                    resourceId = R.string.clear
+                                ),
                                 color = Color.White,
                                 fontSize = 16.sp,
                                 fontStyle = FontStyle.Italic,
@@ -146,7 +152,10 @@ fun EroZoneListCard(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Text(
-                                text = LocalizationManager.getLocalizedString(context, erogenousZone.resourceId),
+                                text = LocalizationManager.getLocalizedString(
+                                    context = context,
+                                    resourceId = erogenousZone.resourceId
+                                ),
                                 modifier = Modifier
                                     .padding(horizontal = 10.dp, vertical = 5.dp)
                                     .clip(RoundedCornerShape(8.dp)),

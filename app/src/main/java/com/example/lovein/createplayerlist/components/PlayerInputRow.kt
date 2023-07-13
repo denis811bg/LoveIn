@@ -76,7 +76,10 @@ fun PlayerInputRow(
             ),
             placeholder = {
                 Text(
-                    text = LocalizationManager.getLocalizedString(context, R.string.players_name),
+                    text = LocalizationManager.getLocalizedString(
+                        context = context,
+                        resourceId = R.string.players_name
+                    ),
                     fontSize = 16.sp,
                     fontFamily = helveticaFontFamily
                 )

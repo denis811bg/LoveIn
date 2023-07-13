@@ -6,6 +6,13 @@
     <string name="erogenous_zones">Erogenous zones</string>
     <string name="clear">Clear</string>
 
+    <string name="not_enough_players_alert_title">Not enough players</string>
+    <string name="not_enough_players_alert_description">You need at least 2 players to launch the game.</string>
+    <string name="add_player_names_alert_title">Add player names</string>
+    <string name="add_player_names_alert_description">You need to add player names to launch the game.</string>
+    <string name="add_player_ero_zones_alert_title">Add player ero zones</string>
+    <string name="add_player_ero_zones_alert_description">You need to add player erogenous zones to launch the game.</string>
+
     <string name="scalp">Scalp</string>
     <string name="ears">Ears</string>
     <string name="navel">Navel</string>
