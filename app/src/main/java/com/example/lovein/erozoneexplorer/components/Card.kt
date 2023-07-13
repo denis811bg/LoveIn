@@ -16,6 +16,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lovein.erozoneexplorer.models.CardBack
@@ -116,6 +117,52 @@ private fun CardContainer(
             border = BorderStroke(1.dp, Color.Transparent)
         ) {
             content()
+        }
+    }
+}
+
+@Preview
+@Composable
+fun CardContainerPreview() {
+    val color: Color = FemaleColor
+    val cardFace: CardBack = CardBack("Action", color)
+
+    CardContainer(
+        color = color,
+    ) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(color = color)
+        ) {
+            Surface(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp)
+                    .shadow(
+                        elevation = if (color == MaleColor || color == FemaleColor) 16.dp else 0.dp,
+                        shape = RoundedCornerShape(16.dp)
+                    ),
+                shape = RoundedCornerShape(16.dp),
+                color = color,
+                border = BorderStroke(1.dp, Color.Transparent)
+            ) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(color = color),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = cardFace.content,
+                        color = Color.White,
+                        fontSize = 24.sp,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = helveticaFontFamily,
+                        textAlign = TextAlign.Center
+                    )
+                }
+            }
         }
     }
 }

@@ -20,14 +20,14 @@ import com.example.lovein.erozoneexplorer.models.StackViewModel
 fun Stack(
     cards: List<Card>,
     position: Int,
-    modifier: Modifier = Modifier
+//    modifier: Modifier = Modifier
 ) {
     val viewModel = hiltViewModel<StackViewModel>()
     viewModel.setCards(cards)
     viewModel.setPosition(position)
 
     Box(
-        modifier = modifier,
+        modifier = Modifier,
         contentAlignment = Alignment.Center
     ) {
         StackLayout(
@@ -39,7 +39,7 @@ fun Stack(
                 CardFaceDisplay(cardFace = viewModel.rightStackTop?.front, modifier)
             },
             transitionTrigger = position,
-            modifier = modifier
+            modifier = Modifier
         )
     }
 }

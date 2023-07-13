@@ -1,25 +1,16 @@
 package com.example.lovein.erozoneexplorer
 
 import android.content.Context
-import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.core.tween
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PlayCircle
-import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.lovein.R
@@ -29,6 +20,7 @@ import com.example.lovein.common.data.EroZone
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.dtos.PlayerDTO
 import com.example.lovein.common.objects.LocalizationManager
+import com.example.lovein.erozoneexplorer.components.PlayerName
 import com.example.lovein.erozoneexplorer.components.Stack
 import com.example.lovein.erozoneexplorer.models.Card
 import com.example.lovein.erozoneexplorer.models.CardBack
@@ -101,100 +93,81 @@ fun EroZoneExplorerScreen(
                     bottom = 16.dp
                 ),
         ) {
-            Spacer(modifier = Modifier.weight(1f))
-
             Column(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
             ) {
-                Spacer(modifier = Modifier.height(20.dp))
+                PlayerName(player = activePlayer)
 
-                AnimatedContent(
-                    targetState = activePlayer.value.name,
-                    transitionSpec = {
-                        fadeIn(tween(3000)) togetherWith fadeOut(tween(3000))
-                    }
-                ) { targetActivePlayerName ->
-                    Text(
-                        text = targetActivePlayerName,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 32.sp,
-                        color = Color.White,
-                        textAlign = TextAlign.Center
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(3f)
+                ) {
+                    Stack(
+                        cards = actionCards,
+                        position = activePlayerIndex.intValue
                     )
                 }
 
-                Spacer(modifier = Modifier.height(20.dp))
+                PlayerName(player = passivePlayer)
 
-                Stack(
-                    cards = actionCards,
-                    position = activePlayerIndex.intValue,
-                    modifier = Modifier.aspectRatio(2f),
-                )
-
-                Spacer(modifier = Modifier.height(20.dp))
-
-                AnimatedContent(
-                    targetState = passivePlayer.value.name,
-                    transitionSpec = {
-                        fadeIn(tween(3000)) togetherWith fadeOut(tween(3000))
-                    }
-                ) { targetPassivePlayerName ->
-                    Text(
-                        text = "${targetPassivePlayerName}'s",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 32.sp,
-                        color = Color.White,
-                        textAlign = TextAlign.Center
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(3f)
+                ) {
+                    Stack(
+                        cards = eroZonesCards,
+                        position = activePlayerIndex.intValue
                     )
                 }
 
-                Spacer(modifier = Modifier.height(20.dp))
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f)
+                ) {
+                    CommonNavigationButton(
+                        text = LocalizationManager.getLocalizedString(context, R.string.play_button),
+                        icon = Icons.Default.PlayCircle,
+                        iconContentDescription = "play_circle_icon",
+                        onClick = {
+                            activePlayer.value = nextActivePlayer.value
+                            passivePlayer.value = nextPassivePlayer.value
+                            passivePlayerRandomEroZone.value = nextPassivePlayerRandomEroZone.value
 
-                Stack(
-                    cards = eroZonesCards,
-                    position = activePlayerIndex.intValue,
-                    modifier = Modifier.aspectRatio(2f)
-                )
+                            nextActivePlayer.value = passivePlayer.value
+                            nextPassivePlayer.value =
+                                playerDTOList[(++activePlayerIndex.intValue + 2) % playerDTOList.size]
+                            nextPassivePlayerRandomEroZone.value = nextPassivePlayer.value.selectedEroZoneList.random()
+
+                            actionCards.add(
+                                createCard(
+                                    cardFrontContent = nextPassivePlayerRandomEroZone.value.actionList.random().label,
+                                    cardBackContent = LocalizationManager.getLocalizedString(context, R.string.action),
+                                    gender = nextPassivePlayer.value.gender
+                                )
+                            )
+                            eroZonesCards.add(
+                                createCard(
+                                    cardFrontContent = LocalizationManager.getLocalizedString(
+                                        context,
+                                        nextPassivePlayerRandomEroZone.value.resourceId
+                                    ),
+                                    cardBackContent = LocalizationManager.getLocalizedString(
+                                        context,
+                                        R.string.ero_zone
+                                    ),
+                                    gender = nextPassivePlayer.value.gender
+                                )
+                            )
+                        },
+                        modifier = Modifier.align(alignment = Alignment.BottomCenter)
+                    )
+                }
             }
-
-            Spacer(modifier = Modifier.weight(1f))
-
-            CommonNavigationButton(
-                text = LocalizationManager.getLocalizedString(context, R.string.play_button),
-                icon = Icons.Default.PlayCircle,
-                iconContentDescription = "play_circle_icon",
-                onClick = {
-                    activePlayer.value = nextActivePlayer.value
-                    passivePlayer.value = nextPassivePlayer.value
-                    passivePlayerRandomEroZone.value = nextPassivePlayerRandomEroZone.value
-
-                    nextActivePlayer.value = passivePlayer.value
-                    nextPassivePlayer.value = playerDTOList[(++activePlayerIndex.intValue + 2) % playerDTOList.size]
-                    nextPassivePlayerRandomEroZone.value = nextPassivePlayer.value.selectedEroZoneList.random()
-
-                    actionCards.add(
-                        createCard(
-                            cardFrontContent = nextPassivePlayerRandomEroZone.value.actionList.random().label,
-                            cardBackContent = LocalizationManager.getLocalizedString(context, R.string.action),
-                            gender = nextPassivePlayer.value.gender
-                        )
-                    )
-                    eroZonesCards.add(
-                        createCard(
-                            cardFrontContent = LocalizationManager.getLocalizedString(
-                                context,
-                                nextPassivePlayerRandomEroZone.value.resourceId
-                            ),
-                            cardBackContent = LocalizationManager.getLocalizedString(context, R.string.ero_zone),
-                            gender = nextPassivePlayer.value.gender
-                        )
-                    )
-                },
-                modifier = Modifier.align(alignment = Alignment.CenterHorizontally)
-            )
-
-            Spacer(modifier = Modifier.windowInsetsBottomHeight(WindowInsets.navigationBars))
         }
     }
 }
