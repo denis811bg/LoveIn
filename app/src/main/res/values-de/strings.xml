@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Love In</string>
+    <string name="play_button">Spielen</string>
+    <string name="players_name">Spielername</string>
+    <string name="add_next_player">Nächsten Spieler hinzufügen</string>
+    <string name="erogenous_zones">Erogene Zonen</string>
+    <string name="clear">Löschen</string>
+    <string name="scalp">Kopfhaut</string>
+    <string name="ears">Ohren</string>
+    <string name="navel">Bauchnabel</string>
+    <string name="lower_stomach">Unterer Bauch</string>
+    <string name="small_of_the_back">Kreuzbein</string>
+    <string name="armpits">Achselhöhlen</string>
+    <string name="inner_arms">Innere Arme</string>
+    <string name="inner_wrist">Innere Handgelenke</string>
+    <string name="palm_of_hands_and_fingertips">Handflächen und Fingerspitzen</string>
+    <string name="behind_the_knee">Hinter dem Knie</string>
+    <string name="nipples">Brustwarzen</string>
+    <string name="lips">Lippen</string>
+    <string name="neck">Hals</string>
+    <string name="inner_thigh">Innere Oberschenkel</string>
+    <string name="bottom_of_feet_and_toes">Fußsohlen und Zehen</string>
+    <string name="glans">Eichel</string>
+    <string name="frenulum">Vorhautbändchen</string>
+    <string name="foreskin">Vorhaut</string>
+    <string name="scrotum_and_testicles">Hodensack und Hoden</string>
+    <string name="perineum">Damm</string>
+    <string name="prostate">Prostata</string>
+    <string name="areola_and_nipples">Brustwarzenhof und Brustwarzen</string>
+    <string name="pubic_mound">Schamhügel</string>
+    <string name="clitoris">Klitoris</string>
+    <string name="a_spot">A-Punkt</string>
+    <string name="g_spot">G-Punkt</string>
+    <string name="cervix">Gebärmutterhals</string>
+    <string name="anus">Anus</string>
+    <string name="action">Aktion</string>
+    <string name="ero_zone">Ero-Zone</string>
+</resources>

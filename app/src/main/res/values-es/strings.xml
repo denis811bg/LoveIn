@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Love In</string>
+    <string name="play_button">Jugar</string>
+    <string name="players_name">Nombre del jugador</string>
+    <string name="add_next_player">Añadir siguiente jugador</string>
+    <string name="erogenous_zones">Zonas erógenas</string>
+    <string name="clear">Pulire</string>
+    <string name="scalp">Cuero cabelludo</string>
+    <string name="ears">Orejas</string>
+    <string name="navel">Ombligo</string>
+    <string name="lower_stomach">Parte baja del estómago</string>
+    <string name="small_of_the_back">Zona baja de la espalda</string>
+    <string name="armpits">Axilas</string>
+    <string name="inner_arms">Parte interna de los brazos</string>
+    <string name="inner_wrist">Parte interna de las muñecas</string>
+    <string name="palm_of_hands_and_fingertips">Palmas de las manos y yemas de los dedos</string>
+    <string name="behind_the_knee">Detrás de la rodilla</string>
+    <string name="nipples">Pezones</string>
+    <string name="lips">Labios</string>
+    <string name="neck">Cuello</string>
+    <string name="inner_thigh">Parte interna del muslo</string>
+    <string name="bottom_of_feet_and_toes">Parte inferior de los pies y dedos de los pies</string>
+    <string name="glans">Glande</string>
+    <string name="frenulum">Frenillo</string>
+    <string name="foreskin">Prepucio</string>
+    <string name="scrotum_and_testicles">Escroto y testículos</string>
+    <string name="perineum">Perineo</string>
+    <string name="prostate">Próstata</string>
+    <string name="areola_and_nipples">Areola y pezones</string>
+    <string name="pubic_mound">Monte de Venus</string>
+    <string name="clitoris">Clítoris</string>
+    <string name="a_spot">Punto A</string>
+    <string name="g_spot">Punto G</string>
+    <string name="cervix">Cuello uterino</string>
+    <string name="anus">Ano</string>
+    <string name="action">Acción</string>
+    <string name="ero_zone">Zona erótica</string>
+</resources>

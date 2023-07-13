@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Love In</string>
+    <string name="play_button">Oynamak</string>
+    <string name="players_name">Oyuncunun adı</string>
+    <string name="add_next_player">Sonraki oyuncu ekle</string>
+    <string name="erogenous_zones">Cinsel bölgeler</string>
+    <string name="clear">Temizle</string>
+    <string name="scalp">Kafa derisi</string>
+    <string name="ears">Kulaklar</string>
+    <string name="navel">Göbek</string>
+    <string name="lower_stomach">Alt karın</string>
+    <string name="small_of_the_back">Belin altı</string>
+    <string name="armpits">Koltuk altları</string>
+    <string name="inner_arms">İç kol</string>
+    <string name="inner_wrist">İç bilek</string>
+    <string name="palm_of_hands_and_fingertips">Avuç içi ve parmak uçları</string>
+    <string name="behind_the_knee">Diz arkası</string>
+    <string name="nipples">Göğüs uçları</string>
+    <string name="lips">Dudaklar</string>
+    <string name="neck">Boyun</string>
+    <string name="inner_thigh">İç uyluk</string>
+    <string name="bottom_of_feet_and_toes">Ayak tabanı ve parmaklar</string>
+    <string name="glans">Glans</string>
+    <string name="frenulum">Frenulum</string>
+    <string name="foreskin">Sünnet derisi</string>
+    <string name="scrotum_and_testicles">Skrotum ve testisler</string>
+    <string name="perineum">Perine</string>
+    <string name="prostate">Prostat</string>
+    <string name="areola_and_nipples">Areola ve meme ucu</string>
+    <string name="pubic_mound">Venüs tepeciği</string>
+    <string name="clitoris">Klitoris</string>
+    <string name="a_spot">A noktası</string>
+    <string name="g_spot">G noktası</string>
+    <string name="cervix">Rahim ağzı</string>
+    <string name="anus">Anüs</string>
+    <string name="action">Aksiyon</string>
+    <string name="ero_zone">Ero bölge</string>
+</resources>

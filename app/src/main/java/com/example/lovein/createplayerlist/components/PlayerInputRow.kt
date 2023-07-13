@@ -1,5 +1,6 @@
 package com.example.lovein.createplayerlist.components
 
+import android.content.Context
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -18,6 +19,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.platform.SoftwareKeyboardController
 import androidx.compose.ui.text.TextStyle
@@ -26,8 +28,10 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.lovein.R
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.models.Player
+import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.ui.theme.helveticaFontFamily
 
 @OptIn(ExperimentalComposeUiApi::class)
@@ -37,6 +41,7 @@ fun PlayerInputRow(
     index: Int,
     isExpanded: MutableState<Boolean>
 ) {
+    val context: Context = LocalContext.current
     val keyboardController: SoftwareKeyboardController? = LocalSoftwareKeyboardController.current
 
     var player: MutableState<Player> = playerList[index]
@@ -71,7 +76,7 @@ fun PlayerInputRow(
             ),
             placeholder = {
                 Text(
-                    text = "Player's name",
+                    text = LocalizationManager.getLocalizedString(context, R.string.players_name),
                     fontSize = 16.sp,
                     fontFamily = helveticaFontFamily
                 )

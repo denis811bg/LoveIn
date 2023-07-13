@@ -1,5 +1,6 @@
 package com.example.lovein.createplayerlist.components
 
+import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -19,14 +20,17 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.lovein.R
 import com.example.lovein.common.data.EroZone
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.models.NoRippleTheme
 import com.example.lovein.common.models.Player
+import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.ui.theme.BackgroundEroZoneUnselectColor
 import com.example.lovein.ui.theme.BackgroundLightBlueColor
 import com.example.lovein.ui.theme.BackgroundLightPinkColor
@@ -41,6 +45,8 @@ fun EroZoneListCard(
     rotateX: State<Float>,
     alpha: State<Float>
 ) {
+    val context: Context = LocalContext.current
+
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -70,7 +76,7 @@ fun EroZoneListCard(
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
-                    text = "Erogenous zones:",
+                    text = LocalizationManager.getLocalizedString(context, R.string.erogenous_zones),
                     color = Color.White,
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
@@ -81,7 +87,7 @@ fun EroZoneListCard(
                     ExtendedFloatingActionButton(
                         text = {
                             Text(
-                                text = "Clear",
+                                text = LocalizationManager.getLocalizedString(context, R.string.clear),
                                 color = Color.White,
                                 fontSize = 16.sp,
                                 fontStyle = FontStyle.Italic,
@@ -140,7 +146,7 @@ fun EroZoneListCard(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Text(
-                                text = erogenousZone.label,
+                                text = LocalizationManager.getLocalizedString(context, erogenousZone.resourceId),
                                 modifier = Modifier
                                     .padding(horizontal = 10.dp, vertical = 5.dp)
                                     .clip(RoundedCornerShape(8.dp)),

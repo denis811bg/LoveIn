@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">Love In</string>
+    <string name="play_button">Play</string>
+    <string name="players_name">Player\'s name</string>
+    <string name="add_next_player">Add next player</string>
+    <string name="erogenous_zones">Erogenous zones</string>
+    <string name="clear">Clear</string>
+
+    <string name="scalp">Scalp</string>
+    <string name="ears">Ears</string>
+    <string name="navel">Navel</string>
+    <string name="lower_stomach">Lower stomach</string>
+    <string name="small_of_the_back">Small of the back</string>
+    <string name="armpits">Armpits</string>
+    <string name="inner_arms">Inner arms</string>
+    <string name="inner_wrist">Inner wrist</string>
+    <string name="palm_of_hands_and_fingertips">Palm of hands and fingertips</string>
+    <string name="behind_the_knee">Behind the knee</string>
+    <string name="nipples">Nipples</string>
+    <string name="lips">Lips</string>
+    <string name="neck">Neck</string>
+    <string name="inner_thigh">Inner thigh</string>
+    <string name="bottom_of_feet_and_toes">Bottom of feet and toes</string>
+    <string name="anus">Anus</string>
+
+    <string name="glans">Glans</string>
+    <string name="frenulum">Frenulum</string>
+    <string name="foreskin">Foreskin</string>
+    <string name="scrotum_and_testicles">Scrotum and testicles</string>
+    <string name="perineum">Perineum</string>
+    <string name="prostate">Prostate</string>
+
+    <string name="areola_and_nipples">Areola and nipples</string>
+    <string name="pubic_mound">Pubic mound</string>
+    <string name="clitoris">Clitoris</string>
+    <string name="a_spot">A-spot</string>
+    <string name="g_spot">G-spot</string>
+    <string name="cervix">Cervix</string>
+
+    <string name="action">Action</string>
+    <string name="ero_zone">Ero zone</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.lovein.createplayerlist
 
+import android.content.Context
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -22,11 +23,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.lovein.R
 import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
 import com.example.lovein.common.data.Gender
@@ -34,6 +37,7 @@ import com.example.lovein.common.data.NavigationScreens
 import com.example.lovein.common.dtos.PlayerDTO
 import com.example.lovein.common.models.NoRippleTheme
 import com.example.lovein.common.models.Player
+import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.createplayerlist.components.CustomAlertDialog
 import com.example.lovein.createplayerlist.components.EroZoneListCard
 import com.example.lovein.createplayerlist.components.PlayerInputRow
@@ -46,6 +50,8 @@ fun CreatePlayerListScreen(
     navController: NavController,
     players: MutableList<MutableState<Player>>
 ) {
+    val context: Context = LocalContext.current
+
     val coroutineScope: CoroutineScope = rememberCoroutineScope()
     val listState: LazyListState = rememberLazyListState()
 
@@ -104,7 +110,7 @@ fun CreatePlayerListScreen(
                         ExtendedFloatingActionButton(
                             text = {
                                 Text(
-                                    text = "Add next player",
+                                    text = LocalizationManager.getLocalizedString(context, R.string.add_next_player),
                                     color = Color.White,
                                     fontSize = 16.sp,
                                     fontStyle = FontStyle.Italic,
@@ -135,7 +141,7 @@ fun CreatePlayerListScreen(
             }
 
             CommonNavigationButton(
-                text = "Play",
+                text = LocalizationManager.getLocalizedString(context, R.string.play_button),
                 icon = Icons.Default.PlayCircle,
                 iconContentDescription = "play_circle_icon",
                 onClick = {

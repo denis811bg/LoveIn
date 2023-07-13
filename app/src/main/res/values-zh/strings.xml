@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Love In</string>
+    <string name="play_button">玩</string>
+    <string name="players_name">玩家名称</string>
+    <string name="add_next_player">添加下一位玩家</string>
+    <string name="erogenous_zones">性感区</string>
+    <string name="clear">清除</string>
+    <string name="scalp">头皮</string>
+    <string name="ears">耳朵</string>
+    <string name="navel">肚脐</string>
+    <string name="lower_stomach">下腹部</string>
+    <string name="small_of_the_back">腰部</string>
+    <string name="armpits">腋下</string>
+    <string name="inner_arms">内臂</string>
+    <string name="inner_wrist">内侧腕部</string>
+    <string name="palm_of_hands_and_fingertips">手掌和指尖</string>
+    <string name="behind_the_knee">膝后</string>
+    <string name="nipples">乳头</string>
+    <string name="lips">嘴唇</string>
+    <string name="neck">脖子</string>
+    <string name="inner_thigh">内侧大腿</string>
+    <string name="bottom_of_feet_and_toes">脚底和脚趾</string>
+    <string name="glans">龟头</string>
+    <string name="frenulum">鞘带</string>
+    <string name="foreskin">包皮</string>
+    <string name="scrotum_and_testicles">阴囊和睾丸</string>
+    <string name="perineum">会阴</string>
+    <string name="prostate">前列腺</string>
+    <string name="areola_and_nipples">乳晕和乳头</string>
+    <string name="pubic_mound">阴部隆起</string>
+    <string name="clitoris">阴蒂</string>
+    <string name="a_spot">A点</string>
+    <string name="g_spot">G点</string>
+    <string name="cervix">子宫颈</string>
+    <string name="anus">肛门</string>
+    <string name="action">行动</string>
+    <string name="ero_zone">情趣区</string>
+</resources>

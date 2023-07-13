@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Love In</string>
+    <string name="play_button">Jouer</string>
+    <string name="players_name">Nom du joueur</string>
+    <string name="add_next_player">Ajouter le joueur suivant</string>
+    <string name="erogenous_zones">Zones érogènes</string>
+    <string name="clear">Nettoyer</string>
+    <string name="scalp">Cuir chevelu</string>
+    <string name="ears">Oreilles</string>
+    <string name="navel">Nombril</string>
+    <string name="lower_stomach">Bas-ventre</string>
+    <string name="small_of_the_back">Creux des reins</string>
+    <string name="armpits">Aisselles</string>
+    <string name="inner_arms">Faces internes des bras</string>
+    <string name="inner_wrist">Face interne du poignet</string>
+    <string name="palm_of_hands_and_fingertips">Paume des mains et bouts des doigts</string>
+    <string name="behind_the_knee">Arrière du genou</string>
+    <string name="nipples">Tétons</string>
+    <string name="lips">Lèvres</string>
+    <string name="neck">Cou</string>
+    <string name="inner_thigh">Faces internes des cuisses</string>
+    <string name="bottom_of_feet_and_toes">Plante des pieds et orteils</string>
+    <string name="glans">Gland</string>
+    <string name="frenulum">Frein</string>
+    <string name="foreskin">Prépuce</string>
+    <string name="scrotum_and_testicles">Scrotum et testicules</string>
+    <string name="perineum">Périnée</string>
+    <string name="prostate">Prostate</string>
+    <string name="areola_and_nipples">Aréole et mamelons</string>
+    <string name="pubic_mound">Mont de Vénus</string>
+    <string name="clitoris">Clitoris</string>
+    <string name="a_spot">Point A</string>
+    <string name="g_spot">Point G</string>
+    <string name="cervix">Col de l\'utérus</string>
+    <string name="anus">Anus</string>
+    <string name="action">Action</string>
+    <string name="ero_zone">Zone érotique</string>
+</resources>

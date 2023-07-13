@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Love In</string>
+    <string name="play_button">Giocare</string>
+    <string name="players_name">Nome del giocatore</string>
+    <string name="add_next_player">Aggiungi prossimo giocatore</string>
+    <string name="erogenous_zones">Zone erogene</string>
+    <string name="clear">Pulire</string>
+    <string name="scalp">Cuoio capelluto</string>
+    <string name="ears">Orecchie</string>
+    <string name="navel">Ombelico</string>
+    <string name="lower_stomach">Basso ventre</string>
+    <string name="small_of_the_back">Piccola della schiena</string>
+    <string name="armpits">Ascelle</string>
+    <string name="inner_arms">Interno delle braccia</string>
+    <string name="inner_wrist">Interno del polso</string>
+    <string name="palm_of_hands_and_fingertips">Palmo delle mani e punta delle dita</string>
+    <string name="behind_the_knee">Dietro il ginocchio</string>
+    <string name="nipples">Capezzoli</string>
+    <string name="lips">Labbra</string>
+    <string name="neck">Collo</string>
+    <string name="inner_thigh">Interno della coscia</string>
+    <string name="bottom_of_feet_and_toes">Pianta dei piedi e dita dei piedi</string>
+    <string name="glans">Glande</string>
+    <string name="frenulum">Frenulo</string>
+    <string name="foreskin">Prepuzio</string>
+    <string name="scrotum_and_testicles">Scroto e testicoli</string>
+    <string name="perineum">Perineo</string>
+    <string name="prostate">Prostata</string>
+    <string name="areola_and_nipples">Areola e capezzoli</string>
+    <string name="pubic_mound">Monticello pubico</string>
+    <string name="clitoris">Clitoride</string>
+    <string name="a_spot">Punto A</string>
+    <string name="g_spot">Punto G</string>
+    <string name="cervix">Cervice</string>
+    <string name="anus">Ano</string>
+    <string name="action">Azione</string>
+    <string name="ero_zone">Zona erotica</string>
+</resources>

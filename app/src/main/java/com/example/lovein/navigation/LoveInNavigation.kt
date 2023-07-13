@@ -11,6 +11,7 @@ import com.example.lovein.common.dtos.PlayerDTO
 import com.example.lovein.common.models.Player
 import com.example.lovein.createplayerlist.CreatePlayerListScreen
 import com.example.lovein.erozoneexplorer.EroZoneExplorerScreen
+import com.example.lovein.languageselection.LanguageSelectionScreen
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
@@ -91,6 +92,24 @@ fun LoveInNavigation() {
                 navController = navController,
                 playerDTOList = playerDTOList ?: emptyList()
             )
+        }
+
+        composable(
+            route = NavigationScreens.LANGUAGE_SELECTION_SCREEN.name,
+            enterTransition = {
+                slideIntoContainer(
+                    towards = AnimatedContentTransitionScope.SlideDirection.Up,
+                    animationSpec = tween(durationMillis = 500)
+                )
+            },
+            exitTransition = {
+                slideOutOfContainer(
+                    towards = AnimatedContentTransitionScope.SlideDirection.Down,
+                    animationSpec = tween(durationMillis = 500)
+                )
+            }
+        ) {
+            LanguageSelectionScreen(navController = navController)
         }
     }
 }

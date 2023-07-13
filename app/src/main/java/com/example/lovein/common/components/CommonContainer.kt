@@ -7,14 +7,21 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Language
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import com.example.lovein.common.data.Gender
+import com.example.lovein.common.data.NavigationScreens
+import com.example.lovein.common.models.Player
+import com.example.lovein.createplayerlist.CreatePlayerListScreen
 import com.example.lovein.ui.theme.BackgroundDarkBlueColor
 import com.example.lovein.ui.theme.BackgroundDarkPinkColor
 import com.example.lovein.ui.theme.BackgroundLightBlueColor
@@ -26,6 +33,9 @@ fun CommonContainer(
     navController: NavController,
     content: @Composable (contentPadding: PaddingValues) -> Unit
 ) {
+    val isLanguageSelectionScreen = navController.currentBackStackEntry?.destination?.route ==
+            NavigationScreens.LANGUAGE_SELECTION_SCREEN.name
+
     Box(modifier = Modifier.fillMaxSize()) {
         Canvas(modifier = Modifier.fillMaxSize()) {
             drawPath(
@@ -75,6 +85,21 @@ fun CommonContainer(
                             }
                         }
                     },
+                    actions = {
+                        if (!isLanguageSelectionScreen) {
+                            IconButton(
+                                onClick = {
+                                    navController.navigate(route = NavigationScreens.LANGUAGE_SELECTION_SCREEN.name)
+                                },
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Language,
+                                    contentDescription = "language_icon",
+                                    tint = Color.White
+                                )
+                            }
+                        }
+                    },
                     colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Transparent)
                 )
             },
@@ -82,5 +107,26 @@ fun CommonContainer(
         ) { innerPadding ->
             content(innerPadding)
         }
+    }
+}
+
+@Preview
+@Composable
+fun CommonContainerPreview() {
+    val navController: NavController = rememberNavController()
+    val players: MutableList<MutableState<Player>> = remember {
+        mutableStateListOf(
+            mutableStateOf(Player(Gender.MALE)),
+            mutableStateOf(Player(Gender.FEMALE))
+        )
+    }
+
+    CommonContainer(
+        navController = navController
+    ) {
+        CreatePlayerListScreen(
+            navController = navController,
+            players = players
+        )
     }
 }
