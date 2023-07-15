@@ -20,7 +20,6 @@ import com.example.lovein.common.data.EroZone
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.dtos.PlayerDTO
 import com.example.lovein.common.objects.LocalizationManager
-import com.example.lovein.erozoneexplorer.components.PlayerName
 import com.example.lovein.erozoneexplorer.components.Stack
 import com.example.lovein.erozoneexplorer.models.Card
 import com.example.lovein.erozoneexplorer.models.CardBack
@@ -51,44 +50,10 @@ fun EroZoneExplorerScreen(
         mutableListOf(
             createCard(
                 cardFrontContent = passivePlayerRandomEroZone.value.actionList.random().label,
-                cardBackContent = LocalizationManager.getLocalizedString(
-                    context = context,
-                    resourceId = R.string.action
-                ),
                 gender = passivePlayer.value.gender
             ),
             createCard(
                 cardFrontContent = nextPassivePlayerRandomEroZone.value.actionList.random().label,
-                cardBackContent = LocalizationManager.getLocalizedString(
-                    context = context,
-                    resourceId = R.string.action
-                ),
-                gender = nextPassivePlayer.value.gender
-            )
-        )
-    }
-    val eroZonesCards: MutableList<Card> = remember {
-        mutableListOf(
-            createCard(
-                cardFrontContent = LocalizationManager.getLocalizedString(
-                    context = context,
-                    resourceId = passivePlayerRandomEroZone.value.resourceId
-                ),
-                cardBackContent = LocalizationManager.getLocalizedString(
-                    context = context,
-                    resourceId = R.string.ero_zone
-                ),
-                gender = passivePlayer.value.gender
-            ),
-            createCard(
-                cardFrontContent = LocalizationManager.getLocalizedString(
-                    context = context,
-                    resourceId = nextPassivePlayerRandomEroZone.value.resourceId
-                ),
-                cardBackContent = LocalizationManager.getLocalizedString(
-                    context = context,
-                    resourceId = R.string.ero_zone
-                ),
                 gender = nextPassivePlayer.value.gender
             )
         )
@@ -110,28 +75,13 @@ fun EroZoneExplorerScreen(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                PlayerName(player = activePlayer)
-
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .weight(3f)
+                        .weight(9f)
                 ) {
                     Stack(
                         cards = actionCards,
-                        position = activePlayerIndex.intValue
-                    )
-                }
-
-                PlayerName(player = passivePlayer)
-
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(3f)
-                ) {
-                    Stack(
-                        cards = eroZonesCards,
                         position = activePlayerIndex.intValue
                     )
                 }
@@ -161,23 +111,6 @@ fun EroZoneExplorerScreen(
                             actionCards.add(
                                 createCard(
                                     cardFrontContent = nextPassivePlayerRandomEroZone.value.actionList.random().label,
-                                    cardBackContent = LocalizationManager.getLocalizedString(
-                                        context = context,
-                                        resourceId = R.string.action
-                                    ),
-                                    gender = nextPassivePlayer.value.gender
-                                )
-                            )
-                            eroZonesCards.add(
-                                createCard(
-                                    cardFrontContent = LocalizationManager.getLocalizedString(
-                                        context = context,
-                                        resourceId = nextPassivePlayerRandomEroZone.value.resourceId
-                                    ),
-                                    cardBackContent = LocalizationManager.getLocalizedString(
-                                        context = context,
-                                        resourceId = R.string.ero_zone
-                                    ),
                                     gender = nextPassivePlayer.value.gender
                                 )
                             )
@@ -192,7 +125,6 @@ fun EroZoneExplorerScreen(
 
 private fun createCard(
     cardFrontContent: String,
-    cardBackContent: String,
     gender: Gender
 ): Card {
     return Card(
@@ -200,10 +132,7 @@ private fun createCard(
             content = cardFrontContent,
             color = setBackgroundColor(gender)
         ),
-        CardBack(
-            content = cardBackContent,
-            color = setBackgroundColor(gender)
-        )
+        CardBack(color = setBackgroundColor(gender))
     )
 }
 
@@ -224,24 +153,14 @@ fun EroZoneExplorerScreenPreview() {
                 "Denis",
                 Gender.MALE,
                 listOf(
-                    EroZone.GLANS,
-                    EroZone.FRENULUM,
-                    EroZone.FORESKIN,
-                    EroZone.SCROTUM_AND_TESTICLES,
-                    EroZone.PERINEUM,
-                    EroZone.PROSTATE
+                    EroZone.SCALP
                 )
             ),
             PlayerDTO(
                 "Alena",
                 Gender.FEMALE,
                 listOf(
-                    EroZone.AREOLA_AND_NIPPLES,
-                    EroZone.PUBIC_MOUND,
-                    EroZone.CLITORIS,
-                    EroZone.A_SPOT,
-                    EroZone.G_SPOT,
-                    EroZone.CERVIX
+                    EroZone.SCALP
                 )
             )
         )

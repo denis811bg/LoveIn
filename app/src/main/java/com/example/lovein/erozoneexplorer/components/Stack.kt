@@ -19,8 +19,7 @@ import com.example.lovein.erozoneexplorer.models.StackViewModel
 @Composable
 fun Stack(
     cards: List<Card>,
-    position: Int,
-//    modifier: Modifier = Modifier
+    position: Int
 ) {
     val viewModel = hiltViewModel<StackViewModel>()
     viewModel.setCards(cards)
@@ -32,10 +31,10 @@ fun Stack(
     ) {
         StackLayout(
             flipCard = viewModel.flipCard,
-            leftStack = { modifier ->
+            topStack = { modifier ->
                 CardFaceDisplay(cardFace = viewModel.leftStackTop?.back, modifier)
             },
-            rightStack = { modifier ->
+            bottomStack = { modifier ->
                 CardFaceDisplay(cardFace = viewModel.rightStackTop?.front, modifier)
             },
             transitionTrigger = position,
@@ -47,8 +46,8 @@ fun Stack(
 @Composable
 private fun StackLayout(
     flipCard: Card?,
-    leftStack: @Composable (modifier: Modifier) -> Unit,
-    rightStack: @Composable (modifier: Modifier) -> Unit,
+    topStack: @Composable (modifier: Modifier) -> Unit,
+    bottomStack: @Composable (modifier: Modifier) -> Unit,
     transitionTrigger: Int,
     modifier: Modifier = Modifier
 ) {
@@ -69,44 +68,46 @@ private fun StackLayout(
     Layout(
         modifier = modifier.fillMaxSize(),
         content = {
-            leftStack(Modifier.layoutId("leftStack"))
-            rightStack(Modifier.layoutId("rightStack"))
+            topStack(Modifier.layoutId("topStack"))
+            bottomStack(Modifier.layoutId("bottomStack"))
             flipCard?.let {
                 val cardFaceDisplayModifier = Modifier
                     .layoutId("flipCard")
                     .graphicsLayer {
-                        rotationY = flipRotation
+                        rotationX = flipRotation
                         cameraDistance = 8 * density
                     }
                 if (flipRotation < 90f) {
                     CardFaceDisplay(flipCard.back, cardFaceDisplayModifier)
                 } else {
-                    CardFaceDisplay(flipCard.front,
-                        modifier = cardFaceDisplayModifier.graphicsLayer { rotationY = 180f }
+                    CardFaceDisplay(
+                        flipCard.front,
+                        modifier = cardFaceDisplayModifier.graphicsLayer { rotationX = 180f }
                     )
                 }
             }
-        }) { measurable, constraints ->
+        }
+    ) { measurable, constraints ->
 
         val flipCardPlaceable = measurable.firstOrNull { it.layoutId == "flipCard" }
-        val leftStackPlaceable = measurable.firstOrNull { it.layoutId == "leftStack" }
-        val rightStackPlaceable = measurable.firstOrNull { it.layoutId == "rightStack" }
+        val topStackPlaceable = measurable.firstOrNull { it.layoutId == "topStack" }
+        val bottomStackPlaceable = measurable.firstOrNull { it.layoutId == "bottomStack" }
 
         layout(constraints.maxWidth, constraints.maxHeight) {
             val cardSpacing = 16.dp.toPx()
-            val cardWidth = ((constraints.maxWidth - cardSpacing) / 2).toInt()
+            val cardHeight = ((constraints.maxHeight - cardSpacing) / 2).toInt()
             val cardConstraints = constraints.copy(
-                minWidth = minOf(constraints.minWidth, cardWidth),
-                maxWidth = cardWidth
+                minHeight = minOf(constraints.minHeight, cardHeight),
+                maxHeight = cardHeight
             )
 
-            val leftStackX = 0
-            val rightStackX = leftStackX + cardSpacing + cardWidth
-            val flipCardX = rightStackX * offset
+            val topStackY = 0
+            val bottomStackY = topStackY + cardSpacing + cardHeight
+            val flipCardY = bottomStackY * offset
 
-            leftStackPlaceable?.measure(cardConstraints)?.place(leftStackX, 0)
-            rightStackPlaceable?.measure(cardConstraints)?.place(rightStackX.toInt(), 0)
-            flipCardPlaceable?.measure(cardConstraints)?.place(flipCardX.toInt(), 0)
+            topStackPlaceable?.measure(cardConstraints)?.place(0, topStackY)
+            bottomStackPlaceable?.measure(cardConstraints)?.place(0, bottomStackY.toInt())
+            flipCardPlaceable?.measure(cardConstraints)?.place(0, flipCardY.toInt())
         }
     }
 }

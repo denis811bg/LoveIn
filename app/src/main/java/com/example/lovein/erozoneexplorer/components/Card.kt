@@ -1,6 +1,7 @@
 package com.example.lovein.erozoneexplorer.components
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,11 +15,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.lovein.R
 import com.example.lovein.erozoneexplorer.models.CardBack
 import com.example.lovein.erozoneexplorer.models.CardFace
 import com.example.lovein.erozoneexplorer.models.CardFront
@@ -40,7 +44,7 @@ fun CardFaceDisplay(
         ) {
             when (cardFace) {
                 is CardFront -> CardFrontContent(cardFace = cardFace, color = cardFace.color)
-                is CardBack -> CardBackContent(cardFace = cardFace, color = cardFace.color)
+                is CardBack -> CardBackContent(color = cardFace.color)
             }
         }
     }
@@ -71,10 +75,7 @@ private fun CardFrontContent(
 }
 
 @Composable
-private fun CardBackContent(
-    cardFace: CardBack,
-    color: Color
-) {
+private fun CardBackContent(color: Color) {
     CardContainer(color = color) {
         Box(
             modifier = Modifier
@@ -82,13 +83,10 @@ private fun CardBackContent(
                 .background(color = color),
             contentAlignment = Alignment.Center
         ) {
-            Text(
-                text = cardFace.content,
-                color = Color.White,
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold,
-                fontFamily = helveticaFontFamily,
-                textAlign = TextAlign.Center
+            Image(
+                painter = painterResource(R.drawable.bg_card),
+                contentDescription = "bg_card",
+                contentScale = ContentScale.Inside
             )
         }
     }
@@ -125,7 +123,6 @@ private fun CardContainer(
 @Composable
 fun CardContainerPreview() {
     val color: Color = FemaleColor
-    val cardFace: CardBack = CardBack("Action", color)
 
     CardContainer(
         color = color,
@@ -153,13 +150,10 @@ fun CardContainerPreview() {
                         .background(color = color),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text(
-                        text = cardFace.content,
-                        color = Color.White,
-                        fontSize = 24.sp,
-                        fontWeight = FontWeight.Bold,
-                        fontFamily = helveticaFontFamily,
-                        textAlign = TextAlign.Center
+                    Image(
+                        painter = painterResource(R.drawable.bg_card),
+                        contentDescription = "bg_card",
+                        contentScale = ContentScale.Inside
                     )
                 }
             }

@@ -9,7 +9,4 @@ class CardFront(
     val color: Color,
 ) : CardFace()
 
-class CardBack(
-    val content: String,
-    val color: Color,
-) : CardFace()
+class CardBack(val color: Color) : CardFace()
