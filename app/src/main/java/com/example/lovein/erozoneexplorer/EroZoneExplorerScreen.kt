@@ -49,11 +49,21 @@ fun EroZoneExplorerScreen(
     val actionCards: MutableList<Card> = remember {
         mutableListOf(
             createCard(
-                cardFrontContent = passivePlayerRandomEroZone.value.actionList.random().label,
+                cardFrontContent = LocalizationManager.getLocalizedString(
+                    context = context,
+                    resourceId = passivePlayerRandomEroZone.value.actionList.random().resourceId
+                )
+                    .replaceFirst("%", activePlayer.value.name)
+                    .replaceFirst("%", passivePlayer.value.name),
                 gender = passivePlayer.value.gender
             ),
             createCard(
-                cardFrontContent = nextPassivePlayerRandomEroZone.value.actionList.random().label,
+                cardFrontContent = LocalizationManager.getLocalizedString(
+                    context = context,
+                    resourceId = nextPassivePlayerRandomEroZone.value.actionList.random().resourceId
+                )
+                    .replaceFirst("%", nextActivePlayer.value.name)
+                    .replaceFirst("%", nextPassivePlayer.value.name),
                 gender = nextPassivePlayer.value.gender
             )
         )
@@ -110,7 +120,12 @@ fun EroZoneExplorerScreen(
 
                             actionCards.add(
                                 createCard(
-                                    cardFrontContent = nextPassivePlayerRandomEroZone.value.actionList.random().label,
+                                    cardFrontContent = LocalizationManager.getLocalizedString(
+                                        context = context,
+                                        resourceId = nextPassivePlayerRandomEroZone.value.actionList.random().resourceId
+                                    )
+                                        .replaceFirst("%", nextActivePlayer.value.name)
+                                        .replaceFirst("%", nextPassivePlayer.value.name),
                                     gender = nextPassivePlayer.value.gender
                                 )
                             )
@@ -158,6 +173,13 @@ fun EroZoneExplorerScreenPreview() {
             ),
             PlayerDTO(
                 "Alena",
+                Gender.FEMALE,
+                listOf(
+                    EroZone.SCALP
+                )
+            ),
+            PlayerDTO(
+                "Sofi",
                 Gender.FEMALE,
                 listOf(
                     EroZone.SCALP
