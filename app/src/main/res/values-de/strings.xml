@@ -34,8 +34,7 @@
     <string name="g_spot">G-Punkt</string>
     <string name="cervix">Gebärmutterhals</string>
     <string name="anus">Anus</string>
-    <string name="action">Aktion</string>
-    <string name="ero_zone">Ero-Zone</string>
+
     <string name="not_enough_players_alert_title">Nicht genügend Spieler</string>
     <string name="not_enough_players_alert_description">Du benötigst mindestens 2 Spieler, um das Spiel zu starten.
     </string>

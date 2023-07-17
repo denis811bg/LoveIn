@@ -34,8 +34,7 @@
     <string name="g_spot">Точка G</string>
     <string name="cervix">Шейка матки</string>
     <string name="anus">Анус</string>
-    <string name="action">Действие</string>
-    <string name="ero_zone">Эрогенная зона</string>
+
     <string name="not_enough_players_alert_title">Недостаточно игроков</string>
     <string name="not_enough_players_alert_description">Для запуска игры необходимо как минимум 2 игрока.</string>
     <string name="add_player_names_alert_title">Добавьте имена игроков</string>

@@ -34,8 +34,7 @@
     <string name="g_spot">G点</string>
     <string name="cervix">子宫颈</string>
     <string name="anus">肛门</string>
-    <string name="action">行动</string>
-    <string name="ero_zone">情趣区</string>
+
     <string name="not_enough_players_alert_title">玩家不足</string>
     <string name="not_enough_players_alert_description">您需要至少2名玩家才能开始游戏。</string>
     <string name="add_player_names_alert_title">添加玩家姓名</string>
