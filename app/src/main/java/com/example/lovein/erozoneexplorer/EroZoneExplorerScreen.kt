@@ -92,7 +92,8 @@ fun EroZoneExplorerScreen(
                 ) {
                     Stack(
                         cards = actionCards,
-                        position = activePlayerIndex.intValue
+                        position = activePlayerIndex.intValue,
+                        playerNames = listOf(activePlayer.value.name, passivePlayer.value.name),
                     )
                 }
 

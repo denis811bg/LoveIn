@@ -19,7 +19,8 @@ import com.example.lovein.erozoneexplorer.models.StackViewModel
 @Composable
 fun Stack(
     cards: List<Card>,
-    position: Int
+    position: Int,
+    playerNames: List<String>
 ) {
     val viewModel = hiltViewModel<StackViewModel>()
     viewModel.setCards(cards)
@@ -32,13 +33,14 @@ fun Stack(
         StackLayout(
             flipCard = viewModel.flipCard,
             topStack = { modifier ->
-                CardFaceDisplay(cardFace = viewModel.leftStackTop?.back, modifier)
+                CardFaceDisplay(cardFace = viewModel.leftStackTop?.back, modifier, playerNames = playerNames)
             },
             bottomStack = { modifier ->
-                CardFaceDisplay(cardFace = viewModel.rightStackTop?.front, modifier)
+                CardFaceDisplay(cardFace = viewModel.rightStackTop?.front, modifier, playerNames = playerNames)
             },
             transitionTrigger = position,
-            modifier = Modifier
+            modifier = Modifier,
+            playerNames = playerNames
         )
     }
 }
@@ -49,7 +51,8 @@ private fun StackLayout(
     topStack: @Composable (modifier: Modifier) -> Unit,
     bottomStack: @Composable (modifier: Modifier) -> Unit,
     transitionTrigger: Int,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    playerNames: List<String>
 ) {
     var offset by remember(transitionTrigger) { mutableStateOf(0f) }
     var flipRotation by remember(transitionTrigger) { mutableStateOf(0f) }
@@ -78,11 +81,12 @@ private fun StackLayout(
                         cameraDistance = 8 * density
                     }
                 if (flipRotation < 90f) {
-                    CardFaceDisplay(flipCard.back, cardFaceDisplayModifier)
+                    CardFaceDisplay(flipCard.back, cardFaceDisplayModifier, playerNames = playerNames)
                 } else {
                     CardFaceDisplay(
                         flipCard.front,
-                        modifier = cardFaceDisplayModifier.graphicsLayer { rotationX = 180f }
+                        modifier = cardFaceDisplayModifier.graphicsLayer { rotationX = 180f },
+                        playerNames = playerNames
                     )
                 }
             }
