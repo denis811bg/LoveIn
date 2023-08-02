@@ -9,6 +9,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -24,6 +27,8 @@ import com.example.lovein.erozoneexplorer.components.Stack
 import com.example.lovein.erozoneexplorer.models.Card
 import com.example.lovein.erozoneexplorer.models.CardBack
 import com.example.lovein.erozoneexplorer.models.CardFront
+import com.example.lovein.ui.theme.BackgroundLightBlueColor
+import com.example.lovein.ui.theme.BackgroundLightPinkColor
 import com.example.lovein.ui.theme.FemaleColor
 import com.example.lovein.ui.theme.MaleColor
 
@@ -48,23 +53,17 @@ fun EroZoneExplorerScreen(
         remember { mutableStateOf(nextPassivePlayer.value.selectedEroZoneList.random()) }
     val actionCards: MutableList<Card> = remember {
         mutableListOf(
-            createCard(
-                cardFrontContent = LocalizationManager.getLocalizedString(
-                    context = context,
-                    resourceId = passivePlayerRandomEroZone.value.actionList.random().resourceId
-                )
-                    .replaceFirst("%", activePlayer.value.name)
-                    .replaceFirst("%", passivePlayer.value.name),
-                gender = passivePlayer.value.gender
+            card(
+                context = context,
+                randomEroZone = passivePlayerRandomEroZone,
+                activePlayer = activePlayer,
+                passivePlayer = passivePlayer
             ),
-            createCard(
-                cardFrontContent = LocalizationManager.getLocalizedString(
-                    context = context,
-                    resourceId = nextPassivePlayerRandomEroZone.value.actionList.random().resourceId
-                )
-                    .replaceFirst("%", nextActivePlayer.value.name)
-                    .replaceFirst("%", nextPassivePlayer.value.name),
-                gender = nextPassivePlayer.value.gender
+            card(
+                context = context,
+                randomEroZone = nextPassivePlayerRandomEroZone,
+                activePlayer = nextActivePlayer,
+                passivePlayer = nextPassivePlayer
             )
         )
     }
@@ -92,8 +91,7 @@ fun EroZoneExplorerScreen(
                 ) {
                     Stack(
                         cards = actionCards,
-                        position = activePlayerIndex.intValue,
-                        playerNames = listOf(activePlayer.value.name, passivePlayer.value.name),
+                        position = activePlayerIndex.intValue
                     )
                 }
 
@@ -120,14 +118,11 @@ fun EroZoneExplorerScreen(
                             nextPassivePlayerRandomEroZone.value = nextPassivePlayer.value.selectedEroZoneList.random()
 
                             actionCards.add(
-                                createCard(
-                                    cardFrontContent = LocalizationManager.getLocalizedString(
-                                        context = context,
-                                        resourceId = nextPassivePlayerRandomEroZone.value.actionList.random().resourceId
-                                    )
-                                        .replaceFirst("%", nextActivePlayer.value.name)
-                                        .replaceFirst("%", nextPassivePlayer.value.name),
-                                    gender = nextPassivePlayer.value.gender
+                                card(
+                                    context = context,
+                                    randomEroZone = nextPassivePlayerRandomEroZone,
+                                    activePlayer = nextActivePlayer,
+                                    passivePlayer = nextPassivePlayer
                                 )
                             )
                         },
@@ -139,8 +134,27 @@ fun EroZoneExplorerScreen(
     }
 }
 
+private fun card(
+    context: Context,
+    randomEroZone: MutableState<EroZone>,
+    activePlayer: MutableState<PlayerDTO>,
+    passivePlayer: MutableState<PlayerDTO>
+) = createCard(
+    cardFrontContent = buildStylizedText(
+        simpleText = LocalizationManager.getLocalizedString(
+            context = context,
+            resourceId = randomEroZone.value.actionList.random().resourceId
+        )
+            .replaceFirst("%", activePlayer.value.name)
+            .replaceFirst("%", passivePlayer.value.name),
+        stylizedTexts = listOf(activePlayer.value.name, passivePlayer.value.name),
+        cardColor = if (passivePlayer.value.gender == Gender.MALE) MaleColor else FemaleColor
+    ),
+    gender = passivePlayer.value.gender
+)
+
 private fun createCard(
-    cardFrontContent: String,
+    cardFrontContent: AnnotatedString,
     gender: Gender
 ): Card {
     return Card(
@@ -169,21 +183,21 @@ fun EroZoneExplorerScreenPreview() {
                 "Denis",
                 Gender.MALE,
                 listOf(
-                    EroZone.SCALP
+                    EroZone.SCALP_AND_HAIR
                 )
             ),
             PlayerDTO(
                 "Alena",
                 Gender.FEMALE,
                 listOf(
-                    EroZone.SCALP
+                    EroZone.SCALP_AND_HAIR
                 )
             ),
             PlayerDTO(
                 "Sofi",
                 Gender.FEMALE,
                 listOf(
-                    EroZone.SCALP
+                    EroZone.SCALP_AND_HAIR
                 )
             )
         )
@@ -192,4 +206,28 @@ fun EroZoneExplorerScreenPreview() {
         navController = navController,
         playerDTOList = playerDTOList
     )
+}
+
+fun buildStylizedText(simpleText: String, stylizedTexts: List<String>, cardColor: Color): AnnotatedString {
+    var remainingText = simpleText
+    return buildAnnotatedString {
+        for (stylizedText in stylizedTexts) {
+            val startIndex = remainingText.indexOf(stylizedText)
+            if (startIndex >= 0) {
+                val endIndex = startIndex + stylizedText.length
+                append(remainingText.substring(0, startIndex))
+
+                pushStyle(
+                    SpanStyle(
+                        color = if (cardColor == MaleColor) BackgroundLightBlueColor else BackgroundLightPinkColor
+                    )
+                )
+                append(remainingText.substring(startIndex, endIndex))
+                pop()
+
+                remainingText = remainingText.substring(endIndex)
+            }
+        }
+        append(remainingText)
+    }
 }

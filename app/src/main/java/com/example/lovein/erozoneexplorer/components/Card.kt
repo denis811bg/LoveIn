@@ -8,28 +8,32 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.lovein.R
 import com.example.lovein.erozoneexplorer.models.CardBack
 import com.example.lovein.erozoneexplorer.models.CardFace
 import com.example.lovein.erozoneexplorer.models.CardFront
 import com.example.lovein.ui.theme.FemaleColor
 import com.example.lovein.ui.theme.MaleColor
+import com.example.lovein.ui.theme.helveticaFontFamily
 
 @Composable
 fun CardFaceDisplay(
     cardFace: CardFace?,
-    modifier: Modifier = Modifier,
-    playerNames: List<String>
+    modifier: Modifier = Modifier
 ) {
     if (cardFace != null) {
         Box(
@@ -39,7 +43,11 @@ fun CardFaceDisplay(
             contentAlignment = Alignment.Center
         ) {
             when (cardFace) {
-                is CardFront -> CardFrontContent(cardFace = cardFace, color = cardFace.color, playerNames = playerNames)
+                is CardFront -> CardFrontContent(
+                    cardFace = cardFace,
+                    color = cardFace.color
+                )
+
                 is CardBack -> CardBackContent(color = cardFace.color)
             }
         }
@@ -49,8 +57,7 @@ fun CardFaceDisplay(
 @Composable
 private fun CardFrontContent(
     cardFace: CardFront,
-    color: Color,
-    playerNames: List<String>
+    color: Color
 ) {
     CardContainer(color = color) {
         Box(
@@ -59,9 +66,13 @@ private fun CardFrontContent(
                 .background(color = color),
             contentAlignment = Alignment.Center
         ) {
-            CustomText(
+            Text(
                 text = cardFace.content,
-                playerNames = playerNames,
+                modifier = Modifier.padding(8.dp),
+                color = Color.White,
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold,
+                fontFamily = helveticaFontFamily
             )
         }
     }
@@ -77,9 +88,10 @@ private fun CardBackContent(color: Color) {
             contentAlignment = Alignment.Center
         ) {
             Image(
-                painter = painterResource(R.drawable.bg_card),
+                painter = painterResource(R.drawable.bg_card_1),
                 contentDescription = "bg_card",
-                contentScale = ContentScale.Inside
+                contentScale = ContentScale.Inside,
+                colorFilter = ColorFilter.tint(color = Color.White)
             )
         }
     }
@@ -117,9 +129,7 @@ private fun CardContainer(
 fun CardContainerPreview() {
     val color: Color = FemaleColor
 
-    CardContainer(
-        color = color,
-    ) {
+    CardContainer(color = color) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -144,7 +154,7 @@ fun CardContainerPreview() {
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
-                        painter = painterResource(R.drawable.bg_card),
+                        painter = painterResource(R.drawable.bg_card_0),
                         contentDescription = "bg_card",
                         contentScale = ContentScale.Inside
                     )

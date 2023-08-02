@@ -19,8 +19,7 @@ import com.example.lovein.erozoneexplorer.models.StackViewModel
 @Composable
 fun Stack(
     cards: List<Card>,
-    position: Int,
-    playerNames: List<String>
+    position: Int
 ) {
     val viewModel = hiltViewModel<StackViewModel>()
     viewModel.setCards(cards)
@@ -33,14 +32,13 @@ fun Stack(
         StackLayout(
             flipCard = viewModel.flipCard,
             topStack = { modifier ->
-                CardFaceDisplay(cardFace = viewModel.leftStackTop?.back, modifier, playerNames = playerNames)
+                CardFaceDisplay(cardFace = viewModel.leftStackTop?.back, modifier)
             },
             bottomStack = { modifier ->
-                CardFaceDisplay(cardFace = viewModel.rightStackTop?.front, modifier, playerNames = playerNames)
+                CardFaceDisplay(cardFace = viewModel.rightStackTop?.front, modifier)
             },
             transitionTrigger = position,
-            modifier = Modifier,
-            playerNames = playerNames
+            modifier = Modifier
         )
     }
 }
@@ -51,8 +49,7 @@ private fun StackLayout(
     topStack: @Composable (modifier: Modifier) -> Unit,
     bottomStack: @Composable (modifier: Modifier) -> Unit,
     transitionTrigger: Int,
-    modifier: Modifier = Modifier,
-    playerNames: List<String>
+    modifier: Modifier = Modifier
 ) {
     var offset by remember(transitionTrigger) { mutableStateOf(0f) }
     var flipRotation by remember(transitionTrigger) { mutableStateOf(0f) }
@@ -60,10 +57,18 @@ private fun StackLayout(
     val animationSpecFlip = tween<Float>(1000, easing = CubicBezierEasing(0.4f, 0.0f, 0.8f, 0.8f))
 
     LaunchedEffect(key1 = transitionTrigger) {
-        animate(initialValue = 0f, targetValue = 1f, animationSpec = animationSpec) { value: Float, _: Float ->
+        animate(
+            initialValue = 0f,
+            targetValue = 1f,
+            animationSpec = animationSpec
+        ) { value: Float, _: Float ->
             offset = value
         }
-        animate(initialValue = 0f, targetValue = 180f, animationSpec = animationSpecFlip) { value: Float, _: Float ->
+        animate(
+            initialValue = 0f,
+            targetValue = 180f,
+            animationSpec = animationSpecFlip
+        ) { value: Float, _: Float ->
             flipRotation = value
         }
     }
@@ -81,12 +86,11 @@ private fun StackLayout(
                         cameraDistance = 8 * density
                     }
                 if (flipRotation < 90f) {
-                    CardFaceDisplay(flipCard.back, cardFaceDisplayModifier, playerNames = playerNames)
+                    CardFaceDisplay(flipCard.back, cardFaceDisplayModifier)
                 } else {
                     CardFaceDisplay(
                         flipCard.front,
-                        modifier = cardFaceDisplayModifier.graphicsLayer { rotationX = 180f },
-                        playerNames = playerNames
+                        modifier = cardFaceDisplayModifier.graphicsLayer { rotationX = 180f }
                     )
                 }
             }
