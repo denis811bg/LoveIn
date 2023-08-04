@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Love In</string>
+    <string name="app_name">LoveIn</string>
     <string name="play_button">Jugar</string>
     <string name="players_name">Nombre del jugador</string>
     <string name="add_next_player">Añadir siguiente jugador</string>
@@ -548,5 +548,28 @@
     <string name="bottom_of_feet_and_toes_ice_action">%, usa un cubo de hielo para una estimulación adicional de los
         pies de %. Desliza el cubo de hielo sobre sus pies, aplicando una ligera presión en diferentes puntos para
         relajar y estimular sus pies.
+    </string>
+    <string name="about_app_description">\t\tBienvenidos a LoveIn: la aplicación móvil que tiene como objetivo brindar placer, alegría y
+        nuevas experiencias a tu vida íntima. LoveIn es una experiencia única para parejas, que explora nuevas facetas
+        emocionales y escenarios íntimos para aquellos que desean fortalecer su relación y mejorar el vínculo con su
+        pareja.\n\n
+
+        \t\tCaracterísticas de la aplicación:\n\n
+        • Experiencia personalizada: Con LoveIn, puedes crear tu propio personaje eligiendo tu género y nombre, y
+        definiendo tus zonas erógenas preferidas. Esto te permitirá disfrutar de momentos únicos e íntimos, creados
+        especialmente para ti y tu pareja.\n\n
+        • Juega en pareja o en grupo: LoveIn no te limita en el número de participantes. Puedes jugar en pareja, creando
+        momentos acogedores y románticos, o añadir amigos para juegos divertidos, emocionantes y excitantes que
+        revelarán nuevas facetas de tu vida íntima.\n\n
+        • Variedad de acciones: Presiona el botón "Jugar" y se te presentará una tarjeta con una acción que uno de los
+        jugadores debe realizar hacia el otro, centrándose en una zona erógena aleatoria elegida por el segundo jugador.
+        Esto te permitirá ampliar tus horizontes íntimos y brindar placer y alegría a la relación mutua.\n\n
+        • Fortalecimiento de la conexión y la confianza: LoveIn está diseñado para fomentar una comunicación abierta y
+        honesta entre las parejas, revelando nuevas facetas de su relación y aumentando el nivel de confianza e
+        intimidad.\n\n
+
+        \t\tÚnete a LoveIn y descubre facetas inexploradas de placer y alegría en tu vida íntima. Sumérgete en una
+        experiencia única creada con amor y cuidado, y comparte momentos de pasión e intimidad con tu pareja o amigos.
+        Disfruta de la valentía y la novedad en tu relación con LoveIn.
     </string>
 </resources>

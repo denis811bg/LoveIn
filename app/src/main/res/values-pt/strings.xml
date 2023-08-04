@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Love In</string>
+    <string name="app_name">LoveIn</string>
     <string name="play_button">Jogar</string>
     <string name="players_name">Nome do jogador</string>
     <string name="add_next_player">Adicionar próximo jogador</string>
@@ -523,7 +523,7 @@
         de %. Isso ajudará a experimentar uma excitação extra.
     </string>
     <string name="bottom_of_feet_and_toes_massage_0_action">%, massage os pés de % em movimentos circulares,
-        aplicando leve pressão e movendo-se da base dos dedos para o calcanhar. Concentre-se em diversos pontos nos pés 
+        aplicando leve pressão e movendo-se da base dos dedos para o calcanhar. Concentre-se em diversos pontos nos pés
         para relaxá-los e estimulá-los. O uso de óleo ou loção ajudará sua parceira a alcançar maior
         relaxamento e prazer.
     </string>
@@ -546,5 +546,27 @@
     <string name="bottom_of_feet_and_toes_ice_action">%, use um cubo de gelo para uma estimulação adicional dos pés
         de %. Deslize o cubo de gelo sobre os pés dela, aplicando leve pressão em diversos pontos para relaxar e
         estimular seus pés.
+    </string>
+    <string name="about_app_description">\t\tBem-vindos ao LoveIn - o aplicativo móvel que tem como objetivo trazer prazer, alegria e
+        novas experiências para a sua vida íntima! LoveIn é uma experiência única para casais, explorando novas facetas
+        emocionais e cenários íntimos para aqueles que desejam fortalecer seu relacionamento e melhorar o vínculo com o
+        parceiro.\n\n
+
+        \t\tRecursos do aplicativo:\n\n
+        • Experiência personalizada: Com o LoveIn, você pode criar seu personagem escolhendo seu gênero e nome, e
+        definindo suas zonas erógenas preferidas. Isso permitirá que você desfrute de momentos únicos e íntimos, criados
+        especialmente para você e seu parceiro.\n\n
+        • Jogue a dois ou em grupo: O LoveIn não o limita quanto ao número de participantes. Você pode jogar a dois,
+        criando momentos românticos e acolhedores, ou adicionar amigos para jogos divertidos, emocionantes e excitantes
+        que revelarão novos aspectos da sua vida íntima.\n\n
+        • Variedade de ações: Pressione o botão "Jogar" e você receberá uma carta com uma ação que um dos jogadores deve
+        realizar em relação ao outro, concentrando-se em uma zona erógena aleatória escolhida pelo segundo jogador. Isso
+        permitirá ampliar seus horizontes íntimos e trazer prazer e alegria para o relacionamento mútuo.\n\n
+        • Fortalecimento da conexão e confiança: O LoveIn foi projetado para favorecer uma comunicação aberta e honesta
+        entre os parceiros, revelando novos aspectos do relacionamento e aumentando o nível de confiança e intimidade.\n\n
+
+        \t\tJunte-se ao LoveIn e descubra facetas inexploradas de prazer e alegria em sua vida íntima. Mergulhe em uma
+        experiência única criada com amor e cuidado e compartilhe momentos de paixão e intimidade com seu parceiro ou
+        amigos. Desfrute da coragem e novidade em seu relacionamento com o LoveIn.
     </string>
 </resources>

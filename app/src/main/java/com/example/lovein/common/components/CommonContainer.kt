@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -35,6 +36,10 @@ fun CommonContainer(
 ) {
     val isLanguageSelectionScreen = navController.currentBackStackEntry?.destination?.route ==
             NavigationScreens.LANGUAGE_SELECTION_SCREEN.name
+
+    val isInfoScreen = navController.currentBackStackEntry?.destination?.route ==
+            NavigationScreens.INFO_SCREEN.name
+
 
     Box(modifier = Modifier.fillMaxSize()) {
         Canvas(modifier = Modifier.fillMaxSize()) {
@@ -95,6 +100,18 @@ fun CommonContainer(
                                 Icon(
                                     imageVector = Icons.Default.Language,
                                     contentDescription = "language_icon",
+                                    tint = Color.White
+                                )
+                            }
+                        }
+
+                        if (!isInfoScreen) {
+                            IconButton(
+                                onClick = { navController.navigate(route = NavigationScreens.INFO_SCREEN.name) }
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Info,
+                                    contentDescription = "info_icon",
                                     tint = Color.White
                                 )
                             }

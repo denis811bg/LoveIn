@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Love In</string>
+    <string name="app_name">LoveIn</string>
     <string name="play_button">Spielen</string>
     <string name="players_name">Spielername</string>
     <string name="add_next_player">Nächsten Spieler hinzufügen</string>
@@ -558,5 +558,30 @@
     <string name="bottom_of_feet_and_toes_ice_action">%, verwende einen Eiswürfel für zusätzliche Stimulation von
         %s Füßen. Gleite mit dem Eiswürfel über ihre Füße und übe leichten Druck an verschiedenen Stellen aus, um
         ihre Füße zu entspannen und zu stimulieren.
+    </string>
+    <string name="about_app_description">\t\tWillkommen bei LoveIn - der mobilen Anwendung, die Freude, Vergnügen und neue Erfahrungen
+        in Ihr intimes Leben bringen möchte! LoveIn ist eine einzigartige Erfahrung für Paare, die neue emotionale
+        Facetten und intime Szenarien entdecken möchten, um ihre Beziehung zu stärken und die Bindung zum Partner zu
+        verbessern.\n\n
+
+        \t\tFunktionen der App:\n\n
+        • Personalisierte Erfahrung: Mit LoveIn können Sie Ihren Charakter erstellen, indem Sie Ihr Geschlecht und Ihren
+        Namen wählen und Ihre bevorzugten erogenen Zonen festlegen. Dies ermöglicht es Ihnen, einzigartige und intime
+        Momente zu genießen, die speziell für Sie und Ihren Partner geschaffen wurden.\n\n
+        • Spielen zu zweit oder in einer größeren Gruppe: LoveIn beschränkt Sie nicht in der Anzahl der Teilnehmer. Sie
+        können zu zweit spielen und gemütliche und romantische Momente erleben oder Freunde hinzufügen, um lustige,
+        aufregende und erregende Spiele zu genießen, die neue Aspekte Ihres intimen Lebens enthüllen.\n\n
+        • Vielfalt an Aktionen: Drücken Sie die "Spielen" -Taste und Ihnen wird eine Karte mit einer Aktion angezeigt,
+        die einer der Spieler gegenüber dem anderen ausführen muss. Dabei liegt der Fokus auf einer zufälligen erogenen
+        Zone, die vom zweiten Spieler ausgewählt wird. Dadurch erweitern Sie Ihre intimen Horizonte und bringen Freude
+        und Glück in Ihre gegenseitige Beziehung.\n\n
+        • Stärkung der Verbindung und des Vertrauens: LoveIn wurde entwickelt, um offene und ehrliche Kommunikation
+        zwischen Partnern zu fördern, neue Facetten ihrer Beziehung aufzudecken und das Vertrauensniveau und die Nähe zu
+        erhöhen.\n\n
+
+        \t\tTreten Sie LoveIn bei und entdecken Sie unerforschte Facetten des Vergnügens und der Freude in Ihrem intimen
+        Leben. Tauchen Sie ein in ein einzigartiges Erlebnis, das mit Liebe und Sorgfalt geschaffen wurde, und teilen
+        Sie Momente der Leidenschaft und Intimität mit Ihrem Partner oder Ihren Freunden. Genießen Sie Mut und Neuheit
+        in Ihrer Beziehung mit LoveIn.
     </string>
 </resources>
