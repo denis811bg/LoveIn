@@ -103,10 +103,7 @@ fun PlayerInputRow(
         )
 
         CustomFloatingActionButton(
-            onClick = {
-                isExpanded.value = !isExpanded.value
-                keyboardController?.hide()
-            },
+            onClick = { isExpanded.value = !isExpanded.value },
             leftShape = false,
             rightShape = false,
             containerColor = player.value.color.value,
