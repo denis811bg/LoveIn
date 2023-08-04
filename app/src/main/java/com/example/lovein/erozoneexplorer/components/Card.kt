@@ -1,8 +1,6 @@
 package com.example.lovein.erozoneexplorer.components
 
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -59,6 +57,7 @@ private fun CardFrontContent(
     cardFace: CardFront,
     color: Color
 ) {
+    val scrollState = rememberScrollState()
     CardContainer(color = color) {
         Box(
             modifier = Modifier
@@ -68,11 +67,13 @@ private fun CardFrontContent(
         ) {
             Text(
                 text = cardFace.content,
-                modifier = Modifier.padding(8.dp),
+                modifier = Modifier
+                    .padding(8.dp)
+                    .verticalScroll(scrollState),
                 color = Color.White,
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
-                fontFamily = helveticaFontFamily
+                fontFamily = helveticaFontFamily,
             )
         }
     }
