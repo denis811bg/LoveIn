@@ -1,8 +1,6 @@
 package com.example.lovein.navigation
 
-import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.animation.core.tween
 import androidx.compose.runtime.*
 import androidx.navigation.NavHostController
 import com.example.lovein.common.data.Gender
@@ -33,28 +31,8 @@ fun LoveInNavigation() {
     ) {
         composable(
             route = NavigationScreens.CREATE_PLAYER_LIST_SCREEN.name,
-            enterTransition = {
-                when (initialState.destination.route) {
-                    NavigationScreens.ERO_ZONE_EXPLORER_SCREEN.name ->
-                        slideIntoContainer(
-                            towards = AnimatedContentTransitionScope.SlideDirection.Right,
-                            animationSpec = tween(durationMillis = 500)
-                        )
-
-                    else -> null
-                }
-            },
-            exitTransition = {
-                when (targetState.destination.route) {
-                    NavigationScreens.ERO_ZONE_EXPLORER_SCREEN.name ->
-                        slideOutOfContainer(
-                            towards = AnimatedContentTransitionScope.SlideDirection.Left,
-                            animationSpec = tween(durationMillis = 500)
-                        )
-
-                    else -> null
-                }
-            },
+            enterTransition = { null },
+            exitTransition = { null }
         ) {
             CreatePlayerListScreen(
                 navController = navController,
@@ -64,28 +42,8 @@ fun LoveInNavigation() {
 
         composable(
             route = NavigationScreens.ERO_ZONE_EXPLORER_SCREEN.name,
-            enterTransition = {
-                when (initialState.destination.route) {
-                    NavigationScreens.CREATE_PLAYER_LIST_SCREEN.name ->
-                        slideIntoContainer(
-                            towards = AnimatedContentTransitionScope.SlideDirection.Left,
-                            animationSpec = tween(durationMillis = 500)
-                        )
-
-                    else -> null
-                }
-            },
-            exitTransition = {
-                when (targetState.destination.route) {
-                    NavigationScreens.CREATE_PLAYER_LIST_SCREEN.name ->
-                        slideOutOfContainer(
-                            towards = AnimatedContentTransitionScope.SlideDirection.Right,
-                            animationSpec = tween(durationMillis = 500)
-                        )
-
-                    else -> null
-                }
-            }
+            enterTransition = { null },
+            exitTransition = { null }
         ) {
             val playerDTOList: List<PlayerDTO>? =
                 navController.previousBackStackEntry?.savedStateHandle?.get<List<PlayerDTO>>("playerDTOList")
