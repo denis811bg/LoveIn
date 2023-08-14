@@ -21,7 +21,8 @@ fun LoveInNavigation() {
     val navController: NavHostController = rememberAnimatedNavController()
     val players: MutableList<MutableState<Player>> = remember {
         mutableStateListOf(
-            mutableStateOf(Player(Gender.MALE))
+            mutableStateOf(Player(Gender.MALE)),
+            mutableStateOf(Player(Gender.FEMALE))
         )
     }
 
