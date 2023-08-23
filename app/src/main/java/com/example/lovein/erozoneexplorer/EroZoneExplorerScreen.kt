@@ -23,6 +23,7 @@ import com.example.lovein.common.data.EroZone
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.dtos.PlayerDTO
 import com.example.lovein.common.objects.LocalizationManager
+import com.example.lovein.common.utils.showInterstitialAd
 import com.example.lovein.erozoneexplorer.components.Stack
 import com.example.lovein.erozoneexplorer.models.Card
 import com.example.lovein.erozoneexplorer.models.CardBack
@@ -37,6 +38,7 @@ fun EroZoneExplorerScreen(
     navController: NavController,
     playerDTOList: List<PlayerDTO>
 ) {
+    var clickedPlayCounter = 0
     val context: Context = LocalContext.current
 
     val activePlayerIndex: MutableIntState = remember { mutableStateOf(0) }
@@ -69,6 +71,8 @@ fun EroZoneExplorerScreen(
     }
 
     CommonContainer(navController = navController) { innerPadding ->
+        if (clickedPlayCounter !=0 && clickedPlayCounter % 20 == 0) showInterstitialAd(context) {}
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -108,6 +112,7 @@ fun EroZoneExplorerScreen(
                         icon = Icons.Default.PlayCircle,
                         iconContentDescription = "play_circle_icon",
                         onClick = {
+                            clickedPlayCounter++
                             activePlayer.value = nextActivePlayer.value
                             passivePlayer.value = nextPassivePlayer.value
                             passivePlayerRandomEroZone.value = nextPassivePlayerRandomEroZone.value

@@ -38,6 +38,7 @@ import com.example.lovein.common.dtos.PlayerDTO
 import com.example.lovein.common.models.NoRippleTheme
 import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
+import com.example.lovein.common.utils.showInterstitialAd
 import com.example.lovein.createplayerlist.components.CustomAlertDialog
 import com.example.lovein.createplayerlist.components.EroZoneListCard
 import com.example.lovein.createplayerlist.components.PlayerInputRow
@@ -187,6 +188,7 @@ fun CreatePlayerListScreen(
                             value = convertPlayersToPlayerDTOList(players)
                         )
 
+                        showInterstitialAd(context) {}
                         navController.navigate(route = NavigationScreens.ERO_ZONE_EXPLORER_SCREEN.name)
                     }
                 },
