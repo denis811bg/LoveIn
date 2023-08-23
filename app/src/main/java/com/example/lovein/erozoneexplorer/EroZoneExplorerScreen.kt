@@ -71,7 +71,7 @@ fun EroZoneExplorerScreen(
     }
 
     CommonContainer(navController = navController) { innerPadding ->
-        if (clickedPlayCounter !=0 && clickedPlayCounter % 20 == 0) showInterstitialAd(context) {}
+        if (clickedPlayCounter !=0 && clickedPlayCounter % 20 == 0) showInterstitialAd(context)
 
         Column(
             modifier = Modifier

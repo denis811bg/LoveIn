@@ -188,7 +188,7 @@ fun CreatePlayerListScreen(
                             value = convertPlayersToPlayerDTOList(players)
                         )
 
-                        showInterstitialAd(context) {}
+                        showInterstitialAd(context)
                         navController.navigate(route = NavigationScreens.ERO_ZONE_EXPLORER_SCREEN.name)
                     }
                 },
