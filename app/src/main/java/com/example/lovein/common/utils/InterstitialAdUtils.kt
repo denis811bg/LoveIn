@@ -33,7 +33,7 @@ fun loadInterstitialAd(context: Context) {
     )
 }
 
-fun showInterstitialAd(context: Context, onAdDismissed: () -> Unit) {
+fun showInterstitialAd(context: Context) {
     val activity = context.findActivity()
 
     if (mInterstitialAd != null && activity != null) {
@@ -45,9 +45,7 @@ fun showInterstitialAd(context: Context, onAdDismissed: () -> Unit) {
 
             override fun onAdDismissedFullScreenContent() {
                 mInterstitialAd = null
-
                 loadInterstitialAd(context)
-                onAdDismissed()
             }
         }
 
