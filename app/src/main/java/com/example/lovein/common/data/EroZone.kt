@@ -2,10 +2,11 @@ package com.example.lovein.common.data
 
 import com.example.lovein.R
 
-enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList: List<Action>) {
+enum class EroZone(val gender: List<Gender>, val resourceId: Int, val eroZoneType: EroZoneType, val actionList: List<Action>) {
     SCALP_AND_HAIR(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.scalp_and_hair,
+        EroZoneType.SOFT,
         listOf(
             Action.SCALP_AND_HAIR_MASSAGE_ACTION,
             Action.SCALP_AND_HAIR_SCRATCH_ACTION,
@@ -20,6 +21,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     EARS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.ears,
+        EroZoneType.SOFT,
         listOf(
             Action.EARS_MASSAGE_ACTION,
             Action.EARS_WHISPER_ACTION,
@@ -33,6 +35,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     NAVEL(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.navel,
+        EroZoneType.HOT,
         listOf(
             Action.NAVEL_KISS_ACTION,
             Action.NAVEL_LICK_ACTION,
@@ -44,6 +47,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     LOWER_STOMACH(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.lower_stomach,
+        EroZoneType.HOT,
         listOf(
             Action.LOWER_STOMACH_KISS_ACTION,
             Action.LOWER_STOMACH_LICK_ACTION,
@@ -57,6 +61,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     SMALL_OF_THE_BACK(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.small_of_the_back,
+        EroZoneType.HOT,
         listOf(
             Action.SMALL_OF_THE_BACK_MASSAGE_ACTION,
             Action.SMALL_OF_THE_BACK_KISS_ACTION,
@@ -67,6 +72,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     ARMPITS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.armpits,
+        EroZoneType.SOFT,
         listOf(
             Action.ARMPITS_MASSAGE_ACTION,
             Action.ARMPITS_KISS_ACTION,
@@ -77,6 +83,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     INNER_ARMS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.inner_arms,
+        EroZoneType.SOFT,
         listOf(
             Action.INNER_ARMS_MASSAGE_ACTION,
             Action.INNER_ARMS_KISS_ACTION,
@@ -88,6 +95,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     INNER_WRIST(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.inner_wrist,
+        EroZoneType.SOFT,
         listOf(
             Action.INNER_WRIST_MASSAGE_ACTION,
             Action.INNER_WRIST_KISS_ACTION,
@@ -99,6 +107,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     PALM_OF_HANDS_AND_FINGERTIPS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.palm_of_hands_and_fingertips,
+        EroZoneType.SOFT,
         listOf(
             Action.PALM_OF_HANDS_AND_FINGERTIPS_MASSAGE_ACTION,
             Action.PALM_OF_HANDS_AND_FINGERTIPS_KISS_ACTION,
@@ -110,6 +119,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     BEHIND_THE_KNEE(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.behind_the_knee,
+        EroZoneType.SOFT,
         listOf(
             Action.BEHIND_THE_KNEE_MASSAGE_ACTION,
             Action.BEHIND_THE_KNEE_KISS_ACTION,
@@ -120,6 +130,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     NIPPLES(
         listOf(Gender.MALE),
         R.string.nipples,
+        EroZoneType.HOT,
         listOf(
             Action.NIPPLES_MASSAGE_ACTION,
             Action.NIPPLES_KISS_ACTION,
@@ -134,6 +145,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     LIPS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.lips,
+        EroZoneType.SOFT,
         listOf(
             Action.LIPS_MASSAGE_ACTION,
             Action.LIPS_KISS_ACTION,
@@ -145,6 +157,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     NECK(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.neck,
+        EroZoneType.SOFT,
         listOf(
             Action.NECK_MASSAGE_0_ACTION,
             Action.NECK_MASSAGE_1_ACTION,
@@ -157,6 +170,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     INNER_THIGH(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.inner_thigh,
+        EroZoneType.HOT,
         listOf(
             Action.INNER_THIGH_MASSAGE_0_ACTION,
             Action.INNER_THIGH_MASSAGE_1_ACTION,
@@ -171,6 +185,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     BOTTOM_OF_FEET_AND_TOES(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.bottom_of_feet_and_toes,
+        EroZoneType.SOFT,
         listOf(
             Action.BOTTOM_OF_FEET_AND_TOES_MASSAGE_0_ACTION,
             Action.BOTTOM_OF_FEET_AND_TOES_MASSAGE_1_ACTION,
@@ -184,6 +199,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     ANUS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.anus,
+        EroZoneType.HARD,
         listOf(
             Action.ANUS_MASSAGE_ACTION,
             Action.ANUS_USE_ACCESSORIES_0_ACTION,
@@ -197,6 +213,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     BUTTOCKS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.buttocks,
+        EroZoneType.HOT,
         listOf(
             Action.BUTTOCKS_MASSAGE_ACTION,
             Action.BUTTOCKS_KISS_ACTION,
@@ -209,6 +226,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     AREOLA_AND_NIPPLES(
         listOf(Gender.FEMALE),
         R.string.areola_and_nipples,
+        EroZoneType.HOT,
         listOf(
             Action.AREOLA_AND_NIPPLES_MASSAGE_ACTION,
             Action.AREOLA_AND_NIPPLES_KISS_ACTION,
@@ -223,6 +241,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     PUBIC_MOUND(
         listOf(Gender.FEMALE),
         R.string.pubic_mound,
+        EroZoneType.HOT,
         listOf(
             Action.PUBIC_MOUND_MASSAGE_ACTION,
             Action.PUBIC_MOUND_KISS_ACTION,
@@ -235,6 +254,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     CLITORIS(
         listOf(Gender.FEMALE),
         R.string.clitoris,
+        EroZoneType.HARD,
         listOf(
             Action.CLITORIS_MASSAGE_0_ACTION,
             Action.CLITORIS_MASSAGE_1_ACTION,
@@ -248,6 +268,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     G_SPOT(
         listOf(Gender.FEMALE),
         R.string.g_spot,
+        EroZoneType.HARD,
         listOf(
             Action.G_SPOT_MASSAGE_ACTION,
             Action.G_SPOT_ITSELF_ACTION
@@ -256,6 +277,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     GLANS(
         listOf(Gender.MALE),
         R.string.glans,
+        EroZoneType.HARD,
         listOf(
             Action.GLANS_MASSAGE_ACTION,
             Action.GLANS_KISS_ACTION,
@@ -270,6 +292,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     SCROTUM_AND_TESTICLES(
         listOf(Gender.MALE),
         R.string.scrotum_and_testicles,
+        EroZoneType.HARD,
         listOf(
             Action.SCROTUM_AND_TESTICLES_MASSAGE_ACTION,
             Action.SCROTUM_AND_TESTICLES_KISS_ACTION,
@@ -283,6 +306,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     PERINEUM(
         listOf(Gender.MALE),
         R.string.perineum,
+        EroZoneType.HARD,
         listOf(
             Action.PERINEUM_MASSAGE_ACTION,
             Action.PERINEUM_LICK_ACTION,
@@ -292,6 +316,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     PROSTATE(
         listOf(Gender.MALE),
         R.string.prostate,
+        EroZoneType.HARD,
         listOf(
             Action.PROSTATE_MASSAGE_ACTION,
             Action.PROSTATE_USE_ACCESSORIES_ACTION,
@@ -301,6 +326,7 @@ enum class EroZone(val gender: List<Gender>, val resourceId: Int, val actionList
     PENIS(
         listOf(Gender.MALE),
         R.string.penis,
+        EroZoneType.HARD,
         listOf(
             Action.PENIS_MASSAGE_ACTION,
             Action.PENIS_KISS_ACTION,
