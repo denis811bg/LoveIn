@@ -34,7 +34,6 @@ import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.data.NavigationScreens
-import com.example.lovein.common.dtos.PlayerDTO
 import com.example.lovein.common.models.NoRippleTheme
 import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
@@ -43,13 +42,14 @@ import com.example.lovein.createplayerlist.components.CustomAlertDialog
 import com.example.lovein.createplayerlist.components.EroZoneListCard
 import com.example.lovein.createplayerlist.components.PlayerInputRow
 import com.example.lovein.ui.theme.helveticaFontFamily
+import com.example.lovein.utils.convertPlayerListToPlayerDTOList
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @Composable
 fun CreatePlayerListScreen(
     navController: NavController,
-    players: MutableList<MutableState<Player>>
+    playerList: MutableList<MutableState<Player>>
 ) {
     val context: Context = LocalContext.current
 
@@ -80,7 +80,7 @@ fun CreatePlayerListScreen(
                 state = listState,
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                itemsIndexed(items = players) { index, player ->
+                itemsIndexed(items = playerList) { index, player ->
                     val isExpanded: MutableState<Boolean> = remember { mutableStateOf(false) }
                     val alpha = animateFloatAsState(
                         targetValue = if (isExpanded.value) 1f else 0f,
@@ -92,7 +92,7 @@ fun CreatePlayerListScreen(
                     )
 
                     PlayerInputRow(
-                        playerList = players,
+                        playerList = playerList,
                         index = index,
                         isExpanded = isExpanded
                     )
@@ -130,10 +130,10 @@ fun CreatePlayerListScreen(
                                 )
                             },
                             onClick = {
-                                players.add(mutableStateOf(Player(Gender.MALE)))
+                                playerList.add(mutableStateOf(Player(Gender.MALE)))
 
                                 coroutineScope.launch {
-                                    listState.animateScrollToItem(players.size - 1)
+                                    listState.animateScrollToItem(playerList.size - 1)
                                 }
                             },
                             modifier = Modifier.align(alignment = Alignment.Start),
@@ -152,7 +152,7 @@ fun CreatePlayerListScreen(
                 icon = Icons.Default.PlayCircle,
                 iconContentDescription = "play_circle_icon",
                 onClick = {
-                    if (players.size < 2) {
+                    if (playerList.size < 2) {
                         isAlertDialogOpen.value = true
                         alertDialogTitle.value = LocalizationManager.getLocalizedString(
                             context = context,
@@ -162,7 +162,7 @@ fun CreatePlayerListScreen(
                             context = context,
                             resourceId = R.string.not_enough_players_alert_description
                         )
-                    } else if (players.any { player -> player.value.name.value == "" }) {
+                    } else if (playerList.any { player -> player.value.name.value == "" }) {
                         isAlertDialogOpen.value = true
                         alertDialogTitle.value = LocalizationManager.getLocalizedString(
                             context = context,
@@ -172,7 +172,7 @@ fun CreatePlayerListScreen(
                             context = context,
                             resourceId = R.string.add_player_names_alert_description
                         )
-                    } else if (players.any { player -> player.value.selectedEroZones.isEmpty() }) {
+                    } else if (playerList.any { player -> player.value.selectedEroZones.isEmpty() }) {
                         isAlertDialogOpen.value = true
                         alertDialogTitle.value = LocalizationManager.getLocalizedString(
                             context = context,
@@ -185,7 +185,7 @@ fun CreatePlayerListScreen(
                     } else {
                         navController.currentBackStackEntry?.savedStateHandle?.set(
                             key = "playerDTOList",
-                            value = convertPlayersToPlayerDTOList(players)
+                            value = convertPlayerListToPlayerDTOList(playerList)
                         )
 
                         showInterstitialAd(context)
@@ -206,16 +206,4 @@ fun CreatePlayerListScreen(
             }
         }
     }
-}
-
-private fun convertPlayersToPlayerDTOList(players: MutableList<MutableState<Player>>): List<PlayerDTO> {
-    return players
-        .map { player ->
-            PlayerDTO(
-                name = player.value.name.value,
-                gender = player.value.gender.value,
-                selectedEroZoneList = player.value.selectedEroZones.toList()
-            )
-        }
-        .toList()
 }

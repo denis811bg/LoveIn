@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.sp
 import com.example.lovein.R
 import com.example.lovein.common.data.EroZone
 import com.example.lovein.common.data.Gender
+import com.example.lovein.common.models.EroZoneMutable
 import com.example.lovein.common.models.NoRippleTheme
 import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
@@ -35,6 +36,7 @@ import com.example.lovein.ui.theme.BackgroundEroZoneUnselectColor
 import com.example.lovein.ui.theme.BackgroundLightBlueColor
 import com.example.lovein.ui.theme.BackgroundLightPinkColor
 import com.example.lovein.ui.theme.helveticaFontFamily
+import com.example.lovein.utils.convertEroZoneToEroZoneMutable
 import com.google.accompanist.flowlayout.FlowRow
 import com.google.accompanist.flowlayout.MainAxisAlignment
 import com.google.accompanist.flowlayout.SizeMode
@@ -128,11 +130,13 @@ fun EroZoneListCard(
                     mainAxisSpacing = 8.dp,
                     crossAxisSpacing = 12.dp
                 ) {
-                    buildGenderErogenousZoneList(player.value.gender.value).forEach { erogenousZone ->
+                    buildGenderErogenousZoneList(player.value.gender.value).forEach { eroZone ->
+                        val eroZoneMutable: EroZoneMutable = convertEroZoneToEroZoneMutable(eroZone)
+
                         Row(
                             modifier = Modifier
                                 .background(
-                                    color = if (player.value.selectedEroZones.contains(erogenousZone)) {
+                                    color = if (player.value.selectedEroZones.contains(eroZoneMutable)) {
                                         if (player.value.gender.value == Gender.MALE)
                                             BackgroundLightBlueColor
                                         else
@@ -142,10 +146,10 @@ fun EroZoneListCard(
                                     shape = RoundedCornerShape(8.dp)
                                 )
                                 .clickable {
-                                    if (player.value.selectedEroZones.contains(erogenousZone)) {
-                                        player.value.selectedEroZones.remove(erogenousZone)
+                                    if (player.value.selectedEroZones.contains(eroZoneMutable)) {
+                                        player.value.selectedEroZones.remove(eroZoneMutable)
                                     } else {
-                                        player.value.selectedEroZones.add(erogenousZone)
+                                        player.value.selectedEroZones.add(eroZoneMutable)
                                     }
                                 },
                             horizontalArrangement = Arrangement.Center,
@@ -154,7 +158,7 @@ fun EroZoneListCard(
                             Text(
                                 text = LocalizationManager.getLocalizedString(
                                     context = context,
-                                    resourceId = erogenousZone.resourceId
+                                    resourceId = eroZone.resourceId
                                 ),
                                 modifier = Modifier
                                     .padding(horizontal = 10.dp, vertical = 5.dp)

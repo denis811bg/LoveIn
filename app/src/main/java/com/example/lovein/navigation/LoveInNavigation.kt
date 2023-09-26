@@ -19,7 +19,7 @@ import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 @Composable
 fun LoveInNavigation() {
     val navController: NavHostController = rememberAnimatedNavController()
-    val players: MutableList<MutableState<Player>> = remember {
+    val playerList: MutableList<MutableState<Player>> = remember {
         mutableStateListOf(
             mutableStateOf(Player(Gender.MALE)),
             mutableStateOf(Player(Gender.FEMALE))
@@ -37,7 +37,7 @@ fun LoveInNavigation() {
         ) {
             CreatePlayerListScreen(
                 navController = navController,
-                players = players
+                playerList = playerList
             )
         }
 

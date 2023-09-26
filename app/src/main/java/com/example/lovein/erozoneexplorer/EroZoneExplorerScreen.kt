@@ -21,6 +21,8 @@ import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
 import com.example.lovein.common.data.*
 import com.example.lovein.common.dtos.PlayerDTO
+import com.example.lovein.common.models.EroZoneMutable
+import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.common.utils.showInterstitialAd
 import com.example.lovein.createplayerlist.components.CustomAlertDialog
@@ -32,6 +34,7 @@ import com.example.lovein.ui.theme.BackgroundLightBlueColor
 import com.example.lovein.ui.theme.BackgroundLightPinkColor
 import com.example.lovein.ui.theme.FemaleColor
 import com.example.lovein.ui.theme.MaleColor
+import com.example.lovein.utils.convertPlayerDTOListToPlayerList
 
 @Composable
 fun EroZoneExplorerScreen(
@@ -40,15 +43,17 @@ fun EroZoneExplorerScreen(
 ) {
     val context: Context = LocalContext.current
 
+    val playerList: List<Player> = convertPlayerDTOListToPlayerList(playerDTOList)
+
     val playerIndex: MutableIntState = remember { mutableStateOf(0) }
-    val actionCards: MutableList<Card> = initActionCards(context, playerDTOList)
+    val actionCards: MutableList<Card> = initActionCards(context, playerList)
 
     val isAlertDialogOpen: MutableState<Boolean> = remember { mutableStateOf(false) }
     val alertDialogTitle: MutableState<String> = remember { mutableStateOf("") }
     val alertDialogText: MutableState<String> = remember { mutableStateOf("") }
 
     CommonContainer(navController = navController) { innerPadding ->
-        if (playerIndex.intValue != 0 && playerIndex.intValue % 20 == 0) showInterstitialAd(context)
+        if (playerIndex.intValue != 0 && playerIndex.intValue % 5 == 0) showInterstitialAd(context)
 
         Column(
             modifier = Modifier
@@ -101,7 +106,7 @@ fun EroZoneExplorerScreen(
                                     context = context,
                                     resourceId = R.string.game_over_description
                                 )
-                                    .replaceFirst("%", playerDTOList[playerIndex.intValue].name)
+                                    .replaceFirst("%", playerList[playerList.size % playerIndex.intValue].name.value)
                             }
                         },
                         modifier = Modifier.align(alignment = Alignment.BottomCenter)
@@ -169,23 +174,22 @@ fun EroZoneExplorerScreenPreview() {
     )
 }
 
-private fun initActionCards(context: Context, playerDTOList: List<PlayerDTO>): MutableList<Card> {
+private fun initActionCards(context: Context, playerList: List<Player>): MutableList<Card> {
     val actionCards: MutableList<Card> = mutableListOf()
 
     var playerIndex = 1
     while (true) {
-        val selectedEroZoneList =
-            playerDTOList[(playerIndex % playerDTOList.size)].selectedEroZoneList.toMutableList()
-        val eroZone: EroZone? =
-            getEroZone(selectedEroZoneList)
+        val selectedEroZoneMutableList: MutableList<EroZoneMutable> =
+            playerList[(playerIndex % playerList.size)].selectedEroZones.toMutableList()
+        val eroZoneMutable: EroZoneMutable? = getEroZone(selectedEroZoneMutableList)
 
-        if (eroZone != null) {
+        if (eroZoneMutable != null) {
             actionCards.add(
                 card(
                     context = context,
-                    eroZone = eroZone,
-                    activePlayer = playerDTOList[((playerIndex - 1) % playerDTOList.size)],
-                    passivePlayer = playerDTOList[(playerIndex++ % playerDTOList.size)]
+                    eroZoneMutable = eroZoneMutable,
+                    activePlayer = playerList[((playerIndex - 1) % playerList.size)],
+                    passivePlayer = playerList[(playerIndex++ % playerList.size)]
                 )
             )
         } else break
@@ -194,35 +198,38 @@ private fun initActionCards(context: Context, playerDTOList: List<PlayerDTO>): M
     return actionCards
 }
 
-private fun getEroZone(selectedEroZones: MutableList<EroZone>): EroZone? {
-    var eroZone: EroZone? = selectedEroZones.filter { it.eroZoneType == EroZoneType.SOFT }.randomOrNull()
+private fun getEroZone(selectedEroZoneMutableList: MutableList<EroZoneMutable>): EroZoneMutable? {
+    var eroZoneMutable: EroZoneMutable? =
+        selectedEroZoneMutableList
+            .filter { it.eroZoneType == EroZoneType.SOFT }
+            .randomOrNull()
 
-    if (eroZone != null) {
-        if (eroZone.actionList.isNotEmpty()) {
-            return eroZone
+    if (eroZoneMutable != null) {
+        if (eroZoneMutable.actionList.isNotEmpty()) {
+            return eroZoneMutable
         } else {
-            selectedEroZones.remove(eroZone)
-            getEroZone(selectedEroZones)
+            selectedEroZoneMutableList.remove(eroZoneMutable)
+            getEroZone(selectedEroZoneMutableList)
         }
     }
 
-    eroZone = selectedEroZones.filter { it.eroZoneType == EroZoneType.HOT }.randomOrNull()
-    if (eroZone != null) {
-        if (eroZone.actionList.isNotEmpty()) {
-            return eroZone
+    eroZoneMutable = selectedEroZoneMutableList.filter { it.eroZoneType == EroZoneType.HOT }.randomOrNull()
+    if (eroZoneMutable != null) {
+        if (eroZoneMutable.actionList.isNotEmpty()) {
+            return eroZoneMutable
         } else {
-            selectedEroZones.remove(eroZone)
-            getEroZone(selectedEroZones)
+            selectedEroZoneMutableList.remove(eroZoneMutable)
+            getEroZone(selectedEroZoneMutableList)
         }
     }
 
-    eroZone = selectedEroZones.filter { it.eroZoneType == EroZoneType.HARD }.randomOrNull()
-    if (eroZone != null) {
-        if (eroZone.actionList.isNotEmpty()) {
-            return eroZone
+    eroZoneMutable = selectedEroZoneMutableList.filter { it.eroZoneType == EroZoneType.HARD }.randomOrNull()
+    if (eroZoneMutable != null) {
+        if (eroZoneMutable.actionList.isNotEmpty()) {
+            return eroZoneMutable
         } else {
-            selectedEroZones.remove(eroZone)
-            getEroZone(selectedEroZones)
+            selectedEroZoneMutableList.remove(eroZoneMutable)
+            getEroZone(selectedEroZoneMutableList)
         }
     }
 
@@ -231,39 +238,22 @@ private fun getEroZone(selectedEroZones: MutableList<EroZone>): EroZone? {
 
 private fun card(
     context: Context,
-    eroZone: EroZone,
-    activePlayer: PlayerDTO,
-    passivePlayer: PlayerDTO
+    eroZoneMutable: EroZoneMutable,
+    activePlayer: Player,
+    passivePlayer: Player
 ) = createCard(
     cardFrontContent = buildStylizedText(
         simpleText = LocalizationManager.getLocalizedString(
             context = context,
-            resourceId = getAction(eroZone)?.resourceId ?: 0
+            resourceId = getAction(eroZoneMutable)?.resourceId ?: 0
         )
-            .replaceFirst("%", activePlayer.name)
-            .replaceFirst("%", passivePlayer.name),
-        stylizedTexts = listOf(activePlayer.name, passivePlayer.name),
-        cardColor = if (passivePlayer.gender == Gender.MALE) MaleColor else FemaleColor
+            .replaceFirst("%", activePlayer.name.value)
+            .replaceFirst("%", passivePlayer.name.value),
+        stylizedTexts = listOf(activePlayer.name.value, passivePlayer.name.value),
+        cardColor = if (passivePlayer.gender.value == Gender.MALE) MaleColor else FemaleColor
     ),
-    gender = passivePlayer.gender
+    gender = passivePlayer.gender.value
 )
-
-private fun getAction(eroZone: EroZone): Action? {
-    var action: Action? = eroZone.actionList.filter { it.actionType == ActionType.SOFT }.randomOrNull()
-
-    if (action != null) {
-        eroZone.actionList.remove(action)
-        return action
-    }
-
-    action = eroZone.actionList.filter { it.actionType == ActionType.HOT }.randomOrNull()
-    if (action != null) {
-        eroZone.actionList.remove(action)
-        return action
-    }
-
-    return null
-}
 
 private fun createCard(
     cardFrontContent: AnnotatedString,
@@ -276,6 +266,25 @@ private fun createCard(
         ),
         CardBack(color = setBackgroundColor(gender))
     )
+}
+
+private fun getAction(eroZoneMutable: EroZoneMutable): Action? {
+    var action: Action? = eroZoneMutable.actionList
+        .filter { it.actionType == ActionType.SOFT }
+        .randomOrNull()
+
+    if (action != null) {
+        eroZoneMutable.actionList.remove(action)
+        return action
+    }
+
+    action = eroZoneMutable.actionList.filter { it.actionType == ActionType.HOT }.randomOrNull()
+    if (action != null) {
+        eroZoneMutable.actionList.remove(action)
+        return action
+    }
+
+    return null
 }
 
 private fun setBackgroundColor(gender: Gender): Color {

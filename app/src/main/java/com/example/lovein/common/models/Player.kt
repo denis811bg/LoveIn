@@ -9,7 +9,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.example.lovein.common.data.EroZone
 import com.example.lovein.common.data.Gender
 import com.example.lovein.ui.theme.FemaleColor
 import com.example.lovein.ui.theme.MaleColor
@@ -17,7 +16,7 @@ import com.example.lovein.ui.theme.MaleColor
 class Player(
     var name: MutableState<String> = mutableStateOf(""),
     var gender: MutableState<Gender> = mutableStateOf(Gender.MALE),
-    var selectedEroZones: SnapshotStateList<EroZone> = mutableStateListOf(),
+    var selectedEroZones: SnapshotStateList<EroZoneMutable> = mutableStateListOf(),
     var icon: MutableState<ImageVector> =
         mutableStateOf(
             if (gender.value == Gender.MALE)
@@ -31,7 +30,7 @@ class Player(
                 MaleColor
             else
                 FemaleColor
-        ),
+        )
 ) {
     constructor(gender: Gender) : this(gender = mutableStateOf(gender))
 }

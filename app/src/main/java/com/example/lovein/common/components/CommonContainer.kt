@@ -131,7 +131,7 @@ fun CommonContainer(
 @Composable
 fun CommonContainerPreview() {
     val navController: NavController = rememberNavController()
-    val players: MutableList<MutableState<Player>> = remember {
+    val playerList: MutableList<MutableState<Player>> = remember {
         mutableStateListOf(
             mutableStateOf(Player(Gender.MALE)),
             mutableStateOf(Player(Gender.FEMALE))
@@ -143,7 +143,7 @@ fun CommonContainerPreview() {
     ) {
         CreatePlayerListScreen(
             navController = navController,
-            players = players
+            playerList = playerList
         )
     }
 }
