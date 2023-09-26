@@ -19,11 +19,11 @@ import androidx.navigation.compose.rememberNavController
 import com.example.lovein.R
 import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
-import com.example.lovein.common.data.EroZone
-import com.example.lovein.common.data.Gender
+import com.example.lovein.common.data.*
 import com.example.lovein.common.dtos.PlayerDTO
 import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.common.utils.showInterstitialAd
+import com.example.lovein.createplayerlist.components.CustomAlertDialog
 import com.example.lovein.erozoneexplorer.components.Stack
 import com.example.lovein.erozoneexplorer.models.Card
 import com.example.lovein.erozoneexplorer.models.CardBack
@@ -38,40 +38,17 @@ fun EroZoneExplorerScreen(
     navController: NavController,
     playerDTOList: List<PlayerDTO>
 ) {
-    var clickedPlayCounter = 0
     val context: Context = LocalContext.current
 
-    val activePlayerIndex: MutableIntState = remember { mutableStateOf(0) }
-    val activePlayer: MutableState<PlayerDTO> =
-        remember { mutableStateOf(playerDTOList[activePlayerIndex.intValue]) }
-    val passivePlayer: MutableState<PlayerDTO> =
-        remember { mutableStateOf(playerDTOList[(activePlayerIndex.intValue + 1) % playerDTOList.size]) }
-    val passivePlayerRandomEroZone: MutableState<EroZone> =
-        remember { mutableStateOf(passivePlayer.value.selectedEroZoneList.random()) }
-    val nextActivePlayer: MutableState<PlayerDTO> = passivePlayer
-    val nextPassivePlayer: MutableState<PlayerDTO> =
-        remember { mutableStateOf(playerDTOList[(activePlayerIndex.intValue + 2) % playerDTOList.size]) }
-    val nextPassivePlayerRandomEroZone: MutableState<EroZone> =
-        remember { mutableStateOf(nextPassivePlayer.value.selectedEroZoneList.random()) }
-    val actionCards: MutableList<Card> = remember {
-        mutableListOf(
-            card(
-                context = context,
-                randomEroZone = passivePlayerRandomEroZone,
-                activePlayer = activePlayer,
-                passivePlayer = passivePlayer
-            ),
-            card(
-                context = context,
-                randomEroZone = nextPassivePlayerRandomEroZone,
-                activePlayer = nextActivePlayer,
-                passivePlayer = nextPassivePlayer
-            )
-        )
-    }
+    val playerIndex: MutableIntState = remember { mutableStateOf(0) }
+    val actionCards: MutableList<Card> = initActionCards(context, playerDTOList)
+
+    val isAlertDialogOpen: MutableState<Boolean> = remember { mutableStateOf(false) }
+    val alertDialogTitle: MutableState<String> = remember { mutableStateOf("") }
+    val alertDialogText: MutableState<String> = remember { mutableStateOf("") }
 
     CommonContainer(navController = navController) { innerPadding ->
-        if (clickedPlayCounter !=0 && clickedPlayCounter % 20 == 0) showInterstitialAd(context)
+        if (playerIndex.intValue != 0 && playerIndex.intValue % 20 == 0) showInterstitialAd(context)
 
         Column(
             modifier = Modifier
@@ -95,7 +72,7 @@ fun EroZoneExplorerScreen(
                 ) {
                     Stack(
                         cards = actionCards,
-                        position = activePlayerIndex.intValue
+                        position = playerIndex.intValue
                     )
                 }
 
@@ -112,51 +89,181 @@ fun EroZoneExplorerScreen(
                         icon = Icons.Default.PlayCircle,
                         iconContentDescription = "play_circle_icon",
                         onClick = {
-                            clickedPlayCounter++
-                            activePlayer.value = nextActivePlayer.value
-                            passivePlayer.value = nextPassivePlayer.value
-                            passivePlayerRandomEroZone.value = nextPassivePlayerRandomEroZone.value
+                            playerIndex.intValue++
 
-                            nextActivePlayer.value = passivePlayer.value
-                            nextPassivePlayer.value =
-                                playerDTOList[(++activePlayerIndex.intValue + 2) % playerDTOList.size]
-                            nextPassivePlayerRandomEroZone.value = nextPassivePlayer.value.selectedEroZoneList.random()
-
-                            actionCards.add(
-                                card(
+                            if (playerIndex.intValue >= actionCards.size) {
+                                isAlertDialogOpen.value = true
+                                alertDialogTitle.value = LocalizationManager.getLocalizedString(
                                     context = context,
-                                    randomEroZone = nextPassivePlayerRandomEroZone,
-                                    activePlayer = nextActivePlayer,
-                                    passivePlayer = nextPassivePlayer
+                                    resourceId = R.string.game_over_title
                                 )
-                            )
+                                alertDialogText.value = LocalizationManager.getLocalizedString(
+                                    context = context,
+                                    resourceId = R.string.game_over_description
+                                )
+                                    .replaceFirst("%", playerDTOList[playerIndex.intValue].name)
+                            }
                         },
                         modifier = Modifier.align(alignment = Alignment.BottomCenter)
                     )
                 }
             }
         }
+
+        if (isAlertDialogOpen.value) {
+            CustomAlertDialog(
+                isAlertDialogOpen = isAlertDialogOpen,
+                title = alertDialogTitle.value,
+                text = alertDialogText.value
+            )
+        }
     }
+}
+
+@Preview
+@Composable
+fun EroZoneExplorerScreenPreview() {
+    val navController: NavController = rememberNavController()
+    val playerDTOList: List<PlayerDTO> =
+        listOf(
+            PlayerDTO(
+                "Denis",
+                Gender.MALE,
+                listOf(
+                    EroZone.SCALP_AND_HAIR,
+                    EroZone.ARMPITS,
+                    EroZone.NIPPLES,
+                    EroZone.NAVEL,
+                    EroZone.PROSTATE,
+                    EroZone.PERINEUM
+                )
+            ),
+            PlayerDTO(
+                "Alena",
+                Gender.FEMALE,
+                listOf(
+                    EroZone.EARS,
+                    EroZone.NECK,
+                    EroZone.LOWER_STOMACH,
+                    EroZone.PUBIC_MOUND,
+                    EroZone.CLITORIS,
+                    EroZone.ANUS
+                )
+            ),
+            PlayerDTO(
+                "Sofi",
+                Gender.FEMALE,
+                listOf(
+                    EroZone.INNER_WRIST,
+                    EroZone.INNER_ARMS,
+                    EroZone.AREOLA_AND_NIPPLES,
+                    EroZone.BUTTOCKS,
+                    EroZone.G_SPOT,
+                )
+            )
+        )
+
+    EroZoneExplorerScreen(
+        navController = navController,
+        playerDTOList = playerDTOList
+    )
+}
+
+private fun initActionCards(context: Context, playerDTOList: List<PlayerDTO>): MutableList<Card> {
+    val actionCards: MutableList<Card> = mutableListOf()
+
+    var playerIndex = 1
+    while (true) {
+        val selectedEroZoneList =
+            playerDTOList[(playerIndex % playerDTOList.size)].selectedEroZoneList.toMutableList()
+        val eroZone: EroZone? =
+            getEroZone(selectedEroZoneList)
+
+        if (eroZone != null) {
+            actionCards.add(
+                card(
+                    context = context,
+                    eroZone = eroZone,
+                    activePlayer = playerDTOList[((playerIndex - 1) % playerDTOList.size)],
+                    passivePlayer = playerDTOList[(playerIndex++ % playerDTOList.size)]
+                )
+            )
+        } else break
+    }
+
+    return actionCards
+}
+
+private fun getEroZone(selectedEroZones: MutableList<EroZone>): EroZone? {
+    var eroZone: EroZone? = selectedEroZones.filter { it.eroZoneType == EroZoneType.SOFT }.randomOrNull()
+
+    if (eroZone != null) {
+        if (eroZone.actionList.isNotEmpty()) {
+            return eroZone
+        } else {
+            selectedEroZones.remove(eroZone)
+            getEroZone(selectedEroZones)
+        }
+    }
+
+    eroZone = selectedEroZones.filter { it.eroZoneType == EroZoneType.HOT }.randomOrNull()
+    if (eroZone != null) {
+        if (eroZone.actionList.isNotEmpty()) {
+            return eroZone
+        } else {
+            selectedEroZones.remove(eroZone)
+            getEroZone(selectedEroZones)
+        }
+    }
+
+    eroZone = selectedEroZones.filter { it.eroZoneType == EroZoneType.HARD }.randomOrNull()
+    if (eroZone != null) {
+        if (eroZone.actionList.isNotEmpty()) {
+            return eroZone
+        } else {
+            selectedEroZones.remove(eroZone)
+            getEroZone(selectedEroZones)
+        }
+    }
+
+    return null
 }
 
 private fun card(
     context: Context,
-    randomEroZone: MutableState<EroZone>,
-    activePlayer: MutableState<PlayerDTO>,
-    passivePlayer: MutableState<PlayerDTO>
+    eroZone: EroZone,
+    activePlayer: PlayerDTO,
+    passivePlayer: PlayerDTO
 ) = createCard(
     cardFrontContent = buildStylizedText(
         simpleText = LocalizationManager.getLocalizedString(
             context = context,
-            resourceId = randomEroZone.value.actionList.random().resourceId
+            resourceId = getAction(eroZone)?.resourceId ?: 0
         )
-            .replaceFirst("%", activePlayer.value.name)
-            .replaceFirst("%", passivePlayer.value.name),
-        stylizedTexts = listOf(activePlayer.value.name, passivePlayer.value.name),
-        cardColor = if (passivePlayer.value.gender == Gender.MALE) MaleColor else FemaleColor
+            .replaceFirst("%", activePlayer.name)
+            .replaceFirst("%", passivePlayer.name),
+        stylizedTexts = listOf(activePlayer.name, passivePlayer.name),
+        cardColor = if (passivePlayer.gender == Gender.MALE) MaleColor else FemaleColor
     ),
-    gender = passivePlayer.value.gender
+    gender = passivePlayer.gender
 )
+
+private fun getAction(eroZone: EroZone): Action? {
+    var action: Action? = eroZone.actionList.filter { it.actionType == ActionType.SOFT }.randomOrNull()
+
+    if (action != null) {
+        eroZone.actionList.remove(action)
+        return action
+    }
+
+    action = eroZone.actionList.filter { it.actionType == ActionType.HOT }.randomOrNull()
+    if (action != null) {
+        eroZone.actionList.remove(action)
+        return action
+    }
+
+    return null
+}
 
 private fun createCard(
     cardFrontContent: AnnotatedString,
@@ -178,42 +285,7 @@ private fun setBackgroundColor(gender: Gender): Color {
         FemaleColor
 }
 
-@Preview
-@Composable
-fun EroZoneExplorerScreenPreview() {
-    val navController: NavController = rememberNavController()
-    val playerDTOList: List<PlayerDTO> =
-        listOf(
-            PlayerDTO(
-                "Denis",
-                Gender.MALE,
-                listOf(
-                    EroZone.SCALP_AND_HAIR
-                )
-            ),
-            PlayerDTO(
-                "Alena",
-                Gender.FEMALE,
-                listOf(
-                    EroZone.SCALP_AND_HAIR
-                )
-            ),
-            PlayerDTO(
-                "Sofi",
-                Gender.FEMALE,
-                listOf(
-                    EroZone.SCALP_AND_HAIR
-                )
-            )
-        )
-
-    EroZoneExplorerScreen(
-        navController = navController,
-        playerDTOList = playerDTOList
-    )
-}
-
-fun buildStylizedText(simpleText: String, stylizedTexts: List<String>, cardColor: Color): AnnotatedString {
+private fun buildStylizedText(simpleText: String, stylizedTexts: List<String>, cardColor: Color): AnnotatedString {
     var remainingText = simpleText
     return buildAnnotatedString {
         for (stylizedText in stylizedTexts) {

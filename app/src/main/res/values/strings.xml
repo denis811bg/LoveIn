@@ -541,4 +541,8 @@
         a unique experience created with love and care, and share moments of passion and intimacy with your partner or
         friends. Enjoy boldness and novelty in your relationship with LoveIn.
     </string>
+    <string name="game_over_title">Game over.</string>
+    <string name="game_over_description">The player with the username % has run out of all cards. You can go back a step
+        and start over.
+    </string>
 </resources>

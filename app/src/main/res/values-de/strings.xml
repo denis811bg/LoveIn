@@ -584,4 +584,8 @@
         Sie Momente der Leidenschaft und Intimität mit Ihrem Partner oder Ihren Freunden. Genießen Sie Mut und Neuheit
         in Ihrer Beziehung mit LoveIn.
     </string>
+    <string name="game_over_description">Dem Spieler mit dem Benutzernamen % sind alle Karten ausgegangen. Sie können
+        einen Schritt zurückgehen und von vorne beginnen.
+    </string>
+    <string name="game_over_title">Spiel vorbei.</string>
 </resources>

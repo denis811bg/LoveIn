@@ -573,4 +573,8 @@
         Immergetevi in un\'esperienza unica creata con amore e attenzione e condividete momenti di passione e intimità
         con il vostro partner o i vostri amici. Godetevi il coraggio e la novità nella vostra relazione con LoveIn.
     </string>
+    <string name="game_over_description">Il giocatore con il nome utente % ha esaurito tutte le carte. Puoi tornare
+        indietro di un passo e ricominciare.
+    </string>
+    <string name="game_over_title">Fine del gioco.</string>
 </resources>

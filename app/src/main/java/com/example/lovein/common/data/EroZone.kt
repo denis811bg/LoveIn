@@ -2,7 +2,12 @@ package com.example.lovein.common.data
 
 import com.example.lovein.R
 
-enum class EroZone(val gender: List<Gender>, val resourceId: Int, val eroZoneType: EroZoneType, val actionList: List<Action>) {
+enum class EroZone(
+    val gender: List<Gender>,
+    val resourceId: Int,
+    val eroZoneType: EroZoneType,
+    val actionList: List<Action>
+) {
     SCALP_AND_HAIR(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.scalp_and_hair,

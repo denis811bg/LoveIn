@@ -549,4 +549,8 @@
         deneyime dalın ve partneriniz veya arkadaşlarınızla tutku dolu ve samimi anları paylaşın. LoveIn ile ilişkinizde
         cesaret ve yenilik tadını çıkarın.
     </string>
+    <string name="game_over_description">Kullanıcı adı % olan oyuncunun tüm kartları tükendi. Bir adım geri gidip
+        yeniden başlayabilirsiniz.
+    </string>
+    <string name="game_over_title">Oyun bitti.</string>
 </resources>

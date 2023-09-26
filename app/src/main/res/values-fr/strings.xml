@@ -594,4 +594,8 @@
         d\'intimité avec votre partenaire ou vos amis. Profitez de l\'audace et de la nouveauté dans votre relation avec
         LoveIn.
     </string>
+    <string name="game_over_description">Le joueur avec le nom d\'utilisateur % n\'a plus de cartes. Vous pouvez revenir
+        en arrière et recommencer.
+    </string>
+    <string name="game_over_title">Partie terminée.</string>
 </resources>
