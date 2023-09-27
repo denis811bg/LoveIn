@@ -106,7 +106,7 @@ fun EroZoneExplorerScreen(
                                     context = context,
                                     resourceId = R.string.game_over_description
                                 )
-                                    .replaceFirst("%", playerList[playerIndex.intValue % playerList.size].name.value)
+                                    .replaceFirst("%", getPlayerNameWithEmptyActions(playerList))
                             }
                         },
                         modifier = Modifier.align(alignment = Alignment.BottomCenter)
@@ -321,4 +321,13 @@ private fun buildStylizedText(simpleText: String, stylizedTexts: List<String>, c
         }
         append(remainingText)
     }
+}
+
+private fun getPlayerNameWithEmptyActions(playerList: List<Player>): String {
+    val playerWithEmptyActions: Player? = playerList.firstOrNull { player ->
+        player.selectedEroZones.any { eroZoneMutable ->
+            eroZoneMutable.actionList.isEmpty()
+        }
+    }
+    return playerWithEmptyActions?.name?.value ?: ""
 }
