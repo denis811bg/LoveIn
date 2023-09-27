@@ -106,7 +106,7 @@ fun EroZoneExplorerScreen(
                                     context = context,
                                     resourceId = R.string.game_over_description
                                 )
-                                    .replaceFirst("%", playerList[playerList.size % playerIndex.intValue].name.value)
+                                    .replaceFirst("%", playerList[playerIndex.intValue % playerList.size].name.value)
                             }
                         },
                         modifier = Modifier.align(alignment = Alignment.BottomCenter)
@@ -119,7 +119,8 @@ fun EroZoneExplorerScreen(
             CustomAlertDialog(
                 isAlertDialogOpen = isAlertDialogOpen,
                 title = alertDialogTitle.value,
-                text = alertDialogText.value
+                text = alertDialogText.value,
+                navController = navController
             )
         }
     }

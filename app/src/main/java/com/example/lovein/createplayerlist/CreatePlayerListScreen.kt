@@ -201,7 +201,8 @@ fun CreatePlayerListScreen(
                 CustomAlertDialog(
                     isAlertDialogOpen = isAlertDialogOpen,
                     title = alertDialogTitle.value,
-                    text = alertDialogText.value
+                    text = alertDialogText.value,
+                    navController = navController
                 )
             }
         }

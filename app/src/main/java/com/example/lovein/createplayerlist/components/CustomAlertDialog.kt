@@ -10,6 +10,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.example.lovein.common.data.NavigationScreens
 import com.example.lovein.ui.theme.AlertDialogConfirmButtonColor
 import com.example.lovein.ui.theme.helveticaFontFamily
 
@@ -17,13 +19,20 @@ import com.example.lovein.ui.theme.helveticaFontFamily
 fun CustomAlertDialog(
     isAlertDialogOpen: MutableState<Boolean>,
     title: String,
-    text: String
+    text: String,
+    navController: NavController
 ) {
     AlertDialog(
         onDismissRequest = { isAlertDialogOpen.value = false },
         confirmButton = {
             TextButton(
-                onClick = { isAlertDialogOpen.value = false }
+                onClick = {
+                    isAlertDialogOpen.value = false
+
+                    if (navController.currentDestination?.route == NavigationScreens.ERO_ZONE_EXPLORER_SCREEN.name) {
+                        navController.navigateUp()
+                    }
+                }
             ) {
                 Text(
                     text = "OK",
