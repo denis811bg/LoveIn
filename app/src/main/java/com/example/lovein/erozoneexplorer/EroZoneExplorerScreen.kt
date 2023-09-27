@@ -179,6 +179,10 @@ private fun initActionCards(context: Context, playerList: List<Player>): Mutable
 
     var playerIndex = 1
     while (true) {
+        if (playerList.isEmpty()) {
+            break
+        }
+
         val selectedEroZoneMutableList: MutableList<EroZoneMutable> =
             playerList[(playerIndex % playerList.size)].selectedEroZones.toMutableList()
         val eroZoneMutable: EroZoneMutable? = getEroZone(selectedEroZoneMutableList)
