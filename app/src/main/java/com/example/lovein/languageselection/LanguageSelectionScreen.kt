@@ -48,11 +48,11 @@ fun LanguageSelectionScreen(navController: NavController) {
                     )
             ) {
                 items(
-                    items = Language.values()
+                    items = Language.entries
                 ) { language ->
                     TextButton(
                         onClick = {
-                            LocalizationManager.setCurrentLocale(language.langAbbrev, context)
+                            LocalizationManager.setCurrentLocale(language.langAbbrev)
                             navController.navigateUp()
                         },
                         modifier = Modifier
