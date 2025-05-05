@@ -1,10 +1,19 @@
 package com.example.lovein.erozoneexplorer
 
 import android.content.Context
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PlayCircle
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -19,7 +28,11 @@ import androidx.navigation.compose.rememberNavController
 import com.example.lovein.R
 import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
-import com.example.lovein.common.data.*
+import com.example.lovein.common.data.Action
+import com.example.lovein.common.data.ActionType
+import com.example.lovein.common.data.EroZone
+import com.example.lovein.common.data.EroZoneType
+import com.example.lovein.common.data.Gender
 import com.example.lovein.common.dtos.PlayerDTO
 import com.example.lovein.common.models.EroZoneMutable
 import com.example.lovein.common.models.Player
@@ -35,6 +48,16 @@ import com.example.lovein.ui.theme.BackgroundLightPinkColor
 import com.example.lovein.ui.theme.FemaleColor
 import com.example.lovein.ui.theme.MaleColor
 import com.example.lovein.utils.convertPlayerDTOListToPlayerList
+import kotlin.collections.List
+import kotlin.collections.MutableList
+import kotlin.collections.any
+import kotlin.collections.filter
+import kotlin.collections.firstOrNull
+import kotlin.collections.isNotEmpty
+import kotlin.collections.listOf
+import kotlin.collections.mutableListOf
+import kotlin.collections.randomOrNull
+import kotlin.collections.toMutableList
 
 @Composable
 fun EroZoneExplorerScreen(
@@ -45,7 +68,7 @@ fun EroZoneExplorerScreen(
 
     val playerList: List<Player> = convertPlayerDTOListToPlayerList(playerDTOList)
 
-    val playerIndex: MutableIntState = remember { mutableStateOf(0) }
+    val playerIndex: MutableState<Int> = remember { mutableIntStateOf(0) }
     val actionCards: MutableList<Card> = initActionCards(context, playerList)
 
     val isAlertDialogOpen: MutableState<Boolean> = remember { mutableStateOf(false) }
@@ -53,7 +76,7 @@ fun EroZoneExplorerScreen(
     val alertDialogText: MutableState<String> = remember { mutableStateOf("") }
 
     CommonContainer(navController = navController) { innerPadding ->
-        if (playerIndex.intValue != 0 && playerIndex.intValue % 5 == 0) showInterstitialAd(context)
+        if (playerIndex.value != 0 && playerIndex.value % 5 == 0) showInterstitialAd(context)
 
         Column(
             modifier = Modifier
@@ -77,7 +100,7 @@ fun EroZoneExplorerScreen(
                 ) {
                     Stack(
                         cards = actionCards,
-                        position = playerIndex.intValue
+                        position = playerIndex.value
                     )
                 }
 
@@ -94,9 +117,9 @@ fun EroZoneExplorerScreen(
                         icon = Icons.Default.PlayCircle,
                         iconContentDescription = "play_circle_icon",
                         onClick = {
-                            playerIndex.intValue++
+                            playerIndex.value++
 
-                            if (playerIndex.intValue >= actionCards.size) {
+                            if (playerIndex.value >= actionCards.size) {
                                 isAlertDialogOpen.value = true
                                 alertDialogTitle.value = LocalizationManager.getLocalizedString(
                                     context = context,
@@ -218,7 +241,8 @@ private fun getEroZone(selectedEroZoneMutableList: MutableList<EroZoneMutable>):
         }
     }
 
-    eroZoneMutable = selectedEroZoneMutableList.filter { it.eroZoneType == EroZoneType.HOT }.randomOrNull()
+    eroZoneMutable =
+        selectedEroZoneMutableList.filter { it.eroZoneType == EroZoneType.HOT }.randomOrNull()
     if (eroZoneMutable != null) {
         if (eroZoneMutable.actionList.isNotEmpty()) {
             return eroZoneMutable
@@ -228,7 +252,8 @@ private fun getEroZone(selectedEroZoneMutableList: MutableList<EroZoneMutable>):
         }
     }
 
-    eroZoneMutable = selectedEroZoneMutableList.filter { it.eroZoneType == EroZoneType.HARD }.randomOrNull()
+    eroZoneMutable =
+        selectedEroZoneMutableList.filter { it.eroZoneType == EroZoneType.HARD }.randomOrNull()
     if (eroZoneMutable != null) {
         if (eroZoneMutable.actionList.isNotEmpty()) {
             return eroZoneMutable
@@ -299,7 +324,11 @@ private fun setBackgroundColor(gender: Gender): Color {
         FemaleColor
 }
 
-private fun buildStylizedText(simpleText: String, stylizedTexts: List<String>, cardColor: Color): AnnotatedString {
+private fun buildStylizedText(
+    simpleText: String,
+    stylizedTexts: List<String>,
+    cardColor: Color
+): AnnotatedString {
     var remainingText = simpleText
     return buildAnnotatedString {
         for (stylizedText in stylizedTexts) {

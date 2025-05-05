@@ -1,8 +1,14 @@
 package com.example.lovein.navigation
 
-import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.data.NavigationScreens
 import com.example.lovein.common.dtos.PlayerDTO
@@ -11,14 +17,10 @@ import com.example.lovein.createplayerlist.CreatePlayerListScreen
 import com.example.lovein.erozoneexplorer.EroZoneExplorerScreen
 import com.example.lovein.info.InfoScreen
 import com.example.lovein.languageselection.LanguageSelectionScreen
-import com.google.accompanist.navigation.animation.AnimatedNavHost
-import com.google.accompanist.navigation.animation.composable
-import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 
-@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun LoveInNavigation() {
-    val navController: NavHostController = rememberAnimatedNavController()
+    val navController: NavHostController = rememberNavController()
     val playerList: MutableList<MutableState<Player>> = remember {
         mutableStateListOf(
             mutableStateOf(Player(Gender.MALE)),
@@ -26,7 +28,7 @@ fun LoveInNavigation() {
         )
     }
 
-    AnimatedNavHost(
+    NavHost(
         navController = navController,
         startDestination = NavigationScreens.CREATE_PLAYER_LIST_SCREEN.name
     ) {

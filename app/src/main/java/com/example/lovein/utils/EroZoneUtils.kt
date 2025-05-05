@@ -16,7 +16,7 @@ fun convertEroZoneToEroZoneMutable(eroZone: EroZone): EroZoneMutable {
 
 fun convertEroZoneMutableListToEroZoneList(selectedEroZoneMutableList: SnapshotStateList<EroZoneMutable>): List<EroZone> {
     return selectedEroZoneMutableList.mapNotNull { eroZoneMutable ->
-        EroZone.values().find { eroZone -> eroZone.resourceId == eroZoneMutable.resourceId }
+        EroZone.entries.find { eroZone -> eroZone.resourceId == eroZoneMutable.resourceId }
     }
 }
 

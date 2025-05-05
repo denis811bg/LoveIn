@@ -4,7 +4,13 @@ import android.content.Context
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.indication
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -13,12 +19,15 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.GroupAdd
 import androidx.compose.material.icons.filled.PlayCircle
-import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -34,7 +43,6 @@ import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.data.NavigationScreens
-import com.example.lovein.common.models.NoRippleTheme
 import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.common.utils.showInterstitialAd
@@ -107,40 +115,43 @@ fun CreatePlayerListScreen(
                 }
 
                 item {
-                    CompositionLocalProvider(LocalRippleTheme provides NoRippleTheme()) {
-                        ExtendedFloatingActionButton(
-                            text = {
-                                Text(
-                                    text = LocalizationManager.getLocalizedString(
-                                        context = context,
-                                        resourceId = R.string.add_next_player
-                                    ),
-                                    color = Color.White,
-                                    fontSize = 16.sp,
-                                    fontStyle = FontStyle.Italic,
-                                    fontWeight = FontWeight.Bold,
-                                    fontFamily = helveticaFontFamily
-                                )
-                            },
-                            icon = {
-                                Icon(
-                                    imageVector = Icons.Default.GroupAdd,
-                                    contentDescription = "group_add_icon",
-                                    tint = Color.White
-                                )
-                            },
-                            onClick = {
-                                playerList.add(mutableStateOf(Player(Gender.MALE)))
+                    ExtendedFloatingActionButton(
+                        modifier = Modifier
+                            .align(alignment = Alignment.Start)
+                            .indication(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null
+                            ),
+                        text = {
+                            Text(
+                                text = LocalizationManager.getLocalizedString(
+                                    context = context,
+                                    resourceId = R.string.add_next_player
+                                ),
+                                color = Color.White,
+                                fontSize = 16.sp,
+                                fontStyle = FontStyle.Italic,
+                                fontWeight = FontWeight.Bold,
+                                fontFamily = helveticaFontFamily
+                            )
+                        },
+                        icon = {
+                            Icon(
+                                imageVector = Icons.Default.GroupAdd,
+                                contentDescription = "group_add_icon",
+                                tint = Color.White
+                            )
+                        },
+                        onClick = {
+                            playerList.add(mutableStateOf(Player(Gender.MALE)))
 
-                                coroutineScope.launch {
-                                    listState.animateScrollToItem(playerList.size - 1)
-                                }
-                            },
-                            modifier = Modifier.align(alignment = Alignment.Start),
-                            containerColor = Color.Transparent,
-                            elevation = FloatingActionButtonDefaults.bottomAppBarFabElevation()
-                        )
-                    }
+                            coroutineScope.launch {
+                                listState.animateScrollToItem(playerList.size - 1)
+                            }
+                        },
+                        containerColor = Color.Transparent,
+                        elevation = FloatingActionButtonDefaults.bottomAppBarFabElevation()
+                    )
                 }
             }
 

@@ -16,7 +16,6 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
@@ -34,7 +33,6 @@ import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.ui.theme.helveticaFontFamily
 
-@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun PlayerInputRow(
     playerList: MutableList<MutableState<Player>>,

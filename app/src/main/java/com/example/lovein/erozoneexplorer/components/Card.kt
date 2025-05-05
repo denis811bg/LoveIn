@@ -141,7 +141,7 @@ fun CardContainerPreview() {
                     .fillMaxSize()
                     .padding(16.dp)
                     .shadow(
-                        elevation = if (color == MaleColor || color == FemaleColor) 16.dp else 0.dp,
+                        elevation = 16.dp,
                         shape = RoundedCornerShape(16.dp)
                     ),
                 shape = RoundedCornerShape(16.dp),
