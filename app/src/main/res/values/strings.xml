@@ -1,18 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">LoveIn</string>
     <string name="play_button">Play</string>
     <string name="players_name">Player\'s name</string>
-    <string name="add_next_player">Add next player</string>
+    <string name="add_next_player">Add another player</string>
     <string name="erogenous_zones">Erogenous zones</string>
-    <string name="clear">Clear</string>
+    <string name="clear">Clear all</string>
 
     <string name="not_enough_players_alert_title">Not enough players</string>
     <string name="not_enough_players_alert_description">You need at least 2 players to launch the game.</string>
     <string name="add_player_names_alert_title">Add player names</string>
     <string name="add_player_names_alert_description">You need to add player names to launch the game.</string>
-    <string name="add_player_ero_zones_alert_title">Add player ero zones</string>
-    <string name="add_player_ero_zones_alert_description">You need to add player erogenous zones to launch the game.
-    </string>
+    <string name="add_player_ero_zones_alert_title">Add erogenous zones</string>
+    <string name="add_player_ero_zones_alert_description">You need to add erogenous zones for each player to start the game.</string>
 
     <string name="scalp_and_hair">Scalp and Hair</string>
     <string name="ears">Ears</string>
@@ -30,496 +30,173 @@
     <string name="inner_thigh">Inner thigh</string>
     <string name="bottom_of_feet_and_toes">Bottom of feet and toes</string>
     <string name="anus">Anus</string>
+    <string name="buttocks">Buttocks</string>
 
     <string name="glans">Glans</string>
     <string name="scrotum_and_testicles">Scrotum and testicles</string>
     <string name="perineum">Perineum</string>
     <string name="prostate">Prostate</string>
+    <string name="penis">Penis</string>
 
     <string name="areola_and_nipples">Areola and nipples</string>
     <string name="pubic_mound">Pubic mound</string>
     <string name="clitoris">Clitoris</string>
     <string name="g_spot">G-spot</string>
-    <string name="scalp_and_hair_massage_action">%, gently massage %\'s scalp. Apply slight pressure to the scalp,
-        varying the speed and intensity of the massage according to your partner\'s preferences. Then, carefully massage
-        the head with the cushions of your fingers in circular motions for 1-3 minutes.
-    </string>
-    <string name="scalp_and_hair_scratch_action">%, lightly scratch %\'s scalp. Move from the nape to the forehead and
-        from the ears upwards to the crown, adjusting the speed and intensity of the movements for added sensations.
-    </string>
-    <string name="scalp_and_hair_pinch_action">%, gently pinch %\'s scalp. While gently pinching, move from the nape to
-        the forehead and from the ears upwards to the crown for additional stimulation of your partner.
-    </string>
-    <string name="scalp_and_hair_pull_action">%, run your fingers through %\'s hair, gently pulling them.
-    </string>
-    <string name="scalp_and_hair_use_accessories_0_action">%, use a soft comb or a wide-toothed comb to gently comb
-        %\'s hair. This can create pleasant sensations, especially if done slowly and rhythmically.
-    </string>
-    <string name="scalp_and_hair_blow_warm_air_action">%, gently blow warm air onto %\'s scalp and hair. This
-        will help create additional excitement and relaxation for your partner.
-    </string>
-    <string name="scalp_and_hair_use_accessories_1_action">%, explore different sensory experiences by adding
-        scented hair products such as oils or perfumes to %\'s scalp and hair.
-    </string>
-    <string name="scalp_and_hair_use_accessories_2_action">%, use special scalp massagers. This will help % feel
-        more relaxed and experience additional stimulation.
-    </string>
-    <string name="ears_massage_action">%, gently massage %\'s earlobes. Use light pressure and circular motions
-        to stimulate the earlobes.
-    </string>
-    <string name="ears_whisper_action">%, whisper tender words to %. Ears are filled with nerve endings and are
-        so sensitive that many people get aroused even from a hot whisper.
-    </string>
-    <string name="ears_bite_action">%, gently nibble on %\'s earlobes to create pleasant sensations.</string>
-    <string name="ears_kiss_action">%, gently kiss %\'s earlobes and the area around the ear. This will help to
-        further arouse your partner and provide unforgettable sensations.
-    </string>
-    <string name="ears_suck_action">%, softly suck on %\'s earlobes for additional arousal and new sensations.
-    </string>
-    <string name="ears_use_accessories_action">%, use a feather or another soft accessory to gently caress the outer
-        contours of %\'s ears, following their shape.
-    </string>
-    <string name="ears_ice_action">%, use an ice cube to stimulate the nerve endings of %\'s earlobes. Gently
-        slide the ice cube along the contours of the ears for additional stimulation and arousal.
-    </string>
-    <string name="navel_kiss_action">%, gently kiss %\'s belly button and the area around it to create pleasant
-        sensations and arousal.
-    </string>
-    <string name="navel_lick_action">%, gently lick %\'s belly button, playfully teasing around it with your
-        tongue.
-    </string>
-    <string name="navel_blow_warm_air_action">%, blow warm breath on %\'s belly button, creating a pleasant
-        feeling of warmth and stimulating erogenous receptors.
-    </string>
-    <string name="navel_use_accessories_action">%, use a feather or other soft accessories. Glide the feather over
-        the skin around %\'s belly button, causing pleasurable sensations and arousal. Lightly touching the skin
-        with a feather can be very sensual.
-    </string>
-    <string name="navel_ice_action">%, gently run an ice cube around %\'s belly button. The ice creates cool
-        sensations and stimulates erogenous receptors.
-    </string>
-    <string name="lower_stomach_kiss_action">%, gently kiss the lower part of %\'s abdomen.</string>
-    <string name="lower_stomach_lick_action">%, gently lick the lower part of %\'s abdomen, moving down from the
-        navel towards the pubic mound. This will help to experience additional excitement and new sensations.
-    </string>
-    <string name="lower_stomach_massage_action">%, gently massage the lower part of %\'s abdomen in circular
-        motions, light pressure, or soft pinches. Use oil or lotion for further arousal of your partner.
-    </string>
-    <string name="lower_stomach_scratch_action">%, delicately run your nails over the skin of %\'s lower
-        abdomen, creating a feeling of slight discomfort that is accompanied by arousal.
-    </string>
-    <string name="lower_stomach_blow_warm_air_action">%, gently blow warm breath on the lower part of %\'s
-        abdomen, creating a pleasant sense of warmth and stimulating the erogenous receptors.
-    </string>
-    <string name="lower_stomach_use_accessories_action">%, use a feather or other soft accessories. Run the feather
-        over the skin of %\'s lower abdomen, creating pleasant sensations and arousal. A light touch of the feather
-        on the skin can be very sensual.
-    </string>
-    <string name="lower_stomach_ice_action">%, gently slide an ice cube over the lower part of %\'s abdomen. The
-        ice creates cool sensations and stimulates the erogenous receptors.
-    </string>
-    <string name="areola_and_nipples_massage_action">%, gently massage %\'s areolas and nipples. With light
-        circular movements, pinches, and pressures, you will give your partner additional excitement and new sensations.
-        Use oils and lotions for a softer and more sensual massage.
-    </string>
+
+    <string name="scalp_and_hair_massage_action">%, gently massage %\'s scalp. Apply light pressure, adjusting the speed and intensity to your partner\'s preferences. Then, use the pads of your fingers to massage the scalp in circular motions for 1–3 minutes.</string>
+    <string name="scalp_and_hair_scratch_action">%, lightly scratch %\'s scalp. Start at the nape and move towards the forehead, then from the ears to the crown. Adjust the speed and pressure to enhance the sensation.</string>
+    <string name="scalp_and_hair_pinch_action">%, gently pinch %\'s scalp. Move from the nape to the forehead and from the ears to the crown while maintaining a light pinching motion to stimulate your partner further.</string>
+    <string name="scalp_and_hair_pull_action">%, run your fingers through %\'s hair and gently pull.</string>
+    <string name="scalp_and_hair_use_accessories_0_action">%, gently comb %\'s hair using a soft or wide-toothed comb. Slow, rhythmic strokes can enhance the pleasurable sensations.</string>
+    <string name="scalp_and_hair_use_accessories_1_action">%, enhance sensory experiences by applying scented hair products, such as oils or perfumes, to %\'s scalp and hair.</string>
+    <string name="scalp_and_hair_use_accessories_2_action">%, use a special scalp massager to help % relax and enjoy additional stimulation.</string>
+    <string name="scalp_and_hair_blow_warm_air_action">%, gently blow warm air onto %\'s scalp and hair. This can promote relaxation and add an extra layer of arousal.</string>
+    <string name="ears_massage_action">%, gently massage %\'s earlobes using light pressure and small circular motions to enhance sensitivity.</string>
+    <string name="ears_whisper_action">%, whisper tender words to %. The ears are rich in nerve endings and can be so sensitive that even a soft whisper can trigger arousal.</string>
+    <string name="ears_bite_action">%, gently nibble on %\'s earlobes to elicit pleasurable sensations.</string>
+    <string name="ears_kiss_action">%, gently kiss %\'s earlobes and the area around the ear. This can deepen arousal and create unforgettable sensations.</string>
+    <string name="ears_suck_action">%, softly suck on %\'s earlobes to enhance arousal and explore new sensations.</string>
+    <string name="ears_use_accessories_action">%, use a feather or another soft accessory to gently trace the outer contours of %\'s ears, following their natural shape.</string>
+    <string name="ears_ice_action">%, use an ice cube to awaken the nerve endings in %\'s earlobes. Gently glide it along the contours of the ears to heighten stimulation and arousal.</string>
+    <string name="navel_kiss_action">%, gently kiss %\'s belly button and the surrounding area to evoke pleasurable sensations and arousal.</string>
+    <string name="navel_lick_action">%, gently lick %\'s belly button, playfully teasing the surrounding area with your tongue.</string>
+    <string name="navel_blow_warm_air_action">%, blow warm breath on %\'s belly button, creating a gentle sensation of warmth and awakening the erogenous nerves.</string>
+    <string name="navel_use_accessories_action">%, use a feather or another soft accessory. Glide it over the skin around %\'s belly button to spark arousal and pleasant sensations. Light, teasing strokes can feel incredibly sensual.</string>
+    <string name="navel_ice_action">%, gently run an ice cube around %\'s belly button. The chill enhances sensitivity and awakens erogenous nerves.</string>
+    <string name="lower_stomach_kiss_action">%, gently kiss the lower part of %\'s abdomen to spark soft, sensual sensations.</string>
+    <string name="lower_stomach_lick_action">%, gently lick the lower part of %\'s abdomen, moving from the navel down to the pubic mound. This can awaken deeper arousal and bring new sensations.</string>
+    <string name="lower_stomach_massage_action">%, gently massage the lower part of %\'s abdomen using circular motions, light pressure, or soft pinches. Use oil or lotion to enhance stimulation and arousal.</string>
+    <string name="lower_stomach_scratch_action">%, delicately run your nails over %\'s lower abdomen, evoking a slight tension that heightens arousal.</string>
+    <string name="lower_stomach_blow_warm_air_action">%, gently blow warm breath on the lower part of %\'s abdomen, creating a soothing warmth that awakens the senses.</string>
+    <string name="lower_stomach_use_accessories_action">%, use a feather or another soft accessory to caress %\'s lower abdomen. Gentle, teasing strokes can evoke deep pleasure and arousal.</string>
+    <string name="lower_stomach_ice_action">%, gently glide an ice cube over the lower part of %\'s abdomen. The chill can amplify sensation and arousal.</string>
+    <string name="areola_and_nipples_massage_action">%, gently massage %\'s areolas and nipples. Use light circular motions, pinches, and gentle pressure to bring your partner new and exciting sensations. Oils or lotions can enhance the softness and sensuality of the massage.</string>
     <string name="areola_and_nipples_kiss_action">%, gently kiss %\'s areolas and nipples.</string>
-    <string name="areola_and_nipples_lick_action">%, gently lick %\'s areolas and nipples. Playful kisses and
-        licking can be particularly arousing.
-    </string>
-    <string name="areola_and_nipples_bite_action">%, use special toys to stimulate %\'s areolas and nipples. For
-        example, small vibrators or clitoral stimulators can be effective in enhancing sensations and arousal.
-    </string>
-    <string name="areola_and_nipples_use_accessories_0_action">%, use special toys to stimulate %\'s areolas and
-        nipples. For example, small vibrators, clitoral stimulators, and nipple clamps with adjustable pressure can be
-        effective in intensifying sensations and arousal.
-    </string>
-    <string name="areola_and_nipples_use_accessories_1_action">%, use a feather or other soft accessories to caress
-        %\'s areolas and nipples. Gentle feather strokes can be especially arousing.
-    </string>
-    <string name="areola_and_nipples_ice_action">%, use ice cubes for additional stimulation of %\'s areolas and
-        nipples. Gently glide the ice cube over the nipples and around them to experience new sensations.
-    </string>
-    <string name="pubic_mound_massage_action">%, gently massage %\'s pubic area. Caress it with light circular
-        movements or stroke its surface. Use oils or lotions. Explore the texture and shape, tuning in to your
-        partner\'s reactions.
-    </string>
-    <string name="pubic_mound_kiss_action">%, gently kiss and caress %\'s pubic area. Playful kisses can be
-        particularly arousing.
-    </string>
-    <string name="pubic_mound_lick_action">%, use your tongue to stimulate %\'s pubic area. Licking can help
-        experience additional arousal.
-    </string>
-    <string name="pubic_mound_use_accessories_0_action">%, use a feather or other soft accessories to stimulate
-        %\'s pubic area. Glide the feather over the surface to add variety and new sensations.
-    </string>
-    <string name="pubic_mound_use_accessories_1_action">%, use special toys such as small vibrators or clitoral
-        stimulators for additional stimulation of %\'s pubic area, to add variety and new sensations.
-    </string>
-    <string name="pubic_mound_ice_action">%, use an ice cube for additional stimulation of %\'s pubic area.
-        Glide the ice cube over your partner\'s pubic area. Playing with temperature can help experience additional
-        arousal.
-    </string>
-    <string name="clitoris_massage_0_action">%, gently stroke and massage %\'s clitoris. Light circular motions
-        and careful caresses will help create pleasant sensations. Use an adequate amount of water-based lubricant to
-        avoid discomfort.
-    </string>
-    <string name="clitoris_massage_1_action">%, massage %\'s clitoris, using gentle pressure combined with
-        circular motions. Use various techniques and intensity to discover what brings more pleasure to your partner.
-    </string>
-    <string name="clitoris_kiss_action">%, gently kiss %\'s clitoris. Vary different rhythms to find what brings
-        the most pleasure to your partner.
-    </string>
-    <string name="clitoris_lick_action">%, use your tongue to caress %\'s clitoris. Use different techniques,
-        such as circular motions, light tongue pressure, and sucking for additional stimulation. Oral stimulation of the
-        clitoris can be very arousing.
-    </string>
-    <string name="clitoris_bite_action">%, gently and carefully nibble on %\'s clitoris for additional
-        stimulation. Consider your partner\'s preferences.
-    </string>
-    <string name="clitoris_use_accessories_action">%, use special clitoral stimulators, vibrators, or massagers for
-        additional clitoral stimulation for %. Make sure to use an adequate amount of water-based lubricant and tune
-        in to your partner\'s reactions.
-    </string>
-    <string name="clitoris_itself_action">%, allow % to independently stimulate her clitoris. This can be an
-        intimate and arousing experience.
-    </string>
-    <string name="g_spot_massage_action">%, insert one or two fingers into %\'s vagina, or you can use a special
-        curved sex toy designed for G-spot stimulation. Use water-based lubricant to moisten the area and facilitate
-        movement. Find a small bulge on the front wall of the vagina. Gently massage the G-spot with circular motions,
-        varying the rhythm and intensity.
-    </string>
-    <string name="g_spot_itself_action">%, allow % to independently stimulate her G-spot using fingers or a
-        special curved sex toy. This can be an intimate and arousing experience.
-    </string>
-    <string name="anus_massage_action">%, use water-based lubricant and start with gentle finger caresses around %\'s
-        anus. Gradually, you can try slow and careful finger penetration inside the anus. It\'s important to be
-        cautious,
-        pay attention to your partner\'s reaction, and consider his preferences and boundaries.
-    </string>
-    <string name="anus_use_accessories_0_action">%, use special anal toys such as anal plugs or anal vibrators to
-        stimulate %\'s anus. Be sure to use an adequate amount of water-based lubricant and start with smaller-sized
-        toys so that your partner can adjust and feel comfortable.
-    </string>
-    <string name="anus_use_accessories_1_action">%, use a feather or other soft accessories to stimulate %\'s
-        anus. Gentle strokes can be very sensual and arousing.
-    </string>
-    <string name="anus_kiss_action">%, gently kiss %\'s anus. Make sure the anal area is clean and lubricated
-        for greater comfort and hygiene.
-    </string>
-    <string name="anus_lick_action">%, gently lick %\'s anus. Make sure the anal area is clean and lubricated
-        for greater comfort and hygiene. Rimming (anal licking) can be erotic and arousing for some people.
-    </string>
-    <string name="anus_ice_action">%, use an ice cube to stimulate %\'s anus. It\'s important to be cautious,
-        pay attention to your partner\'s reaction, and consider his preferences and boundaries.
-    </string>
-    <string name="anus_itself_action">%, % can stimulate his anus independently using fingers or special sex
-        toys, and you can watch and support him during this process. Mutual masturbation can be an intimate and arousing
-        experience.
-    </string>
-    <string name="buttocks_massage_action">%, massage %\'s buttocks. Use circular motions, gentle pressure,
-        stroking, light slaps, rubbing, pinching, or deep massaging movements to arouse your partner. Massage oils or
-        lotions can enhance the stimulation in this area.
-    </string>
-    <string name="buttocks_kiss_action">%, kiss %\'s buttocks. Playful kisses can evoke arousal and pleasure.
-    </string>
-    <string name="buttocks_lick_action">%, lick %\'s buttocks. You can pay extra attention to the area around
-        the anus.
-    </string>
-    <string name="buttocks_bite_action">%, gently nibble on %\'s buttocks. Pay attention to your partner\'s
-        reaction for greater enjoyment.
-    </string>
-    <string name="buttocks_use_accessories_action">%, use feathers or soft accessories to stimulate %\'s
-        buttocks. Glide the feather over the surface to add variety and new sensations, paying special attention to the
-        area around the anus.
-    </string>
-    <string name="buttocks_ice_action">%, gently glide an ice cube over %\'s buttocks. This will provide
-        additional pleasure and new sensations.
-    </string>
-    <string name="buttocks">Buttocks</string>
-    <string name="glans_massage_action">%, gently massage %\'s glans. Use different techniques, such as lightly
-        pressing and squeezing the glans, making up-and-down movements, or massaging the glans in circular motions. Use
-        water-based lubricant to moisturize the glans and facilitate hand movements.
-    </string>
-    <string name="glans_kiss_action">%, gently kiss %\'s glans. Use water-based lubricant to moisturize the
-        glans and facilitate movements.
-    </string>
-    <string name="glans_lick_action">%, gently lick %\'s glans with your tongue. Vary different movements and
-        rhythms, for example, circular movements with your tongue, to find what brings the most pleasure to your
-        partner.
-    </string>
-    <string name="glans_bite_action">%, gently nibble on %\'s glans. Pay attention to your partner\'s reaction
-        and respond to his signals.
-    </string>
-    <string name="glans_suck_action">%, gently suck %\'s glans.</string>
-    <string name="glans_use_accessories_action">%, use special toys such as penis massagers or vibrators to
-        stimulate %\'s glans.
-    </string>
-    <string name="glans_ice_action">%, use an ice cube to stimulate %\'s glans. Playing with temperature can be
-        very exciting.
-    </string>
-    <string name="glans_itself_action">%, let % stimulate his own glans. Pay attention to his preferences and
-        reactions, and support him in this process.
-    </string>
-    <string name="scrotum_and_testicles_massage_action">%, massage %\'s scrotum. Gently caress it with light
-        circular movements, strokes, or gentle squeezing. Pay attention to your partner\'s reactions and preferences.
-        Make sure to use an ample amount of water-based lubricant and tune in to your partner\'s responses.
-    </string>
-    <string name="scrotum_and_testicles_kiss_action">%, gently kiss %\'s scrotum.</string>
-    <string name="scrotum_and_testicles_lick_action">%, use your tongue to stimulate %\'s scrotum. Lick and
-        caress it with tender movements. Vary different motions and rhythms to find what brings the most pleasure to
-        your partner.
-    </string>
-    <string name="scrotum_and_testicles_bite_action">%, gently bite %\'s scrotum. Pay attention to your
-        partner\'s reactions and preferences.
-    </string>
-    <string name="scrotum_and_testicles_suck_action">%, gently suck %\'s scrotum and testicles. Vary different
-        movements and rhythms to find what brings the most pleasure to your partner.
-    </string>
-    <string name="scrotum_and_testicles_use_accessories_0_action">%, use special sex toys for stimulating %\'s
-        scrotum and testicles, such as massagers or vibrators.
-    </string>
-    <string name="scrotum_and_testicles_use_accessories_1_action">%, use a feather or other soft accessories to
-        stimulate %\'s scrotum. Gentle strokes will help create an extra sense of excitement.
-    </string>
-    <string name="perineum_massage_action">%, gently massage %\'s perineum. Caress this area with light circular
-        movements or up-and-down strokes. Pay attention to your partner\'s reactions and his preferences regarding
-        intensity and pressure.
-    </string>
-    <string name="perineum_lick_action">%, use your tongue to stimulate %\'s perineum. Caress this area with
-        gentle tongue movements. Vary different movements and rhythms to find what brings the most pleasure to your
-        partner.
-    </string>
-    <string name="perineum_use_accessories_action">%, use various accessories such as feathers, vibrators, or
-        massagers to stimulate %\'s perineum. Make sure to use an ample amount of water-based lubricant and respond
-        to your partner\'s reactions.
-    </string>
-    <string name="prostate_massage_action">%, use water-based lubricant and gently insert your fingers into %\'s
-        anus. Gently massage the prostate gland, making circular motions on the walls of the rectum. It\'s important to
-        be careful, gentle, and considerate of your partner\'s comfort.
-    </string>
-    <string name="prostate_use_accessories_action">%, use special sex toys such as massagers or vibrators to
-        stimulate %\'s prostate. Make sure to use an adequate amount of water-based lubricant and follow the
-        instructions provided with the toy.
-    </string>
-    <string name="prostate_itself_action">%, let % stimulate his prostate on his own, and you can watch and
-        support him in this process. It can be an intimate and exciting experience for both of you.
-    </string>
-    <string name="penis">Penis</string>
-    <string name="penis_massage_action">%, gently massage %\'s penis. Make sure to use an adequate amount of
-        water-based lubricant for greater comfort. Vary different movements and rhythms, such as up-and-down motions,
-        light strokes, and gentle squeezes, to find what brings the most pleasure to your partner.
-    </string>
-    <string name="penis_kiss_action">%, softly kiss %\'s penis. Move from the base of the penis up to the tip,
-        gently kissing it.
-    </string>
-    <string name="penis_suck_action">%, gently suck %\'s penis. Vary different movements and rhythms, such as
-        up-and-down motions with your lips, deep throating, to find what brings the most pleasure to your partner.
-    </string>
-    <string name="penis_lick_action">%, lick %\'s penis. Use different practices, run your tongue from the base
-        of the penis to the tip, use circular movements.
-    </string>
-    <string name="penis_use_accessories_0_action">%, use special massagers to stimulate %\'s penis. Ensure to use
-        an adequate amount of water-based lubricant for greater comfort.
-    </string>
-    <string name="penis_use_accessories_1_action">%, use feathers or other soft accessories for additional
-        stimulation of %\'s penis. This will provide extra sensations and arousal.
-    </string>
-    <string name="penis_ice_action">%, use an ice cube to stimulate %\'s penis. Playing with temperature can be
-        quite exciting.
-    </string>
-    <string name="penis_itself_action">%, allow % to massage his own penis. Watch for his reactions and
-        preferences.
-    </string>
-    <string name="nipples_massage_action">%, gently massage %\'s nipples and the area around them. Stroke, make
-        circular movements around the nipples, and lightly pinch. Use oils or lotions for more pleasurable sensations.
-    </string>
-    <string name="nipples_kiss_action">%, gently kiss %\'s nipples.</string>
-    <string name="nipples_lick_action">%, lick %\'s nipples and the area around them.</string>
-    <string name="nipples_bite_action">%, you can experiment with lightly nibbling %\'s nipples, carefully and
-        gently.
-    </string>
-    <string name="nipples_ice_action">%, move an ice cube around %\'s nipples or apply it gently to create a
-        sensation of coolness and excitement.
-    </string>
-    <string name="nipples_use_accessories_0_action">%, use a massager, vibrator, or clamp with adjustable pressure
-        to caress and stimulate %\'s nipples to create new exciting sensations and enjoy the sensuality of the
-        accessories.
-    </string>
-    <string name="nipples_use_accessories_1_action">%, use a feather or other soft accessories to stimulate %\'s
-        nipples. This can help to add extra excitement.
-    </string>
-    <string name="nipples_suck_action">%, gently suck on %\'s nipples for additional stimulation.</string>
-    <string name="areola_and_nipples_suck_action">%, gently suck on %\'s nipples for additional stimulation.
-    </string>
-    <string name="small_of_the_back_massage_action">%, massage %\'s lower back. Use different techniques such as
-        circular motions, gentle pressure, pinching, etc. to relax your partner. Oil or lotion can make the massage more
-        arousing.
-    </string>
-    <string name="small_of_the_back_kiss_action">%, kiss %\'s lower back. Explore this area with your lips,
-        paying attention to your partner\'s reactions.
-    </string>
-    <string name="small_of_the_back_use_accessories_action">%, use a feather or another soft accessory to trace
-        along %\'s lower back.
-    </string>
-    <string name="small_of_the_back_ice_action">%, gently glide an ice cube along %\'s lower back.</string>
-    <string name="armpits_massage_action">%, gently massage %\'s armpits. Try light circular motions or strokes
-        to stimulate this area. Oil or lotion can make the massage more arousing.
-    </string>
-    <string name="armpits_kiss_action">%, kiss %\'s armpits with your lips. Playful kisses and gentle caresses
-        can be arousing.
-    </string>
-    <string name="armpits_use_accessories_action">%, use a feather or other soft accessories to tickle %\'s
-        armpits.
-    </string>
-    <string name="armpits_ice_action">%, use an ice cube for additional stimulation of %\'s armpits. Slowly and
-        gently glide the ice cube over her armpits to give your partner a new experience and arousal.
-    </string>
-    <string name="inner_arms_massage_action">%, massage the inner side of %\'s arms gently. Use strokes,
-        circular motions, and pinching for additional stimulation. Massaging with oil or lotion can intensify the
-        sensations.
-    </string>
-    <string name="inner_arms_kiss_action">%, caress the inner side of %\'s arms with kisses or light nibbling
-        with your lips. Playful kisses and gentle touches can be arousing.
-    </string>
-    <string name="inner_arms_lick_action">%, use your tongue to stimulate the inner side of %\'s arms. Lightly
-        licking along the inner side of her arms can create pleasurable sensations and excitement.
-    </string>
-    <string name="inner_arms_use_accessories_action">%, use a feather or other soft accessories to stimulate the
-        inner side of %\'s arms.
-    </string>
-    <string name="inner_arms_ice_action">%, use an ice cube for additional massage on the inner side of %\'s
-        arms. It can add variety and new sensations to your experience.
-    </string>
-    <string name="inner_wrist_massage_action">%, gently massage the inner side of %\'s wrists. Using oil or
-        lotion for the massage can intensify the sensations.
-    </string>
-    <string name="inner_wrist_kiss_action">%, caress the inner side of %\'s wrists with kisses. Playful kisses
-        and tender touches can be arousing.
-    </string>
-    <string name="inner_wrist_lick_action">%, lick the inner side of %\'s wrists. Gentle licking along the inner
-        side of the wrists can evoke pleasant sensations and arousal.
-    </string>
-    <string name="inner_wrist_use_accessories_action">%, use a feather or other soft accessories to stimulate the
-        inner side of %\'s wrists. This can add variety and new sensations to your experience.
-    </string>
-    <string name="inner_wrist_ice_action">%, use an ice cube for additional stimulation on the inner side of
-        %\'s wrists. Playing with temperature can help create additional excitement.
-    </string>
-    <string name="palm_of_hands_and_fingertips_massage_action">%, massage %\'s palms using gentle pressure and
-        circular motions. This can create pleasant sensations and relaxation.
-    </string>
-    <string name="palm_of_hands_and_fingertips_kiss_action">%, kiss %\'s palms with your lips. Pay attention to
-        the fingertips and touch them with tender kisses.
-    </string>
-    <string name="palm_of_hands_and_fingertips_lick_action">%, lick %\'s palms and fingertips for additional
-        stimulation and arousal.
-    </string>
-    <string name="palm_of_hands_and_fingertips_suck_action">%, suck on %\'s fingertips. This can help enhance
-        the excitement.
-    </string>
-    <string name="palm_of_hands_and_fingertips_use_accessories_action">%, use feathers or other soft accessories to
-        stimulate %\'s palms and fingertips. This can add new sensations and increase arousal.
-    </string>
-    <string name="behind_the_knee_massage_action">%, gently massage the area behind %\'s knees. Try light
-        circular motions, pressings, and pinches in this area. Pay attention to your partner\'s reaction and
-        preferences. Applying massage oil or lotion in the area behind the knees can create additional pleasure and
-        arousal.
-    </string>
-    <string name="behind_the_knee_kiss_action">%, kiss the area behind %\'s knees and lightly nibble with your
-        lips. Erotic kisses and gentle caresses can be arousing.
-    </string>
-    <string name="behind_the_knee_lick_action">%, lick the area behind %\'s knees to create pleasurable
-        sensations.
-    </string>
-    <string name="behind_the_knee_use_accessories_action">%, use a feather or other soft accessories in the area
-        behind %\'s knees to provide additional pleasure and arousal.
-    </string>
-    <string name="lips_massage_action">%, gently run your fingertips along %\'s lips. You can also use food,
-        like fruits, ice cream, etc. Glide a piece of food over her lips and let your partner eat it. This will allow
-        her to experience new sensations and excitement.
-    </string>
-    <string name="lips_kiss_action">%, experiment with different types of kisses - gentle, passionate, playful, or
-        light touches with your lips. Vary the intensity and rhythm to discover new sensations and arouse %.
-    </string>
-    <string name="lips_lick_action">%, use the tip of your tongue to caress %\'s lips. This may include gentle
-        licking, circular motions, etc. Explore which movements and touches bring her the most pleasure.
-    </string>
-    <string name="lips_bite_action">%, nibble on %\'s lips gently and carefully to experience new sensations and
-        enhance stimulation. For some people, gentle biting or light nibbling on the lips can be arousing.
-    </string>
-    <string name="neck_massage_0_action">%, massage %\'s neck. Use gentle pressure and circular motions to relax
-        your partner\'s muscles, which will create pleasant sensations. Use oils or lotions for a more enjoyable
-        experience.
-    </string>
-    <string name="neck_massage_1_action">%, vary your touches and pressure according to %\'s preferences. Use
-        your fingertips for light caresses or apply gentle pressure to different areas of the neck. Don\'t forget to use
-        oil or lotion for increased arousal.
-    </string>
-    <string name="neck_kiss_action">%, kiss or lightly nibble on %\'s neck. Playful kisses along the neck can
-        create pleasurable sensations and arousal.
-    </string>
-    <string name="neck_lick_action">%, lick %\'s neck. This can evoke erotic sensations and intensify
-        stimulation.
-    </string>
-    <string name="neck_use_accessories_action">%, use feathers or other soft accessories to stimulate %\'s neck.
-        Glide the feathers along her neck or use soft accessories to create new sensations.
-    </string>
-    <string name="neck_ice_action">%, use an ice cube on %\'s neck area. Playing with temperature can bring new
-        sensations and arousal.
-    </string>
-    <string name="lips_ice_action">%, run an ice cube over %\'s lips. Playing with temperature can bring new
-        sensations and arousal.
-    </string>
-    <string name="inner_thigh_massage_0_action">%, gently massage %\'s inner thigh. Gentle and caressing touches
-        can create pleasant sensations and arousal. Use oils or lotions for a more enjoyable experience.
-    </string>
-    <string name="inner_thigh_massage_1_action">%, vary your touches and pressure on %\'s inner thigh. Some
-        people enjoy light and tender touches, while others prefer more intense and vigorous movements. Don\'t forget to
-        use oils or lotions for added arousal.
-    </string>
-    <string name="inner_thigh_kiss_action">%, caress %\'s inner thigh with your lips, kiss it or lightly nibble
-        with your lips. Playful kisses and gentle caresses can be arousing.
-    </string>
-    <string name="inner_thigh_lick_action">%, use your tongue to stimulate %\'s inner thigh. Light licks along
-        the inner thigh can create pleasant sensations and arousal.
-    </string>
-    <string name="inner_thigh_bite_action">%, gently nibble on the outer surface of %\'s thigh for additional
-        stimulation.
-    </string>
-    <string name="inner_thigh_use_accessories_0_action">%, use feathers or other soft accessories to stimulate
-        %\'s inner thigh. This can add variety and new sensations to your experience.
-    </string>
-    <string name="inner_thigh_use_accessories_1_action">%, use a massager, vibrator, or other accessories for
-        additional stimulation on %\'s outer thigh. This will provide unforgettable sensations to your partner and
-        help them experience additional arousal.
-    </string>
-    <string name="inner_thigh_ice_action">%, use an ice cube for additional stimulation on %\'s inner thigh. It
-        will help to experience extra excitement.
-    </string>
-    <string name="bottom_of_feet_and_toes_massage_0_action">%, massage %\'s feet in circular motions, apply
-        gentle pressure, and move from the base of the toes to the heel. Focus on various points on her feet to relax
-        and stimulate them. Using oil or lotion will help your partner achieve greater relaxation and pleasure.
-    </string>
-    <string name="bottom_of_feet_and_toes_massage_1_action">%, stroke %\'s feet and toes with the tips of your
-        fingers. This can be a pleasant and soothing gesture.
-    </string>
-    <string name="bottom_of_feet_and_toes_kiss_action">%, kiss %\'s feet and toes for additional stimulation and
-        excitement.
-    </string>
-    <string name="bottom_of_feet_and_toes_lick_action">%, use your tongue to stimulate %\'s feet and toes.
-        Licking her feet and toes can create pleasurable sensations.
-    </string>
-    <string name="bottom_of_feet_and_toes_suck_action">%, suck on %\'s toes. This will help relax your partner
-        and provide them with additional pleasure and excitement.
-    </string>
-    <string name="bottom_of_feet_and_toes_use_accessories_action">%, massage %\'s feet using feathers, massage
-        balls, roller massagers, or special accessories. This can help intensify the sensations and add variety to the
-        experience.
-    </string>
-    <string name="bottom_of_feet_and_toes_ice_action">%, use an ice cube for additional stimulation of %\'s
-        feet. Glide the ice cube over her feet, applying light pressure on various points to relax and stimulate her
-        feet.
-    </string>
+    <string name="areola_and_nipples_suck_action">%, gently suck on %\'s nipples, alternating with soft licks or kisses to enhance stimulation and arousal.</string>
+    <string name="areola_and_nipples_lick_action">%, gently lick %\'s areolas and nipples. Playful licking and soft kisses can be especially arousing.</string>
+    <string name="areola_and_nipples_bite_action">%, gently nibble or lightly bite %\'s nipples and areolas. Pay close attention to your partner\'s reaction and adjust the pressure to ensure it stays pleasurable.</string>
+    <string name="areola_and_nipples_use_accessories_0_action">%, use special toys to stimulate %\'s areolas and nipples. Small vibrators, clitoral stimulators, or nipple clamps with adjustable pressure can intensify sensations and arousal.</string>
+    <string name="areola_and_nipples_use_accessories_1_action">%, use a feather or another soft accessory to caress %\'s areolas and nipples. Gentle strokes can feel incredibly arousing.</string>
+    <string name="areola_and_nipples_ice_action">%, use an ice cube to stimulate %\'s areolas and nipples. Gently glide it over and around the nipples to evoke new sensations.</string>
+    <string name="pubic_mound_massage_action">%, gently massage %\'s pubic area. Caress it with light circular motions or smooth strokes. Use oils or lotions to enhance the sensations. Explore the texture and shape while tuning in to your partner\'s responses.</string>
+    <string name="pubic_mound_kiss_action">%, gently kiss and caress %\'s pubic area. Soft, playful kisses can be especially arousing.</string>
+    <string name="pubic_mound_lick_action">%, use your tongue to stimulate %\'s pubic area. Gentle licking can heighten sensitivity and arousal.</string>
+    <string name="pubic_mound_use_accessories_0_action">%, use a feather or another soft accessory to stimulate %\'s pubic area. Glide it over the surface to introduce variety and awaken new sensations.</string>
+    <string name="pubic_mound_use_accessories_1_action">%, use special toys such as small vibrators or clitoral stimulators to stimulate %\'s pubic area. These can add variety and create new, exciting sensations.</string>
+    <string name="pubic_mound_ice_action">%, gently glide an ice cube over %\'s pubic area to stimulate the skin. Playing with temperature can intensify sensations and heighten arousal.</string>
+    <string name="clitoris_massage_0_action">%, gently stroke and massage %\'s clitoris. Light circular motions and delicate caresses can create pleasant sensations. Use a generous amount of water-based lubricant to avoid discomfort.</string>
+    <string name="clitoris_massage_1_action">%, massage %\'s clitoris using gentle pressure and circular motions. Try different techniques and levels of intensity to discover what brings your partner the most pleasure.</string>
+    <string name="clitoris_kiss_action">%, gently kiss %\'s clitoris. Experiment with different rhythms to find what gives your partner the most pleasure.</string>
+    <string name="clitoris_lick_action">%, use your tongue to caress %\'s clitoris. Try different techniques, such as circular motions, light pressure, and gentle sucking, to enhance stimulation. Oral play can be intensely arousing.</string>
+    <string name="clitoris_bite_action">%, gently nibble on %\'s clitoris to provide subtle stimulation. Always pay attention to your partner\'s preferences and comfort.</string>
+    <string name="clitoris_use_accessories_action">%, use clitoral stimulators, vibrators, or massagers to pleasure %. Be sure to use plenty of water-based lubricant and stay attentive to your partner\'s reactions.</string>
+    <string name="clitoris_itself_action">%, invite % to stimulate her clitoris herself. This can be a deeply intimate and arousing experience.</string>
+    <string name="g_spot_massage_action">%, insert one or two fingers into %\'s vagina, or use a specially curved toy designed for G-spot stimulation. Apply water-based lubricant to moisten the area and ensure smooth movement. Locate a small bulge on the front vaginal wall, then gently massage the G-spot with circular motions, varying rhythm and intensity.</string>
+    <string name="g_spot_itself_action">%, invite % to stimulate her G-spot herself using fingers or a curved toy. This can be a deeply intimate and arousing experience.</string>
+    <string name="anus_massage_action">%, apply water-based lubricant and begin with gentle finger caresses around %\'s anus. Gradually explore slow and careful penetration with a finger. Always be cautious, observe your partner\'s reaction, and respect his preferences and boundaries.</string>
+    <string name="anus_use_accessories_0_action">%, use anal toys such as plugs or vibrators to stimulate %\'s anus. Always use plenty of water-based lubricant, and begin with smaller-sized toys to help your partner feel safe and comfortable.</string>
+    <string name="anus_use_accessories_1_action">%, use a feather or another soft accessory to stimulate %\'s anus. Gentle, teasing strokes can feel deeply sensual and arousing.</string>
+    <string name="anus_kiss_action">%, gently kiss %\'s anus. Make sure the area is clean and lubricated to ensure comfort and hygiene.</string>
+    <string name="anus_lick_action">%, gently lick %\'s anus. Ensure the area is clean and lubricated for comfort and hygiene. Rimming (anal licking) can be highly erotic and deeply arousing for some people.</string>
+    <string name="anus_ice_action">%, use an ice cube to stimulate %\'s anus. Be cautious, observe your partner\'s reaction, and respect his boundaries and comfort levels.</string>
+    <string name="anus_itself_action">%, % can stimulate his anus on his own using fingers or anal toys, while you watch and offer support. Mutual self-pleasure can be a deeply intimate and arousing experience.</string>
+    <string name="buttocks_massage_action">%, massage %\'s buttocks using circular motions, gentle pressure, stroking, light slaps, rubbing, pinching, or deep kneading. Massage oils or lotions can enhance stimulation in this sensitive area.</string>
+    <string name="buttocks_kiss_action">%, kiss %\'s buttocks. Playful kisses can awaken arousal and pleasure.</string>
+    <string name="buttocks_lick_action">%, lick %\'s buttocks, giving extra attention to the area around the anus if your partner enjoys it.</string>
+    <string name="buttocks_bite_action">%, gently nibble on %\'s buttocks. Pay close attention to your partner\'s response to ensure it remains pleasurable.</string>
+    <string name="buttocks_use_accessories_action">%, use a feather or another soft accessory to stimulate %\'s buttocks. Gently glide it over the skin to introduce variety and new sensations, focusing especially on the area around the anus if desired.</string>
+    <string name="buttocks_ice_action">%, gently glide an ice cube over %\'s buttocks to offer cool contrast and awaken new sensations.</string>
+    <string name="glans_massage_action">%, gently massage %\'s glans. Try different techniques, such as light pressure, gentle squeezing, up-and-down strokes, or circular motions. Use water-based lubricant to keep the area moisturized and ensure smooth hand movements.</string>
+    <string name="glans_kiss_action">%, gently kiss %\'s glans. Use water-based lubricant to keep the area soft and ensure comfortable movements.</string>
+    <string name="glans_lick_action">%, gently lick %\'s glans with your tongue. Experiment with different movements and rhythms, such as slow circles or tip-focused strokes, to discover what brings your partner the most pleasure.</string>
+    <string name="glans_bite_action">%, gently nibble on %\'s glans. Watch your partner\'s reaction closely and adjust based on his response.</string>
+    <string name="glans_suck_action">%, gently suck on %\'s glans, maintaining soft, consistent pressure for maximum pleasure.</string>
+    <string name="glans_use_accessories_action">%, use toys such as penis massagers or vibrators to stimulate %\'s glans. Always apply water-based lubricant for comfort and enhanced sensation.</string>
+    <string name="glans_ice_action">%, gently glide an ice cube over %\'s glans. Temperature play can create surprising and exciting sensations.</string>
+    <string name="glans_itself_action">%, let % stimulate his own glans. Be attentive to his preferences and reactions, and support him throughout the experience.</string>
+    <string name="scrotum_and_testicles_massage_action">%, massage %\'s scrotum. Gently caress it with light circular motions, soft strokes, or gentle squeezes. Use plenty of water-based lubricant and stay attentive to your partner\'s responses and preferences.</string>
+    <string name="scrotum_and_testicles_kiss_action">%, gently kiss %\'s scrotum to offer a delicate and intimate sensation.</string>
+    <string name="scrotum_and_testicles_lick_action">%, use your tongue to stimulate %\'s scrotum. Lick and caress it with soft, deliberate motions. Explore different rhythms to discover what brings your partner the most pleasure.</string>
+    <string name="scrotum_and_testicles_bite_action">%, gently nibble or bite %\'s scrotum. Be attentive to your partner\'s responses and comfort level.</string>
+    <string name="scrotum_and_testicles_suck_action">%, gently suck %\'s scrotum and testicles. Experiment with various rhythms and techniques to discover what gives your partner the most pleasure.</string>
+    <string name="scrotum_and_testicles_use_accessories_0_action">%, use toys like massagers or vibrators to stimulate %\'s scrotum and testicles. Always apply water-based lubricant for smooth sensations.</string>
+    <string name="scrotum_and_testicles_use_accessories_1_action">%, use a feather or another soft accessory to stimulate %\'s scrotum. Gentle strokes can awaken sensitivity and add excitement.</string>
+    <string name="perineum_massage_action">%, gently massage %\'s perineum. Caress this sensitive area with light circular motions or up-and-down strokes. Pay close attention to your partner\'s reactions and preferences regarding intensity and pressure.</string>
+    <string name="perineum_lick_action">%, use your tongue to stimulate %\'s perineum. Caress this area with soft, deliberate tongue movements. Experiment with different rhythms to discover what brings your partner the most pleasure.</string>
+    <string name="perineum_use_accessories_action">%, use accessories like feathers, vibrators, or massagers to stimulate %\'s perineum. Always use plenty of water-based lubricant and stay attuned to your partner\'s reactions.</string>
+    <string name="prostate_massage_action">%, apply water-based lubricant and gently insert your fingers into %\'s anus. Massage the prostate with light circular motions along the front wall of the rectum. Always be careful, gentle, and attentive to your partner\'s comfort.</string>
+    <string name="prostate_use_accessories_action">%, use prostate massagers or vibrators to stimulate %\'s prostate. Always use plenty of water-based lubricant and follow the toy\'s instructions carefully.</string>
+    <string name="prostate_itself_action">%, let % explore prostate stimulation on his own while you offer support and presence. This can be a deeply intimate and exciting experience for both of you.</string>
+    <string name="penis_massage_action">%, gently massage %\'s penis. Use plenty of water-based lubricant for optimal comfort. Experiment with different rhythms and motions—such as up-and-down strokes, light touches, and gentle squeezes—to discover what brings your partner the most pleasure.</string>
+    <string name="penis_kiss_action">%, softly kiss %\'s penis, moving from the base to the tip with tender kisses.</string>
+    <string name="penis_suck_action">%, gently suck %\'s penis. Try different rhythms and techniques, like slow up-and-down motions or deeper movements, to discover what gives your partner the most pleasure.</string>
+    <string name="penis_lick_action">%, lick %\'s penis. Run your tongue from the base to the tip, using circular motions or gentle strokes to vary the sensation.</string>
+    <string name="penis_use_accessories_0_action">%, use penis massagers or vibrators to stimulate %\'s penis. Always apply plenty of water-based lubricant to ensure smooth and pleasurable sensations.</string>
+    <string name="penis_use_accessories_1_action">%, use a feather or another soft accessory to stimulate %\'s penis. Gentle touches can awaken extra sensations and enhance arousal.</string>
+    <string name="penis_ice_action">%, gently glide an ice cube over %\'s penis. Temperature play can be surprisingly stimulating and exciting.</string>
+    <string name="penis_itself_action">%, let % massage his own penis while you observe and support him. Pay close attention to his reactions and preferences.</string>
+    <string name="nipples_massage_action">%, gently massage %\'s nipples and the surrounding area. Use soft strokes, circular motions, and light pinches. Oils or lotions can enhance the sensations and make the experience even more pleasurable.</string>
+    <string name="nipples_kiss_action">%, gently kiss %\'s nipples with slow, tender pressure.</string>
+    <string name="nipples_lick_action">%, softly lick %\'s nipples and the area around them, varying speed and pressure for added pleasure.</string>
+    <string name="nipples_bite_action">%, lightly nibble on %\'s nipples, staying gentle and attentive to your partner\'s response.</string>
+    <string name="nipples_ice_action">%, glide an ice cube around %\'s nipples or gently press it to the skin to create a cool, stimulating sensation.</string>
+    <string name="nipples_use_accessories_0_action">%, use a massager, vibrator, or adjustable clamp to stimulate %\'s nipples. These accessories can create exciting new sensations and deepen the sensual experience.</string>
+    <string name="nipples_use_accessories_1_action">%, use a feather or another soft accessory to tease %\'s nipples. This can awaken extra excitement and arousal.</string>
+    <string name="nipples_suck_action">%, gently suck on %\'s nipples, alternating with light licks or kisses to increase stimulation.</string>
+    <string name="small_of_the_back_massage_action">%, massage %\'s lower back. Try different techniques such as circular motions, gentle pressure, or light pinching to help your partner relax. Using oil or lotion can also make the massage more sensual and arousing.</string>
+    <string name="small_of_the_back_kiss_action">%, kiss %\'s lower back. Explore the area with soft, lingering kisses while observing your partner\'s reactions.</string>
+    <string name="small_of_the_back_use_accessories_action">%, use a feather or another soft accessory to slowly trace along %\'s lower back, awakening delicate sensations.</string>
+    <string name="small_of_the_back_ice_action">%, gently glide an ice cube along %\'s lower back to introduce a cool, thrilling contrast.</string>
+    <string name="armpits_massage_action">%, gently massage %\'s armpits. Use light circular motions or soft strokes to stimulate this sensitive area. Applying oil or lotion can make the experience more sensual and arousing.</string>
+    <string name="armpits_kiss_action">%, kiss %\'s armpits with your lips. Playful kisses and soft caresses can be unexpectedly arousing.</string>
+    <string name="armpits_use_accessories_action">%, use a feather or another soft accessory to lightly tease %\'s armpits, adding a playful and stimulating sensation.</string>
+    <string name="armpits_ice_action">%, slowly glide an ice cube over %\'s armpits to awaken new sensations and add a thrilling chill to the experience.</string>
+    <string name="inner_arms_massage_action">%, gently massage the inner side of %\'s arms. Use soft strokes, circular motions, and light pinching to enhance stimulation. Massage oil or lotion can intensify the sensations and increase arousal.</string>
+    <string name="inner_arms_kiss_action">%, caress the inner side of %\'s arms with soft kisses or light nibbling. Playful touches in this area can be surprisingly arousing.</string>
+    <string name="inner_arms_lick_action">%, use your tongue to stimulate the inner side of %\'s arms. Light licking in this sensitive area can create waves of pleasure and anticipation.</string>
+    <string name="inner_arms_use_accessories_action">%, use a feather or another soft accessory to gently tease the inner side of %\'s arms and spark new sensations.</string>
+    <string name="inner_arms_ice_action">%, glide an ice cube along the inner side of %\'s arms. This cool contrast can introduce exciting variety and heighten sensitivity.</string>
+    <string name="inner_wrist_massage_action">%, gently massage the inner side of %\'s wrists. Using oil or lotion can enhance the sensations and add a sensual touch to the experience.</string>
+    <string name="inner_wrist_kiss_action">%, caress the inner side of %\'s wrists with playful kisses. Gentle touches in this sensitive area can spark arousal.</string>
+    <string name="inner_wrist_lick_action">%, gently lick the inner side of %\'s wrists. Soft tongue movements here can awaken pleasure and build anticipation.</string>
+    <string name="inner_wrist_use_accessories_action">%, use a feather or another soft accessory to gently stimulate the inner side of %\'s wrists. This can introduce variety and spark new sensations.</string>
+    <string name="inner_wrist_ice_action">%, glide an ice cube along the inner side of %\'s wrists. Temperature play here can create an exciting and refreshing contrast.</string>
+    <string name="palm_of_hands_and_fingertips_massage_action">%, massage %\'s palms with gentle pressure and circular motions. This can create soothing sensations and deep relaxation.</string>
+    <string name="palm_of_hands_and_fingertips_kiss_action">%, kiss %\'s palms gently with your lips. Don\'t forget the fingertips—touch them with slow, tender kisses.</string>
+    <string name="palm_of_hands_and_fingertips_lick_action">%, gently lick %\'s palms and fingertips to heighten arousal and offer a unique sensual experience.</string>
+    <string name="palm_of_hands_and_fingertips_suck_action">%, softly suck on %\'s fingertips. This can intensify arousal and create a teasing, sensual moment.</string>
+    <string name="palm_of_hands_and_fingertips_use_accessories_action">%, use a feather or another soft accessory to stimulate %\'s palms and fingertips. Light touches can introduce new sensations and enhance arousal.</string>
+    <string name="behind_the_knee_massage_action">%, gently massage the area behind %\'s knees using light circular motions, soft pressure, or gentle pinches. Pay close attention to your partner\'s reactions and preferences. Applying massage oil or lotion can enhance the sensations and add to the arousal.</string>
+    <string name="behind_the_knee_kiss_action">%, kiss the area behind %\'s knees, adding playful nibbles with your lips. Gentle, erotic kisses in this sensitive spot can be highly arousing.</string>
+    <string name="behind_the_knee_lick_action">%, gently lick the area behind %\'s knees to awaken pleasurable and unexpected sensations.</string>
+    <string name="behind_the_knee_use_accessories_action">%, use a feather or another soft accessory to tease the area behind %\'s knees. Light touches can provide extra pleasure and enhance arousal.</string>
+    <string name="lips_massage_action">%, gently run your fingertips along %\'s lips. You can also use food, like fruit or ice cream—glide it over her lips and let her taste it slowly. This adds playful intimacy and awakens new sensations.</string>
+    <string name="lips_kiss_action">%, experiment with different types of kisses—gentle, passionate, playful, or barely-there lip touches. Vary the rhythm and intensity to explore what excites % the most.</string>
+    <string name="lips_lick_action">%, use the tip of your tongue to slowly caress %\'s lips with gentle licks or circular motions. Explore what types of touches bring her the most pleasure.</string>
+    <string name="lips_bite_action">%, gently nibble on %\'s lips to enhance stimulation and awaken new sensations. Many find soft biting or teasing nibbles on the lips highly arousing.</string>
+    <string name="lips_ice_action">%, slowly run an ice cube over %\'s lips. The contrast in temperature can awaken new sensations and spark arousal.</string>
+    <string name="neck_massage_0_action">%, massage %\'s neck using gentle pressure and circular motions to relax the muscles and create pleasant sensations. Massage oils or lotions can make the experience even more enjoyable.</string>
+    <string name="neck_massage_1_action">%, vary your touch and pressure based on %\'s preferences. Use your fingertips for light caresses, or apply gentle pressure to different parts of the neck. Don\'t forget to use oil or lotion to heighten arousal.</string>
+    <string name="neck_kiss_action">%, kiss or gently nibble %\'s neck. Playful touches in this sensitive area can trigger waves of pleasure and arousal.</string>
+    <string name="neck_lick_action">%, slowly lick %\'s neck. This can evoke deep erotic sensations and intensify the moment.</string>
+    <string name="neck_use_accessories_action">%, use a feather or another soft accessory to tease %\'s neck. Glide it along the skin to introduce new, tingling sensations.</string>
+    <string name="neck_ice_action">%, glide an ice cube along %\'s neck. The contrast of cold against warm skin can awaken new sensations and heighten arousal.</string>
+    <string name="inner_thigh_massage_0_action">%, gently massage %\'s inner thigh. Soft, caressing touches can create deeply pleasurable sensations and spark arousal. Using oils or lotions can make the experience even more sensual.</string>
+    <string name="inner_thigh_massage_1_action">%, vary your touch and pressure on %\'s inner thigh. Some enjoy soft, delicate caresses, while others respond better to firmer, more vigorous strokes. Don\'t forget to use oil or lotion to enhance arousal.</string>
+    <string name="inner_thigh_kiss_action">%, caress %\'s inner thigh with your lips—kiss it gently or playfully nibble to build anticipation. This area is often very sensitive and highly arousing.</string>
+    <string name="inner_thigh_lick_action">%, use your tongue to explore %\'s inner thigh. Gentle licks along this sensitive area can awaken pleasure and arousal.</string>
+    <string name="inner_thigh_bite_action">%, gently nibble on the outer part of %\'s thigh to add playful stimulation and deepen arousal.</string>
+    <string name="inner_thigh_use_accessories_0_action">%, use a feather or another soft accessory to tease %\'s inner thigh. Light strokes can introduce variety and awaken new sensations.</string>
+    <string name="inner_thigh_use_accessories_1_action">%, use a massager, vibrator, or similar accessory to stimulate %\'s outer thigh. This can create unforgettable sensations and heighten your partner\'s arousal.</string>
+    <string name="inner_thigh_ice_action">%, gently glide an ice cube along %\'s inner thigh. The cool contrast can heighten sensitivity and spark extra excitement.</string>
+    <string name="bottom_of_feet_and_toes_massage_0_action">%, massage %\'s feet using circular motions and gentle pressure, moving from the base of the toes down to the heel. Focus on key points to relax and stimulate. Using oil or lotion can enhance relaxation and intensify pleasure.</string>
+    <string name="bottom_of_feet_and_toes_massage_1_action">%, gently stroke %\'s feet and toes with your fingertips. This soothing gesture can feel incredibly comforting and intimate.</string>
+    <string name="bottom_of_feet_and_toes_kiss_action">%, kiss %\'s feet and toes slowly and sensually to provide extra stimulation and playful excitement.</string>
+    <string name="bottom_of_feet_and_toes_lick_action">%, use your tongue to stimulate %\'s feet and toes. Gentle licking can evoke pleasant tingles and awaken new sensations.</string>
+    <string name="bottom_of_feet_and_toes_suck_action">%, softly suck on %\'s toes. This can be both deeply relaxing and surprisingly arousing for your partner.</string>
+    <string name="bottom_of_feet_and_toes_use_accessories_action">%, stimulate %\'s feet using feathers, massage balls, rollers, or other accessories. These tools can deepen sensation and introduce playful variety.</string>
+    <string name="bottom_of_feet_and_toes_ice_action">%, glide an ice cube over %\'s feet, applying light pressure to key points. The cool sensation can relax and awaken heightened sensitivity.</string>
+
     <string name="about_app_description">\t\tWelcome to LoveIn - the mobile application designed to bring pleasure, enjoyment, and a new
         experience to your intimate life! LoveIn is a unique experience for partners, exploring new emotional facets and
         intimate scenarios for those who seek to strengthen their relationship and improve their bond with their
@@ -541,8 +218,7 @@
         a unique experience created with love and care, and share moments of passion and intimacy with your partner or
         friends. Enjoy boldness and novelty in your relationship with LoveIn.
     </string>
+
     <string name="game_over_title">Game over.</string>
-    <string name="game_over_description">The player with the username % has run out of all cards. You can go back a step
-        and start over.
-    </string>
+    <string name="game_over_description">The player named % has used up all their cards. You can go back and start over.</string>
 </resources>
