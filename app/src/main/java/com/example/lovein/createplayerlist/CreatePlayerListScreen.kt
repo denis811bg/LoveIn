@@ -53,6 +53,7 @@ import com.example.lovein.ui.theme.helveticaFontFamily
 import com.example.lovein.utils.convertPlayerListToPlayerDTOList
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import kotlin.random.Random
 
 @Composable
 fun CreatePlayerListScreen(
@@ -143,7 +144,8 @@ fun CreatePlayerListScreen(
                             )
                         },
                         onClick = {
-                            playerList.add(mutableStateOf(Player(Gender.MALE)))
+                            val gender = if (Random.nextBoolean()) Gender.MALE else Gender.FEMALE
+                            playerList.add(mutableStateOf(Player(gender)))
 
                             coroutineScope.launch {
                                 listState.animateScrollToItem(playerList.size - 1)

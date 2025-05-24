@@ -1,555 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">LoveIn</string>
-    <string name="play_button">Giocare</string>
+    <string name="play_button">Gioca</string>
     <string name="players_name">Nome del giocatore</string>
     <string name="add_next_player">Aggiungi prossimo giocatore</string>
     <string name="erogenous_zones">Zone erogene</string>
-    <string name="clear">Pulire</string>
+    <string name="clear">Cancella</string>
+
+    <string name="not_enough_players_alert_title">Giocatori insufficienti</string>
+    <string name="not_enough_players_alert_description">Hai bisogno di almeno 2 giocatori per iniziare il gioco.</string>
+    <string name="add_player_names_alert_title">Aggiungi i nomi dei giocatori</string>
+    <string name="add_player_names_alert_description">Devi aggiungere i nomi dei giocatori per iniziare il gioco.</string>
+    <string name="add_player_ero_zones_alert_title">Aggiungi le zone erogene dei giocatori</string>
+    <string name="add_player_ero_zones_alert_description">Devi aggiungere le zone erogene dei giocatori per iniziare il gioco.</string>
+
     <string name="scalp_and_hair">Cuoio capelluto e capelli</string>
     <string name="ears">Orecchie</string>
     <string name="navel">Ombelico</string>
     <string name="lower_stomach">Basso ventre</string>
-    <string name="small_of_the_back">Piccola della schiena</string>
+    <string name="small_of_the_back">Parte bassa della schiena</string>
     <string name="armpits">Ascelle</string>
-    <string name="inner_arms">Interno delle braccia</string>
-    <string name="inner_wrist">Interno del polso</string>
-    <string name="palm_of_hands_and_fingertips">Palmo delle mani e punta delle dita</string>
-    <string name="behind_the_knee">Dietro il ginocchio</string>
+    <string name="inner_arms">Parte interna delle braccia</string>
+    <string name="inner_wrist">Parte interna del polso</string>
+    <string name="palm_of_hands_and_fingertips">Palmo delle mani e polpastrelli</string>
+    <string name="behind_the_knee">Dietro le ginocchia</string>
     <string name="nipples">Capezzoli</string>
     <string name="lips">Labbra</string>
     <string name="neck">Collo</string>
     <string name="inner_thigh">Interno della coscia</string>
-    <string name="bottom_of_feet_and_toes">Pianta dei piedi e dita dei piedi</string>
+    <string name="bottom_of_feet_and_toes">Piante dei piedi e dita dei piedi</string>
+    <string name="anus">Ano</string>
+    <string name="buttocks">Glutei</string>
+
     <string name="glans">Glande</string>
     <string name="scrotum_and_testicles">Scroto e testicoli</string>
     <string name="perineum">Perineo</string>
     <string name="prostate">Prostata</string>
+    <string name="penis">Pene</string>
+
     <string name="areola_and_nipples">Areola e capezzoli</string>
-    <string name="pubic_mound">Monticello pubico</string>
+    <string name="pubic_mound">Monte di Venere</string>
     <string name="clitoris">Clitoride</string>
     <string name="g_spot">Punto G</string>
-    <string name="anus">Ano</string>
 
-    <string name="not_enough_players_alert_title">Giocatori insufficienti</string>
-    <string name="not_enough_players_alert_description">È necessario almeno 2 giocatori per avviare il gioco.</string>
-    <string name="add_player_names_alert_title">Aggiungi i nomi dei giocatori</string>
-    <string name="add_player_names_alert_description">Devi aggiungere i nomi dei giocatori per avviare il gioco.
-    </string>
-    <string name="add_player_ero_zones_alert_title">Aggiungi le zone erogene dei giocatori</string>
-    <string name="add_player_ero_zones_alert_description">Devi aggiungere le zone erogene dei giocatori per avviare il
-        gioco.
-    </string>
-    <string name="scalp_and_hair_massage_action">%, massaggia delicatamente il cuoio capelluto di %. Applica una
-        leggera pressione, variando la velocità e l\'intensità del massaggio in base alle preferenze del tuo partner.
-        Poi, massaggia delicatamente la testa con le punte delle dita in movimenti circolari per 1-3 minuti.
-    </string>
-    <string name="scalp_and_hair_scratch_action">%, graffia leggermente il cuoio capelluto di %. Muoviti dalla
-        nuca alla fronte e dalle orecchie verso l\'alto fino alla sommità della testa, variando la velocità e
-        l\'intensità dei movimenti per sensazioni aggiuntive.
-    </string>
-    <string name="scalp_and_hair_pinch_action">%, pizzica leggermente il cuoio capelluto di %. Muoviti
-        delicatamente dalla nuca alla fronte e dalle orecchie verso l\'alto fino alla sommità della testa, per una
-        stimolazione aggiuntiva per il tuo partner.
-    </string>
-    <string name="scalp_and_hair_pull_action">%, passa le dita tra i capelli di %, tirandoli delicatamente.
-    </string>
-    <string name="scalp_and_hair_use_accessories_0_action">%, usa un pettine morbido o un pettine a denti larghi per
-        pettinare delicatamente i capelli di %. Ciò può creare sensazioni piacevoli, soprattutto se fatto lentamente
-        e ritmicamente.
-    </string>
-    <string name="scalp_and_hair_blow_warm_air_action">%, soffia delicatamente aria calda sul cuoio capelluto e i
-        capelli di %. Questo aiuterà a creare eccitazione aggiuntiva e a rilassare il tuo partner.
-    </string>
-    <string name="scalp_and_hair_use_accessories_1_action">%, esplora diverse esperienze sensoriali aggiungendo
-        prodotti per capelli profumati, come oli o profumi, sul cuoio capelluto e i capelli di %.
-    </string>
-    <string name="scalp_and_hair_use_accessories_2_action">%, usa massaggiatori speciali per il cuoio capelluto.
-        Questo aiuterà % a sentirsi più rilassata e a provare stimolazione aggiuntiva.
-    </string>
-    <string name="ears_massage_action">%, massaggia delicatamente i lobi delle orecchie di %. Usa leggere
-        pressioni e movimenti circolari per stimolare i lobi delle orecchie.
-    </string>
-    <string name="ears_whisper_action">%, sussurra dolci parole a %. Le orecchie sono letteralmente piene di
-        terminazioni nervose e sono così sensibili che molte persone si eccitano anche solo da un caldo sussurro.
-    </string>
-    <string name="ears_bite_action">%, mordicchia delicatamente i lobi delle orecchie di % per creare piacevoli
-        sensazioni.
-    </string>
-    <string name="ears_kiss_action">%, baciami delicatamente i lobi delle orecchie e l\'area intorno all\'orecchio
-        di %. Questo aiuterà a eccitare ulteriormente il tuo partner e regalerà sensazioni indimenticabili.
-    </string>
-    <string name="ears_suck_action">%, succhia delicatamente i lobi delle orecchie di % per un\'eccitazione
-        aggiuntiva e nuove sensazioni.
-    </string>
-    <string name="ears_use_accessories_action">%, usa una penna o un altro accessorio morbido per accarezzare
-        delicatamente i contorni esterni delle orecchie di %, seguendone la forma.
-    </string>
-    <string name="ears_ice_action">%, usa un cubetto di ghiaccio per stimolare le terminazioni nervose dei lobi
-        delle orecchie di %. Passa delicatamente il cubetto di ghiaccio lungo i contorni delle orecchie per una
-        stimolazione aggiuntiva ed eccitazione.
-    </string>
-    <string name="navel_kiss_action">%, baciate delicatamente l\'ombelico e l\'area intorno all\'ombelico di %
-        per creare sensazioni piacevoli ed eccitazione.
-    </string>
-    <string name="navel_lick_action">%, leccate dolcemente l\'ombelico di % e giocateci con la lingua attorno.
-    </string>
-    <string name="navel_blow_warm_air_action">%, soffiate caldo sull\'ombelico di % per creare una piacevole
-        sensazione di calore e stimolare i recettori erogeni.
-    </string>
-    <string name="navel_use_accessories_action">%, utilizzate una piuma o altri accessori morbidi. Passate la piuma
-        sulla pelle intorno all\'ombelico di % per suscitare sensazioni piacevoli ed eccitazione. Un leggero tocco
-        della piuma sulla pelle può essere molto sensuale.
-    </string>
-    <string name="navel_ice_action">%, passate delicatamente un cubetto di ghiaccio intorno all\'ombelico di %.
-        Il ghiaccio crea sensazioni fresche e stimola i recettori erogeni.
-    </string>
-    <string name="lower_stomach_kiss_action">%, baciala delicatamente la parte inferiore della pancia di %.
-    </string>
-    <string name="lower_stomach_lick_action">%, leccala dolcemente la parte inferiore della pancia %, scendendo dal
-        suo ombelico fino al pube. Questo aiuterà a provare un\'ulteriore eccitazione e a sperimentare nuove sensazioni.
-    </string>
-    <string name="lower_stomach_massage_action">%, massaggiare delicatamente la parte inferiore della pancia di
-        % con movimenti circolari, leggera pressione o pizzicotti dolci. Usa dell\'olio o una lozione per aumentare
-        l\'eccitazione del tuo partner.
-    </string>
-    <string name="lower_stomach_scratch_action">%, passa delicatamente le unghie sulla pelle della parte inferiore
-        della pancia di %, provocando una leggera sensazione di disagio che va di pari passo con l\'eccitazione.
-    </string>
-    <string name="lower_stomach_blow_warm_air_action">%, soffia dolcemente aria calda sulla parte inferiore della
-        pancia di %, creando una piacevole sensazione di calore e stimolando i recettori erogeni.
-    </string>
-    <string name="lower_stomach_use_accessories_action">%, usa una piuma o altri accessori morbidi. Passa la piuma
-        sulla pelle della parte inferiore della pancia di %, creando sensazioni piacevoli e eccitazione. Un leggero
-        tocco di piuma sulla pelle può essere molto sensuale.
-    </string>
-    <string name="lower_stomach_ice_action">%, passa delicatamente un cubetto di ghiaccio sulla parte inferiore
-        della pancia di %. Il ghiaccio crea sensazioni fresche e stimola i recettori erogeni.
-    </string>
-    <string name="areola_and_nipples_massage_action">%, massaggia delicatamente le areole e i capezzoli di %.
-        Con leggeri movimenti circolari, pizzicotti e pressioni, regalerai al tuo partner eccitazione aggiuntiva e nuove
-        sensazioni. Utilizza oli e creme per un massaggio più delicato e sensuale.
-    </string>
+    <string name="scalp_and_hair_massage_action">%, massaggia delicatamente il cuoio capelluto di %. Applica una leggera pressione, variando la velocità e l\'intensità del massaggio in base alle preferenze del tuo partner. Poi, massaggia delicatamente la testa con le punte delle dita in movimenti circolari per 1–3 minuti.</string>
+    <string name="scalp_and_hair_scratch_action">%, graffia leggermente il cuoio capelluto di %. Muoviti dalla nuca alla fronte e dalle orecchie verso l\'alto fino alla sommità della testa, variando la velocità e l\'intensità dei movimenti per sensazioni aggiuntive.</string>
+    <string name="scalp_and_hair_pinch_action">%, pizzica leggermente il cuoio capelluto di %. Muoviti delicatamente dalla nuca alla fronte e dalle orecchie verso l\'alto fino alla sommità della testa, per una stimolazione aggiuntiva del tuo partner.</string>
+    <string name="scalp_and_hair_pull_action">%, passa le dita tra i capelli di %, tirandoli delicatamente.</string>
+    <string name="scalp_and_hair_use_accessories_0_action">%, usa un pettine morbido o un pettine a denti larghi per pettinare delicatamente i capelli di %. Questo può creare sensazioni piacevoli, soprattutto se fatto lentamente e con ritmo.</string>
+    <string name="scalp_and_hair_blow_warm_air_action">%, soffia delicatamente aria calda sul cuoio capelluto e i capelli di %. Questo aiuterà a creare eccitazione e a rilassare il tuo partner.</string>
+    <string name="scalp_and_hair_use_accessories_1_action">%, esplora diverse esperienze sensoriali aggiungendo prodotti profumati per capelli, come oli o profumi, sul cuoio capelluto e i capelli di %.</string>
+    <string name="scalp_and_hair_use_accessories_2_action">%, usa massaggiatori speciali per il cuoio capelluto. Questo aiuterà % a rilassarsi e a provare stimolazioni aggiuntive.</string>
+    <string name="ears_massage_action">%, massaggia delicatamente i lobi delle orecchie di %. Usa leggere pressioni e movimenti circolari per stimolare i lobi delle orecchie.</string>
+    <string name="ears_whisper_action">%, sussurra dolci parole a %. Le orecchie sono piene di terminazioni nervose e sono così sensibili che molte persone si eccitano anche solo con un caldo sussurro.</string>
+    <string name="ears_bite_action">%, mordicchia delicatamente i lobi delle orecchie di % per creare piacevoli sensazioni.</string>
+    <string name="ears_kiss_action">%, bacia delicatamente i lobi delle orecchie e l\'area intorno all\'orecchio di %. Questo aiuterà a eccitare ulteriormente il tuo partner e regalerà sensazioni indimenticabili.</string>
+    <string name="ears_suck_action">%, succhia delicatamente i lobi delle orecchie di % per un\'eccitazione aggiuntiva e nuove sensazioni.</string>
+    <string name="ears_use_accessories_action">%, usa una piuma o un altro accessorio morbido per accarezzare delicatamente i contorni esterni delle orecchie di %, seguendone la forma.</string>
+    <string name="ears_ice_action">%, usa un cubetto di ghiaccio per stimolare le terminazioni nervose dei lobi delle orecchie di %. Passa delicatamente il cubetto lungo i contorni delle orecchie per una stimolazione ed eccitazione aggiuntiva.</string>
+    <string name="navel_kiss_action">%, bacia delicatamente l\'ombelico e l\'area intorno all\'ombelico di % per creare sensazioni piacevoli ed eccitazione.</string>
+    <string name="navel_lick_action">%, lecca dolcemente l\'ombelico di % e gioca con la lingua intorno ad esso.</string>
+    <string name="navel_blow_warm_air_action">%, soffia aria calda sull\'ombelico di % per creare una piacevole sensazione di calore e stimolare i recettori erogeni.</string>
+    <string name="navel_use_accessories_action">%, usa una piuma o altri accessori morbidi. Passa la piuma sulla pelle intorno all\'ombelico di % per suscitare sensazioni piacevoli ed eccitazione. Un tocco leggero della piuma può essere molto sensuale.</string>
+    <string name="navel_ice_action">%, passa delicatamente un cubetto di ghiaccio intorno all\'ombelico di %. Il ghiaccio crea sensazioni fresche e stimola i recettori erogeni.</string>
+    <string name="lower_stomach_kiss_action">%, bacia delicatamente la parte inferiore della pancia di %.</string>
+    <string name="lower_stomach_lick_action">%, lecca dolcemente la parte inferiore della pancia di %, scendendo dall\'ombelico fino al pube. Questo aiuterà a provare un\'ulteriore eccitazione e a sperimentare nuove sensazioni.</string>
+    <string name="lower_stomach_massage_action">%, massaggia delicatamente la parte inferiore della pancia di % con movimenti circolari, una leggera pressione o dolci pizzicotti. Usa dell\'olio o una lozione per aumentare l\'eccitazione del tuo partner.</string>
+    <string name="lower_stomach_scratch_action">%, passa delicatamente le unghie sulla pelle della parte inferiore della pancia di %, provocando una leggera sensazione di disagio che si accompagna all\'eccitazione.</string>
+    <string name="lower_stomach_blow_warm_air_action">%, soffia dolcemente aria calda sulla parte inferiore della pancia di %, creando una piacevole sensazione di calore e stimolando i recettori erogeni.</string>
+    <string name="lower_stomach_use_accessories_action">%, usa una piuma o altri accessori morbidi. Passa la piuma sulla pelle della parte inferiore della pancia di %, creando sensazioni piacevoli ed eccitazione. Un tocco leggero della piuma sulla pelle può essere molto sensuale.</string>
+    <string name="lower_stomach_ice_action">%, passa delicatamente un cubetto di ghiaccio sulla parte inferiore della pancia di %. Il ghiaccio crea sensazioni fresche e stimola i recettori erogeni.</string>
+    <string name="areola_and_nipples_massage_action">%, massaggia delicatamente le areole e i capezzoli di %. Con leggeri movimenti circolari, pizzicotti e pressioni, regalerai al tuo partner un\'eccitazione aggiuntiva e nuove sensazioni. Utilizza oli e lozioni per un massaggio più delicato e sensuale.</string>
     <string name="areola_and_nipples_kiss_action">%, bacia dolcemente le areole e i capezzoli di %.</string>
-    <string name="areola_and_nipples_lick_action">%, lecca dolcemente le areole e i capezzoli di %. Baci e
-        leccate giocose possono essere particolarmente eccitanti.
-    </string>
-    <string name="areola_and_nipples_bite_action">%, mordicchia leggermente le areole e i capezzoli di %. È
-        importante essere prudenti e agire in base alle sue preferenze e limiti.
-    </string>
-    <string name="areola_and_nipples_use_accessories_0_action">%, usa giocattoli speciali per stimolare le areole e
-        i capezzoli di %. Ad esempio, piccoli vibratori, stimolatori clitoridei e mollette per capezzoli con
-        pressione regolabile possono essere efficaci nel intensificare le sensazioni e l\'eccitazione.
-    </string>
-    <string name="areola_and_nipples_use_accessories_1_action">%, usa una piuma o altri accessori morbidi per
-        accarezzare le areole e i capezzoli di %. Carezze delicate con una piuma possono essere particolarmente
-        eccitanti.
-    </string>
-    <string name="areola_and_nipples_ice_action">%, utilizza cubetti di ghiaccio per una stimolazione aggiuntiva
-        delle areole e dei capezzoli di %. Passa delicatamente il cubetto di ghiaccio sui capezzoli e intorno ad
-        essi per provare nuove sensazioni.
-    </string>
-    <string name="pubic_mound_massage_action">%, massaggi delicatamente l\'area pubica di %. Accarezzala con
-        leggeri movimenti circolari o sfioramenti sulla sua superficie. Usa oli o lozioni. Esplora la texture e la
-        forma, sintonizzandoti sulle reazioni del tuo partner.
-    </string>
-    <string name="pubic_mound_kiss_action">%, bacia e accarezza delicatamente l\'area pubica di %. Baci giocosi
-        possono essere particolarmente eccitanti.
-    </string>
-    <string name="pubic_mound_lick_action">%, usa la tua lingua per stimolare l\'area pubica di %. Leccare può
-        aiutare a provare un\'eccitazione aggiuntiva.
-    </string>
-    <string name="pubic_mound_use_accessories_0_action">%, usa una piuma o altri accessori morbidi per stimolare
-        l\'area pubica di %. Passa la piuma sulla superficie per aggiungere varietà e nuove sensazioni.
-    </string>
-    <string name="pubic_mound_use_accessories_1_action">%, utilizza giocattoli speciali come piccoli vibratori o
-        stimolatori clitoridei per una stimolazione aggiuntiva dell\'area pubica di %, per aggiungere varietà e
-        nuove sensazioni.
-    </string>
-    <string name="pubic_mound_ice_action">%, utilizza un cubetto di ghiaccio per una stimolazione aggiuntiva
-        dell\'area pubica di %. Passa delicatamente il cubetto di ghiaccio sulla zona del tuo partner. Giocare con
-        la temperatura può aiutare a provare un\'eccitazione aggiuntiva.
-    </string>
-    <string name="clitoris_massage_0_action">%, accarezza delicatamente e massaggia il clitoride di %. Leggeri
-        movimenti circolari e accarezzamenti attenti aiuteranno a creare piacevoli sensazioni. Utilizza una quantità
-        adeguata di lubrificante a base d\'acqua per evitare disagi.
-    </string>
-    <string name="clitoris_massage_1_action">%, massaggia il clitoride di %, utilizzando una leggera pressione
-        combinata con movimenti circolari. Usa diverse tecniche e intensità per scoprire cosa procura più piacere alla
-        tua partner.
-    </string>
-    <string name="clitoris_kiss_action">%, bacìa delicatamente il clitoride di %. Varia i ritmi per scoprire
-        cosa procura il massimo piacere alla tua partner.
-    </string>
-    <string name="clitoris_lick_action">%, usa la tua lingua per accarezzare il clitoride di %. Utilizza diverse
-        tecniche, come movimenti circolari, leggera pressione della lingua e suzione, per una stimolazione aggiuntiva.
-        La stimolazione orale del clitoride può essere molto eccitante.
-    </string>
-    <string name="clitoris_bite_action">%, mordicchia delicatamente e con attenzione il clitoride di % per una
-        stimolazione aggiuntiva. Considera le preferenze della tua partner.
-    </string>
-    <string name="clitoris_use_accessories_action">%, utilizza speciali stimolatori clitoridei, vibratori o
-        massaggiatori per una stimolazione aggiuntiva del clitoride di %. Assicurati di utilizzare una quantità
-        adeguata di lubrificante a base d\'acqua e sintonizzati sulle reazioni della tua partner.
-    </string>
-    <string name="clitoris_itself_action">%, permetti a % di stimolare il suo clitoride in modo autonomo. Questa
-        può essere un\'esperienza intima ed eccitante.
-    </string>
-    <string name="g_spot_massage_action">%, inserisci uno o due dita nella vagina di %, o puoi utilizzare un
-        giocattolo sessuale speciale curvo progettato per la stimolazione del punto G. Usa lubrificante a base d\'acqua
-        per umidificare la zona e facilitare il movimento. Trova una piccola protuberanza sulla parete anteriore della
-        vagina. Massaggia delicatamente il punto G con movimenti circolari, variando il ritmo e l\'intensità.
-    </string>
-    <string name="g_spot_itself_action">%, permetti a % di stimolare autonomamente il suo punto G usando le dita
-        o un giocattolo sessuale speciale curvo. Questa può essere un\'esperienza intima ed eccitante.
-    </string>
-    <string name="anus_massage_action">%, usa un lubrificante a base d\'acqua e inizia con dolci carezze intorno
-        all\'ano di %. Gradualmente, puoi provare una penetrazione lenta e delicata con il dito all\'interno
-        dell\'ano. È importante essere prudenti, prestare attenzione alla reazione del tuo partner e rispettare le sue
-        preferenze e i suoi limiti.
-    </string>
-    <string name="anus_use_accessories_0_action">%, usa speciali giocattoli anali come tappi anali o vibratori anali
-        per stimolare l\'ano di %. Assicurati di usare una quantità sufficiente di lubrificante a base d\'acqua e
-        inizia con giocattoli di dimensioni più piccole in modo che il tuo partner possa adattarsi e sentirsi a suo
-        agio.
-    </string>
-    <string name="anus_use_accessories_1_action">%, usa una piuma o altri accessori morbidi per stimolare l\'ano di
-        %. Le carezze leggere possono essere molto sensuali ed eccitanti.
-    </string>
-    <string name="anus_kiss_action">%, bacia delicatamente l\'ano di %. Assicurati che l\'area anale sia pulita
-        e lubrificata per maggiore comfort e igiene.
-    </string>
-    <string name="anus_lick_action">%, lecca delicatamente l\'ano di %. Assicurati che l\'area anale sia pulita
-        e lubrificata per maggiore comfort e igiene. Il \"rimming\" (leccare l\'ano) può essere erotico ed eccitante per
-        alcune persone.
-    </string>
-    <string name="anus_ice_action">%, usa un cubetto di ghiaccio per stimolare l\'ano di %. È importante essere
-        prudenti, prestare attenzione alla reazione del tuo partner e rispettare le sue preferenze e i suoi limiti.
-    </string>
-    <string name="anus_itself_action">%, % può stimolare il suo ano in modo indipendente usando le dita o
-        giocattoli sessuali speciali, e tu puoi guardare e sostenerlo durante questo processo. La masturbazione
-        reciproca può essere un\'esperienza intima ed eccitante.
-    </string>
-    <string name="buttocks_massage_action">%, massaggia le natiche di %. Utilizza movimenti circolari, una
-        leggera pressione, carezze, leggere schiaffetti, sfregamenti, pizzicotti o movimenti di massaggio profondi per
-        stimolare il tuo partner. Gli oli da massaggio o le creme possono aumentare la stimolazione in questa zona.
-    </string>
-    <string name="buttocks_kiss_action">%, bacia le natiche di %. Baci giocosi possono suscitare eccitazione e
-        piacere.
-    </string>
-    <string name="buttocks_lick_action">%, lecca le natiche di %. Puoi prestare particolare attenzione all\'area
-        intorno all\'ano.
-    </string>
-    <string name="buttocks_bite_action">%, mordicchia delicatamente le natiche di %. Presta attenzione alla
-        reazione del tuo partner per maggior piacere.
-    </string>
-    <string name="buttocks_use_accessories_action">%, utilizza piume o accessori morbidi per stimolare le natiche di
-        %. Passa la piuma sulla superficie per aggiungere varietà e nuove sensazioni, prestando particolare
-        attenzione all\'area intorno all\'ano.
-    </string>
-    <string name="buttocks_ice_action">%, sfiora delicatamente le natiche di % con un cubetto di ghiaccio. Ciò
-        fornirà piacere aggiuntivo e nuove sensazioni.
-    </string>
-    <string name="buttocks">Glutei</string>
-    <string name="glans_massage_action">%, massaggia delicatamente la punta del pene di %. Utilizza diverse
-        tecniche, come premere leggermente e stringere la punta, fare movimenti su e giù o massaggiare la punta con
-        movimenti circolari. Usa un lubrificante a base d\'acqua per idratare la punta e facilitare i movimenti delle
-        mani.
-    </string>
-    <string name="glans_kiss_action">%, baciami delicatamente la punta del pene di %. Usa un lubrificante a base
-        d\'acqua per idratare la punta e facilitare i movimenti.
-    </string>
-    <string name="glans_lick_action">%, lecca delicatamente la punta del pene di % con la lingua. Varia i
-        movimenti e i ritmi, ad esempio, movimenti circolari con la lingua, per trovare ciò che dà più piacere al tuo
-        partner.
-    </string>
-    <string name="glans_bite_action">%, mordicchia delicatamente la punta del pene di %. Presta attenzione alla
-        reazione del tuo partner e rispondi ai suoi segnali.
-    </string>
+    <string name="areola_and_nipples_suck_action">%, succhia delicatamente i capezzoli di % per una stimolazione aggiuntiva.</string>
+    <string name="areola_and_nipples_lick_action">%, lecca dolcemente le areole e i capezzoli di %. Baci e leccate giocose possono essere particolarmente eccitanti.</string>
+    <string name="areola_and_nipples_bite_action">%, mordicchia leggermente le areole e i capezzoli di %. È importante essere prudenti e rispettare le sue preferenze e i suoi limiti.</string>
+    <string name="areola_and_nipples_use_accessories_0_action">%, usa giocattoli speciali per stimolare le areole e i capezzoli di %. Ad esempio, piccoli vibratori, stimolatori clitoridei e mollette per capezzoli con pressione regolabile possono essere efficaci per intensificare le sensazioni e l\'eccitazione.</string>
+    <string name="areola_and_nipples_use_accessories_1_action">%, usa una piuma o altri accessori morbidi per accarezzare le areole e i capezzoli di %. Carezze delicate con una piuma possono essere particolarmente eccitanti.</string>
+    <string name="areola_and_nipples_ice_action">%, utilizza cubetti di ghiaccio per una stimolazione aggiuntiva delle areole e dei capezzoli di %. Passa delicatamente il cubetto di ghiaccio sui capezzoli e intorno a essi per provare nuove sensazioni.</string>
+    <string name="pubic_mound_massage_action">%, massaggi delicatamente l\'area pubica di %. Accarezzala con leggeri movimenti circolari o sfioramenti sulla sua superficie. Usa oli o lozioni. Esplora la texture e la forma, sintonizzandoti sulle reazioni del tuo partner.</string>
+    <string name="pubic_mound_kiss_action">%, bacia e accarezza delicatamente l\'area pubica di %. Baci giocosi possono essere particolarmente eccitanti.</string>
+    <string name="pubic_mound_lick_action">%, usa la tua lingua per stimolare l\'area pubica di %. Leccare può aiutare a provare un\'eccitazione aggiuntiva.</string>
+    <string name="pubic_mound_use_accessories_0_action">%, usa una piuma o altri accessori morbidi per stimolare l\'area pubica di %. Passa la piuma sulla superficie per aggiungere varietà e nuove sensazioni.</string>
+    <string name="pubic_mound_use_accessories_1_action">%, utilizza giocattoli speciali come piccoli vibratori o stimolatori clitoridei per una stimolazione aggiuntiva dell\'area pubica di %, per aggiungere varietà e nuove sensazioni.</string>
+    <string name="pubic_mound_ice_action">%, utilizza un cubetto di ghiaccio per una stimolazione aggiuntiva dell\'area pubica di %. Passa delicatamente il cubetto di ghiaccio sulla zona del tuo partner. Giocare con la temperatura può aiutare a provare un\'eccitazione aggiuntiva.</string>
+    <string name="clitoris_massage_0_action">%, accarezza delicatamente e massaggia il clitoride di %. Leggeri movimenti circolari e accarezzamenti attenti aiuteranno a creare piacevoli sensazioni. Utilizza una quantità adeguata di lubrificante a base d\'acqua per evitare disagi.</string>
+    <string name="clitoris_massage_1_action">%, massaggia il clitoride di %, utilizzando una leggera pressione combinata con movimenti circolari. Usa diverse tecniche e intensità per scoprire cosa procura più piacere alla tua partner.</string>
+    <string name="clitoris_kiss_action">%, bacìa delicatamente il clitoride di %. Varia i ritmi per scoprire cosa procura il massimo piacere alla tua partner.</string>
+    <string name="clitoris_lick_action">%, usa la tua lingua per accarezzare il clitoride di %. Utilizza diverse tecniche, come movimenti circolari, leggera pressione della lingua e suzione, per una stimolazione aggiuntiva. La stimolazione orale del clitoride può essere molto eccitante.</string>
+    <string name="clitoris_bite_action">%, mordicchia delicatamente e con attenzione il clitoride di % per una stimolazione aggiuntiva. Considera le preferenze della tua partner.</string>
+    <string name="clitoris_use_accessories_action">%, utilizza speciali stimolatori clitoridei, vibratori o massaggiatori per una stimolazione aggiuntiva del clitoride di %. Assicurati di utilizzare una quantità adeguata di lubrificante a base d\'acqua e sintonizzati sulle reazioni della tua partner.</string>
+    <string name="clitoris_itself_action">%, permetti a % di stimolare il suo clitoride in modo autonomo. Questa può essere un\'esperienza intima ed eccitante.</string>
+    <string name="g_spot_massage_action">%, inserisci uno o due dita nella vagina di %, o puoi utilizzare un giocattolo sessuale speciale curvo progettato per la stimolazione del punto G. Usa lubrificante a base d\'acqua per umidificare la zona e facilitare il movimento. Trova una piccola protuberanza sulla parete anteriore della vagina. Massaggia delicatamente il punto G con movimenti circolari, variando il ritmo e l\'intensità.</string>
+    <string name="g_spot_itself_action">%, permetti a % di stimolare autonomamente il suo punto G usando le dita o un giocattolo sessuale speciale curvo. Questa può essere un\'esperienza intima ed eccitante.</string>
+    <string name="anus_massage_action">%, usa un lubrificante a base d\'acqua e inizia con dolci carezze intorno all\'ano di %. Gradualmente, puoi provare una penetrazione lenta e delicata con il dito all\'interno dell\'ano. È importante essere prudenti, prestare attenzione alla reazione del tuo partner e rispettare le sue preferenze e i suoi limiti.</string>
+    <string name="anus_use_accessories_0_action">%, usa speciali giocattoli anali come tappi anali o vibratori anali per stimolare l\'ano di %. Assicurati di usare una quantità sufficiente di lubrificante a base d\'acqua e inizia con giocattoli di dimensioni più piccole in modo che il tuo partner possa adattarsi e sentirsi a suo agio.</string>
+    <string name="anus_use_accessories_1_action">%, usa una piuma o altri accessori morbidi per stimolare l\'ano di %. Le carezze leggere possono essere molto sensuali ed eccitanti.</string>
+    <string name="anus_kiss_action">%, bacia delicatamente l\'ano di %. Assicurati che l\'area anale sia pulita e lubrificata per maggiore comfort e igiene.</string>
+    <string name="anus_lick_action">%, lecca delicatamente l\'ano di %. Assicurati che l\'area anale sia pulita e lubrificata per maggiore comfort e igiene. Il "rimming" (leccare l\'ano) può essere erotico ed eccitante per alcune persone.</string>
+    <string name="anus_ice_action">%, usa un cubetto di ghiaccio per stimolare l\'ano di %. È importante essere prudenti, prestare attenzione alla reazione del tuo partner e rispettare le sue preferenze e i suoi limiti.</string>
+    <string name="anus_itself_action">%, % può stimolare il suo ano in modo indipendente usando le dita o giocattoli sessuali speciali, e tu puoi guardare e sostenerlo durante questo processo. La masturbazione reciproca può essere un\'esperienza intima ed eccitante.</string>
+    <string name="buttocks_massage_action">%, massaggia le natiche di %. Utilizza movimenti circolari, una leggera pressione, carezze, leggere schiaffetti, sfregamenti, pizzicotti o movimenti di massaggio profondi per stimolare il tuo partner. Gli oli da massaggio o le creme possono aumentare la stimolazione in questa zona.</string>
+    <string name="buttocks_kiss_action">%, bacia le natiche di %. Baci giocosi possono suscitare eccitazione e piacere.</string>
+    <string name="buttocks_lick_action">%, lecca le natiche di %. Puoi prestare particolare attenzione all\'area intorno all\'ano.</string>
+    <string name="buttocks_bite_action">%, mordicchia delicatamente le natiche di %. Presta attenzione alla reazione del tuo partner per maggior piacere.</string>
+    <string name="buttocks_use_accessories_action">%, utilizza piume o accessori morbidi per stimolare le natiche di %. Passa la piuma sulla superficie per aggiungere varietà e nuove sensazioni, prestando particolare attenzione all\'area intorno all\'ano.</string>
+    <string name="buttocks_ice_action">%, sfiora delicatamente le natiche di % con un cubetto di ghiaccio. Ciò fornirà piacere aggiuntivo e nuove sensazioni.</string>
+    <string name="glans_massage_action">%, massaggia delicatamente la punta del pene di %. Utilizza diverse tecniche, come premere leggermente e stringere la punta, fare movimenti su e giù o massaggiare la punta con movimenti circolari. Usa un lubrificante a base d\'acqua per idratare la punta e facilitare i movimenti delle mani.</string>
+    <string name="glans_kiss_action">%, baciami delicatamente la punta del pene di %. Usa un lubrificante a base d\'acqua per idratare la punta e facilitare i movimenti.</string>
+    <string name="glans_lick_action">%, lecca delicatamente la punta del pene di % con la lingua. Varia i movimenti e i ritmi, ad esempio, movimenti circolari con la lingua, per trovare ciò che dà più piacere al tuo partner.</string>
+    <string name="glans_bite_action">%, mordicchia delicatamente la punta del pene di %. Presta attenzione alla reazione del tuo partner e rispondi ai suoi segnali.</string>
     <string name="glans_suck_action">%, succhia delicatamente la punta del pene di %.</string>
-    <string name="glans_use_accessories_action">%, usa giocattoli speciali come massaggiatori per il pene o
-        vibratori per stimolare la punta del pene di %.
-    </string>
-    <string name="glans_ice_action">%, usa un cubetto di ghiaccio per stimolare la punta del pene di %. Giocare
-        con la temperatura può essere molto eccitante.
-    </string>
-    <string name="glans_itself_action">%, lascia che % stimoli da solo la sua punta del pene. Presta attenzione
-        alle sue preferenze e reazioni e sostienilo in questo processo.
-    </string>
-    <string name="scrotum_and_testicles_massage_action">%, massaggia delicatamente lo scroto di %. Accarezzalo
-        con movimenti circolari leggeri, carezze o leggera pressione. Presta attenzione alle reazioni e alle preferenze
-        del tuo partner. Assicurati di utilizzare una quantità sufficiente di lubrificante a base d\'acqua e
-        sintonizzati sulle risposte del tuo partner.
-    </string>
+    <string name="glans_use_accessories_action">%, usa giocattoli speciali come massaggiatori per il pene o vibratori per stimolare la punta del pene di %.</string>
+    <string name="glans_ice_action">%, usa un cubetto di ghiaccio per stimolare la punta del pene di %. Giocare con la temperatura può essere molto eccitante.</string>
+    <string name="glans_itself_action">%, lascia che % stimoli da solo la sua punta del pene. Presta attenzione alle sue preferenze e reazioni e sostienilo in questo processo.</string>
+    <string name="scrotum_and_testicles_massage_action">%, massaggia delicatamente lo scroto di %. Accarezzalo con movimenti circolari leggeri, carezze o leggera pressione. Presta attenzione alle reazioni e alle preferenze del tuo partner. Assicurati di utilizzare una quantità sufficiente di lubrificante a base d\'acqua e sintonizzati sulle risposte del tuo partner.</string>
     <string name="scrotum_and_testicles_kiss_action">%, bacia delicatamente lo scroto di %.</string>
-    <string name="scrotum_and_testicles_lick_action">%, usa la tua lingua per stimolare lo scroto di %. Leccalo
-        e accarezzalo con movimenti delicati. Varia i diversi movimenti e ritmi per trovare ciò che dà maggior piacere
-        al tuo partner.
-    </string>
-    <string name="scrotum_and_testicles_bite_action">%, mordi delicatamente lo scroto di %. Presta attenzione
-        alle reazioni e alle preferenze del tuo partner.
-    </string>
-    <string name="scrotum_and_testicles_suck_action">%, succhia delicatamente lo scroto e i testicoli di %.
-        Varia i diversi movimenti e ritmi per trovare ciò che dà maggior piacere al tuo partner.
-    </string>
-    <string name="scrotum_and_testicles_use_accessories_0_action">%, usa giocattoli sessuali speciali per stimolare
-        lo scroto e i testicoli di %, come massaggiatori o vibratori.
-    </string>
-    <string name="scrotum_and_testicles_use_accessories_1_action">%, usa una piuma o altri accessori morbidi per
-        stimolare lo scroto di %. Carezze leggere aiuteranno a creare una sensazione di eccitazione extra.
-    </string>
-    <string name="perineum_massage_action">%, massaggi delicatamente il perineo di %. Accarezza questa zona con
-        leggeri movimenti circolari o con movimenti su e giù. Presta attenzione alle reazioni del tuo partner e alle sue
-        preferenze riguardo all\'intensità e alla pressione.
-    </string>
-    <string name="perineum_lick_action">%, usa la tua lingua per stimolare il perineo di %. Accarezza questa
-        zona con delicati movimenti della lingua. Varia i diversi movimenti e ritmi per trovare ciò che porta maggiore
-        piacere al tuo partner.
-    </string>
-    <string name="perineum_use_accessories_action">%, usa vari accessori come piume, vibratori o massaggiatori per
-        stimolare il perineo di %. Assicurati di usare una quantità sufficiente di lubrificante a base d\'acqua e di
-        rispondere alle reazioni del tuo partner.
-    </string>
-    <string name="prostate_massage_action">%, utilizza del lubrificante a base d\'acqua ed inserisci delicatamente
-        le tue dita nell\'ano di %. Massaggia delicatamente la prostata facendo movimenti circolari sulle pareti del
-        retto. È importante essere attenta, delicata e considerare il comfort del tuo partner.
-    </string>
-    <string name="prostate_use_accessories_action">%, utilizza speciali sex toys come massaggiatori o vibratori per
-        stimolare la prostata di %. Assicurati di utilizzare una quantità sufficiente di lubrificante a base
-        d\'acqua e segui le istruzioni fornite con il giocattolo.
-    </string>
-    <string name="prostate_itself_action">%, lascia che % stimoli la sua prostata da solo, tu puoi guardare e
-        sostenerlo in questo processo. Può essere un\'esperienza intima ed eccitante per entrambi.
-    </string>
-    <string name="penis">Pene</string>
-    <string name="penis_massage_action">%, massaggia delicatamente il pene di %. Assicurati di utilizzare una
-        quantità adeguata di lubrificante a base d\'acqua per maggiore comfort. Varia i movimenti e i ritmi, come
-        movimenti su e giù, leggere carezze, lievi pressioni, per scoprire ciò che dà maggior piacere al tuo partner.
-    </string>
-    <string name="penis_kiss_action">%, baciale dolcemente il pene di %. Muoviti dalla base del pene verso
-        l\'alto fino alla punta, bacilandola delicatamente.
-    </string>
-    <string name="penis_suck_action">%, succhia dolcemente il pene di %. Varia i movimenti e i ritmi, come
-        movimenti su e giù con le labbra, deepthroating, per scoprire ciò che dà maggior piacere al tuo partner.
-    </string>
-    <string name="penis_lick_action">%, lecca il pene di %. Usa diverse tecniche, passa la tua lingua dalla base
-        alla punta del pene, usa movimenti circolari.
-    </string>
-    <string name="penis_use_accessories_0_action">%, usa massaggiatori speciali per stimolare il pene di %.
-        Assicurati di utilizzare una quantità adeguata di lubrificante a base d\'acqua per maggiore comfort.
-    </string>
-    <string name="penis_use_accessories_1_action">%, usa piume o altri accessori morbidi per una stimolazione
-        aggiuntiva del pene di %. Ciò fornirà sensazioni extra ed eccitazione.
-    </string>
-    <string name="penis_ice_action">%, usa un cubetto di ghiaccio per stimolare il pene di %. Giocare con la
-        temperatura può essere piuttosto eccitante.
-    </string>
-    <string name="penis_itself_action">%, permetti a % di massaggiare il proprio pene. Osserva le sue reazioni e
-        preferenze.
-    </string>
-    <string name="nipples_massage_action">%, massaggia delicatamente i capezzoli di % e l\'area circostante.
-        Accarezza, fai movimenti circolari intorno ai capezzoli e pizzica leggermente. Usa oli o lozioni per sensazioni
-        più piacevoli.
-    </string>
+    <string name="scrotum_and_testicles_lick_action">%, usa la tua lingua per stimolare lo scroto di %. Leccalo e accarezzalo con movimenti delicati. Varia i diversi movimenti e ritmi per trovare ciò che dà maggior piacere al tuo partner.</string>
+    <string name="scrotum_and_testicles_bite_action">%, mordi delicatamente lo scroto di %. Presta attenzione alle reazioni e alle preferenze del tuo partner.</string>
+    <string name="scrotum_and_testicles_suck_action">%, succhia delicatamente lo scroto e i testicoli di %. Varia i diversi movimenti e ritmi per trovare ciò che dà maggior piacere al tuo partner.</string>
+    <string name="scrotum_and_testicles_use_accessories_0_action">%, usa giocattoli sessuali speciali per stimolare lo scroto e i testicoli di %, come massaggiatori o vibratori.</string>
+    <string name="scrotum_and_testicles_use_accessories_1_action">%, usa una piuma o altri accessori morbidi per stimolare lo scroto di %. Carezze leggere aiuteranno a creare una sensazione di eccitazione extra.</string>
+    <string name="perineum_massage_action">%, massaggi delicatamente il perineo di %. Accarezza questa zona con leggeri movimenti circolari o con movimenti su e giù. Presta attenzione alle reazioni del tuo partner e alle sue preferenze riguardo all\'intensità e alla pressione.</string>
+    <string name="perineum_lick_action">%, usa la tua lingua per stimolare il perineo di %. Accarezza questa zona con delicati movimenti della lingua. Varia i diversi movimenti e ritmi per trovare ciò che porta maggiore piacere al tuo partner.</string>
+    <string name="perineum_use_accessories_action">%, usa vari accessori come piume, vibratori o massaggiatori per stimolare il perineo di %. Assicurati di usare una quantità sufficiente di lubrificante a base d\'acqua e di rispondere alle reazioni del tuo partner.</string>
+    <string name="prostate_massage_action">%, utilizza del lubrificante a base d\'acqua ed inserisci delicatamente le tue dita nell\'ano di %. Massaggia delicatamente la prostata facendo movimenti circolari sulle pareti del retto. È importante essere attenta, delicata e considerare il comfort del tuo partner.</string>
+    <string name="prostate_use_accessories_action">%, utilizza speciali sex toys come massaggiatori o vibratori per stimolare la prostata di %. Assicurati di utilizzare una quantità sufficiente di lubrificante a base d\'acqua e segui le istruzioni fornite con il giocattolo.</string>
+    <string name="prostate_itself_action">%, lascia che % stimoli la sua prostata da solo, tu puoi guardare e sostenerlo in questo processo. Può essere un\'esperienza intima ed eccitante per entrambi.</string>
+    <string name="penis_massage_action">%, massaggia delicatamente il pene di %. Assicurati di utilizzare una quantità adeguata di lubrificante a base d\'acqua per maggiore comfort. Varia i movimenti e i ritmi, come movimenti su e giù, leggere carezze, lievi pressioni, per scoprire ciò che dà maggior piacere al tuo partner.</string>
+    <string name="penis_kiss_action">%, baciale dolcemente il pene di %. Muoviti dalla base del pene verso l\'alto fino alla punta, bacilandola delicatamente.</string>
+    <string name="penis_suck_action">%, succhia dolcemente il pene di %. Varia i movimenti e i ritmi, come movimenti su e giù con le labbra, deepthroating, per scoprire ciò che dà maggior piacere al tuo partner.</string>
+    <string name="penis_lick_action">%, lecca il pene di %. Usa diverse tecniche, passa la tua lingua dalla base alla punta del pene, usa movimenti circolari.</string>
+    <string name="penis_use_accessories_0_action">%, usa massaggiatori speciali per stimolare il pene di %. Assicurati di utilizzare una quantità adeguata di lubrificante a base d\'acqua per maggiore comfort.</string>
+    <string name="penis_use_accessories_1_action">%, usa piume o altri accessori morbidi per una stimolazione aggiuntiva del pene di %. Ciò fornirà sensazioni extra ed eccitazione.</string>
+    <string name="penis_ice_action">%, usa un cubetto di ghiaccio per stimolare il pene di %. Giocare con la temperatura può essere piuttosto eccitante.</string>
+    <string name="penis_itself_action">%, permetti a % di massaggiare il proprio pene. Osserva le sue reazioni e preferenze.</string>
+    <string name="nipples_massage_action">%, massaggia delicatamente i capezzoli di % e l\'area circostante. Accarezza, fai movimenti circolari intorno ai capezzoli e pizzica leggermente. Usa oli o lozioni per sensazioni più piacevoli.</string>
     <string name="nipples_kiss_action">%, bacia dolcemente i capezzoli di %.</string>
     <string name="nipples_lick_action">%, lecca i capezzoli di % e l\'area circostante.</string>
-    <string name="nipples_bite_action">%, puoi sperimentare con morsi leggeri ai capezzoli di %, con attenzione
-        e delicatezza.
-    </string>
-    <string name="nipples_ice_action">%, muovi un cubetto di ghiaccio intorno ai capezzoli di % o applicalo
-        delicatamente per creare una sensazione di freschezza ed eccitazione.
-    </string>
-    <string name="nipples_use_accessories_0_action">%, usa un massaggiatore, vibratore o morsetto con pressione
-        regolabile per accarezzare e stimolare i capezzoli di %, creando nuove sensazioni eccitanti e godendoti la
-        sensualità degli accessori.
-    </string>
-    <string name="nipples_use_accessories_1_action">%, usa una piuma o altri accessori morbidi per stimolare i
-        capezzoli di %. Questo può contribuire a aumentare l\'eccitazione.
-    </string>
-    <string name="nipples_suck_action">%, succhia delicatamente i capezzoli di % per una stimolazione
-        aggiuntiva.
-    </string>
-    <string name="areola_and_nipples_suck_action">%, succhia delicatamente i capezzoli di % per una stimolazione
-        aggiuntiva.
-    </string>
-    <string name="small_of_the_back_massage_action">%, massaggia la zona lombare di %. Utilizza diverse tecniche
-        come movimenti circolari, lieve pressione, pizzicotti, ecc. per rilassare la tua partner. Olio o lozione possono
-        rendere il massaggio più eccitante.
-    </string>
-    <string name="small_of_the_back_kiss_action">%, bacia la zona lombare di %. Esplora questa zona con le tue
-        labbra, prestare attenzione alle reazioni della tua partner.
-    </string>
-    <string name="small_of_the_back_use_accessories_action">%, usa una piuma o altro accessorio morbido per seguire
-        lungo la zona lombare di %.
-    </string>
-    <string name="small_of_the_back_ice_action">%, fai scorrere delicatamente un cubetto di ghiaccio lungo la zona
-        lombare di %.
-    </string>
-    <string name="armpits_massage_action">%, massaggi delicatamente le ascelle di %. Prova movimenti circolari
-        leggeri o carezze per stimolare questa zona. L\'olio o la lozione possono rendere il massaggio più eccitante.
-    </string>
-    <string name="armpits_kiss_action">%, bacia le ascelle di % con le tue labbra. Baci giocosi e carezze
-        delicate possono essere eccitanti.
-    </string>
-    <string name="armpits_use_accessories_action">%, usa una piuma o altri accessori morbidi per solleticare le
-        ascelle di %.
-    </string>
-    <string name="armpits_ice_action">%, usa un cubetto di ghiaccio per una stimolazione aggiuntiva delle ascelle di
-        %. Scivola lentamente e delicatamente il cubetto di ghiaccio sulle sue ascelle per regalare al tuo partner
-        una nuova esperienza ed eccitazione.
-    </string>
-    <string name="inner_arms_massage_action">%, massaggi delicatamente la parte interna delle braccia di %.
-        Utilizza movimenti circolari, carezze e pizzicotti per una stimolazione aggiuntiva. Il massaggio con olio o
-        lozione può intensificare le sensazioni.
-    </string>
-    <string name="inner_arms_kiss_action">%, accarezza la parte interna delle braccia di % con baci o leggeri
-        morsi con le labbra. Baci giocosi e tocchi delicati possono essere eccitanti.
-    </string>
-    <string name="inner_arms_lick_action">%, usa la tua lingua per stimolare la parte interna delle braccia di
-        %. Leccare delicatamente lungo la parte interna delle sue braccia può creare sensazioni piacevoli ed
-        eccitanti.
-    </string>
-    <string name="inner_arms_use_accessories_action">%, utilizza una piuma o altri accessori morbidi per stimolare
-        la parte interna delle braccia di %.
-    </string>
-    <string name="inner_arms_ice_action">%, usa un cubetto di ghiaccio per un massaggio aggiuntivo sulla parte
-        interna delle braccia di %. Può aggiungere varietà e nuove sensazioni alla vostra esperienza.
-    </string>
-    <string name="inner_wrist_massage_action">%, massaggia delicatamente la parte interna dei polsi di %. L\'uso
-        di olio o lozione per il massaggio può intensificare le sensazioni.
-    </string>
-    <string name="inner_wrist_kiss_action">%, coccola la parte interna dei polsi di % con dei baci. Baci giocosi
-        e carezze tenere possono essere eccitanti.
-    </string>
-    <string name="inner_wrist_lick_action">%, lecca la parte interna dei polsi di %. Leccare delicatamente lungo
-        la parte interna dei polsi può suscitare piacevoli sensazioni ed eccitazione.
-    </string>
-    <string name="inner_wrist_use_accessories_action">%, usa una piuma o altri accessori morbidi per stimolare la
-        parte interna dei polsi di %. Questo può aggiungere varietà e nuove sensazioni alla vostra esperienza.
-    </string>
-    <string name="inner_wrist_ice_action">%, usa un cubetto di ghiaccio per una stimolazione aggiuntiva sulla parte
-        interna dei polsi di %. Giocare con la temperatura può aiutare a creare eccitazione aggiuntiva.
-    </string>
-    <string name="palm_of_hands_and_fingertips_massage_action">%, massaggiate delicatamente i palmi di % usando
-        una leggera pressione e movimenti circolari. Questo può creare sensazioni piacevoli e rilassamento.
-    </string>
-    <string name="palm_of_hands_and_fingertips_kiss_action">%, bacia i palmi di % con le tue labbra. Presta
-        attenzione alle punte delle dita e toccale con teneri baci.
-    </string>
-    <string name="palm_of_hands_and_fingertips_lick_action">%, lecca i palmi e le punte delle dita di % per una
-        stimolazione e un\'eccitazione aggiuntive.
-    </string>
-    <string name="palm_of_hands_and_fingertips_suck_action">%, succhia le punte delle dita di %. Questo può
-        contribuire ad aumentare l\'eccitazione.
-    </string>
-    <string name="palm_of_hands_and_fingertips_use_accessories_action">%, usa piume o altri accessori morbidi per
-        stimolare i palmi e le punte delle dita di %. Questo può aggiungere nuove sensazioni e aumentare
-        l\'eccitazione.
-    </string>
-    <string name="behind_the_knee_massage_action">%, massaggia delicatamente la zona dietro le ginocchia di %.
-        Prova leggeri movimenti circolari, pressioni e pizzicotti in questa zona. Presta attenzione alla reazione del
-        tuo partner e alle sue preferenze. L\'applicazione di olio da massaggio o lozione nella zona dietro le ginocchia
-        può creare piacere ed eccitazione aggiuntivi.
-    </string>
-    <string name="behind_the_knee_kiss_action">%, bacia la zona dietro le ginocchia di % e pizzica leggermente
-        con le labbra. Baci erotici e carezze dolci possono essere eccitanti.
-    </string>
-    <string name="behind_the_knee_lick_action">%, lecca la zona dietro le ginocchia di % per creare piacevoli
-        sensazioni.
-    </string>
-    <string name="behind_the_knee_use_accessories_action">%, usa una piuma o altri accessori morbidi nella zona
-        dietro le ginocchia di % per fornire piacere ed eccitazione aggiuntivi.
-    </string>
-    <string name="lips_massage_action">%, accarezza delicatamente le labbra di % con le punte delle dita. Puoi
-        anche utilizzare del cibo, come frutta, gelato, ecc. Passa un pezzo di cibo sulle sue labbra e lascia che la tua
-        partner lo mangi. Questo le permetterà di sperimentare nuove sensazioni ed eccitazione.
-    </string>
-    <string name="lips_kiss_action">%, sperimenta diversi tipi di baci - dolci, appassionati, giocosi o leggere
-        carezze con le labbra. Varia l\'intensità e il ritmo per scoprire nuove sensazioni e stimolare %.
-    </string>
-    <string name="lips_lick_action">%, usa la punta della tua lingua per accarezzare le labbra di %. Questo
-        potrebbe includere delicati leccamenti, movimenti circolari, ecc. Esplora quali movimenti e accarezzamenti le
-        procurano maggior piacere.
-    </string>
-    <string name="lips_bite_action">%, mordicchia delicatamente e con attenzione le labbra di % per scoprire
-        nuove sensazioni e intensificare la stimolazione. Per alcune persone, mordicchiare o pizzicare leggermente le
-        labbra può essere eccitante.
-    </string>
-    <string name="neck_massage_0_action">%, massaggia il collo di %. Usa una leggera pressione e movimenti
-        circolari per rilassare i muscoli del tuo partner, creando sensazioni piacevoli. Usa oli o lozioni per
-        un\'esperienza più piacevole.
-    </string>
-    <string name="neck_massage_1_action">%, varia le tue carezze e la pressione in base alle preferenze di %.
-        Usa le punte delle dita per leggere carezze o applica una leggera pressione su diverse parti del collo. Non
-        dimenticare di usare olio o lozione per aumentare l\'eccitazione.
-    </string>
-    <string name="neck_kiss_action">%, bacia o mordicchia delicatamente il collo di %. Baci giocosi lungo il
-        collo possono creare sensazioni piacevoli e eccitazione.
-    </string>
-    <string name="neck_lick_action">%, lecca il collo di %. Questo può suscitare sensazioni erotiche e
-        intensificare la stimolazione.
-    </string>
-    <string name="neck_use_accessories_action">%, usa piume o altri accessori morbidi per stimolare il collo di
-        %. Fai scivolare le piume lungo il suo collo o usa accessori morbidi per creare nuove sensazioni.
-    </string>
-    <string name="neck_ice_action">%, usa un cubetto di ghiaccio sulla zona del collo di %. Giocare con la
-        temperatura può portare nuove sensazioni ed eccitazione.
-    </string>
-    <string name="lips_ice_action">%, passa un cubetto di ghiaccio sulle labbra di %. Giocare con la temperatura
-        può portare nuove sensazioni ed eccitazione.
-    </string>
-    <string name="inner_thigh_massage_0_action">%, massaggia delicatamente la parte interna della coscia di %.
-        Carezze leggere e dolci possono creare piacevoli sensazioni e eccitazione. Usa oli o lozioni per un\'esperienza
-        più piacevole.
-    </string>
-    <string name="inner_thigh_massage_1_action">%, varia le tue carezze e la pressione sulla parte interna della
-        coscia di %. Alcune persone amano carezze leggere e tenere, mentre altre preferiscono movimenti più intensi
-        ed energici. Non dimenticare di usare oli o lozioni per aumentare l\'eccitazione.
-    </string>
-    <string name="inner_thigh_kiss_action">%, accarezza la parte interna della coscia di % con le tue labbra,
-        baciale o mordicchiala leggermente con le labbra. Baci giocosi e carezze dolci possono essere eccitanti.
-    </string>
-    <string name="inner_thigh_lick_action">%, usa la tua lingua per stimolare la parte interna della coscia di
-        %. Leccate leggere lungo la parte interna della coscia possono creare sensazioni piacevoli ed eccitazione.
-    </string>
-    <string name="inner_thigh_bite_action">%, mordicchia delicatamente la superficie esterna della coscia di %
-        per una stimolazione aggiuntiva.
-    </string>
-    <string name="inner_thigh_use_accessories_0_action">%, usa piume o altri accessori morbidi per stimolare la
-        parte interna della coscia di %. Questo può aggiungere varietà e nuove sensazioni alla tua esperienza.
-    </string>
-    <string name="inner_thigh_use_accessories_1_action">%, usa un massaggiatore, vibratore o altri accessori per una
-        stimolazione aggiuntiva sulla coscia esterna di %. Questo fornirà sensazioni indimenticabili al tuo partner
-        e lo aiuterà a sperimentare eccitazione aggiuntiva.
-    </string>
-    <string name="inner_thigh_ice_action">%, usa un cubetto di ghiaccio per una stimolazione aggiuntiva sulla parte
-        interna della coscia di %. Ciò aiuterà a provare un\'eccitazione extra.
-    </string>
-    <string name="bottom_of_feet_and_toes_massage_0_action">%, massaggia i piedi di % con movimenti circolari,
-        applicando una leggera pressione e muovendoti dalla base delle dita al tallone. Concentrati su diversi punti dei
-        piedi per rilassarli e stimolarli. L\'uso di olio o lozione aiuterà il tuo partner a raggiungere
-        maggiore relax e piacere.
-    </string>
-    <string name="bottom_of_feet_and_toes_massage_1_action">%, accarezza i piedi e le dita dei piedi di % con la
-        punta delle dita. Questo può essere un gesto piacevole e rilassante.
-    </string>
-    <string name="bottom_of_feet_and_toes_kiss_action">%, bacia i piedi e le dita dei piedi di % per una
-        stimolazione ed eccitazione aggiuntiva.
-    </string>
-    <string name="bottom_of_feet_and_toes_lick_action">%, usa la lingua per stimolare i piedi e le dita dei piedi di
-        %. Leccare i suoi piedi e le dita può creare sensazioni piacevoli.
-    </string>
-    <string name="bottom_of_feet_and_toes_suck_action">%, succhia le dita dei piedi di %. Questo aiuterà a
-        rilassare il tuo partner e a fornirle piacere ed eccitazione aggiuntivi.
-    </string>
-    <string name="bottom_of_feet_and_toes_use_accessories_action">%, massaggia i piedi di % utilizzando piume,
-        palline da massaggio, massaggiatori a rullo o accessori speciali. Questo può aiutare ad intensificare le
-        sensazioni e aggiungere varietà all\'esperienza.
-    </string>
-    <string name="bottom_of_feet_and_toes_ice_action">%, usa un cubetto di ghiaccio per una stimolazione aggiuntiva
-        dei piedi di %. Scorri il cubetto di ghiaccio sui suoi piedi, applicando una leggera pressione su diversi
-        punti per rilassarli e stimolarli.
-    </string>
+    <string name="nipples_bite_action">%, puoi sperimentare con morsi leggeri ai capezzoli di %, con attenzione e delicatezza.</string>
+    <string name="nipples_ice_action">%, muovi un cubetto di ghiaccio intorno ai capezzoli di % o applicalo delicatamente per creare una sensazione di freschezza ed eccitazione.</string>
+    <string name="nipples_use_accessories_0_action">%, usa un massaggiatore, vibratore o morsetto con pressione regolabile per accarezzare e stimolare i capezzoli di %, creando nuove sensazioni eccitanti e godendoti la sensualità degli accessori.</string>
+    <string name="nipples_use_accessories_1_action">%, usa una piuma o altri accessori morbidi per stimolare i capezzoli di %. Questo può contribuire a aumentare l\'eccitazione.</string>
+    <string name="nipples_suck_action">%, succhia delicatamente i capezzoli di % per una stimolazione aggiuntiva.</string>
+    <string name="small_of_the_back_massage_action">%, massaggia la zona lombare di %. Utilizza diverse tecniche come movimenti circolari, lieve pressione, pizzicotti, ecc. per rilassare la tua partner. Olio o lozione possono rendere il massaggio più eccitante.</string>
+    <string name="small_of_the_back_kiss_action">%, bacia la zona lombare di %. Esplora questa zona con le tue labbra, prestando attenzione alle reazioni della tua partner.</string>
+    <string name="small_of_the_back_use_accessories_action">%, usa una piuma o altro accessorio morbido per seguire lungo la zona lombare di %.</string>
+    <string name="small_of_the_back_ice_action">%, fai scorrere delicatamente un cubetto di ghiaccio lungo la zona lombare di %.</string>
+    <string name="armpits_massage_action">%, massaggi delicatamente le ascelle di %. Prova movimenti circolari leggeri o carezze per stimolare questa zona. L\'olio o la lozione possono rendere il massaggio più eccitante.</string>
+    <string name="armpits_kiss_action">%, bacia le ascelle di % con le tue labbra. Baci giocosi e carezze delicate possono essere eccitanti.</string>
+    <string name="armpits_use_accessories_action">%, usa una piuma o altri accessori morbidi per solleticare le ascelle di %.</string>
+    <string name="armpits_ice_action">%, usa un cubetto di ghiaccio per una stimolazione aggiuntiva delle ascelle di %. Scivola lentamente e delicatamente il cubetto di ghiaccio sulle sue ascelle per regalare al tuo partner una nuova esperienza ed eccitazione.</string>
+    <string name="inner_arms_massage_action">%, massaggi delicatamente la parte interna delle braccia di %. Utilizza movimenti circolari, carezze e pizzicotti per una stimolazione aggiuntiva. Il massaggio con olio o lozione può intensificare le sensazioni.</string>
+    <string name="inner_arms_kiss_action">%, accarezza la parte interna delle braccia di % con baci o leggeri morsi con le labbra. Baci giocosi e tocchi delicati possono essere eccitanti.</string>
+    <string name="inner_arms_lick_action">%, usa la tua lingua per stimolare la parte interna delle braccia di %. Leccare delicatamente lungo la parte interna delle sue braccia può creare sensazioni piacevoli ed eccitanti.</string>
+    <string name="inner_arms_use_accessories_action">%, utilizza una piuma o altri accessori morbidi per stimolare la parte interna delle braccia di %.</string>
+    <string name="inner_arms_ice_action">%, usa un cubetto di ghiaccio per un massaggio aggiuntivo sulla parte interna delle braccia di %. Può aggiungere varietà e nuove sensazioni alla vostra esperienza.</string>
+    <string name="inner_wrist_massage_action">%, massaggia delicatamente la parte interna dei polsi di %. L\'uso di olio o lozione per il massaggio può intensificare le sensazioni.</string>
+    <string name="inner_wrist_kiss_action">%, coccola la parte interna dei polsi di % con dei baci. Baci giocosi e carezze tenere possono essere eccitanti.</string>
+    <string name="inner_wrist_lick_action">%, lecca la parte interna dei polsi di %. Leccare delicatamente lungo la parte interna dei polsi può suscitare piacevoli sensazioni ed eccitazione.</string>
+    <string name="inner_wrist_use_accessories_action">%, usa una piuma o altri accessori morbidi per stimolare la parte interna dei polsi di %. Questo può aggiungere varietà e nuove sensazioni alla vostra esperienza.</string>
+    <string name="inner_wrist_ice_action">%, usa un cubetto di ghiaccio per una stimolazione aggiuntiva sulla parte interna dei polsi di %. Giocare con la temperatura può aiutare a creare eccitazione aggiuntiva.</string>
+    <string name="palm_of_hands_and_fingertips_massage_action">%, massaggiate delicatamente i palmi di % usando una leggera pressione e movimenti circolari. Questo può creare sensazioni piacevoli e rilassamento.</string>
+    <string name="palm_of_hands_and_fingertips_kiss_action">%, bacia i palmi di % con le tue labbra. Presta attenzione alle punte delle dita e toccale con teneri baci.</string>
+    <string name="palm_of_hands_and_fingertips_lick_action">%, lecca i palmi e le punte delle dita di % per una stimolazione e un\'eccitazione aggiuntive.</string>
+    <string name="palm_of_hands_and_fingertips_suck_action">%, succhia le punte delle dita di %. Questo può contribuire ad aumentare l\'eccitazione.</string>
+    <string name="palm_of_hands_and_fingertips_use_accessories_action">%, usa piume o altri accessori morbidi per stimolare i palmi e le punte delle dita di %. Questo può aggiungere nuove sensazioni e aumentare l\'eccitazione.</string>
+    <string name="behind_the_knee_massage_action">%, massaggia delicatamente la zona dietro le ginocchia di %. Prova leggeri movimenti circolari, pressioni e pizzicotti in questa zona. Presta attenzione alla reazione del tuo partner e alle sue preferenze. L\'applicazione di olio da massaggio o lozione nella zona dietro le ginocchia può creare piacere ed eccitazione aggiuntivi.</string>
+    <string name="behind_the_knee_kiss_action">%, bacia la zona dietro le ginocchia di % e pizzica leggermente con le labbra. Baci erotici e carezze dolci possono essere eccitanti.</string>
+    <string name="behind_the_knee_lick_action">%, lecca la zona dietro le ginocchia di % per creare piacevoli sensazioni.</string>
+    <string name="behind_the_knee_use_accessories_action">%, usa una piuma o altri accessori morbidi nella zona dietro le ginocchia di % per fornire piacere ed eccitazione aggiuntivi.</string>
+    <string name="lips_massage_action">%, accarezza delicatamente le labbra di % con le punte delle dita. Puoi anche utilizzare del cibo, come frutta, gelato, ecc. Passa un pezzo di cibo sulle sue labbra e lascia che la tua partner lo mangi. Questo le permetterà di sperimentare nuove sensazioni ed eccitazione.</string>
+    <string name="lips_kiss_action">%, sperimenta diversi tipi di baci - dolci, appassionati, giocosi o leggere carezze con le labbra. Varia l\'intensità e il ritmo per scoprire nuove sensazioni e stimolare %.</string>
+    <string name="lips_lick_action">%, usa la punta della tua lingua per accarezzare le labbra di %. Questo potrebbe includere delicati leccamenti, movimenti circolari, ecc. Esplora quali movimenti e accarezzamenti le procurano maggior piacere.</string>
+    <string name="lips_bite_action">%, mordicchia delicatamente e con attenzione le labbra di % per scoprire nuove sensazioni e intensificare la stimolazione. Per alcune persone, mordicchiare o pizzicare leggermente le labbra può essere eccitante.</string>
+    <string name="lips_ice_action">%, passa un cubetto di ghiaccio sulle labbra di %. Giocare con la temperatura può portare nuove sensazioni ed eccitazione.</string>
+    <string name="neck_massage_0_action">%, massaggia il collo di %. Usa una leggera pressione e movimenti circolari per rilassare i muscoli del tuo partner, creando sensazioni piacevoli. Usa oli o lozioni per un\'esperienza più piacevole.</string>
+    <string name="neck_massage_1_action">%, varia le tue carezze e la pressione in base alle preferenze di %. Usa le punte delle dita per leggere carezze o applica una leggera pressione su diverse parti del collo. Non dimenticare di usare olio o lozione per aumentare l\'eccitazione.</string>
+    <string name="neck_kiss_action">%, bacia o mordicchia delicatamente il collo di %. Baci giocosi lungo il collo possono creare sensazioni piacevoli e eccitazione.</string>
+    <string name="neck_lick_action">%, lecca il collo di %. Questo può suscitare sensazioni erotiche e intensificare la stimolazione.</string>
+    <string name="neck_use_accessories_action">%, usa piume o altri accessori morbidi per stimolare il collo di %. Fai scivolare le piume lungo il suo collo o usa accessori morbidi per creare nuove sensazioni.</string>
+    <string name="neck_ice_action">%, usa un cubetto di ghiaccio sulla zona del collo di %. Giocare con la temperatura può portare nuove sensazioni ed eccitazione.</string>
+    <string name="inner_thigh_massage_0_action">%, massaggia delicatamente la parte interna della coscia di %. Carezze leggere e dolci possono creare piacevoli sensazioni e eccitazione. Usa oli o lozioni per un\'esperienza più piacevole.</string>
+    <string name="inner_thigh_massage_1_action">%, varia le tue carezze e la pressione sulla parte interna della coscia di %. Alcune persone amano carezze leggere e tenere, mentre altre preferiscono movimenti più intensi ed energici. Non dimenticare di usare oli o lozioni per aumentare l\'eccitazione.</string>
+    <string name="inner_thigh_kiss_action">%, accarezza la parte interna della coscia di % con le tue labbra, baciale o mordicchiala leggermente con le labbra. Baci giocosi e carezze dolci possono essere eccitanti.</string>
+    <string name="inner_thigh_lick_action">%, usa la tua lingua per stimolare la parte interna della coscia di %. Leccate leggere lungo la parte interna della coscia possono creare sensazioni piacevoli ed eccitazione.</string>
+    <string name="inner_thigh_bite_action">%, mordicchia delicatamente la superficie esterna della coscia di % per una stimolazione aggiuntiva.</string>
+    <string name="inner_thigh_use_accessories_0_action">%, usa piume o altri accessori morbidi per stimolare la parte interna della coscia di %. Questo può aggiungere varietà e nuove sensazioni alla tua esperienza.</string>
+    <string name="inner_thigh_use_accessories_1_action">%, usa un massaggiatore, vibratore o altri accessori per una stimolazione aggiuntiva sulla coscia esterna di %. Questo fornirà sensazioni indimenticabili al tuo partner e lo aiuterà a sperimentare eccitazione aggiuntiva.</string>
+    <string name="inner_thigh_ice_action">%, usa un cubetto di ghiaccio per una stimolazione aggiuntiva sulla parte interna della coscia di %. Ciò aiuterà a provare un\'eccitazione extra.</string>
+    <string name="bottom_of_feet_and_toes_massage_0_action">%, massaggia i piedi di % con movimenti circolari, applicando una leggera pressione e muovendoti dalla base delle dita al tallone. Concentrati su diversi punti dei piedi per rilassarli e stimolarli. L\'uso di olio o lozione aiuterà il tuo partner a raggiungere maggiore relax e piacere.</string>
+    <string name="bottom_of_feet_and_toes_massage_1_action">%, accarezza i piedi e le dita dei piedi di % con la punta delle dita. Questo può essere un gesto piacevole e rilassante.</string>
+    <string name="bottom_of_feet_and_toes_kiss_action">%, bacia i piedi e le dita dei piedi di % per una stimolazione ed eccitazione aggiuntiva.</string>
+    <string name="bottom_of_feet_and_toes_lick_action">%, usa la lingua per stimolare i piedi e le dita dei piedi di %. Leccare i suoi piedi e le dita può creare sensazioni piacevoli.</string>
+    <string name="bottom_of_feet_and_toes_suck_action">%, succhia le dita dei piedi di %. Questo aiuterà a rilassare il tuo partner e a fornirle piacere ed eccitazione aggiuntivi.</string>
+    <string name="bottom_of_feet_and_toes_use_accessories_action">%, massaggia i piedi di % utilizzando piume, palline da massaggio, massaggiatori a rullo o accessori speciali. Questo può aiutare ad intensificare le sensazioni e aggiungere varietà all\'esperienza.</string>
+    <string name="bottom_of_feet_and_toes_ice_action">%, usa un cubetto di ghiaccio per una stimolazione aggiuntiva dei piedi di %. Scorri il cubetto di ghiaccio sui suoi piedi, applicando una leggera pressione su diversi punti per rilassarli e stimolarli.</string>
+
     <string name="about_app_description">\t\tBenvenuti su LoveIn - l\'applicazione mobile che mira a portare piacere, gioia e nuove
         esperienze nella vostra vita intima! LoveIn è un\'esperienza unica per le coppie, che esplora nuove sfaccettature
         emotive e scenari intimi per coloro che desiderano rafforzare la loro relazione e migliorare il legame con il
@@ -573,8 +220,7 @@
         Immergetevi in un\'esperienza unica creata con amore e attenzione e condividete momenti di passione e intimità
         con il vostro partner o i vostri amici. Godetevi il coraggio e la novità nella vostra relazione con LoveIn.
     </string>
-    <string name="game_over_description">Il giocatore con il nome utente % ha esaurito tutte le carte. Puoi tornare
-        indietro di un passo e ricominciare.
-    </string>
+
+    <string name="game_over_description">Il giocatore con il nome utente % ha esaurito tutte le carte. Puoi tornare indietro di un passaggio e ricominciare.</string>
     <string name="game_over_title">Fine del gioco.</string>
 </resources>

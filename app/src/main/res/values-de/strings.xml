@@ -5,15 +5,23 @@
     <string name="players_name">Spielername</string>
     <string name="add_next_player">Nächsten Spieler hinzufügen</string>
     <string name="erogenous_zones">Erogene Zonen</string>
-    <string name="clear">Löschen</string>
+    <string name="clear">Zurücksetzen</string>
+
+    <string name="not_enough_players_alert_title">Nicht genügend Spieler</string>
+    <string name="not_enough_players_alert_description">Du benötigst mindestens 2 Spieler, um das Spiel zu starten.</string>
+    <string name="add_player_names_alert_title">Füge Spielernamen hinzu</string>
+    <string name="add_player_names_alert_description">Du musst Spielernamen hinzufügen, um das Spiel zu starten.</string>
+    <string name="add_player_ero_zones_alert_title">Füge erogene Zonen der Spieler hinzu</string>
+    <string name="add_player_ero_zones_alert_description">Du musst erogene Zonen der Spieler hinzufügen, um das Spiel zu starten.</string>
+
     <string name="scalp_and_hair">Kopfhaut und Haare</string>
     <string name="ears">Ohren</string>
     <string name="navel">Bauchnabel</string>
     <string name="lower_stomach">Unterer Bauch</string>
-    <string name="small_of_the_back">Kreuzbein</string>
+    <string name="small_of_the_back">Lendenbereich</string>
     <string name="armpits">Achselhöhlen</string>
-    <string name="inner_arms">Innere Arme</string>
-    <string name="inner_wrist">Innere Handgelenke</string>
+    <string name="inner_arms">Innenseiten der Arme</string>
+    <string name="inner_wrist">Innenseite der Handgelenke</string>
     <string name="palm_of_hands_and_fingertips">Handflächen und Fingerspitzen</string>
     <string name="behind_the_knee">Hinter dem Knie</string>
     <string name="nipples">Brustwarzen</string>
@@ -21,544 +29,174 @@
     <string name="neck">Hals</string>
     <string name="inner_thigh">Innere Oberschenkel</string>
     <string name="bottom_of_feet_and_toes">Fußsohlen und Zehen</string>
+    <string name="anus">Anus</string>
+    <string name="buttocks">Gesäß</string>
+
     <string name="glans">Eichel</string>
     <string name="scrotum_and_testicles">Hodensack und Hoden</string>
     <string name="perineum">Damm</string>
     <string name="prostate">Prostata</string>
+    <string name="penis">Penis</string>
+
     <string name="areola_and_nipples">Brustwarzenhof und Brustwarzen</string>
     <string name="pubic_mound">Schamhügel</string>
     <string name="clitoris">Klitoris</string>
     <string name="g_spot">G-Punkt</string>
-    <string name="anus">Anus</string>
 
-    <string name="not_enough_players_alert_title">Nicht genügend Spieler</string>
-    <string name="not_enough_players_alert_description">Du benötigst mindestens 2 Spieler, um das Spiel zu starten.
-    </string>
-    <string name="add_player_names_alert_title">Füge Spielernamen hinzu</string>
-    <string name="add_player_names_alert_description">Du musst Spielernamen hinzufügen, um das Spiel zu starten.
-    </string>
-    <string name="add_player_ero_zones_alert_title">Füge erogene Zonen der Spieler hinzu</string>
-    <string name="add_player_ero_zones_alert_description">Du musst erogene Zonen der Spieler hinzufügen, um das Spiel zu
-        starten.
-    </string>
-    <string name="scalp_and_hair_massage_action">%, massiere die Kopfhaut von % sanft. Übe leichten Druck auf
-        die Kopfhaut aus und variiere die Geschwindigkeit und Intensität der Massage entsprechend den Vorlieben deines
-        Partners. Anschließend massiere vorsichtig den Kopf mit den Fingerspitzen in kreisenden Bewegungen für 1-3
-        Minuten.
-    </string>
-    <string name="scalp_and_hair_scratch_action">%, kratze leicht die Kopfhaut von %. Bewege dich vom Nacken zur
-        Stirn und von den Ohren nach oben zur Kopfmitte, indem du die Geschwindigkeit und Intensität der Bewegungen für
-        zusätzliche Empfindungen veränderst.
-    </string>
-    <string name="scalp_and_hair_pinch_action">%, kneife leicht die Kopfhaut von %. Während du sanft kneifst,
-        bewege dich vom Nacken zur Stirn und von den Ohren nach oben zur Kopfmitte für zusätzliche Stimulation deines
-        Partners.
-    </string>
-    <string name="scalp_and_hair_pull_action">%, fahre mit deinen Fingern durch %s Haare und ziehe sie sanft.
-    </string>
-    <string name="scalp_and_hair_use_accessories_0_action">%, benutze einen weichen Kamm oder einen Kamm mit breiten
-        Zinken, um %s Haare sanft zu kämmen. Dies kann angenehme Empfindungen erzeugen, besonders wenn du es langsam
-        und rhythmisch machst.
-    </string>
-    <string name="scalp_and_hair_blow_warm_air_action">%, puste sanft warme Luft auf %s Kopfhaut und Haare. Dies
-        wird zusätzliche Erregung erzeugen und deinem Partner Entspannung verschaffen.
-    </string>
-    <string name="scalp_and_hair_use_accessories_1_action">%, erkunde verschiedene sensorische Erfahrungen, indem du
-        duftende Haarprodukte wie Öle oder Parfums auf %s Kopfhaut und Haare aufträgst.
-    </string>
-    <string name="scalp_and_hair_use_accessories_2_action">%, verwende spezielle Kopfmassagegeräte. Dies wird %
-        helfen, sich entspannter zu fühlen und zusätzliche Stimulation zu erfahren.
-    </string>
-    <string name="ears_massage_action">%, massiere sanft die Ohrläppchen von %. Verwende leichten Druck und
-        kreisende Bewegungen, um die Ohrläppchen zu stimulieren.
-    </string>
-    <string name="ears_whisper_action">%, flüstere zärtliche Worte zu %. Die Ohren sind buchstäblich mit
-        Nervenenden überfüllt und so empfindlich, dass viele Menschen sogar von einem heißen Flüstern erregt werden.
-    </string>
-    <string name="ears_bite_action">%, beiße vorsichtig in %s Ohrläppchen, um angenehme Empfindungen zu
-        erzeugen.
-    </string>
-    <string name="ears_kiss_action">%, küsse sanft %s Ohrläppchen und den Bereich um ihr Ohr. Dadurch wirst du
-        deinen Partner zusätzlich erregen und unvergessliche Empfindungen schenken.
-    </string>
-    <string name="ears_suck_action">%, sauge sanft an %s Ohrläppchen, um zusätzliche Erregung und neue
-        Empfindungen zu erhalten.
-    </string>
-    <string name="ears_use_accessories_action">%, benutze eine Feder oder ein anderes weiches Accessoire, um die
-        äußeren Konturen von %s Ohren sanft zu streicheln und ihrer Form zu folgen.
-    </string>
-    <string name="ears_ice_action">%, verwende einen Eiswürfel, um die Nervenenden der Ohrläppchen von % zu
-        stimulieren. Führe den Eiswürfel vorsichtig entlang der Konturen der Ohren, um zusätzliche Stimulation und
-        Erregung zu bieten.
-    </string>
-    <string name="navel_kiss_action">%, küsse zärtlich den Bauchnabel und die Umgebung des Bauchnabels von %, um
-        angenehme Empfindungen und Erregung zu erzeugen.
-    </string>
-    <string name="navel_lick_action">%, lecke sanft den Bauchnabel von % und spiele mit deiner Zunge darum
-        herum.
-    </string>
-    <string name="navel_blow_warm_air_action">%, hauche warmen Atem auf %s Bauchnabel, um ein angenehmes Gefühl
-        von Wärme zu erzeugen und die erogenen Rezeptoren zu stimulieren.
-    </string>
-    <string name="navel_use_accessories_action">%, verwende eine Feder oder andere weiche Accessoires. Streiche mit
-        der Feder über die Haut rund um %s Bauchnabel und erzeuge angenehme Empfindungen und Erregung. Eine sanfte
-        Berührung der Haut mit einer Feder kann sehr sinnlich sein.
-    </string>
-    <string name="navel_ice_action">%, fahre vorsichtig mit einem Eiswürfel um %s Bauchnabel herum. Das Eis
-        erzeugt kühle Empfindungen und stimuliert die erogenen Rezeptoren.
-    </string>
-    <string name="lower_stomach_kiss_action">%, küsse zärtlich den unteren Teil von % Bauch.</string>
-    <string name="lower_stomach_lick_action">%, lecke sanft den unteren Teil von % Bauch, von ihrem Bauchnabel
-        hinunter zum Schamhügel. Dadurch wird zusätzliche Erregung erzeugt und neue Empfindungen erlebt.
-    </string>
-    <string name="lower_stomach_massage_action">%, massiere sanft den unteren Teil von % Bauch mit kreisenden
-        Bewegungen, leichtem Druck oder sanftem Kneifen. Verwende Öl oder Lotion, um die Erregung deines Partners zu
-        steigern.
-    </string>
-    <string name="lower_stomach_scratch_action">%, fahre vorsichtig mit deinen Fingernägeln über die Haut des
-        unteren Bauchbereichs von % und erzeuge dabei ein leichtes Unbehagen, das mit Erregung einhergeht.
-    </string>
-    <string name="lower_stomach_blow_warm_air_action">%, hauche sanft warme Atemluft auf den unteren Bauchbereich
-        von % und erzeuge ein angenehmes Gefühl von Wärme, während du die erogenen Rezeptoren stimulierst.
-    </string>
-    <string name="lower_stomach_use_accessories_action">%, verwende eine Feder oder andere weiche Accessoires.
-        Streiche mit der Feder über die Haut des unteren Bauchbereichs von % und erzeuge angenehme Empfindungen und
-        Erregung. Ein leichter Federstrich auf der Haut kann sehr sinnlich sein.
-    </string>
-    <string name="lower_stomach_ice_action">%, streiche sanft mit einem Eiswürfel über den unteren Bauchbereich von
-        %. Eis erzeugt kühle Empfindungen und stimuliert die erogenen Rezeptoren.
-    </string>
-    <string name="areola_and_nipples_massage_action">%, massiere die Brustwarzen und Brüste von % sanft. Mit
-        leichten kreisenden Bewegungen, Kneifen und Druck verschaffst du deinem Partner zusätzliche Erregung und neue
-        Empfindungen. Verwende Öle und Lotionen für eine sanftere und sinnlichere Massage.
-    </string>
-    <string name="areola_and_nipples_kiss_action">%, küsse die Brustwarzen und Brüste von % sanft.</string>
-    <string name="areola_and_nipples_lick_action">%, lecke die Brustwarzen und Brüste von % sanft. Verspielte
-        Küsse und Lecken können besonders erregend sein.
-    </string>
-    <string name="areola_and_nipples_bite_action">%, beiße leicht in die Brustwarzen und Brüste von %. Es ist
-        wichtig, vorsichtig zu sein und nach ihren Vorlieben und Grenzen zu handeln.
-    </string>
-    <string name="areola_and_nipples_use_accessories_0_action">%, benutze spezielle Spielzeuge zur Stimulation von
-        %s Brustwarzen und Areolen. Zum Beispiel können kleine Vibratoren, klitorale Stimulatoren und Nippelklemmen
-        mit einstellbarem Druck effektiv sein, um Empfindungen und Erregung zu verstärken.
-    </string>
-    <string name="areola_and_nipples_use_accessories_1_action">%, benutze eine Feder oder andere weiche Accessoires,
-        um %s Brustwarzen und Brüste zu streicheln. Sanftes Federnstreichen kann besonders erregend sein.
-    </string>
-    <string name="areola_and_nipples_ice_action">%, verwende Eiswürfel für zusätzliche Stimulation von %s
-        Brustwarzen und Brüsten. Gleite vorsichtig mit dem Eiswürfel über die Brustwarzen und um sie herum, um neue
-        Empfindungen zu erleben.
-    </string>
-    <string name="pubic_mound_massage_action">%, massiere %s Schamgegend sanft. Streichele sie mit leichten
-        kreisenden Bewegungen oder gleite mit deinen Händen über ihre Oberfläche. Verwende Öle oder Lotionen. Erforsche
-        die Textur und Form und achte auf die Reaktionen deines Partners.
-    </string>
-    <string name="pubic_mound_kiss_action">%, küsse und streichle %s Schamgegend sanft. Verspielte Küsse können
-        besonders erregend sein.
-    </string>
-    <string name="pubic_mound_lick_action">%, benutze deine Zunge, um den Schambereich von % zu stimulieren. Das
-        Lecken kann zusätzliche Erregung verschaffen.
-    </string>
-    <string name="pubic_mound_use_accessories_0_action">%, verwende eine Feder oder andere weiche Accessoires, um
-        den Schambereich von % zu stimulieren. Gleite mit der Feder über die Oberfläche, um Abwechslung und neue
-        Empfindungen hinzuzufügen.
-    </string>
-    <string name="pubic_mound_use_accessories_1_action">%, benutze spezielle Spielzeuge wie kleine Vibratoren oder
-        klitorale Stimulatoren, um den Schambereich von % zusätzlich zu stimulieren und Abwechslung und neue
-        Empfindungen hinzuzufügen.
-    </string>
-    <string name="pubic_mound_ice_action">%, benutze einen Eiswürfel für zusätzliche Stimulation des Schambereichs
-        von %. Gleite den Eiswürfel über die Zone deines Partners. Das Spiel mit der Temperatur kann zusätzliche
-        Erregung erzeugen.
-    </string>
-    <string name="clitoris_massage_0_action">%, streichle und massiere sanft %s Klitoris. Leichte kreisende
-        Bewegungen und sorgfältige Streicheleinheiten helfen angenehme Empfindungen zu erzeugen. Verwende eine
-        ausreichende Menge wasserbasiertes Gleitmittel, um Unannehmlichkeiten zu vermeiden.
-    </string>
-    <string name="clitoris_massage_1_action">%, massiere %s Klitoris mit sanftem Druck in Verbindung mit
-        kreisenden Bewegungen. Verwende verschiedene Techniken und Intensitäten, um herauszufinden, was deinem Partner
-        mehr Freude bereitet.
-    </string>
-    <string name="clitoris_kiss_action">%, küsse %s Klitoris sanft. Variiere verschiedene Rhythmen, um
-        herauszufinden, was deinem Partner am meisten Freude bereitet.
-    </string>
-    <string name="clitoris_lick_action">%, benutze deine Zunge, um %s Klitoris zu verwöhnen. Verwende
-        verschiedene Techniken wie kreisende Bewegungen, leichten Druck mit der Zunge und Saugen für zusätzliche
-        Stimulation. Die orale Stimulation der Klitoris kann sehr erregend sein.
-    </string>
-    <string name="clitoris_bite_action">%, beiße sanft und vorsichtig in %s Klitoris für zusätzliche
-        Stimulation. Beachte die Vorlieben deines Partners.
-    </string>
-    <string name="clitoris_use_accessories_action">%, verwende spezielle Klitorisstimulatoren, Vibratoren oder
-        Massagegeräte für zusätzliche Klitorisstimulation bei %. Stelle sicher, dass du eine ausreichende Menge
-        wasserbasiertes Gleitmittel verwendest und auf die Reaktionen deines Partners achtest.
-    </string>
-    <string name="clitoris_itself_action">%, erlaube %, ihre Klitoris selbstständig zu stimulieren. Dies kann
-        eine intime und erregende Erfahrung sein.
-    </string>
-    <string name="g_spot_massage_action">%, führe einen oder zwei Finger in %s Vagina ein, oder du kannst ein
-        spezielles gebogenes Sexspielzeug zur Stimulation des G-Punkts verwenden. Verwende wasserbasiertes Gleitmittel,
-        um die Region zu befeuchten und die Bewegung zu erleichtern. Finde eine kleine Erhebung an der vorderen Wand der
-        Vagina. Massiere den G-Punkt sanft mit kreisenden Bewegungen und variiere Rhythmus und Intensität.
-    </string>
-    <string name="g_spot_itself_action">%, erlaube %, ihren G-Punkt selbstständig mit den Fingern oder einem
-        speziellen gebogenen Sexspielzeug zu stimulieren. Dies kann eine intime und erregende Erfahrung sein.
-    </string>
-    <string name="anus_massage_action">%, benutze wasserbasiertes Gleitgel und beginne mit sanften
-        Fingerstreicheleien rund um den Anus von %. Nach und nach kannst du vorsichtig und behutsam mit dem Finger
-        in den Anus eindringen. Es ist wichtig, vorsichtig zu sein, auf die Reaktion deines Partners zu achten und seine
-        Vorlieben und Grenzen zu respektieren.
-    </string>
-    <string name="anus_use_accessories_0_action">%, benutze spezielle Analspielzeuge wie Analplugs oder Analdildos,
-        um den Anus von % zu stimulieren. Achte darauf, eine ausreichende Menge an wasserbasiertem Gleitgel zu
-        verwenden und beginne mit kleineren Spielzeugen, damit sich dein Partner daran gewöhnen und sich wohlfühlen
-        kann.
-    </string>
-    <string name="anus_use_accessories_1_action">%, benutze eine Feder oder andere weiche Accessoires, um den Anus
-        von % zu stimulieren. Sanfte Streicheleinheiten können sehr sinnlich und erregend sein.
-    </string>
-    <string name="anus_kiss_action">%, küsse den Anus von % sanft. Achte darauf, dass der anale Bereich sauber
-        und geschmiert ist, für mehr Komfort und Hygiene.
-    </string>
-    <string name="anus_lick_action">%, lecke den Anus von % sanft. Achte darauf, dass der anale Bereich sauber
-        und geschmiert ist, für mehr Komfort und Hygiene. Rimming (Anilingus) kann für manche Menschen erotisch und
-        erregend sein.
-    </string>
-    <string name="anus_ice_action">%, benutze einen Eiswürfel, um den Anus von % zu stimulieren. Es ist wichtig,
-        vorsichtig zu sein, auf die Reaktion deines Partners zu achten und seine Vorlieben und Grenzen zu respektieren.
-    </string>
-    <string name="anus_itself_action">%, % kann seinen Anus selbstständig mit den Fingern oder speziellen
-        Sexspielzeugen stimulieren, und du kannst dabei zuschauen und ihn unterstützen. Gegenseitige Masturbation kann
-        eine intime und erregende Erfahrung sein.
-    </string>
-    <string name="buttocks_massage_action">%, massiere %\' Gesäß. Verwende kreisende Bewegungen, sanften Druck,
-        Streicheln, leichte Klapse, Reiben, Kneifen oder tiefe massierende Bewegungen, um deinen Partner zu erregen.
-        Massageöle oder Lotionen können die Stimulation in diesem Bereich verstärken.
-    </string>
-    <string name="buttocks_kiss_action">%, küsse %\' Gesäß. Verspielte Küsse können Erregung und Vergnügen
-        hervorrufen.
-    </string>
-    <string name="buttocks_lick_action">%, lecke %\' Gesäß. Du kannst besondere Aufmerksamkeit auf den Bereich
-        um den Anus legen.
-    </string>
-    <string name="buttocks_bite_action">%, knabbere sanft an %\' Gesäß. Beachte die Reaktion deines Partners für
-        mehr Genuss.
-    </string>
-    <string name="buttocks_use_accessories_action">%, verwende Federn oder weiche Accessoires, um %\' Gesäß zu
-        stimulieren. Gleite mit der Feder über die Oberfläche, um Abwechslung und neue Empfindungen hinzuzufügen, wobei
-        du besonders auf den Bereich um den Anus achtest.
-    </string>
-    <string name="buttocks_ice_action">%, gleite sanft mit einem Eiswürfel über %\' Gesäß. Dies wird
-        zusätzliches Vergnügen und neue Empfindungen bereiten.
-    </string>
-    <string name="buttocks">Gesäß</string>
-    <string name="glans_massage_action">%, massiere vorsichtig die Eichel von %. Verwende verschiedene Techniken
-        wie sanftes Drücken und Zusammenziehen der Eichel, Auf- und Abbewegungen oder kreisförmige Bewegungen, um die
-        Eichel zu massieren. Benutze wasserbasiertes Gleitmittel, um die Eichel zu befeuchten und die Bewegung der Hände
-        zu erleichtern.
-    </string>
-    <string name="glans_kiss_action">%, küsse vorsichtig die Eichel von %. Verwende wasserbasiertes Gleitmittel,
-        um die Eichel zu befeuchten und die Bewegungen zu erleichtern.
-    </string>
-    <string name="glans_lick_action">%, lecke vorsichtig die Eichel von % mit deiner Zunge. Variiere die
-        Bewegungen und Rhythmen, zum Beispiel kreisförmige Bewegungen mit der Zunge, um herauszufinden, was deinem
-        Partner am meisten Freude bereitet.
-    </string>
-    <string name="glans_bite_action">%, beiße vorsichtig in die Eichel von %. Achte auf die Reaktion deines
-        Partners und reagiere auf seine Signale.
-    </string>
-    <string name="glans_suck_action">%, sauge vorsichtig an der Eichel von %.</string>
-    <string name="glans_use_accessories_action">%, verwende spezielle Spielzeuge wie Penis-Massager oder Vibratoren,
-        um die Eichel von % zu stimulieren.
-    </string>
-    <string name="glans_ice_action">%, benutze einen Eiswürfel, um die Eichel von % zu stimulieren. Das Spielen
-        mit der Temperatur kann sehr aufregend sein.
-    </string>
-    <string name="glans_itself_action">%, erlaube %, seine Eichel selbst zu stimulieren. Achte auf seine
-        Vorlieben und Reaktionen und unterstütze ihn in diesem Prozess.
-    </string>
-    <string name="scrotum_and_testicles_massage_action">%, massiere %\' Hoden. Streichle sie sanft mit leichten
-        kreisenden Bewegungen, Streichungen oder leichtem Druck. Achte auf die Reaktionen und Vorlieben deines Partners.
-        Verwende ausreichend Wasserbasis Gleitgel und stimme dich auf die Reaktionen deines Partners ab.
-    </string>
-    <string name="scrotum_and_testicles_kiss_action">%, küsse %\' Hoden sanft.</string>
-    <string name="scrotum_and_testicles_lick_action">%, verwende deine Zunge, um %\' Hoden zu stimulieren. Lecke
-        und streichle sie mit zarten Bewegungen. Varriere verschiedene Bewegungen und Rhythmen, um herauszufinden, was
-        deinem Partner am meisten Freude bereitet.
-    </string>
-    <string name="scrotum_and_testicles_bite_action">%, beiße %\' Hoden sanft. Achte auf die Reaktionen und
-        Vorlieben deines Partners.
-    </string>
-    <string name="scrotum_and_testicles_suck_action">%, sauge %\' Hoden und Hodensack sanft. Varriere
-        verschiedene Bewegungen und Rhythmen, um herauszufinden, was deinem Partner am meisten Freude bereitet.
-    </string>
-    <string name="scrotum_and_testicles_use_accessories_0_action">%, verwende spezielle Sexspielzeuge zur
-        Stimulation von %\' Hoden und Hodensack, wie Massager oder Vibratoren.
-    </string>
-    <string name="scrotum_and_testicles_use_accessories_1_action">%, verwende eine Feder oder andere weiche
-        Accessoires zur Stimulation von %\' Hoden. Sanftes Streicheln wird zusätzliche Erregung schaffen.
-    </string>
-    <string name="perineum_massage_action">%, massieren Sie sanft %\' Damm. Streicheln Sie diesen Bereich mit
-        leichten kreisenden Bewegungen oder Auf- und Abbewegungen. Achten Sie auf die Reaktionen Ihres Partners und
-        seine Vorlieben hinsichtlich Intensität und Druck.
-    </string>
-    <string name="perineum_lick_action">%, verwenden Sie Ihre Zunge, um %\' Damm zu stimulieren. Liebkosen Sie
-        diesen Bereich mit sanften Zungenbewegungen. Variieren Sie verschiedene Bewegungen und Rhythmen, um
-        herauszufinden, was Ihrem Partner am meisten Freude bereitet.
-    </string>
-    <string name="perineum_use_accessories_action">%, verwenden Sie verschiedene Accessoires wie Federn, Vibratoren
-        oder Massager, um %\' Damm zu stimulieren. Achten Sie darauf, eine ausreichende Menge wasserbasiertes
-        Gleitmittel zu verwenden und auf die Reaktionen Ihres Partners einzugehen.
-    </string>
-    <string name="prostate_massage_action">%, verwenden Sie wasserbasiertes Gleitmittel und führen Sie Ihre Finger
-        vorsichtig in % Anus ein. Massieren Sie vorsichtig die Prostata, indem Sie kreisende Bewegungen an den
-        Wänden des Mastdarms machen. Es ist wichtig, vorsichtig, sanft und rücksichtsvoll auf den Komfort Ihres Partners
-        zu achten.
-    </string>
-    <string name="prostate_use_accessories_action">%, verwenden Sie spezielle Sexspielzeuge wie Massager oder
-        Vibratoren, um die Prostata von % zu stimulieren. Stellen Sie sicher, dass Sie eine ausreichende Menge
-        wasserbasiertes Gleitmittel verwenden und den Anweisungen des Spielzeugs folgen.
-    </string>
-    <string name="prostate_itself_action">%, lassen Sie % seine Prostata selbst stimulieren, und Sie können
-        zuschauen und ihn in diesem Prozess unterstützen. Es kann eine intime und aufregende Erfahrung für euch beide
-        sein.
-    </string>
-    <string name="penis">Penis</string>
-    <string name="penis_massage_action">%, massieren Sie sanft %\' Penis. Stellen Sie sicher, dass Sie eine
-        ausreichende Menge wasserbasiertes Gleitmittel verwenden, um mehr Komfort zu gewährleisten. Variieren Sie
-        verschiedene Bewegungen und Rhythmen, wie Auf- und Abwärtsbewegungen, leichte Streicheleinheiten und sanfte
-        Druckausübung, um herauszufinden, was Ihrem Partner am meisten Freude bereitet.
-    </string>
-    <string name="penis_kiss_action">%, küssen Sie %\' Penis sanft. Bewegen Sie sich von der Basis des Penis bis
-        zur Spitze und küssen Sie ihn zärtlich.
-    </string>
-    <string name="penis_suck_action">%, saugen Sie %\' Penis sanft. Variieren Sie verschiedene Bewegungen und
-        Rhythmen, wie Auf- und Abwärtsbewegungen mit Ihren Lippen, Deepthroating, um herauszufinden, was Ihrem Partner
-        am meisten Freude bereitet.
-    </string>
-    <string name="penis_lick_action">%, lecken Sie %\' Penis. Verwenden Sie verschiedene Techniken, führen Sie
-        Ihre Zunge von der Basis bis zur Spitze des Penis, verwenden Sie kreisende Bewegungen.
-    </string>
-    <string name="penis_use_accessories_0_action">%, verwenden Sie spezielle Massagegeräte, um %\' Penis zu
-        stimulieren. Achten Sie darauf, eine ausreichende Menge wasserbasiertes Gleitmittel für mehr Komfort zu
-        verwenden.
-    </string>
-    <string name="penis_use_accessories_1_action">%, verwenden Sie Federn oder andere weiche Accessoires, um %\'
-        Penis zusätzlich zu stimulieren. Dies wird zusätzliche Empfindungen und Erregung bringen.
-    </string>
-    <string name="penis_ice_action">%, verwenden Sie einen Eiswürfel, um %\' Penis zu stimulieren. Das Spiel mit
-        der Temperatur kann sehr aufregend sein.
-    </string>
-    <string name="penis_itself_action">%, erlauben Sie %, seinen eigenen Penis zu massieren. Achten Sie auf
-        seine Reaktionen und Vorlieben.
-    </string>
-    <string name="nipples_massage_action">%, massieren Sie vorsichtig die Brustwarzen von % und die Umgebung.
-        Streichen Sie, machen Sie kreisende Bewegungen um die Brustwarzen und kneifen Sie leicht. Verwenden Sie Öle oder
-        Lotionen für angenehmere Empfindungen.
-    </string>
-    <string name="nipples_kiss_action">%, küssen Sie sanft %\' Brustwarzen.</string>
-    <string name="nipples_lick_action">%, lecken Sie %\' Brustwarzen und die Umgebung.</string>
-    <string name="nipples_bite_action">%, Sie können mit leichtem Beißen an %\' Brustwarzen experimentieren,
-        vorsichtig und behutsam.
-    </string>
-    <string name="nipples_ice_action">%, bewegen Sie einen Eiswürfel um %\' Brustwarzen oder legen Sie ihn
-        vorsichtig darauf, um ein Gefühl von Kühle und Erregung zu erzeugen.
-    </string>
-    <string name="nipples_use_accessories_0_action">%, verwenden Sie einen Massager, Vibrator oder eine Klammer mit
-        einstellbarem Druck, um %\' Brustwarzen zu streicheln und zu stimulieren und neue aufregende Empfindungen zu
-        erzeugen und die Sinnlichkeit der Accessoires zu genießen.
-    </string>
-    <string name="nipples_use_accessories_1_action">%, verwenden Sie eine Feder oder andere weiche Accessoires, um
-        %\' Brustwarzen zu stimulieren. Dies kann zusätzliche Erregung hervorrufen.
-    </string>
-    <string name="nipples_suck_action">%, sauge sanft an %\' Brustwarzen für zusätzliche Stimulation.</string>
-    <string name="areola_and_nipples_suck_action">%, sauge sanft an %s Brustwarzen für zusätzliche
-        Stimulation.
-    </string>
-    <string name="small_of_the_back_massage_action">%, massiere %s unteren Rücken. Verwende verschiedene
-        Techniken wie kreisende Bewegungen, sanften Druck, Kneifen usw., um deinen Partner zu entspannen. Öl oder Lotion
-        können die Massage erotischer gestalten.
-    </string>
-    <string name="small_of_the_back_kiss_action">%, küsse %s unteren Rücken. Erforsche diesen Bereich mit deinen
-        Lippen und achte auf die Reaktionen deines Partners.
-    </string>
-    <string name="small_of_the_back_use_accessories_action">%, verwende eine Feder oder ein anderes weiches
-        Accessoire, um entlang von %s unterem Rücken zu streichen.
-    </string>
-    <string name="small_of_the_back_ice_action">%, gleite sanft mit einem Eiswürfel entlang von %s unterem
-        Rücken.
-    </string>
-    <string name="armpits_massage_action">%, massiere sanft %s Achselhöhlen. Versuche leichte kreisende
-        Bewegungen oder Streicheleinheiten, um diesen Bereich zu stimulieren. Öl oder Lotion können die Massage
-        anregender machen.
-    </string>
-    <string name="armpits_kiss_action">%, küsse %s Achselhöhlen mit deinen Lippen. Verspielte Küsse und sanfte
-        Liebkosungen können erregend sein.
-    </string>
-    <string name="armpits_use_accessories_action">%, benutze eine Feder oder andere weiche Accessoires, um %s
-        Achselhöhlen zu kitzeln.
-    </string>
-    <string name="armpits_ice_action">%, verwende einen Eiswürfel für zusätzliche Stimulation von %s
-        Achselhöhlen. Gleite langsam und vorsichtig den Eiswürfel über ihre Achselhöhlen, um deinem Partner ein neues
-        Erlebnis und Erregung zu geben.
-    </string>
-    <string name="inner_arms_massage_action">%, massieren Sie die Innenseite von %s Armen sanft. Verwenden Sie
-        Streichbewegungen, kreisende Bewegungen und leichtes Kneifen für zusätzliche Stimulation. Die Massage mit Öl
-        oder Lotion kann die Empfindungen verstärken.
-    </string>
-    <string name="inner_arms_kiss_action">%, streicheln Sie die Innenseite von %s Armen mit Küssen oder leichtem
-        Knabbern Ihrer Lippen. Verspielte Küsse und sanfte Berührungen können erregend sein.
-    </string>
-    <string name="inner_arms_lick_action">%, verwenden Sie Ihre Zunge, um die Innenseite von %s Armen zu
-        stimulieren. Leichtes Lecken entlang der Innenseite ihrer Arme kann angenehme Empfindungen und Erregung
-        erzeugen.
-    </string>
-    <string name="inner_arms_use_accessories_action">%, verwenden Sie eine Feder oder andere weiche Accessoires, um
-        die Innenseite von %s Armen zu stimulieren.
-    </string>
-    <string name="inner_arms_ice_action">%, verwenden Sie einen Eiswürfel für eine zusätzliche Massage der
-        Innenseite von %s Armen. Das kann Ihrer Erfahrung Vielfalt und neue Empfindungen hinzufügen.
-    </string>
-    <string name="inner_wrist_massage_action">%, massiere sanft die Innenseite von %s Handgelenken. Die
-        Verwendung von Öl oder Lotion für die Massage kann die Empfindungen intensivieren.
-    </string>
-    <string name="inner_wrist_kiss_action">%, liebkose die Innenseite von %s Handgelenken mit Küssen. Verspielte
-        Küsse und zarte Berührungen können erregend sein.
-    </string>
-    <string name="inner_wrist_lick_action">%, lecke die Innenseite von %s Handgelenken. Sanftes Lecken entlang
-        der Innenseite der Handgelenke kann angenehme Empfindungen hervorrufen und erregend sein.
-    </string>
-    <string name="inner_wrist_use_accessories_action">%, verwende eine Feder oder andere weiche Accessoires, um die
-        Innenseite von %s Handgelenken zu stimulieren. Dies kann Abwechslung und neue Empfindungen in dein Erlebnis
-        bringen.
-    </string>
-    <string name="inner_wrist_ice_action">%, benutze einen Eiswürfel für zusätzliche Stimulation auf der Innenseite
-        von %s Handgelenken. Das Spielen mit Temperaturen kann zusätzliche Aufregung schaffen.
-    </string>
-    <string name="palm_of_hands_and_fingertips_massage_action">%, massiere %s Handflächen mit sanftem Druck und
-        kreisenden Bewegungen. Dies kann angenehme Empfindungen und Entspannung erzeugen.
-    </string>
-    <string name="palm_of_hands_and_fingertips_kiss_action">%, küsse %s Handflächen mit deinen Lippen. Achte auf
-        die Fingerspitzen und berühre sie mit zarten Küssen.
-    </string>
-    <string name="palm_of_hands_and_fingertips_lick_action">%, lecke %s Handflächen und Fingerspitzen für
-        zusätzliche Stimulation und Erregung.
-    </string>
-    <string name="palm_of_hands_and_fingertips_suck_action">%, sauge an %s Fingerspitzen. Dies kann die Erregung
-        verstärken.
-    </string>
-    <string name="palm_of_hands_and_fingertips_use_accessories_action">%, verwende Federn oder andere weiche
-        Accessoires, um %s Handflächen und Fingerspitzen zu stimulieren. Dies kann neue Empfindungen hinzufügen und
-        die Erregung steigern.
-    </string>
-    <string name="behind_the_knee_massage_action">%, massiere sanft den Bereich hinter %s Knien. Versuche
-        leichte kreisende Bewegungen, Druckausübungen und Kneifen in diesem Bereich. Achte auf die Reaktion deines
-        Partners und seine Vorlieben. Die Verwendung von Massageöl oder Lotion im Bereich hinter den Knien kann
-        zusätzliches Vergnügen und Erregung erzeugen.
-    </string>
-    <string name="behind_the_knee_kiss_action">%, küsse den Bereich hinter %s Knien und knabbere leicht mit
-        deinen Lippen daran. Erotische Küsse und sanfte Liebkosungen können erregend sein.
-    </string>
-    <string name="behind_the_knee_lick_action">%, lecke den Bereich hinter %s Knien, um angenehme Empfindungen
-        zu erzeugen.
-    </string>
-    <string name="behind_the_knee_use_accessories_action">%, benutze eine Feder oder andere weiche Accessoires im
-        Bereich hinter %s Knien, um zusätzliches Vergnügen und Erregung zu bieten.
-    </string>
-    <string name="lips_massage_action">%, streiche sanft mit deinen Fingerspitzen über %s Lippen. Du kannst auch
-        Essen verwenden, wie Früchte, Eiscreme, etc. Streiche ein Stück Essen über ihre Lippen und lass deine Partnerin
-        es essen. Dadurch kann sie neue Empfindungen und Aufregung erleben.
-    </string>
-    <string name="lips_kiss_action">%, experimentiere mit verschiedenen Arten von Küssen - sanft, leidenschaftlich,
-        verspielt oder leichte Berührungen mit deinen Lippen. Varieiere die Intensität und den Rhythmus, um neue
-        Empfindungen zu entdecken und % zu erregen.
-    </string>
-    <string name="lips_lick_action">%, benutze die Spitze deiner Zunge, um %s Lippen zu streicheln. Dies kann
-        sanftes Lecken, kreisende Bewegungen usw. beinhalten. Erforsche, welche Bewegungen und Berührungen ihr am
-        meisten Freude bereiten.
-    </string>
-    <string name="lips_bite_action">%, beiße vorsichtig und behutsam in %s Lippen, um neue Empfindungen zu
-        erleben und die Stimulation zu intensivieren. Für manche Menschen kann leichtes Beißen oder Zupfen an den Lippen
-        erregend sein.
-    </string>
-    <string name="neck_massage_0_action">%, massiere %s Nacken. Verwende sanften Druck und kreisende Bewegungen,
-        um die Muskeln deines Partners zu entspannen, was angenehme Empfindungen erzeugt. Verwende Öle oder Lotionen für
-        ein angenehmeres Erlebnis.
-    </string>
-    <string name="neck_massage_1_action">%, variere deine Berührungen und den Druck entsprechend %s Vorlieben.
-        Verwende deine Fingerspitzen für leichte Streicheleinheiten oder übe sanften Druck auf verschiedene Bereiche des
-        Nackens aus. Vergiss nicht, Öl oder Lotion für eine gesteigerte Erregung zu verwenden.
-    </string>
-    <string name="neck_kiss_action">%, küsse oder knabbere leicht an %s Nacken. Verspielte Küsse entlang des
-        Nackens können angenehme Empfindungen und Erregung hervorrufen.
-    </string>
-    <string name="neck_lick_action">%, lecke %s Nacken. Dies kann erotische Empfindungen hervorrufen und die
-        Stimulation intensivieren.
-    </string>
-    <string name="neck_use_accessories_action">%, verwende Federn oder andere weiche Accessoires, um %s Nacken
-        zu stimulieren. Gleite mit den Federn entlang ihres Nackens oder verwende weiche Accessoires, um neue
-        Empfindungen zu erzeugen.
-    </string>
-    <string name="neck_ice_action">%, verwende einen Eiswürfel im Nackenbereich von %. Das Spiel mit der
-        Temperatur kann neue Empfindungen und Erregung bringen.
-    </string>
-    <string name="lips_ice_action">%, führe einen Eiswürfel über %s Lippen. Das Spiel mit der Temperatur kann
-        neue Empfindungen und Erregung bringen.
-    </string>
-    <string name="inner_thigh_massage_0_action">%, massiere sanft die Innenseite von %s Oberschenkel. Sanfte und
-        zärtliche Berührungen können angenehme Empfindungen und Erregung hervorrufen. Verwende Öle oder Lotionen für ein
-        angenehmeres Erlebnis.
-    </string>
-    <string name="inner_thigh_massage_1_action">%, variiere deine Berührungen und den Druck auf %s
-        Oberschenkelinnenseite. Manche Menschen mögen leichte und zarte Berührungen, während andere intensivere und
-        energischere Bewegungen bevorzugen. Vergiss nicht, Öle oder Lotionen für zusätzliche Erregung zu verwenden.
-    </string>
-    <string name="inner_thigh_kiss_action">%, streichle %s Oberschenkelinnenseite mit deinen Lippen, küsse sie
-        oder knabbere sanft mit deinen Lippen daran. Verspielte Küsse und zärtliche Streicheleinheiten können erregend
-        sein.
-    </string>
-    <string name="inner_thigh_lick_action">%, benutze deine Zunge, um %s Oberschenkelinnenseite zu stimulieren.
-        Leichte Leckbewegungen entlang der Oberschenkelinnenseite können angenehme Empfindungen und Erregung erzeugen.
-    </string>
-    <string name="inner_thigh_bite_action">%, knabbere sanft an der äußeren Oberfläche von %s Oberschenkel für
-        zusätzliche Stimulation.
-    </string>
-    <string name="inner_thigh_use_accessories_0_action">%, verwende Federn oder andere weiche Accessoires, um %s
-        Oberschenkelinnenseite zu stimulieren. Dies kann Abwechslung und neue Empfindungen in dein Erlebnis bringen.
-    </string>
-    <string name="inner_thigh_use_accessories_1_action">%, verwende einen Massager, Vibrator oder andere Accessoires
-        für zusätzliche Stimulation an %s äußerem Oberschenkel. Dies wird deinem Partner unvergessliche Empfindungen
-        bescheren und ihm helfen, zusätzliche Erregung zu erfahren.
-    </string>
-    <string name="inner_thigh_ice_action">%, benutze einen Eiswürfel für zusätzliche Stimulation an %s innerer
-        Oberschenkel. Das wird dazu beitragen, zusätzliche Erregung zu erleben.
-    </string>
-    <string name="bottom_of_feet_and_toes_massage_0_action">%, massiere %s Füße in kreisenden Bewegungen, übe
-        sanften Druck aus und bewege dich von der Basis der Zehen zur Ferse. Konzentriere dich auf verschiedene Punkte
-        Füßen, um sie zu entspannen und zu stimulieren. Die Verwendung von Öl oder Lotion hilft deinem
-        Partner, eine größere Entspannung und Freude zu erreichen.
-    </string>
-    <string name="bottom_of_feet_and_toes_massage_1_action">%, streichele %s Füße und Zehen mit den
-        Fingerspitzen. Dies kann eine angenehme und beruhigende Geste sein.
-    </string>
-    <string name="bottom_of_feet_and_toes_kiss_action">%, küsse %s Füße und Zehen für zusätzliche Stimulation
-        und Erregung.
-    </string>
-    <string name="bottom_of_feet_and_toes_lick_action">%, verwende deine Zunge, um %s Füße und Zehen zu
-        stimulieren. Das Lecken ihrer Füße und Zehen kann angenehme Empfindungen hervorrufen.
-    </string>
-    <string name="bottom_of_feet_and_toes_suck_action">%, sauge an %s Zehen. Dadurch entspannt sich dein Partner
-        und empfindet zusätzliches Vergnügen und Erregung.
-    </string>
-    <string name="bottom_of_feet_and_toes_use_accessories_action">%, massiere %s Füße mit Federn, Massagebällen,
-        Rollenmassagegeräten oder speziellen Accessoires. Dadurch können die Empfindungen verstärkt und die Erfahrung
-        abwechslungsreicher gestaltet werden.
-    </string>
-    <string name="bottom_of_feet_and_toes_ice_action">%, verwende einen Eiswürfel für zusätzliche Stimulation von
-        %s Füßen. Gleite mit dem Eiswürfel über ihre Füße und übe leichten Druck an verschiedenen Stellen aus, um
-        ihre Füße zu entspannen und zu stimulieren.
-    </string>
+    <string name="scalp_and_hair_massage_action">%, massiere %s Kopfhaut sanft. Übe leichten Druck aus und variiere Geschwindigkeit und Intensität je nach den Vorlieben deines Partners. Massiere dann vorsichtig mit den Fingerspitzen in kreisenden Bewegungen für 1–3 Minuten.</string>
+    <string name="scalp_and_hair_scratch_action">%, kratze sanft %s Kopfhaut. Fahre vom Nacken zur Stirn und von den Ohren zur Kopfmitte, während du Tempo und Intensität für zusätzliche Empfindungen variierst.</string>
+    <string name="scalp_and_hair_pinch_action">%, kneife sanft in %s Kopfhaut. Bewege dich dabei vom Nacken zur Stirn und von den Ohren zur Kopfmitte, um zusätzliche Reize zu erzeugen.</string>
+    <string name="scalp_and_hair_pull_action">%, gleite mit den Fingern durch %s Haare und ziehe sie dabei sanft.</string>
+    <string name="scalp_and_hair_use_accessories_0_action">%, verwende einen weichen Kamm oder einen mit breiten Zinken, um %s Haare sanft zu kämmen. Langsame, rhythmische Bewegungen können besonders angenehm sein.</string>
+    <string name="scalp_and_hair_blow_warm_air_action">%, puste sanft warme Luft auf %s Kopfhaut und Haare. Das kann zusätzliche Erregung hervorrufen und zur Entspannung beitragen.</string>
+    <string name="scalp_and_hair_use_accessories_1_action">%, erkunde verschiedene Sinneseindrücke, indem du duftende Haaröle oder Parfums auf %s Kopfhaut und Haare aufträgst.</string>
+    <string name="scalp_and_hair_use_accessories_2_action">%, verwende spezielle Massagegeräte für die Kopfhaut. Sie helfen %, sich zu entspannen und neue Reize zu erleben.</string>
+    <string name="ears_massage_action">%, massiere sanft %s Ohrläppchen. Verwende leichten Druck und kreisende Bewegungen, um sie zärtlich zu stimulieren.</string>
+    <string name="ears_whisper_action">%, flüstere % zärtliche Worte ins Ohr. Die Ohren sind reich an Nervenenden und so empfindlich, dass schon ein heißes Flüstern Erregung auslösen kann.</string>
+    <string name="ears_bite_action">%, beiße sanft in %s Ohrläppchen, um angenehme Reize zu erzeugen.</string>
+    <string name="ears_kiss_action">%, küsse sanft %s Ohrläppchen und die Umgebung des Ohrs. So kannst du deinen Partner zusätzlich erregen und unvergessliche Gefühle wecken.</string>
+    <string name="ears_suck_action">%, sauge sanft an %s Ohrläppchen. Diese zärtliche Geste kann neue Empfindungen hervorrufen und die Erregung steigern.</string>
+    <string name="ears_use_accessories_action">%, streichle sanft die äußeren Konturen von %s Ohren mit einer Feder oder einem anderen weichen Accessoire und folge dabei ihrer Form.</string>
+    <string name="ears_ice_action">%, gleite mit einem Eiswürfel über %s Ohrläppchen, um die empfindlichen Nervenenden zu stimulieren. Folge sanft den Konturen der Ohren für intensive Reize.</string>
+    <string name="navel_kiss_action">%, küsse zärtlich %s Bauchnabel und die umliegende Haut. Solche Berührungen können angenehme Empfindungen und Erregung hervorrufen.</string>
+    <string name="navel_lick_action">%, lecke sanft %s Bauchnabel und spiele mit der Zunge liebevoll darum herum.</string>
+    <string name="navel_blow_warm_air_action">%, hauche warmen Atem auf %s Bauchnabel. Die sanfte Wärme kann ein wohliges Gefühl erzeugen und die erogenen Zonen anregen.</string>
+    <string name="navel_use_accessories_action">%, streiche mit einer Feder oder einem anderen weichen Accessoire sanft über die Haut rund um %s Bauchnabel. Solche Berührungen können sehr sinnlich und erregend wirken.</string>
+    <string name="navel_ice_action">%, gleite vorsichtig mit einem Eiswürfel um %s Bauchnabel. Die Kälte kann prickelnde Empfindungen auslösen und die erogenen Zonen anregen.</string>
+    <string name="lower_stomach_kiss_action">%, küsse zärtlich %s Unterbauch.</string>
+    <string name="lower_stomach_lick_action">%, lecke sanft %s Unterbauch, vom Bauchnabel hinab bis zum Venushügel. Diese Bewegung kann zusätzliche Erregung und neue Empfindungen hervorrufen.</string>
+    <string name="lower_stomach_massage_action">%, massiere sanft %s Unterbauch mit kreisenden Bewegungen, leichtem Druck oder zartem Kneifen. Verwende Öl oder Lotion, um die Erregung zu intensivieren.</string>
+    <string name="lower_stomach_scratch_action">%, fahre sanft mit deinen Fingernägeln über %s Unterbauch. Das leichte Kribbeln kann mit prickelnder Erregung einhergehen.</string>
+    <string name="lower_stomach_blow_warm_air_action">%, hauche sanft warme Luft auf %s Unterbauch. Die zarte Wärme kann ein wohliges Gefühl erzeugen und erogene Zonen stimulieren.</string>
+    <string name="lower_stomach_use_accessories_action">%, streiche mit einer Feder oder anderen weichen Accessoires über %s Unterbauch. Zarte Berührungen können angenehme Empfindungen und Erregung hervorrufen.</string>
+    <string name="lower_stomach_ice_action">%, gleite sanft mit einem Eiswürfel über %s Unterbauch. Die Kälte erzeugt prickelnde Empfindungen und stimuliert empfindliche Nervenenden.</string>
+    <string name="areola_and_nipples_massage_action">%, massiere sanft %s Brustwarzen und den Bereich um die Areolen. Mit kreisenden Bewegungen, leichtem Kneifen und sanftem Druck kannst du intensive Empfindungen und Erregung hervorrufen. Verwende Öl oder Lotion für ein besonders sinnliches Erlebnis.</string>
+    <string name="areola_and_nipples_kiss_action">%, küsse sanft %s Brustwarzen und die umliegende Haut.</string>
+    <string name="areola_and_nipples_suck_action">%, sauge sanft an %s Brustwarzen, um die Stimulation zu intensivieren.</string>
+    <string name="areola_and_nipples_lick_action">%, lecke sanft %s Brustwarzen und die umliegende Haut. Verspieltes Lecken und Küsse können besonders erregend wirken.</string>
+    <string name="areola_and_nipples_bite_action">%, beiße sanft in %s Brustwarzen. Achte dabei stets auf ihre Vorlieben und Grenzen.</string>
+    <string name="areola_and_nipples_use_accessories_0_action">%, verwende spezielle Toys zur Stimulation von %s Brustwarzen und Areolen – etwa kleine Vibratoren, klitorale Stimulatoren oder Nippelklemmen mit einstellbarem Druck. Diese können die Empfindungen deutlich verstärken.</string>
+    <string name="areola_and_nipples_use_accessories_1_action">%, streichele %s Brustwarzen sanft mit einer Feder oder einem anderen weichen Accessoire. Solche Berührungen können besonders erregend sein.</string>
+    <string name="areola_and_nipples_ice_action">%, gleite vorsichtig mit einem Eiswürfel über %s Brustwarzen und die umliegende Haut. Die Kälte kann prickelnde Empfindungen auslösen und für intensive Reize sorgen.</string>
+    <string name="pubic_mound_massage_action">%, massiere sanft %s Schambereich. Streichele ihn mit leichten, kreisenden Bewegungen oder gleite mit der Hand sanft über die Haut. Verwende Öl oder Lotion und achte aufmerksam auf die Reaktionen deines Partners.</string>
+    <string name="pubic_mound_kiss_action">%, küsse sanft %s Schambereich. Verspielte Küsse können besonders erregend wirken.</string>
+    <string name="pubic_mound_lick_action">%, verwöhne %s Schambereich mit deiner Zunge. Lecken kann intensive Erregung hervorrufen.</string>
+    <string name="pubic_mound_use_accessories_0_action">%, streiche mit einer Feder oder einem anderen weichen Accessoire sanft über %s Schambereich. So entstehen neue sinnliche Reize und Abwechslung im Spiel.</string>
+    <string name="pubic_mound_use_accessories_1_action">%, verwende spezielle Toys wie kleine Vibratoren oder klitorale Stimulatoren, um %s Schambereich zusätzlich zu stimulieren. Das sorgt für neue Reize und aufregende Abwechslung.</string>
+    <string name="pubic_mound_ice_action">%, gleite sanft mit einem Eiswürfel über %s Schambereich. Das Spiel mit Temperatur kann prickelnde Empfindungen und zusätzliche Erregung auslösen.</string>
+    <string name="clitoris_massage_0_action">%, streichle und massiere %s Klitoris sanft. Leichte, kreisende Bewegungen und zärtliche Berührungen können angenehme Empfindungen hervorrufen. Verwende ausreichend Gleitgel auf Wasserbasis, um Unannehmlichkeiten zu vermeiden.</string>
+    <string name="clitoris_massage_1_action">%, massiere %s Klitoris mit sanftem Druck und kreisenden Bewegungen. Probiere verschiedene Techniken und Intensitäten aus, um herauszufinden, was ihr besonders gefällt.</string>
+    <string name="clitoris_kiss_action">%, küsse %s Klitoris zärtlich. Variiere Rhythmus und Intensität, um herauszufinden, was ihr am meisten gefällt.</string>
+    <string name="clitoris_lick_action">%, verwöhne %s Klitoris mit deiner Zunge. Nutze kreisende Bewegungen, leichten Zungendruck oder sanftes Saugen für zusätzliche Stimulation. Die orale Stimulation kann äußerst erregend sein.</string>
+    <string name="clitoris_bite_action">%, beiße ganz vorsichtig in %s Klitoris – nur wenn es ihren Vorlieben entspricht. Achte auf ihre Reaktionen.</string>
+    <string name="clitoris_use_accessories_action">%, verwende Klitorisstimulatoren, Vibratoren oder spezielle Massagegeräte zur zusätzlichen Stimulation von %s Klitoris. Achte dabei auf ihre Reaktionen und verwende ausreichend Gleitgel auf Wasserbasis.</string>
+    <string name="clitoris_itself_action">%, gib % die Möglichkeit, ihre Klitoris selbst zu stimulieren. Das kann eine besonders intime und erregende Erfahrung für euch beide sein.</string>
+    <string name="g_spot_massage_action">%, führe ein bis zwei Finger vorsichtig in %s Vagina ein oder verwende ein gebogenes Sexspielzeug, das speziell zur G-Punkt-Stimulation entwickelt wurde. Nutze ein wasserbasiertes Gleitgel, um die Region zu befeuchten und die Bewegungen zu erleichtern. Spüre eine kleine Erhebung an der vorderen Vaginalwand auf und massiere den G-Punkt sanft mit kreisenden Bewegungen – variierend in Rhythmus und Intensität.</string>
+    <string name="g_spot_itself_action">%, gib % die Möglichkeit, ihren G-Punkt selbst mit den Fingern oder einem gebogenen Toy zu stimulieren. Dies kann für euch beide eine besonders intime und aufregende Erfahrung sein.</string>
+    <string name="anus_massage_action">%, verwende ein wasserbasiertes Gleitgel und beginne mit sanften Fingerstreicheln rund um %s Anus. Allmählich kannst du vorsichtig und behutsam mit einem Finger eindringen. Achte dabei stets auf die Reaktionen deines Partners und respektiere seine Vorlieben und Grenzen.</string>
+    <string name="anus_use_accessories_0_action">%, verwende spezielle Analspielzeuge wie Plugs oder Analdildos, um %s Anus zu stimulieren. Verwende ausreichend wasserbasiertes Gleitgel und beginne mit kleineren Größen, damit sich dein Partner wohl und sicher fühlt.</string>
+    <string name="anus_use_accessories_1_action">%, streichle %s Anus sanft mit einer Feder oder anderen weichen Accessoires. Solche zarten Berührungen können sehr sinnlich und erregend sein.</string>
+    <string name="anus_kiss_action">%, küsse %s Anus sanft. Achte darauf, dass der Bereich sauber und gut befeuchtet ist, um Komfort und Hygiene zu gewährleisten.</string>
+    <string name="anus_lick_action">%, lecke %s Anus sanft. Achte darauf, dass der Bereich sauber und gut befeuchtet ist, um Komfort und Hygiene sicherzustellen. Rimming (Analingus) kann für manche Menschen sehr erregend und intim sein.</string>
+    <string name="anus_ice_action">%, gleite sanft mit einem Eiswürfel über %s Anus. Achte aufmerksam auf die Reaktionen deines Partners und respektiere stets seine Grenzen und Wünsche.</string>
+    <string name="anus_itself_action">%, % kann seinen Anus selbst mit den Fingern oder speziellen Toys stimulieren, während du zuschaust und ihn dabei unterstützt. Gemeinsame Masturbation kann eine besonders intime und erregende Erfahrung sein.</string>
+    <string name="buttocks_massage_action">%, massiere %s Gesäß sanft. Verwende kreisende Bewegungen, sanften Druck, Streicheln, leichte Klapse, Reiben, Kneifen oder tiefe, massierende Bewegungen, um deinen Partner zu erregen. Massageöle oder Lotionen können die Stimulation in diesem Bereich intensivieren.</string>
+    <string name="buttocks_kiss_action">%, küsse %s Gesäß zärtlich. Verspielte Küsse können Erregung und Lust hervorrufen.</string>
+    <string name="buttocks_lick_action">%, lecke %s Gesäß sanft. Du kannst dabei dem Bereich rund um den Anus besondere Aufmerksamkeit schenken.</string>
+    <string name="buttocks_bite_action">%, knabbere sanft an %s Gesäß. Achte auf die Reaktionen deines Partners, um das Vergnügen zu steigern.</string>
+    <string name="buttocks_use_accessories_action">%, verwende eine Feder oder andere weiche Accessoires, um %s Gesäß zu stimulieren. Gleite damit sanft über die Haut und schenke dem Bereich um den Anus besondere Aufmerksamkeit – das sorgt für Abwechslung und neue Empfindungen.</string>
+    <string name="buttocks_ice_action">%, gleite sanft mit einem Eiswürfel über %s Gesäß. Das Spiel mit der Temperatur kann zusätzliches Vergnügen und aufregende Empfindungen erzeugen.</string>
+    <string name="glans_massage_action">%, massiere vorsichtig %s Eichel. Verwende verschiedene Techniken wie sanftes Drücken, leichtes Umfassen, Auf- und Abbewegungen oder kreisende Massagen. Trage wasserbasiertes Gleitgel auf, um die Eichel zu befeuchten und die Handbewegungen geschmeidiger zu machen.</string>
+    <string name="glans_kiss_action">%, küsse sanft %s Eichel. Verwende etwas wasserbasiertes Gleitgel, um sie angenehm zu befeuchten und die Bewegungen zu erleichtern.</string>
+    <string name="glans_lick_action">%, lecke sanft %s Eichel mit deiner Zunge. Variiere die Bewegungen und Rhythmen – etwa kreisende Bewegungen – um herauszufinden, was deinem Partner besonders gefällt.</string>
+    <string name="glans_bite_action">%, beiße ganz vorsichtig in %s Eichel. Achte aufmerksam auf die Reaktionen deines Partners und gehe behutsam auf seine Signale ein.</string>
+    <string name="glans_suck_action">%, sauge sanft an %s Eichel.</string>
+    <string name="glans_use_accessories_action">%, verwende spezielle Toys wie Penis-Massager oder Vibratoren, um %s Eichel gezielt zu stimulieren.</string>
+    <string name="glans_ice_action">%, gleite mit einem Eiswürfel sanft über %s Eichel. Das Spiel mit der Temperatur kann sehr erregend sein.</string>
+    <string name="glans_itself_action">%, erlaube %, seine Eichel selbst zu stimulieren. Achte auf seine Vorlieben und Reaktionen, und unterstütze ihn dabei einfühlsam.</string>
+    <string name="scrotum_and_testicles_massage_action">%, massiere %s Hoden sanft. Streichele sie mit leichten, kreisenden Bewegungen, sanftem Druck oder zarten Streichungen. Achte auf die Reaktionen und Vorlieben deines Partners. Verwende ausreichend wasserbasiertes Gleitgel und stimme deine Berührungen auf seine Empfindungen ab.</string>
+    <string name="scrotum_and_testicles_kiss_action">%, küsse %s Hoden sanft.</string>
+    <string name="scrotum_and_testicles_lick_action">%, verwende deine Zunge, um %s Hoden zu stimulieren. Lecke und streichle sie mit zarten Bewegungen. Variiere die Bewegungen und Rhythmen, um herauszufinden, was deinem Partner am meisten Freude bereitet.</string>
+    <string name="scrotum_and_testicles_bite_action">%, beiße sanft in %s Hoden. Achte dabei auf die Reaktionen und Vorlieben deines Partners.</string>
+    <string name="scrotum_and_testicles_suck_action">%, sauge sanft an %s Hoden und Hodensack. Variiere die Bewegungen und Rhythmen, um herauszufinden, was deinem Partner am meisten Freude bereitet.</string>
+    <string name="scrotum_and_testicles_use_accessories_0_action">%, verwende spezielle Sexspielzeuge zur Stimulation von %s Hoden und Hodensack, wie Massager oder Vibratoren.</string>
+    <string name="scrotum_and_testicles_use_accessories_1_action">%, verwende eine Feder oder andere weiche Accessoires zur Stimulation von %s Hoden. Sanftes Streicheln kann zusätzliche Erregung hervorrufen.</string>
+    <string name="perineum_massage_action">%, massiere sanft %s Damm. Streichele diesen Bereich mit leichten, kreisenden Bewegungen oder Auf- und Abbewegungen. Achte auf die Reaktionen deines Partners und seine Vorlieben in Bezug auf Intensität und Druck.</string>
+    <string name="perineum_lick_action">%, benutze deine Zunge, um %s Damm zu stimulieren. Liebkose diesen Bereich mit sanften Zungenbewegungen. Variiere Bewegungen und Rhythmen, um herauszufinden, was deinem Partner am meisten Freude bereitet.</string>
+    <string name="perineum_use_accessories_action">%, verwende verschiedene Accessoires wie Federn, Vibratoren oder Massager, um %s Damm zu stimulieren. Achte darauf, ausreichend wasserbasiertes Gleitgel zu verwenden und auf die Reaktionen deines Partners einzugehen.</string>
+    <string name="prostate_massage_action">%, verwende wasserbasiertes Gleitgel und führe deine Finger vorsichtig in %s Anus ein. Massiere die Prostata sanft, indem du kreisende Bewegungen an den Wänden des Mastdarms ausführst. Achte darauf, behutsam, sanft und rücksichtsvoll auf den Komfort deines Partners einzugehen.</string>
+    <string name="prostate_use_accessories_action">%, verwende spezielle Sexspielzeuge wie Massager oder Vibratoren, um %s Prostata zu stimulieren. Achte darauf, ausreichend wasserbasiertes Gleitgel zu verwenden und den Anweisungen des Spielzeugs zu folgen.</string>
+    <string name="prostate_itself_action">%, erlaube %, seine Prostata selbst zu stimulieren, während du zuschaust und ihn dabei unterstützt. Dies kann eine intime und aufregende Erfahrung für euch beide sein.</string>
+    <string name="penis_massage_action">%, massiere sanft %s Penis. Achte darauf, ausreichend wasserbasiertes Gleitgel zu verwenden, um maximalen Komfort zu gewährleisten. Variiere Bewegungen und Rhythmen – wie Auf- und Abbewegungen, sanftes Streicheln oder leichtes Drücken –, um herauszufinden, was deinem Partner am meisten Freude bereitet.</string>
+    <string name="penis_kiss_action">%, küsse %s Penis sanft. Bewege dich von der Basis bis zur Spitze und küsse ihn zärtlich.</string>
+    <string name="penis_suck_action">%, sauge sanft an %s Penis. Variiere Bewegungen und Rhythmen, zum Beispiel Auf- und Abbewegungen mit deinen Lippen oder Deepthroating, um herauszufinden, was deinem Partner besonders gefällt.</string>
+    <string name="penis_lick_action">%, lecke %s Penis. Verwende verschiedene Techniken – fahre mit deiner Zunge von der Basis bis zur Spitze und mache kreisende Bewegungen.</string>
+    <string name="penis_use_accessories_0_action">%, verwende spezielle Massagegeräte zur Stimulation von %s Penis. Achte darauf, ausreichend wasserbasiertes Gleitgel zu benutzen, um maximalen Komfort zu gewährleisten.</string>
+    <string name="penis_use_accessories_1_action">%, verwende Federn oder andere weiche Accessoires, um %s Penis zusätzlich zu stimulieren. Das sorgt für neue Empfindungen und zusätzliche Erregung.</string>
+    <string name="penis_ice_action">%, verwende einen Eiswürfel, um %s Penis zu stimulieren. Das Spiel mit der Temperatur kann sehr erregend sein.</string>
+    <string name="penis_itself_action">%, erlaube %, seinen eigenen Penis selbst zu massieren. Achte auf seine Reaktionen und Vorlieben.</string>
+    <string name="nipples_massage_action">%, massiere vorsichtig %s Brustwarzen und die umliegende Region. Streiche, mache kreisende Bewegungen um die Brustwarzen und kneife sie leicht. Verwende Öle oder Lotionen, um angenehmere Empfindungen zu erzeugen.</string>
+    <string name="nipples_kiss_action">%, küsse sanft %s Brustwarzen.</string>
+    <string name="nipples_lick_action">%, lecke %s Brustwarzen und die Umgebung.</string>
+    <string name="nipples_bite_action">%, experimentiere vorsichtig mit leichtem Beißen an %s Brustwarzen.</string>
+    <string name="nipples_ice_action">%, bewege einen Eiswürfel um %s Brustwarzen oder lege ihn vorsichtig darauf, um ein Gefühl von Kühle und Erregung zu erzeugen.</string>
+    <string name="nipples_use_accessories_0_action">%, verwende einen Massager, Vibrator oder eine Klammer mit einstellbarem Druck, um %s Brustwarzen zu streicheln und zu stimulieren. So kannst du neue aufregende Empfindungen erzeugen und die Sinnlichkeit der Accessoires genießen.</string>
+    <string name="nipples_use_accessories_1_action">%, verwende eine Feder oder andere weiche Accessoires, um %s Brustwarzen zu stimulieren. Das kann zusätzliche Erregung hervorrufen.</string>
+    <string name="nipples_suck_action">%, sauge sanft an %s Brustwarzen für zusätzliche Stimulation.</string>
+    <string name="small_of_the_back_massage_action">%, massiere %s unteren Rücken sanft. Verwende verschiedene Techniken wie kreisende Bewegungen, leichten Druck oder sanftes Kneifen, um deinen Partner zu entspannen. Öl oder Lotion können die Massage sinnlicher gestalten.</string>
+    <string name="small_of_the_back_kiss_action">%, küsse %s unteren Rücken. Erforsche diesen Bereich mit deinen Lippen und achte auf die Reaktionen deines Partners.</string>
+    <string name="small_of_the_back_use_accessories_action">%, verwende eine Feder oder ein anderes weiches Accessoire, um sanft über %s unteren Rücken zu streichen.</string>
+    <string name="small_of_the_back_ice_action">%, gleite sanft mit einem Eiswürfel über %s unteren Rücken. Das Spiel mit der Temperatur kann aufregende Empfindungen hervorrufen.</string>
+    <string name="armpits_massage_action">%, massiere sanft %s Achselhöhlen. Verwende leichte kreisende Bewegungen oder sanfte Streicheleinheiten, um diesen Bereich zu stimulieren. Öl oder Lotion können die Massage noch anregender machen.</string>
+    <string name="armpits_kiss_action">%, küsse %s Achselhöhlen mit deinen Lippen. Verspielte Küsse und sanfte Berührungen können sehr erregend sein.</string>
+    <string name="armpits_use_accessories_action">%, benutze eine Feder oder andere weiche Accessoires, um %s Achselhöhlen sanft zu stimulieren.</string>
+    <string name="armpits_ice_action">%, verwende einen Eiswürfel, um %s Achselhöhlen zusätzlich zu stimulieren. Gleite langsam und sanft mit dem Eiswürfel über ihre Haut, um neue Empfindungen und Erregung zu erzeugen.</string>
+    <string name="inner_arms_massage_action">%, massiere sanft die Innenseiten von %s Armen. Verwende streichende, kreisende Bewegungen und leichtes Kneifen für zusätzliche Stimulation. Eine Massage mit Öl oder Lotion kann die Empfindungen intensivieren.</string>
+    <string name="inner_arms_kiss_action">%, küsse die Innenseiten von %s Armen oder knabbere leicht mit deinen Lippen daran. Verspielte Küsse und zarte Berührungen können sehr erregend sein.</string>
+    <string name="inner_arms_lick_action">%, benutze deine Zunge, um die Innenseiten von %s Armen zu stimulieren. Sanftes Lecken entlang der Innenseiten kann angenehme Empfindungen und Erregung hervorrufen.</string>
+    <string name="inner_arms_use_accessories_action">%, benutze eine Feder oder andere weiche Accessoires, um die Innenseiten von %s Armen sanft zu stimulieren.</string>
+    <string name="inner_arms_ice_action">%, benutze einen Eiswürfel für eine zusätzliche Stimulation der Innenseiten von %s Armen. Das Spiel mit der Temperatur kann neue Empfindungen und Abwechslung bringen.</string>
+    <string name="inner_wrist_massage_action">%, massiere sanft die Innenseiten von %s Handgelenken. Die Verwendung von Öl oder Lotion kann die Empfindungen intensivieren und die Massage sinnlicher machen.</string>
+    <string name="inner_wrist_kiss_action">%, küsse zärtlich die Innenseiten von %s Handgelenken. Verspielte Küsse und sanfte Berührungen können sehr erregend wirken.</string>
+    <string name="inner_wrist_lick_action">%, lecke sanft die Innenseiten von %s Handgelenken. Zärtliches Lecken entlang der Haut kann angenehme Empfindungen hervorrufen und erregend sein.</string>
+    <string name="inner_wrist_use_accessories_action">%, verwende eine Feder oder andere weiche Accessoires, um die Innenseiten von %s Handgelenken zu stimulieren. Das kann Abwechslung und neue Empfindungen in euer Spiel bringen.</string>
+    <string name="inner_wrist_ice_action">%, gleite mit einem Eiswürfel sanft über die Innenseiten von %s Handgelenken. Das Spiel mit der Temperatur kann zusätzliche Erregung erzeugen.</string>
+    <string name="palm_of_hands_and_fingertips_massage_action">%, massiere %s Handflächen mit sanftem Druck und kreisenden Bewegungen. Dies kann wohltuende Empfindungen und tiefe Entspannung hervorrufen.</string>
+    <string name="palm_of_hands_and_fingertips_kiss_action">%, küsse zärtlich %s Handflächen. Widme besondere Aufmerksamkeit den Fingerspitzen und verwöhne sie mit sanften Küssen.</string>
+    <string name="palm_of_hands_and_fingertips_lick_action">%, lecke sanft über %s Handflächen und Fingerspitzen. Dies kann zusätzliche Erregung und angenehme Sinneseindrücke erzeugen.</string>
+    <string name="palm_of_hands_and_fingertips_suck_action">%, sauge sanft an %s Fingerspitzen. Das kann die Erregung intensivieren und neue Empfindungen wecken.</string>
+    <string name="palm_of_hands_and_fingertips_use_accessories_action">%, verwende Federn oder andere weiche Accessoires, um %s Handflächen und Fingerspitzen zu stimulieren. Dies kann neue Reize setzen und die Erregung steigern.</string>
+    <string name="behind_the_knee_massage_action">%, massiere sanft den Bereich hinter %s Knien. Verwende leichte kreisende Bewegungen, sanften Druck oder leichtes Kneifen. Achte dabei auf die Reaktionen und Vorlieben deines Partners. Massageöl oder Lotion können die Empfindungen zusätzlich intensivieren.</string>
+    <string name="behind_the_knee_kiss_action">%, küsse zärtlich den Bereich hinter %s Knien und knabbere sanft mit deinen Lippen daran. Erotische Küsse und zarte Berührungen können besonders erregend sein.</string>
+    <string name="behind_the_knee_lick_action">%, lecke sanft den Bereich hinter %s Knien, um angenehme Empfindungen und Erregung zu erzeugen.</string>
+    <string name="behind_the_knee_use_accessories_action">%, verwende eine Feder oder andere weiche Accessoires im Bereich hinter %s Knien, um zusätzliche sinnliche Reize und Erregung zu erzeugen.</string>
+    <string name="lips_massage_action">%, streichle sanft mit deinen Fingerspitzen über %s Lippen. Du kannst auch Lebensmittel wie Früchte oder Eiscreme verwenden. Streiche ein Stück davon über ihre Lippen und lass deine Partnerin es genießen. So kann sie neue Empfindungen und Erregung erleben.</string>
+    <string name="lips_kiss_action">%, experimentiere mit verschiedenen Arten von Küssen – sanft, leidenschaftlich, verspielt oder mit leichten Berührungen deiner Lippen. Variiere Intensität und Rhythmus, um neue Empfindungen zu entdecken und % zu erregen.</string>
+    <string name="lips_lick_action">%, benutze die Spitze deiner Zunge, um %s Lippen zu verwöhnen. Das kann sanftes Lecken, kreisende Bewegungen und andere Zungentechniken beinhalten. Finde heraus, was ihr am meisten Freude bereitet.</string>
+    <string name="lips_bite_action">%, beiße %s Lippen vorsichtig und liebevoll, um neue Empfindungen zu wecken und die Erregung zu steigern. Für manche Menschen kann sanftes Beißen oder Zupfen besonders stimulierend sein.</string>
+    <string name="lips_ice_action">%, gleite mit einem Eiswürfel über %s Lippen. Das Spiel mit der Temperatur kann aufregende neue Empfindungen hervorrufen und die Erregung steigern.</string>
+    <string name="neck_massage_0_action">%, massiere %s Nacken. Wende sanften Druck und kreisende Bewegungen an, um die Muskeln deines Partners zu entspannen und angenehme Empfindungen zu erzeugen. Verwende Öl oder Lotion für ein noch angenehmeres Erlebnis.</string>
+    <string name="neck_massage_1_action">%, variiere deine Berührungen und den Druck je nach %s Vorlieben. Nutze deine Fingerspitzen für sanfte Streicheleinheiten oder übe leichten Druck auf verschiedene Bereiche des Nackens aus. Vergiss nicht, Öl oder Lotion zu verwenden, um die Erregung zu steigern.</string>
+    <string name="neck_kiss_action">%, küsse oder knabbere leicht an %s Nacken. Verspielte Küsse entlang des Nackens können angenehme Empfindungen und Erregung hervorrufen.</string>
+    <string name="neck_lick_action">%, lecke %s Nacken. Dies kann erotische Empfindungen auslösen und die Stimulation intensivieren.</string>
+    <string name="neck_use_accessories_action">%, verwende Federn oder andere weiche Accessoires, um %s Nacken zu stimulieren. Streiche mit den Federn sanft über ihren Nacken oder nutze weiche Accessoires, um neue sinnliche Empfindungen zu erzeugen.</string>
+    <string name="neck_ice_action">%, gleite mit einem Eiswürfel über %s Nacken. Das Spiel mit der Temperatur kann neue, aufregende Empfindungen und Erregung hervorrufen.</string>
+    <string name="inner_thigh_massage_0_action">%, massiere sanft die Innenseite von %s Oberschenkeln. Sanfte und zärtliche Berührungen können angenehme Empfindungen und Erregung hervorrufen. Verwende Öl oder Lotion für ein angenehmeres Erlebnis.</string>
+    <string name="inner_thigh_massage_1_action">%, variiere deine Berührungen und den Druck auf der Innenseite von %s Oberschenkeln. Manche Menschen bevorzugen sanfte und leichte Berührungen, während andere intensivere und energischere Bewegungen mögen. Vergiss nicht, Öl oder Lotion für zusätzliche Erregung zu verwenden.</string>
+    <string name="inner_thigh_kiss_action">%, streichle die Innenseite von %s Oberschenkeln mit deinen Lippen, küsse sie oder knabbere sanft daran. Verspielte Küsse und zärtliche Berührungen können sehr erregend sein.</string>
+    <string name="inner_thigh_lick_action">%, benutze deine Zunge, um die Innenseite von %s Oberschenkeln zu stimulieren. Leichtes Lecken entlang der Oberschenkelinnenseite kann angenehme Empfindungen und Erregung hervorrufen.</string>
+    <string name="inner_thigh_bite_action">%, knabbere sanft an der Außenseite von %s Oberschenkeln für zusätzliche Stimulation.</string>
+    <string name="inner_thigh_use_accessories_0_action">%, verwende Federn oder andere weiche Accessoires, um die Innenseite von %s Oberschenkeln zu stimulieren. Das kann Abwechslung und neue Empfindungen in euer Erlebnis bringen.</string>
+    <string name="inner_thigh_use_accessories_1_action">%, verwende einen Massager, Vibrator oder andere Accessoires für zusätzliche Stimulation an der Außenseite von %s Oberschenkeln. Das wird deinem Partner unvergessliche Empfindungen schenken und ihm helfen, mehr Erregung zu erleben.</string>
+    <string name="inner_thigh_ice_action">%, benutze einen Eiswürfel für zusätzliche Stimulation an der Innenseite von %s Oberschenkeln. Das kann zu intensiverem Lustempfinden führen.</string>
+    <string name="bottom_of_feet_and_toes_massage_0_action">%, massiere %s Füße mit kreisenden Bewegungen, übe sanften Druck aus und bewege dich von der Basis der Zehen bis zur Ferse. Konzentriere dich auf verschiedene Punkte an den Füßen, um sie zu entspannen und zu stimulieren. Die Verwendung von Öl oder Lotion hilft deinem Partner, sich besser zu entspannen und mehr Freude zu empfinden.</string>
+    <string name="bottom_of_feet_and_toes_massage_1_action">%, streichle %s Füße und Zehen mit deinen Fingerspitzen. Das kann eine angenehme und beruhigende Geste sein.</string>
+    <string name="bottom_of_feet_and_toes_kiss_action">%, küsse %s Füße und Zehen für zusätzliche Stimulation und Erregung.</string>
+    <string name="bottom_of_feet_and_toes_lick_action">%, benutze deine Zunge, um %s Füße und Zehen zu stimulieren. Das Lecken ihrer Füße und Zehen kann angenehme Empfindungen hervorrufen.</string>
+    <string name="bottom_of_feet_and_toes_suck_action">%, sauge sanft an %s Zehen. Das hilft deinem Partner, sich zu entspannen und zusätzliches Vergnügen sowie Erregung zu erleben.</string>
+    <string name="bottom_of_feet_and_toes_use_accessories_action">%, massiere %s Füße mit Federn, Massagebällen, Rollmassagern oder speziellen Accessoires. Das kann die Empfindungen intensivieren und für Abwechslung sorgen.</string>
+    <string name="bottom_of_feet_and_toes_ice_action">%, verwende einen Eiswürfel für zusätzliche Stimulation von %s Füßen. Gleite mit dem Eiswürfel sanft über ihre Füße und übe leichten Druck auf verschiedene Punkte aus, um sie zu entspannen und zu stimulieren.</string>
+
     <string name="about_app_description">\t\tWillkommen bei LoveIn - der mobilen Anwendung, die Freude, Vergnügen und neue Erfahrungen
         in Ihr intimes Leben bringen möchte! LoveIn ist eine einzigartige Erfahrung für Paare, die neue emotionale
         Facetten und intime Szenarien entdecken möchten, um ihre Beziehung zu stärken und die Bindung zum Partner zu
@@ -584,8 +222,7 @@
         Sie Momente der Leidenschaft und Intimität mit Ihrem Partner oder Ihren Freunden. Genießen Sie Mut und Neuheit
         in Ihrer Beziehung mit LoveIn.
     </string>
-    <string name="game_over_description">Dem Spieler mit dem Benutzernamen % sind alle Karten ausgegangen. Sie können
-        einen Schritt zurückgehen und von vorne beginnen.
-    </string>
-    <string name="game_over_title">Spiel vorbei.</string>
+
+    <string name="game_over_description">Dem Spieler mit dem Benutzernamen % sind alle Karten ausgegangen. Du kannst einen Schritt zurückgehen und neu beginnen.</string>
+    <string name="game_over_title">Spiel beendet.</string>
 </resources>

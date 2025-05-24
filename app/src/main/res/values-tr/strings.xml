@@ -1,533 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">LoveIn</string>
-    <string name="play_button">Oynamak</string>
-    <string name="players_name">Oyuncunun adı</string>
-    <string name="add_next_player">Sonraki oyuncu ekle</string>
-    <string name="erogenous_zones">Cinsel bölgeler</string>
+    <string name="play_button">Oyna</string>
+    <string name="players_name">Oyuncu adı</string>
+    <string name="add_next_player">Sonraki oyuncuyu ekle</string>
+    <string name="erogenous_zones">Erojen bölgeler</string>
     <string name="clear">Temizle</string>
-    <string name="scalp_and_hair">Kafa derisi ve saç</string>
-    <string name="ears">Kulaklar</string>
-    <string name="navel">Göbek</string>
-    <string name="lower_stomach">Alt karın</string>
-    <string name="small_of_the_back">Belin altı</string>
-    <string name="armpits">Koltuk altları</string>
-    <string name="inner_arms">İç kol</string>
-    <string name="inner_wrist">İç bilek</string>
-    <string name="palm_of_hands_and_fingertips">Avuç içi ve parmak uçları</string>
-    <string name="behind_the_knee">Diz arkası</string>
-    <string name="nipples">Göğüs uçları</string>
-    <string name="lips">Dudaklar</string>
-    <string name="neck">Boyun</string>
-    <string name="inner_thigh">İç uyluk</string>
-    <string name="bottom_of_feet_and_toes">Ayak tabanı ve parmaklar</string>
-    <string name="glans">Glans</string>
-    <string name="scrotum_and_testicles">Skrotum ve testisler</string>
-    <string name="perineum">Perine</string>
-    <string name="prostate">Prostat</string>
-    <string name="areola_and_nipples">Areola ve meme ucu</string>
-    <string name="pubic_mound">Venüs tepeciği</string>
-    <string name="clitoris">Klitoris</string>
-    <string name="g_spot">G noktası</string>
-    <string name="anus">Anüs</string>
 
     <string name="not_enough_players_alert_title">Yetersiz oyuncu sayısı</string>
     <string name="not_enough_players_alert_description">Oyunu başlatmak için en az 2 oyuncuya ihtiyacınız var.</string>
     <string name="add_player_names_alert_title">Oyuncu isimleri ekleyin</string>
     <string name="add_player_names_alert_description">Oyunu başlatmak için oyuncu isimleri eklemeniz gerekiyor.</string>
     <string name="add_player_ero_zones_alert_title">Oyuncu erojen bölgeleri ekleyin</string>
-    <string name="add_player_ero_zones_alert_description">Oyunu başlatmak için oyuncu erojen bölgeleri eklemeniz
-        gerekiyor.
-    </string>
-    <string name="scalp_and_hair_massage_action">%, % saç derisini nazikçe masaj yapın. Ortak tercihlerine
-        göre hafif bir baskı uygulayarak masajın hızını ve şiddetini değiştirin. Ardından, parmak uçlarınızla başı
-        nazikçe dairesel hareketlerle 1-3 dakika boyunca masajlayın.
-    </string>
-    <string name="scalp_and_hair_scratch_action">%, % saç derisini hafifçe tırmalayın. Hız ve şiddeti
-        değiştirerek ense ile alından ve kulaklardan başa doğru hareket ederek ekstra hisler için.
-    </string>
-    <string name="scalp_and_hair_pinch_action">%, % saç derisini hafifçe çimdikleyin. Hız ve şiddeti
-        değiştirerek ense ile alından ve kulaklardan başa doğru hareket ederek ortağınıza ekstra uyarı sağlayın.
-    </string>
-    <string name="scalp_and_hair_pull_action">%, % saçlarını parmaklarınızla geçirerek hafifçe çekin.
-    </string>
-    <string name="scalp_and_hair_use_accessories_0_action">%, % saçlarını nazikçe tarayın, geniş dişli
-        yumuşak bir tarak kullanın. Bu, özellikle yavaş ve ritmik yapıldığında hoş hisler yaratabilir.
-    </string>
-    <string name="scalp_and_hair_blow_warm_air_action">%, % saç derisine ve saçlarına hafifçe ılık hava
-        üfleyin. Bu, ekstra uyarı yaratmaya yardımcı olacak ve partnerinizi rahatlatacaktır.
-    </string>
-    <string name="scalp_and_hair_use_accessories_1_action">%, % saç derisine ve saçlarına kokulu saç
-        ürünleri ekleyerek farklı duyusal deneyimler yaşayın, yağlar veya parfümler gibi.
-    </string>
-    <string name="scalp_and_hair_use_accessories_2_action">%, saç derisi için özel masaj aletleri kullanın. Bu,
-        % daha rahatlamış hissetmesine ve ekstra uyarı yaşamasına yardımcı olacaktır.
-    </string>
-    <string name="ears_massage_action">%, % kulak memelerini nazikçe masaj yapın. Kulak memelerini
-        uyarlamak için hafif basınç ve dairesel hareketler kullanın.
-    </string>
-    <string name="ears_whisper_action">%, % yumuşak sözcüklerle fısıldayın. Kulaklar harfi harfine sinir
-        uçlarıyla dolu ve çok hassaslar, birçok insan hatta sıcak fısıltıdan bile heyecanlanır.
-    </string>
-    <string name="ears_bite_action">%, % kulak memelerini hafifçe ısırarak hoş duygular yaratın.</string>
-    <string name="ears_kiss_action">%, % kulak memelerini ve kulak çevresini nazikçe öpün. Bu, partnerinizi
-        ekstra tahrik edecektir ve unutulmaz duygular yaşatacaktır.
-    </string>
-    <string name="ears_suck_action">%, % kulak memelerini nazikçe emerek ekstra uyarılma ve yeni duygular
-        elde edin.
-    </string>
-    <string name="ears_use_accessories_action">%, % kulaklarının dış hatlarını takip ederek bir tüy veya
-        başka yumuşak bir aksesuar kullanın ve nazikçe okşayın.
-    </string>
-    <string name="ears_ice_action">%, % kulak memelerinin sinir uçlarını uyarlamak için bir buz küpü
-        kullanın. Ekstra uyarı ve heyecan için buz küpünü kulakların çevresinde nazikçe gezdirin.
-    </string>
-    <string name="navel_kiss_action">%, % göbek deliğini ve çevresini nazikçe öperek hoş duygular ve
-        uyarılma yaratın.
-    </string>
-    <string name="navel_lick_action">%, % göbek deliğini nazikçe yalayın ve etrafında dilinizle oynayın.
-    </string>
-    <string name="navel_blow_warm_air_action">%, % göbek deliğine sıcak nefesle üfleyerek hoş bir sıcaklık
-        hissi yaratın ve erojen reseptörleri uyarmaya çalışın.
-    </string>
-    <string name="navel_use_accessories_action">%, bir tüy veya diğer yumuşak aksesuarlar kullanın. % göbek
-        deliği çevresinde tüyü geçirerek hoş duygular ve uyarılma oluşturun. Bir tüyün cilde nazikçe dokunması oldukça
-        duygusal olabilir.
-    </string>
-    <string name="navel_ice_action">%, % göbek deliğinin etrafında hafifçe bir buz küpü gezdirin. Buz,
-        serinletici duygular yaratır ve erojen reseptörleri uyaran etkiye sahiptir.
-    </string>
-    <string name="lower_stomach_kiss_action">%, % alt karın bölgesini nazikçe öpün.</string>
-    <string name="lower_stomach_lick_action">%, % alt karın bölgesini nazikçe yalayın, göbeğinden kasık
-        tepesine doğru inerek. Bu, ekstra uyarılmayı hissetmeye ve yeni duygular deneyimlemeye yardımcı olacaktır.
-    </string>
-    <string name="lower_stomach_massage_action">%, % alt karın bölgesini dairesel hareketlerle, hafif
-        dokunuşlarla veya nazikçe çimdikleyerek yumuşakça masaj yapın. Partnerinizin uyarılmasını artırmak için yağ veya
-        losyon kullanın.
-    </string>
-    <string name="lower_stomach_scratch_action">%, % alt karın bölgesinin cildini tırnaklarınızla hafifçe
-        geçirerek, hafif rahatsızlık hissi uyandırarak, beraberinde uyarılma hissi yaratın.
-    </string>
-    <string name="lower_stomach_blow_warm_air_action">%, % alt karın bölgesine sıcak nefesle nazikçe
-        üfleyerek, hoş bir sıcaklık hissi yaratın ve erojen reseptörleri uyarmış olun.
-    </string>
-    <string name="lower_stomach_use_accessories_action">%, bir tüy veya diğer yumuşak aksesuarları kullanın. Tüyü
-        % alt karın bölgesinin cildine nazikçe geçirerek hoş ve uyarıcı duygular uyandırın. Tüyün yumuşak
-        dokunuşu oldukça duyusal olabilir.
-    </string>
-    <string name="lower_stomach_ice_action">%, % alt karın bölgesine nazikçe bir buz küpü geçirin. Buz,
-        ferahlatıcı duygular yaratır ve erojen reseptörleri uyarır.
-    </string>
-    <string name="areola_and_nipples_massage_action">%, % areola ve meme uçlarını nazikçe masaj yap. Hafif
-        dairesel hareketler, çimdikleme ve basınç uygulayarak partnerinize ekstra heyecan ve yeni duyumlar
-        yaşatacaksınız. Daha yumuşak ve duygusal bir masaj için yağ ve losyon kullanın.
-    </string>
-    <string name="areola_and_nipples_kiss_action">%, % areola ve meme uçlarını nazikçe öp.</string>
-    <string name="areola_and_nipples_lick_action">%, % areola ve meme uçlarını nazikçe yalayın. Oyuncu
-        öpücükler ve yalama özellikle heyecan verici olabilir.
-    </string>
-    <string name="areola_and_nipples_bite_action">%, % areola ve meme uçlarını hafifçe ısır. Onun
-        tercihlerine ve sınırlarına saygılı olmak önemlidir.
-    </string>
-    <string name="areola_and_nipples_use_accessories_0_action">%, % areola ve meme uçlarını uyarlamak için
-        özel oyuncaklar kullan. Örneğin, küçük titreşimli oyuncaklar, klitoral uyarıcılar ve basınç ayarlı meme
-        klipsleri duyumları ve uyarılmayı artırmak için etkili olabilir.
-    </string>
-    <string name="areola_and_nipples_use_accessories_1_action">%, % areola ve meme uçlarını okşamak için
-        tüy veya diğer yumuşak aksesuarlar kullanın. Yumuşak tüy hareketleri özellikle heyecan verici olabilir.
-    </string>
-    <string name="areola_and_nipples_ice_action">%, % areola ve meme uçlarını ekstra uyarım için buz
-        küpleri kullanın. Yeni duyumlar yaşamak için meme uçları üzerinde ve etrafında buz küpüyle nazikçe gezinin.
-    </string>
-    <string name="pubic_mound_massage_action">%, % kasık bölgesini nazikçe masaj yap. Onu hafif dairesel
-        hareketlerle okşayın ya da yüzeyine ellerinizle sürtün. Yağ veya losyon kullanın. Dokuyu ve şekli keşfedin,
-        partnerinizin tepkilerine uyum sağlayın.
-    </string>
-    <string name="pubic_mound_kiss_action">%, % kasık bölgesini nazikçe öpün ve okşayın. Oyuncu öpücükler
-        özellikle heyecan verici olabilir.
-    </string>
-    <string name="pubic_mound_lick_action">%, dilinizi kullanarak % kasık bölgesini uyarın. Yalamak ekstra
-        uyarılmayı artırmaya yardımcı olabilir.
-    </string>
-    <string name="pubic_mound_use_accessories_0_action">%, % kasık bölgesini uyarım için bir tüy veya diğer
-        yumuşak aksesuarlar kullanın. Yüzeyin üzerinde tüyü gezdirerek çeşitlilik ve yeni duyumlar ekleyin.
-    </string>
-    <string name="pubic_mound_use_accessories_1_action">%, % kasık bölgesini ekstra uyarım için küçük
-        vibratörler veya klitoral stimülatörler gibi özel oyuncaklar kullanın, çeşitlilik ve yeni duyumlar ekleyin.
-    </string>
-    <string name="pubic_mound_ice_action">%, % kasık bölgesine ekstra uyarım için bir buz küpü kullanın.
-        Partnerinizin kasık bölgesi üzerinde buz küpü gezdirin. Sıcaklıkla oynamak ekstra heyecan yaratmaya yardımcı
-        olabilir.
-    </string>
-    <string name="clitoris_massage_0_action">%, % klitorisini nazikçe okşayın ve masaj yapın. Hafif
-        dairesel hareketler ve dikkatli dokunuşlar hoş duygular yaratacaktır. Rahatsızlığı önlemek için uygun miktarda
-        su bazlı kayganlaştırıcı kullanın.
-    </string>
-    <string name="clitoris_massage_1_action">%, hafif baskıyla birleştirilmiş dairesel hareketler kullanarak
-        % klitorisini masajlayın. Partnerinizin daha fazla zevk almasını sağlamak için farklı teknikler ve
-        yoğunluklar kullanın.
-    </string>
-    <string name="clitoris_kiss_action">%, % klitorisini nazikçe öpün. Partnerinizin daha fazla zevk
-        almasını sağlamak için farklı ritimler deneyin.
-    </string>
-    <string name="clitoris_lick_action">%, % klitorisini okşamak için dilinizi kullanın. Dairesel
-        hareketler, dilin hafif baskısı ve emme gibi farklı teknikler kullanarak ekstra uyarı sağlayın. Klitoral oral
-        uyarı, oldukça heyecan verici olabilir.
-    </string>
-    <string name="clitoris_bite_action">%, % klitorisini nazik ve dikkatli bir şekilde ısırın, böylece
-        ekstra uyarı sağlanır. Partnerinizin tercihlerini göz önünde bulundurun.
-    </string>
-    <string name="clitoris_use_accessories_action">%, % klitoral uyarıcıları, titreşimli oyuncakları veya
-        masaj aletlerini kullanarak ekstra klitoral uyarı sağlayın. Partnerinizin tepkilerine dikkat etmek için yeterli
-        miktarda su bazlı kayganlaştırıcı kullanmaktan emin olun.
-    </string>
-    <string name="clitoris_itself_action">%, % klitorisini kendi başına uyarabilmesine izin verin. Bu,
-        samimi ve heyecan verici bir deneyim olabilir.
-    </string>
-    <string name="g_spot_massage_action">%, % vajinasına bir veya iki parmak sokun, veya G noktası uyarımı
-        için özel eğimli bir seks oyuncak kullanabilirsiniz. Bölgeyi nemlendirmek ve hareketi kolaylaştırmak için su
-        bazlı kayganlaştırıcı kullanın. Vajinanın ön duvarında küçük bir çıkıntı bulun. G noktasını hafif dairesel
-        hareketlerle, ritmi ve yoğunluğu değiştirerek nazikçe masaj yapın.
-    </string>
-    <string name="g_spot_itself_action">%, % kendi başına parmakları veya özel eğimli bir seks oyuncak
-        kullanarak G noktasını uyarabilmesine izin verin. Bu, samimi ve heyecan verici bir deneyim olabilir.
-    </string>
-    <string name="anus_massage_action">%, su bazlı kayganlaştırıcı kullanın ve % anüsü etrafında nazikçe
-        parmaklarınızla okşamalara başlayın. Yavaşça ve dikkatlice parmağınızı anüsüne doğru hareket ettirebilirsiniz.
-        Partnerinizin tepkisine dikkat edin ve tercihlerini ve sınırlarını göz önünde bulundurun.
-    </string>
-    <string name="anus_use_accessories_0_action">%, % anüsünü uyarmak için anal fişler veya anal vibratörler
-        gibi özel anal oyuncaklar kullanabilirsiniz. Daha rahat bir deneyim için yeterli miktarda su bazlı
-        kayganlaştırıcı kullanmayı unutmayın ve küçük boyutlu oyuncaklarla başlayın, böylece partneriniz alışabilir ve
-        rahatlık hissedebilir.
-    </string>
-    <string name="anus_use_accessories_1_action">%, % anüsünü uyarmak için tüy veya diğer yumuşak
-        aksesuarlar kullanın. Hafif pürüzlü dokunuşlar çok şehvetli ve heyecan verici olabilir.
-    </string>
-    <string name="anus_kiss_action">%, % anüsünü nazikçe öpün. Daha rahat bir deneyim için anal bölgenin
-        temiz ve kayganlaştırılmış olduğundan emin olun.
-    </string>
-    <string name="anus_lick_action">%, % anüsünü nazikçe yalayın. Daha rahat bir deneyim için anal bölgenin
-        temiz ve kayganlaştırılmış olduğundan emin olun. \"Rimming\" (anal yalama), bazı insanlar için erotik ve heyecan
-        verici olabilir.
-    </string>
-    <string name="anus_ice_action">%, % anüsünü uyarmak için bir buz küpü kullanın. Partnerinizin tepkisine
-        dikkat edin ve tercihlerini ve sınırlarını göz önünde bulundurun.
-    </string>
-    <string name="anus_itself_action">%, % kendi başına parmakları veya özel seks oyuncakları kullanarak anüsünü
-        uyarmak isteyebilir ve siz de ona izleyici ve destek olabilirsiniz. Karşılıklı mastürbasyon, samimi ve heyecan
-        verici bir deneyim olabilir.
-    </string>
-    <string name="buttocks_massage_action">%, % kalçalarını nazikçe masaj yap. Eşinizi uyaracak dairesel
-        hareketler, hafif baskı, okşamalar, hafif tokatlamalar, sürtünmeler, çimdiklemeler veya derin masaj
-        hareketlerini kullanın. Masaj yağları veya losyonları bu bölgedeki uyarımı artırabilir.
-    </string>
-    <string name="buttocks_kiss_action">%, % kalçalarını öp. Oyunbaz öpücükler heyecan ve zevk
-        uyandırabilir.
-    </string>
-    <string name="buttocks_lick_action">%, % kalçalarını yala. Özellikle anüs çevresine özel ilgi
-        gösterebilirsiniz.
-    </string>
-    <string name="buttocks_bite_action">%, % kalçalarını nazikçe ısır. Daha fazla zevk için eşinizin
-        tepkisine dikkat edin.
-    </string>
-    <string name="buttocks_use_accessories_action">%, % kalçalarını uyarabilmek için tüy veya yumuşak
-        aksesuarlar kullan. Yeni deneyimler ve çeşitlilik için yüzey üzerinde tüy gezdirin ve özellikle anüs çevresine
-        dikkat edin.
-    </string>
-    <string name="buttocks_ice_action">%, % kalçalarını nazikçe bir buz küpü ile okşa. Bu ekstra zevk ve
-        yeni duyumlar sağlayacaktır.
-    </string>
-    <string name="buttocks">Kalçalar</string>
-    <string name="glans_massage_action">%, % başını nazikçe masaj yap. Başını hafifçe bastırma ve sıkma,
-        yukarı ve aşağı hareketler yapma veya daire şeklinde masaj yaparak farklı teknikler kullan. Ellerinin hareketini
-        kolaylaştırmak için su bazlı kayganlaştırıcı kullan.
-    </string>
-    <string name="glans_kiss_action">%, % başını nazikçe öp. Başını nemlendirmek ve hareketleri
-        kolaylaştırmak için su bazlı kayganlaştırıcı kullan.
-    </string>
-    <string name="glans_lick_action">%, % başını dilinle nazikçe yala. Dilinle daire şeklinde hareketler
-        gibi farklı hareketleri ve ritimleri deneyerek partnerine en çok zevk veren yöntemi bul.
-    </string>
-    <string name="glans_bite_action">%, % başını nazikçe ısırmaya çalış. Partnerinin tepkisine dikkat et ve
-        işaretlerine cevap ver.
-    </string>
-    <string name="glans_suck_action">%, % başını nazikçe em.</string>
-    <string name="glans_use_accessories_action">%, % başını uyarmak için penis masaj aletleri veya
-        titreşimli oyuncaklar gibi özel oyuncaklar kullan.
-    </string>
-    <string name="glans_ice_action">%, % başını uyarıcı olarak bir buz küpü kullan. Sıcaklıkla oynamak çok
-        heyecan verici olabilir.
-    </string>
-    <string name="glans_itself_action">%, % kendi başını uyarabilmesine izin ver. Onun tercihlerine ve
-        tepkilerine dikkat et ve bu süreçte ona destek ol.
-    </string>
-    <string name="scrotum_and_testicles_massage_action">%, % testislerini nazikçe masaj yap. Onları hafif
-        dairesel hareketlerle okşa, ya da hafifçe sıkarak, veya nazik bir baskı uygulayarak rahatlama sağla. Partnerinin
-        tepkilerine ve tercihlerine dikkat et. Testislerini nemlendirmek ve el hareketlerini kolaylaştırmak
-        için su bazlı kayganlaştırıcı kullanmayı unutma.
-    </string>
-    <string name="scrotum_and_testicles_kiss_action">%, % testislerini nazikçe öp.</string>
-    <string name="scrotum_and_testicles_lick_action">%, % testislerini dilini kullanarak uyar. Onları
-        hafifçe yalayarak ve okşayarak farklı hareketler ve ritimler deneyerek partnerine en fazla zevki sağlamayı bul.
-    </string>
-    <string name="scrotum_and_testicles_bite_action">%, % testislerini nazikçe ısırmak. Partnerinin
-        tepkilerine ve tercihlerine dikkat et.
-    </string>
-    <string name="scrotum_and_testicles_suck_action">%, % testislerini nazikçe em. Farklı hareketler ve
-        ritimler deneyerek partnerine en fazla zevki sağlamayı bul.
-    </string>
-    <string name="scrotum_and_testicles_use_accessories_0_action">%, masaj aletleri veya vibratörler gibi özel seks
-        oyuncakları kullanarak % testislerini uyar.
-    </string>
-    <string name="scrotum_and_testicles_use_accessories_1_action">%, % testislerini uyarmak için tüy veya
-        diğer yumuşak aksesuarlar kullan. Nazik dokunuşlar, ekstra heyecan hissi yaratmaya yardımcı olacaktır.
-    </string>
-    <string name="perineum_massage_action">%, % perine bölgesini nazikçe masaj yap. Bu bölgeyi hafif
-        dairesel hareketlerle veya yukarı-aşağı hareketlerle okşayın. Partnerinizin tepkilerine ve yoğunluk ve basınç
-        tercihlerine dikkat edin.
-    </string>
-    <string name="perineum_lick_action">%, % perine bölgesini uyarım için dilinizi kullanın. Bu bölgeyi
-        yumuşak dil hareketleriyle okşayın. Partnerinizin zevkine en uygun olanı bulmak için farklı hareketleri ve
-        ritimleri değiştirin.
-    </string>
-    <string name="perineum_use_accessories_action">%, % perine bölgesini uyarım için tüyler, titreşimli
-        oyuncaklar veya masaj aletleri gibi çeşitli aksesuarlar kullanın. Partnerinizin tepkilerine cevap vermek için
-        yeterli miktarda su bazlı kayganlaştırıcı kullanmaya özen gösterin.
-    </string>
-    <string name="prostate_massage_action">%, su bazlı kayganlaştırıcı kullanın ve % anüsüne dikkatlice
-        parmaklarınızı yerleştirin. Rektum duvarlarında dairesel hareketler yaparak prostatını nazikçe masajlayın.
-        Partnerinizin konforuna dikkat etmek için dikkatli, nazik olmak önemlidir.
-    </string>
-    <string name="prostate_use_accessories_action">%, % prostatını uyarmak için masaj aletleri veya
-        titreşimli oyuncaklar gibi özel seks oyuncakları kullanın. Oyuncakla birlikte verilen talimatları izlemek için
-        yeterli miktarda su bazlı kayganlaştırıcı kullandığınızdan emin olun.
-    </string>
-    <string name="prostate_itself_action">%, % kendi prostatını uyarmasına izin verin, siz de izleyebilir ve
-        destekleyebilirsiniz. Her ikisi için de samimi ve heyecan verici bir deneyim olabilir.
-    </string>
+    <string name="add_player_ero_zones_alert_description">Oyunu başlatmak için oyuncu erojen bölgeleri eklemeniz gerekiyor.</string>
+
+    <string name="scalp_and_hair">Kafa derisi ve saç</string>
+    <string name="ears">Kulaklar</string>
+    <string name="navel">Göbek</string>
+    <string name="lower_stomach">Alt karın</string>
+    <string name="small_of_the_back">Belin altı</string>
+    <string name="armpits">Koltuk altları</string>
+    <string name="inner_arms">Kolların iç kısmı</string>
+    <string name="inner_wrist">Bileğin iç kısmı</string>
+    <string name="palm_of_hands_and_fingertips">Avuç içi ve parmak uçları</string>
+    <string name="behind_the_knee">Diz arkası</string>
+    <string name="nipples">Göğüs uçları</string>
+    <string name="lips">Dudaklar</string>
+    <string name="neck">Boyun</string>
+    <string name="inner_thigh">Uyluğun iç kısmı</string>
+    <string name="bottom_of_feet_and_toes">Ayak tabanı ve ayak parmakları</string>
+    <string name="anus">Anüs</string>
+    <string name="buttocks">Kalçalar (popo)</string>
+
+    <string name="glans">Penis başı</string>
+    <string name="scrotum_and_testicles">Torba ve testisler</string>
+    <string name="perineum">Perine</string>
+    <string name="prostate">Prostat</string>
     <string name="penis">Penis</string>
-    <string name="penis_massage_action">%, % penisini nazikçe masaj yapın. Daha fazla konfor için su bazlı
-        kayganlaştırıcı kullanmaya özen gösterin. Farklı hareketler ve ritmler deneyin, yukarı ve aşağı doğru
-        hareketler, hafif okşamalar, hafif baskılar gibi, partnerinize en çok zevki sağlayanı bulun.
-    </string>
-    <string name="penis_kiss_action">%, % penisini nazikçe öpün. Penisin tabanından başına doğru hareket
-        ederek nazikçe öpücükler verin.
-    </string>
-    <string name="penis_suck_action">%, % penisini nazikçe emin. Farklı hareketler ve ritmler deneyin,
-        dudaklarla yukarı ve aşağı doğru hareketler, \"deepthroating\" gibi, partnerinize en çok zevki sağlayanı bulun.
-    </string>
-    <string name="penis_lick_action">%, % penisini yalayın. Farklı teknikler kullanın, penisin tabanından
-        başına doğru dilinizi gezdirin, dairesel hareketler yapın.
-    </string>
-    <string name="penis_use_accessories_0_action">%, % penisini uyarım için özel seks oyuncakları kullanın.
-        Daha fazla konfor için su bazlı kayganlaştırıcı kullanmaya özen gösterin.
-    </string>
-    <string name="penis_use_accessories_1_action">%, % penisini uyarmak için tüyler veya diğer yumuşak
-        aksesuarlar kullanın. Bu ekstra hisler ve heyecan sağlayacaktır.
-    </string>
-    <string name="penis_ice_action">%, % penisini uyarmak için bir buz küpü kullanın. Sıcaklık oyunları
-        oldukça heyecan verici olabilir.
-    </string>
-    <string name="penis_itself_action">%, % kendi penisini masaj yapmasına izin verin. Onun tepkilerini ve
-        tercihlerini gözlemleyin.
-    </string>
-    <string name="nipples_massage_action">%, % meme uçlarını ve çevresini nazikçe masaj yapın. Meme
-        uçlarının etrafında dairesel hareketler yapın, hafifçe sıkıştırın ve pireler gibi hareketler yapın. Daha keyifli
-        hisler için su bazlı yağlar veya losyonlar kullanın.
-    </string>
-    <string name="nipples_kiss_action">%, % meme uçlarını nazikçe öpün.</string>
-    <string name="nipples_lick_action">%, % meme uçlarını ve çevresini yalayın.</string>
-    <string name="nipples_bite_action">%, % meme uçlarını hafifçe ısırmayı deneyebilirsiniz, dikkatli ve
-        nazik olun.
-    </string>
-    <string name="nipples_ice_action">%, % meme uçlarının etrafında bir buz küpü hareket ettirin veya
-        nazikçe üzerine koyun, böylece serinlik ve heyecan duygusu yaratabilirsiniz.
-    </string>
-    <string name="nipples_use_accessories_0_action">%, % meme uçlarını uyarmak için ayarlanabilir basınca
-        sahip masaj aleti, titreşimli alet veya pense kullanın, böylece yeni heyecan verici duygular yaratabilir ve
-        aksesuarların duygusallığının tadını çıkarabilirsiniz.
-    </string>
-    <string name="nipples_use_accessories_1_action">%, % meme uçlarını uyarmak için bir tüy veya diğer
-        yumuşak aksesuarlar kullanın. Bu, heyecanı artırmaya yardımcı olabilir.
-    </string>
-    <string name="nipples_suck_action">%, ekstra uyarı için % meme uçlarını nazikçe emin.</string>
-    <string name="areola_and_nipples_suck_action">%, ekstra uyarı için % meme uçlarını nazikçe emin.
-    </string>
-    <string name="small_of_the_back_massage_action">%, % bel bölgesini masaj yap. Farklı teknikler
-        kullanarak, dairesel hareketler, hafif baskı, çimdikleme vb. ile partnerini rahatlatabilirsin. Masaj için yağ
-        veya losyon kullanmak daha heyecanlı hale getirebilir.
-    </string>
-    <string name="small_of_the_back_kiss_action">%, % bel bölgesini öp. Dudaklarınla bu bölgeyi keşfet ve
-        partnerinin tepkisine dikkat et.
-    </string>
-    <string name="small_of_the_back_use_accessories_action">%, % bel bölgesini bir tüy veya başka bir
-        yumuşak aksesuarla takip et.
-    </string>
-    <string name="small_of_the_back_ice_action">%, % bel bölgesi boyunca nazikçe bir buz küpü gezdir.
-    </string>
-    <string name="armpits_massage_action">%, % koltukaltını nazikçe masaj yap. Bu bölgeyi uyarmak için
-        hafif dairesel hareketler veya okşamalar deneyin. Masajı daha heyecan verici hale getirmek için yağ veya losyon
-        kullanabilirsiniz.
-    </string>
-    <string name="armpits_kiss_action">%, % koltukaltlarını dudaklarınla öp. Oyunbaz öpücükler ve nazik
-        dokunuşlar heyecan verici olabilir.
-    </string>
-    <string name="armpits_use_accessories_action">%, % koltukaltlarını okşamak için tüy veya diğer yumuşak
-        aksesuarları kullan.
-    </string>
-    <string name="armpits_ice_action">%, % koltukaltlarında ekstra uyarım için bir buz küpü kullan. Onun
-        koltukaltlarının üzerinde yavaş ve nazikçe buz küpünü gezdirerek partnerinize yeni bir deneyim ve heyecan
-        yaşatın.
-    </string>
-    <string name="inner_arms_massage_action">%, % kollarının iç tarafını nazikçe masaj yapın. Ekstra uyarı
-        için dairesel hareketler, okşamalar ve çimdiklemeler kullanın. Masaj için yağ veya losyon kullanmak duyguları
-        yoğunlaştırabilir.
-    </string>
-    <string name="inner_arms_kiss_action">%, % kollarının iç tarafını dudaklarınızla öpün veya hafifçe
-        ısırın. Oynak öpücükler ve nazik dokunuşlar heyecan verici olabilir.
-    </string>
-    <string name="inner_arms_lick_action">%, % kollarının iç tarafını uyarmak için dilinizi kullanın.
-        Kollarının iç tarafını dilinizle hafifçe yalayarak hoş ve heyecan verici duygular yaratabilirsiniz.
-    </string>
-    <string name="inner_arms_use_accessories_action">%, % kollarının iç tarafını uyarmak için tüy veya
-        diğer yumuşak aksesuarları kullanın.
-    </string>
-    <string name="inner_arms_ice_action">%, % kollarının iç tarafında ekstra bir masaj için bir buz küpü
-        kullanın. Bu deneyiminize çeşitlilik ve yeni duygular katabilir.
-    </string>
-    <string name="inner_wrist_massage_action">%, % bileklerinin iç kısmını nazikçe masaj yap. Masaj için
-        yağ veya losyon kullanmak duyumları şiddetlendirebilir.
-    </string>
-    <string name="inner_wrist_kiss_action">%, % bileklerinin iç kısmını öpücüklerle okşa. Şakacı öpücükler
-        ve nazik dokunuşlar heyecan verici olabilir.
-    </string>
-    <string name="inner_wrist_lick_action">%, % bileklerinin iç kısmını yala. Bileklerin iç kısmını nazikçe
-        yalamak hoş duyumlar ve heyecan yaratabilir.
-    </string>
-    <string name="inner_wrist_use_accessories_action">%, % bileklerinin iç kısmını uyarmak için tüy veya
-        diğer yumuşak aksesuarları kullan. Bu deneyime çeşitlilik ve yeni duyumlar ekleyebilir.
-    </string>
-    <string name="inner_wrist_ice_action">%, % bileklerinin iç kısmında ekstra uyarı için bir buz küpü
-        kullan. Sıcaklıkla oynamak ekstra heyecan yaratmaya yardımcı olabilir.
-    </string>
-    <string name="palm_of_hands_and_fingertips_massage_action">%, % avuç içlerini nazikçe hafif bir baskı
-        ve dairesel hareketlerle masaj yap. Bu hoş duygular ve rahatlama yaratabilir.
-    </string>
-    <string name="palm_of_hands_and_fingertips_kiss_action">%, % avuç içlerini dudaklarınla öp. Parmak
-        uçlarına dikkat et ve onları nazik öpücüklerle dokun.
-    </string>
-    <string name="palm_of_hands_and_fingertips_lick_action">%, % avuç içlerini ve parmak uçlarını yalamak
-        için ekstra bir uyarım ve heyecan yarat.
-    </string>
-    <string name="palm_of_hands_and_fingertips_suck_action">%, % parmak uçlarını em. Bu, heyecanı artırmaya
-        yardımcı olabilir.
-    </string>
-    <string name="palm_of_hands_and_fingertips_use_accessories_action">%, % avuç içlerini ve parmak
-        uçlarını uyarmak için tüy veya diğer yumuşak aksesuarları kullan. Bu yeni duygular ekleyebilir ve heyecanı
-        artırabilir.
-    </string>
-    <string name="behind_the_knee_massage_action">%, % dizlerinin arkasını nazikçe masaj yapın. Bu bölgede
-        hafif dairesel hareketler, basınçlar ve çimdiklemeler deneyin. Partnerinizin tepkisine ve tercihlerine dikkat
-        edin. Dizlerin arkasına masaj yağı veya losyon uygulamak ekstra zevk ve uyarı yaratabilir.
-    </string>
-    <string name="behind_the_knee_kiss_action">%, % dizlerinin arkasını öpün ve dudaklarınızla hafifçe
-        ısırın. Erotik öpücükler ve nazik okşamalar heyecan verici olabilir.
-    </string>
-    <string name="behind_the_knee_lick_action">%, % dizlerinin arkasını yalamak için hoş duygular
-        yaratın.
-    </string>
-    <string name="behind_the_knee_use_accessories_action">%, % dizlerinin arkasında bir tüy veya diğer
-        yumuşak aksesuarları kullanarak ekstra zevk ve uyarı sağlayın.
-    </string>
-    <string name="lips_massage_action">%, % dudaklarını parmak uçlarınla nazikçe okşa. Aynı zamanda meyve,
-        dondurma vb. gibi yiyecekler de kullanabilirsin. Bir parça yiyeceği dudaklarının üzerinde gezdir ve partnerinin
-        yemesine izin ver. Bu, onun yeni duyumlar ve heyecan yaşamasına olanak sağlar.
-    </string>
-    <string name="lips_kiss_action">%, farklı öpücük türlerini dene - nazik, tutkulu, oyunbaz veya dudakları hafifçe
-        dokunuşlarla. % heyecanlandırmak için yoğunluğu ve ritmi değiştir.
-    </string>
-    <string name="lips_lick_action">%, % dudaklarını dilinin ucuyla okşa. Bu, hafif yalama, dairesel
-        hareketler vb. içerebilir. Hangi hareketlerin ve dokunuşların ona daha fazla zevk verdiğini keşfet.
-    </string>
-    <string name="lips_bite_action">%, % dudaklarını hafifçe ve dikkatlice ısırmak, yeni duyumlar keşfetmek
-        ve uyarıyı artırmak için yapılabilir. Bazı insanlar için dudakları hafifçe ısırmak veya çimdiklemek heyecan
-        verici olabilir.
-    </string>
-    <string name="neck_massage_0_action">%, % boynunu nazikçe masaj yapın. Partnerinizin kaslarını
-        rahatlatmak ve keyifli duygular yaratmak için hafif bir basınç ve dairesel hareketler kullanın. Daha zevkli bir
-        deneyim için yağ veya losyon kullanın.
-    </string>
-    <string name="neck_massage_1_action">%, % tercihlerine göre dokunuşlarınızı ve basıncınızı değiştirin.
-        Parmak uçlarınızı hafif okşamalar için kullanın veya boynun farklı bölgelerine hafif bir basınç uygulayın.
-        Uyarıyı artırmak için yağ veya losyon kullanmayı unutmayın.
-    </string>
-    <string name="neck_kiss_action">%, % boynunu dudaklarınızla öpün veya hafifçe ısırın. Oyuncuca
-        öpücükler boynun boyunca keyifli duygular yaratabilir ve uyarıcı olabilir.
-    </string>
-    <string name="neck_lick_action">%, % boynunu yalayın. Bu, erotik duyguları harekete geçirebilir ve
-        uyarıyı artırabilir.
-    </string>
-    <string name="neck_use_accessories_action">%, % boynunu uyarmak için tüyler veya diğer yumuşak
-        aksesuarlar kullanın. Tüyleri boyun boyunca kaydırın veya yeni duygular yaratmak için yumuşak aksesuarlar
-        kullanın.
-    </string>
-    <string name="neck_ice_action">%, % boyun bölgesinde bir buz küpü kullanın. Sıcaklıkla oynamak yeni
-        duygular ve uyarılma sağlayabilir.
-    </string>
-    <string name="lips_ice_action">%, % dudaklarına bir buz küpü sür. Sıcaklıkla oynamak yeni duygular ve
-        uyarılma sağlayabilir.
-    </string>
-    <string name="inner_thigh_massage_0_action">%, % uyluk iç kısmını nazikçe masaj yap. Nazik ve sevecen
-        dokunuşlar hoş duygular ve uyarılma yaratabilir. Daha keyifli bir deneyim için yağ veya losyon kullan.
-    </string>
-    <string name="inner_thigh_massage_1_action">%, % uyluk iç kısmında dokunuşlarını ve baskısını değiştir.
-        Bazı insanlar hafif ve nazik dokunuşları severken, diğerleri daha yoğun ve enerjik hareketleri tercih edebilir.
-        Uyarılmayı artırmak için yağ veya losyon kullanmayı unutma.
-    </string>
-    <string name="inner_thigh_kiss_action">%, % uyluk iç kısmını dudaklarınla okşa, öp veya hafifçe ısır.
-        Oyunbaz öpücükler ve nazik okşamalar uyarıcı olabilir.
-    </string>
-    <string name="inner_thigh_lick_action">%, % uyluk iç kısmını uyarıcı için dilini kullan. Uyluk iç
-        kısmının boyunca hafif yalamalar hoş duygular ve uyarılma yaratabilir.
-    </string>
-    <string name="inner_thigh_bite_action">%, ekstra uyarılma için % uyluk dış yüzeyini hafifçe ısır.
-    </string>
-    <string name="inner_thigh_use_accessories_0_action">%, % uyluk iç kısmını uyarıcı için tüy veya diğer
-        yumuşak aksesuarlar kullan. Bu deneyime çeşitlilik ve yeni duygular ekleyebilir.
-    </string>
-    <string name="inner_thigh_use_accessories_1_action">%, % dış uyluk yüzeyinde ekstra uyarı için masaj
-        aleti, titreşimli masaj aleti veya diğer aksesuarları kullan. Bu, partnerine unutulmaz duygular yaşatacak ve
-        ekstra uyarılma yaşamasına yardımcı olacaktır.
-    </string>
-    <string name="inner_thigh_ice_action">%, % uyluğunun iç kısmında ekstra uyarı için bir buz küpü kullan.
-        Bu, ekstra heyecan yaşamaya yardımcı olacaktır.
-    </string>
-    <string name="bottom_of_feet_and_toes_massage_0_action">%, % ayaklarını dairesel hareketlerle, hafif
-        bir baskı uygulayarak ve parmaklardan topuğa doğru hareket ederek masaj yapın. Ayaklarının farklı
-        noktalarına odaklanarak onları rahatlatın ve uyarın. Yağ veya losyon kullanmak, partnerinizin daha fazla
-        rahatlama ve zevk yaşamasına yardımcı olacaktır.
-    </string>
-    <string name="bottom_of_feet_and_toes_massage_1_action">%, % ayaklarını ve parmaklarını parmak
-        uçlarıyla okşayın. Bu hoş ve huzur verici bir hareket olabilir.
-    </string>
-    <string name="bottom_of_feet_and_toes_kiss_action">%, % ayaklarını ve parmaklarını öperek ekstra uyarı
-        ve heyecan yaşatın.
-    </string>
-    <string name="bottom_of_feet_and_toes_lick_action">%, % ayaklarını ve parmaklarını uyarabilmek için
-        dilinizi kullanın. Onun ayaklarını ve parmaklarını yalamak hoş duygular yaratabilir.
-    </string>
-    <string name="bottom_of_feet_and_toes_suck_action">%, % ayak parmaklarını emin. Bu, partnerinizi
-        rahatlatmaya ve ekstra zevk yaşatmaya yardımcı olacaktır.
-    </string>
-    <string name="bottom_of_feet_and_toes_use_accessories_action">%, % ayaklarını tüyler, masaj topları,
-        masaj silindirleri veya özel aksesuarlar kullanarak masaj yapın. Bu, duyguları kuvvetlendirmeye ve deneyime
-        çeşitlilik katmaya yardımcı olabilir.
-    </string>
-    <string name="bottom_of_feet_and_toes_ice_action">%, % ayaklarını ekstra uyarım için bir buz küpü
-        kullanın. Ayaklarının üzerinde buz küpü gezdirerek, onları rahatlatmak ve uyarıcı etki yapmak için farklı
-        noktalara hafifçe basın.
-    </string>
+
+    <string name="areola_and_nipples">Meme ucu ve çevresi</string>
+    <string name="pubic_mound">Venüs tepeciği</string>
+    <string name="clitoris">Klitoris</string>
+    <string name="g_spot">G noktası</string>
+
+    <string name="scalp_and_hair_massage_action">%, %\'nin saç derisine nazikçe masaj yapın. Partnerinizin tercihlerine göre hafif bir baskı uygulayarak masajın hızını ve şiddetini değiştirin, ardından parmak uçlarınızla başına dairesel hareketlerle 1–3 dakika boyunca masaj yapın.</string>
+    <string name="scalp_and_hair_scratch_action">%, %\'nin saç derisini hafifçe tırmalayın. Ense ile alından ve kulaklardan yukarıya doğru hareket ederek hız ve şiddeti değiştirin.</string>
+    <string name="scalp_and_hair_pinch_action">%, %\'nin saç derisini hafifçe çimdikleyin. Ense ile alından ve kulaklardan başa doğru nazikçe hareket ederek ekstra uyarım sağlayın.</string>
+    <string name="scalp_and_hair_pull_action">%, %\'nin saçlarını parmaklarınızla nazikçe tararken hafifçe çekin.</string>
+    <string name="scalp_and_hair_use_accessories_0_action">%, %\'nin saçlarını yumuşak veya geniş dişli bir tarakla nazikçe tarayın. Bu, özellikle yavaş ve ritmik yapıldığında hoş hisler yaratabilir.</string>
+    <string name="scalp_and_hair_blow_warm_air_action">%, %\'nin saç derisine ve saçlarına hafifçe ılık hava üfleyin. Bu, ekstra uyarım yaratmaya yardımcı olacak ve partnerinizi rahatlatacaktır.</string>
+    <string name="scalp_and_hair_use_accessories_1_action">%, %\'nin saç derisine ve saçlarına parfüm veya yağ gibi kokulu saç ürünleri uygulayarak farklı duyusal deneyimler yaşatın.</string>
+    <string name="scalp_and_hair_use_accessories_2_action">%, saç derisi için özel masaj aletleri kullanın. Bu, %\'nin daha fazla rahatlamasına ve ek uyarım yaşamasına yardımcı olacaktır.</string>
+    <string name="ears_massage_action">%, %\'nin kulak memelerine nazikçe masaj yapın. Hafif basınç ve dairesel hareketlerle kulak memelerini uyarın.</string>
+    <string name="ears_whisper_action">%, %\'nin kulağına yumuşak sözler fısıldayın. Kulaklar sinir uçlarıyla doludur ve öylesine hassastır ki, sıcak bir fısıltı bile birçok insanı heyecanlandırabilir.</string>
+    <string name="ears_bite_action">%, %\'nin kulak memelerini hafifçe ısırarak hoş ve uyarıcı hisler yaratın.</string>
+    <string name="ears_kiss_action">%, %\'nin kulak memelerini ve çevresini nazikçe öpün. Bu, partnerinizi daha fazla heyecanlandıracak ve unutulmaz hisler yaşatacaktır.</string>
+    <string name="ears_suck_action">%, %\'nin kulak memelerini nazikçe emerek ekstra uyarım ve yeni hisler kazandırın.</string>
+    <string name="ears_use_accessories_action">%, %\'nin kulaklarının dış hatlarını takip ederek bir tüy veya başka yumuşak bir aksesuarla nazikçe okşayın.</string>
+    <string name="ears_ice_action">%, %\'nin kulak memelerini uyarmak için bir buz küpü kullanın. Buzu kulakların çevresinde nazikçe gezdirerek ekstra uyarım ve heyecan sağlayın.</string>
+    <string name="navel_kiss_action">%, %\'nin göbek deliğini ve çevresini nazikçe öperek hoş hisler ve uyarılma yaratın.</string>
+    <string name="navel_lick_action">%, %\'nin göbek deliğini nazikçe yalayın ve dilinizle etrafında oynayın.</string>
+    <string name="navel_blow_warm_air_action">%, %\'nin göbek deliğine sıcak nefes üfleyerek hoş bir sıcaklık hissi yaratın ve erojen reseptörleri uyarın.</string>
+    <string name="navel_use_accessories_action">%, %\'nin göbek deliği çevresinde tüy veya başka yumuşak aksesuarlar kullanın. Tüyü cildine nazikçe dokundurarak hoş hisler ve uyarılma sağlayın.</string>
+    <string name="navel_ice_action">%, %\'nin göbek deliği çevresinde nazikçe bir buz küpü gezdirin. Buz serinletici hisler yaratır ve erojen reseptörleri uyarır.</string>
+    <string name="lower_stomach_kiss_action">%, %\'nin alt karın bölgesini nazikçe öpün.</string>
+    <string name="lower_stomach_lick_action">%, %\'nin alt karın bölgesini nazikçe yalayın, göbekten kasık tepesine doğru inin. Bu, ekstra uyarılma ve yeni hisler yaşamasına yardımcı olur.</string>
+    <string name="lower_stomach_massage_action">%, %\'nin alt karın bölgesine dairesel hareketlerle, hafif dokunuşlarla veya nazik çimdiklerle yumuşakça masaj yapın. Uyarılmayı artırmak için yağ veya losyon kullanın.</string>
+    <string name="lower_stomach_scratch_action">%, %\'nin alt karın cildine tırnaklarınızı hafifçe sürerek hafif bir rahatsızlık hissi yaratın, bu da uyarılma ile birleşir.</string>
+    <string name="lower_stomach_blow_warm_air_action">%, %\'nin alt karın bölgesine sıcak nefesle nazikçe üfleyin, hoş bir sıcaklık hissi yaratarak erojen reseptörleri uyarın.</string>
+    <string name="lower_stomach_use_accessories_action">%, %\'nin alt karın cildine bir tüy veya başka yumuşak aksesuarlarla nazikçe dokunun. Bu, hoş ve uyarıcı hisler yaratabilir.</string>
+    <string name="lower_stomach_ice_action">%, %\'nin alt karın bölgesine nazikçe bir buz küpü gezdirin. Buz, serinletici hisler yaratır ve erojen reseptörleri uyarır.</string>
+    <string name="areola_and_nipples_massage_action">%, %\'nin areola ve meme uçlarına nazikçe masaj yapın. Hafif dairesel hareketler, çimdikleme ve baskı uygulayarak partnerinize ekstra heyecan ve yeni hisler yaşatabilirsiniz. Daha yumuşak ve duyusal bir masaj için yağ veya losyon kullanın.</string>
+    <string name="areola_and_nipples_kiss_action">%, %\'nin areola ve meme uçlarını nazikçe öpün.</string>
+    <string name="areola_and_nipples_suck_action">%, %\'nin meme uçlarını ekstra uyarım için nazikçe eminiz.</string>
+    <string name="areola_and_nipples_lick_action">%, %\'nin areola ve meme uçlarını nazikçe yalayın. Oyuncu öpücükler ve yalamalar özellikle heyecan verici olabilir.</string>
+    <string name="areola_and_nipples_bite_action">%, %\'nin areola ve meme uçlarını hafifçe ısırın. Onun tercihleri ve sınırlarına dikkat etmek önemlidir.</string>
+    <string name="areola_and_nipples_use_accessories_0_action">%, %\'nin areola ve meme uçlarını uyarmak için özel oyuncaklar kullanın. Küçük vibratörler, klitoral uyarıcılar ve ayarlanabilir basınca sahip meme klipsleri duyumları ve uyarılmayı artırabilir.</string>
+    <string name="areola_and_nipples_use_accessories_1_action">%, %\'nin areola ve meme uçlarını okşamak için tüy veya diğer yumuşak aksesuarlar kullanın. Yumuşak tüy dokunuşları özellikle heyecan verici olabilir.</string>
+    <string name="areola_and_nipples_ice_action">%, %\'nin areola ve meme uçlarını ekstra uyarım için buz küpleriyle nazikçe uyarın. Buz küpünü meme uçlarının üzerinde ve etrafında gezdirerek yeni duyumlar yaratabilirsiniz.</string>
+    <string name="pubic_mound_massage_action">%, %\'nin kasık bölgesine nazikçe masaj yapın. Hafif dairesel hareketlerle okşayın veya yüzeyine ellerinizle hafifçe dokunun. Yağ veya losyon kullanın, dokusunu ve şeklini keşfedin ve partnerinizin tepkilerine uyum sağlayın.</string>
+    <string name="pubic_mound_kiss_action">%, %\'nin kasık bölgesini nazikçe öpün ve okşayın. Oyuncu öpücükler özellikle heyecan verici olabilir.</string>
+    <string name="pubic_mound_lick_action">%, %\'nin kasık bölgesini dilinizle uyarın. Yalamak ekstra uyarılmayı artırmaya yardımcı olabilir.</string>
+    <string name="pubic_mound_use_accessories_0_action">%, %\'nin kasık bölgesini uyarmak için bir tüy veya diğer yumuşak aksesuarlar kullanın. Tüyü yüzey boyunca gezdirerek çeşitlilik ve yeni hisler katın.</string>
+    <string name="pubic_mound_use_accessories_1_action">%, %\'nin kasık bölgesini ekstra uyarım için küçük vibratörler veya klitoral stimülatörler gibi özel oyuncaklarla uyarın; bu yeni duyumlar ve çeşitlilik sağlayabilir.</string>
+    <string name="pubic_mound_ice_action">%, %\'nin kasık bölgesini ekstra uyarım için bir buz küpüyle nazikçe uyarın. Buz küpünü kasık bölgesi üzerinde gezdirin; sıcaklıkla oynamak ekstra heyecan yaratabilir.</string>
+    <string name="clitoris_massage_0_action">%, %\'nin klitorisini nazikçe okşayın ve masaj yapın. Hafif dairesel hareketler ve dikkatli dokunuşlar hoş hisler yaratacaktır. Rahatsızlığı önlemek için uygun miktarda su bazlı kayganlaştırıcı kullanın.</string>
+    <string name="clitoris_massage_1_action">%, %\'nin klitorisini hafif baskı ile dairesel hareketler kullanarak masajlayın. Partnerinizin daha fazla zevk alması için farklı teknikler ve yoğunluklar deneyin.</string>
+    <string name="clitoris_kiss_action">%, %\'nin klitorisini nazikçe öpün. Partnerinizin daha fazla zevk alması için ritimleri çeşitlendirin.</string>
+    <string name="clitoris_lick_action">%, %\'nin klitorisini okşamak için dilinizi kullanın. Dairesel hareketler, hafif dil baskısı ve emme gibi farklı tekniklerle ekstra uyarım sağlayın. Klitoral oral uyarı oldukça heyecan verici olabilir.</string>
+    <string name="clitoris_bite_action">%, %\'nin klitorisini nazik ve dikkatli bir şekilde ısırın. Bu ekstra uyarım sağlayabilir. Partnerinizin tercihlerini göz önünde bulundurun.</string>
+    <string name="clitoris_use_accessories_action">%, %\'nin klitorisini uyarmak için özel klitoral uyarıcılar, vibratörler veya masaj aletleri kullanın. Partnerinizin tepkilerine dikkat edin ve yeterli miktarda su bazlı kayganlaştırıcı kullanın.</string>
+    <string name="clitoris_itself_action">%, %\'nin klitorisini kendi başına uyarmasına izin verin. Bu, samimi ve heyecan verici bir deneyim olabilir.</string>
+    <string name="g_spot_massage_action">%, %\'nin vajinasına bir veya iki parmak sokun ya da G noktası uyarımı için özel eğimli bir seks oyuncağı kullanın. Bölgeyi nemlendirmek ve hareketi kolaylaştırmak için su bazlı kayganlaştırıcı kullanın. Vajinanın ön duvarında küçük bir çıkıntı bulun. G noktasına hafif dairesel hareketlerle, ritim ve yoğunluğu değiştirerek nazikçe masaj yapın.</string>
+    <string name="g_spot_itself_action">%, %\'nin parmaklarıyla veya özel eğimli bir seks oyuncağıyla G noktasını kendi başına uyarmasına izin verin. Bu, samimi ve heyecan verici bir deneyim olabilir.</string>
+    <string name="anus_massage_action">%, su bazlı kayganlaştırıcı kullanın ve %\'nin anüsü etrafında parmaklarınızla nazikçe okşamaya başlayın. Yavaşça ve dikkatlice parmağınızı anüsüne doğru hareket ettirebilirsiniz. Partnerinizin tepkilerine dikkat edin ve tercihlerini ve sınırlarını göz önünde bulundurun.</string>
+    <string name="anus_use_accessories_0_action">%, %\'nin anüsünü uyarmak için anal plug veya anal vibratör gibi özel anal oyuncaklar kullanın. Daha konforlu bir deneyim için bol miktarda su bazlı kayganlaştırıcı kullanın ve küçük boyutlu oyuncaklarla başlayarak partnerinizin alışmasını sağlayın.</string>
+    <string name="anus_use_accessories_1_action">%, %\'nin anüsünü uyarmak için tüy veya başka yumuşak aksesuarlar kullanın. Hafif dokunuşlar oldukça şehvetli ve uyarıcı olabilir.</string>
+    <string name="anus_kiss_action">%, %\'nin anüsünü nazikçe öpün. Daha konforlu bir deneyim için anal bölgenin temiz ve kayganlaştırılmış olduğundan emin olun.</string>
+    <string name="anus_lick_action">%, %\'nin anüsünü nazikçe yalayın. Daha konforlu bir deneyim için anal bölgenin temiz ve kayganlaştırılmış olması önemlidir. "Rimming" (anüs yalama), bazı kişiler için erotik ve heyecan verici olabilir.</string>
+    <string name="anus_ice_action">%, %\'nin anüsünü uyarmak için bir buz küpü kullanın. Partnerinizin tepkilerine dikkat edin ve tercihlerini ve sınırlarını dikkate alın.</string>
+    <string name="anus_itself_action">%, % anüsünü kendi başına parmaklarıyla veya özel seks oyuncaklarıyla uyarmak isteyebilir ve siz de onu izleyip destekleyebilirsiniz. Karşılıklı mastürbasyon samimi ve heyecan verici bir deneyim olabilir.</string>
+    <string name="buttocks_massage_action">%, %\'nin kalçalarına nazikçe masaj yapın. Partnerinizi uyarmak için dairesel hareketler, hafif baskı, okşamalar, hafif tokatlar, sürtünmeler, çimdiklemeler veya derin masaj teknikleri kullanın. Masaj yağları veya losyonları bu bölgedeki hissiyatı artırabilir.</string>
+    <string name="buttocks_kiss_action">%, %\'nin kalçalarını öpün. Oyunbaz öpücükler heyecan ve zevk uyandırabilir.</string>
+    <string name="buttocks_lick_action">%, %\'nin kalçalarını yalayın. Özellikle anüs çevresine dikkat göstermek uyarımı artırabilir.</string>
+    <string name="buttocks_bite_action">%, %\'nin kalçalarını nazikçe ısırın. Daha fazla zevk için partnerinizin tepkilerine dikkat edin.</string>
+    <string name="buttocks_use_accessories_action">%, %\'nin kalçalarını uyarmak için tüy veya başka yumuşak aksesuarlar kullanın. Yeni duyumlar için yüzeyde nazikçe gezdirin ve özellikle anüs çevresine özen gösterin.</string>
+    <string name="buttocks_ice_action">%, %\'nin kalçalarına nazikçe bir buz küpüyle dokunun. Bu ekstra zevk ve yeni hisler sağlayacaktır.</string>
+    <string name="glans_massage_action">%, %\'nin penisin başını nazikçe masaj yap. Hafif bastırma, sıkma, yukarı-aşağı hareketler veya dairesel masaj gibi farklı teknikler kullanın. Ellerinizin rahat hareket etmesi için su bazlı kayganlaştırıcı kullanın.</string>
+    <string name="glans_kiss_action">%, %\'nin penisin başını nazikçe öpün. Başın kaygan olmasını sağlamak için su bazlı kayganlaştırıcı kullanabilirsiniz.</string>
+    <string name="glans_lick_action">%, %\'nin penisin başını dilinizle nazikçe yalayın. Dairesel hareketler ve farklı ritimler deneyerek partnerinizin en çok hoşlandığı tekniği keşfedin.</string>
+    <string name="glans_bite_action">%, %\'nin penisin başını nazikçe ısırın. Partnerinizin tepkilerine dikkat edin ve işaretlerine göre hareket edin.</string>
+    <string name="glans_suck_action">%, %\'nin penisin başını nazikçe em.</string>
+    <string name="glans_use_accessories_action">%, %\'nin penisin başını uyarmak için penis masaj aleti veya titreşimli oyuncak gibi özel oyuncaklar kullanın.</string>
+    <string name="glans_ice_action">%, %\'nin penisin başını uyarmak için bir buz küpü kullanın. Sıcaklıkla oynamak oldukça heyecan verici olabilir.</string>
+    <string name="glans_itself_action">%, %\'nin kendi başını uyarmasına izin verin. Onun tercihlerine ve tepkilerine dikkat edin ve bu süreçte ona destek olun.</string>
+    <string name="scrotum_and_testicles_massage_action">%, %\'nin testislerine nazikçe masaj yapın. Hafif dairesel hareketlerle okşayın, nazikçe sıkın veya hafif baskı uygulayın. Partnerinizin tepkilerine ve tercihlerine dikkat edin. El hareketlerini kolaylaştırmak için su bazlı kayganlaştırıcı kullanmayı unutmayın.</string>
+    <string name="scrotum_and_testicles_kiss_action">%, %\'nin testislerini nazikçe öpün.</string>
+    <string name="scrotum_and_testicles_lick_action">%, %\'nin testislerini dilinizle uyarın. Hafifçe yalayın ve okşayın, farklı hareket ve ritimler deneyerek en fazla zevki sağlamaya çalışın.</string>
+    <string name="scrotum_and_testicles_bite_action">%, %\'nin testislerini nazikçe ısırın. Partnerinizin tepkilerine ve sınırlarına dikkat edin.</string>
+    <string name="scrotum_and_testicles_suck_action">%, %\'nin testislerini nazikçe emin. Farklı ritimler ve teknikler deneyerek partnerinizin en çok zevk aldığı yöntemi keşfedin.</string>
+    <string name="scrotum_and_testicles_use_accessories_0_action">%, %\'nin testislerini uyarmak için masaj aletleri veya vibratör gibi özel seks oyuncakları kullanın.</string>
+    <string name="scrotum_and_testicles_use_accessories_1_action">%, %\'nin testislerini uyarmak için tüy veya diğer yumuşak aksesuarlar kullanın. Hafif dokunuşlar ekstra heyecan hissi yaratmaya yardımcı olabilir.</string>
+    <string name="perineum_massage_action">%, %\'nin perine bölgesine nazikçe masaj yapın. Bu bölgeyi hafif dairesel ya da yukarı-aşağı hareketlerle okşayın. Partnerinizin tepkilerine ve baskı tercihlerine dikkat edin.</string>
+    <string name="perineum_lick_action">%, %\'nin perine bölgesini uyarıcı olarak dilinizi kullanarak okşayın. Farklı hareket ve ritimler deneyerek partnerinizin en çok zevk aldığı yöntemi keşfedin.</string>
+    <string name="perineum_use_accessories_action">%, %\'nin perine bölgesini uyarmak için tüy, vibratör veya masaj aleti gibi çeşitli aksesuarlar kullanın. Yeterli miktarda su bazlı kayganlaştırıcı kullandığınızdan ve partnerinizin tepkilerine dikkat ettiğinizden emin olun.</string>
+    <string name="prostate_massage_action">%, su bazlı kayganlaştırıcı kullanın ve %\'nin anüsüne dikkatlice parmaklarınızı yerleştirin. Rektum duvarında dairesel hareketlerle prostatını nazikçe masaj yapın. Partnerinizin konforu için nazik ve dikkatli olmak önemlidir.</string>
+    <string name="prostate_use_accessories_action">%, %\'nin prostatını uyarmak için masaj aletleri veya titreşimli oyuncaklar gibi özel seks oyuncakları kullanın. Oyuncağın talimatlarını takip edin ve yeterli miktarda su bazlı kayganlaştırıcı kullandığınızdan emin olun.</string>
+    <string name="prostate_itself_action">%, %\'nin kendi prostatını uyarmasına izin verin, siz de onu izleyip destekleyebilirsiniz. Bu, her iki taraf için de samimi ve heyecan verici bir deneyim olabilir.</string>
+    <string name="penis_massage_action">%, % penisini nazikçe masaj yapın. Daha fazla konfor için su bazlı kayganlaştırıcı kullanın. Yukarı-aşağı hareketler, hafif okşamalar ve baskılar gibi farklı teknikler deneyerek partnerinize en fazla zevk vereni bulun.</string>
+    <string name="penis_kiss_action">%, %\'nin penisini nazikçe öpün. Penisin tabanından başına doğru ilerleyerek yumuşak öpücükler verin.</string>
+    <string name="penis_suck_action">%, %\'nin penisini nazikçe emin. Dudaklarla yukarı-aşağı hareketler veya derin emme gibi farklı teknikler deneyin ve en fazla zevk veren yöntemi keşfedin.</string>
+    <string name="penis_lick_action">%, %\'nin penisini yalayın. Dilinizi penisin tabanından başına doğru gezdirin ve dairesel hareketler gibi çeşitli tekniklerle uyarın.</string>
+    <string name="penis_use_accessories_0_action">%, %\'nin penisini uyarmak için özel seks oyuncakları kullanın. Daha fazla konfor için su bazlı kayganlaştırıcı kullanmayı ihmal etmeyin.</string>
+    <string name="penis_use_accessories_1_action">%, %\'nin penisini uyarmak için tüyler veya diğer yumuşak aksesuarlar kullanın. Bu, ekstra duyumlar ve heyecan sağlayacaktır.</string>
+    <string name="penis_ice_action">%, %\'nin penisini uyarmak için bir buz küpü kullanın. Sıcaklıkla oynamak oldukça heyecan verici olabilir.</string>
+    <string name="penis_itself_action">%, %\'nin kendi penisini masaj yapmasına izin verin. Onun tepkilerini ve tercihlerini gözlemleyin ve sürece destek olun.</string>
+    <string name="nipples_massage_action">%, %\'nin meme uçlarını ve çevresini nazikçe masaj yapın. Meme uçlarının etrafında dairesel hareketler yapın, hafifçe sıkın veya okşayın. Daha keyifli hisler için su bazlı yağlar veya losyonlar kullanın.</string>
+    <string name="nipples_kiss_action">%, %\'nin meme uçlarını nazikçe öpün.</string>
+    <string name="nipples_lick_action">%, %\'nin meme uçlarını ve çevresini yalayın.</string>
+    <string name="nipples_bite_action">%, %\'nin meme uçlarını hafifçe ısırmayı deneyin, dikkatli ve nazik olun.</string>
+    <string name="nipples_ice_action">%, %\'nin meme uçlarının etrafında bir buz küpü gezdirin veya nazikçe üzerine yerleştirin, serinlik ve heyecan duygusu yaratmak için.</string>
+    <string name="nipples_use_accessories_0_action">%, %\'nin meme uçlarını uyarmak için ayarlanabilir basınca sahip masaj aleti, titreşimli oyuncak veya pense kullanın; yeni heyecan verici hisler yaratabilir ve aksesuarların duyusallığının tadını çıkarabilirsiniz.</string>
+    <string name="nipples_use_accessories_1_action">%, %\'nin meme uçlarını uyarmak için tüy veya diğer yumuşak aksesuarlar kullanın. Bu, heyecanı artırmaya yardımcı olabilir.</string>
+    <string name="nipples_suck_action">%, %\'nin meme uçlarını ekstra uyarı için nazikçe emin.</string>
+    <string name="small_of_the_back_massage_action">%, %\'nin bel bölgesine masaj yap. Farklı teknikler kullanarak, dairesel hareketler, hafif baskı, çimdikleme vb. ile partnerini rahatlatabilirsin. Masaj için yağ veya losyon kullanmak deneyimi daha heyecanlı hale getirebilir.</string>
+    <string name="small_of_the_back_kiss_action">%, %\'nin bel bölgesini öp. Dudaklarınla bu bölgeyi keşfet ve partnerinin tepkisine dikkat et.</string>
+    <string name="small_of_the_back_use_accessories_action">%, %\'nin bel bölgesini bir tüy veya başka bir yumuşak aksesuarla takip et.</string>
+    <string name="small_of_the_back_ice_action">%, %\'nin bel bölgesi boyunca nazikçe bir buz küpü gezdir.</string>
+    <string name="armpits_massage_action">%, %\'nin koltukaltına nazikçe masaj yap. Bu bölgeyi uyarmak için hafif dairesel hareketler veya okşamalar deneyin. Masajı daha heyecan verici hale getirmek için yağ veya losyon kullanabilirsiniz.</string>
+    <string name="armpits_kiss_action">%, %\'nin koltukaltlarını dudaklarınla öp. Oyunbaz öpücükler ve nazik dokunuşlar heyecan verici olabilir.</string>
+    <string name="armpits_use_accessories_action">%, %\'nin koltukaltlarını okşamak için tüy veya diğer yumuşak aksesuarları kullan.</string>
+    <string name="armpits_ice_action">%, %\'nin koltukaltlarında ekstra uyarım için bir buz küpü kullan. Onun koltukaltlarının üzerinde yavaş ve nazikçe buz küpünü gezdirerek partnerinize yeni bir deneyim ve heyecan yaşatın.</string>
+    <string name="inner_arms_massage_action">%, %\'nin kollarının iç kısmına nazikçe masaj yapın. Ekstra uyarım için dairesel hareketler, okşamalar ve hafif çimdiklemeler kullanın. Yağ veya losyon kullanmak hisleri yoğunlaştırabilir.</string>
+    <string name="inner_arms_kiss_action">%, %\'nin kollarının iç kısmını dudaklarınızla öpün veya hafifçe ısırın. Oyunbaz öpücükler ve nazik dokunuşlar heyecan verici olabilir.</string>
+    <string name="inner_arms_lick_action">%, %\'nin kollarının iç kısmını uyarmak için dilinizi kullanın. Bu bölgeyi hafifçe yalayarak hoş ve heyecan verici hisler yaratabilirsiniz.</string>
+    <string name="inner_arms_use_accessories_action">%, %\'nin kollarının iç kısmını uyarmak için tüy veya diğer yumuşak aksesuarlar kullanın.</string>
+    <string name="inner_arms_ice_action">%, %\'nin kollarının iç kısmında ekstra uyarım için bir buz küpü kullanın. Bu, deneyiminize çeşitlilik ve yeni hisler katabilir.</string>
+    <string name="inner_wrist_massage_action">%, %\'nin bileklerinin iç kısmına nazikçe masaj yapın. Masaj için yağ veya losyon kullanmak hisleri yoğunlaştırabilir.</string>
+    <string name="inner_wrist_kiss_action">%, %\'nin bileklerinin iç kısmını öpücüklerle okşayın. Şakacı öpücükler ve nazik dokunuşlar heyecan verici olabilir.</string>
+    <string name="inner_wrist_lick_action">%, %\'nin bileklerinin iç kısmını yalayın. Bu bölgeyi nazikçe yalamak hoş hisler ve heyecan yaratabilir.</string>
+    <string name="inner_wrist_use_accessories_action">%, %\'nin bileklerinin iç kısmını uyarmak için tüy veya diğer yumuşak aksesuarlar kullanın. Bu, deneyiminize çeşitlilik ve yeni hisler katabilir.</string>
+    <string name="inner_wrist_ice_action">%, %\'nin bileklerinin iç kısmında ekstra uyarım için bir buz küpü kullanın. Sıcaklıkla oynamak heyecanı artırmaya yardımcı olabilir.</string>
+    <string name="palm_of_hands_and_fingertips_massage_action">%, %\'nin avuç içlerine hafif bir baskı ve dairesel hareketlerle nazikçe masaj yapın. Bu, hoş duygular ve rahatlama yaratabilir.</string>
+    <string name="palm_of_hands_and_fingertips_kiss_action">%, %\'nin avuç içlerini dudaklarınızla öpün. Parmak uçlarına dikkat edin ve onları nazik öpücüklerle okşayın.</string>
+    <string name="palm_of_hands_and_fingertips_lick_action">%, %\'nin avuç içlerini ve parmak uçlarını yalayarak ekstra uyarım ve heyecan yaratın.</string>
+    <string name="palm_of_hands_and_fingertips_suck_action">%, %\'nin parmak uçlarını emerek heyecanı artırmaya yardımcı olun.</string>
+    <string name="palm_of_hands_and_fingertips_use_accessories_action">%, %\'nin avuç içlerini ve parmak uçlarını uyarmak için tüy veya diğer yumuşak aksesuarlar kullanın. Bu, yeni hisler ekleyebilir ve heyecanı artırabilir.</string>
+    <string name="behind_the_knee_massage_action">%, %\'nin dizlerinin arkasına nazikçe masaj yapın. Bu bölgede hafif dairesel hareketler, basınçlar ve çimdiklemeler deneyin. Partnerinizin tepkisine ve tercihlerine dikkat edin. Masaj yağı veya losyon uygulamak ekstra zevk ve uyarım sağlayabilir.</string>
+    <string name="behind_the_knee_kiss_action">%, %\'nin dizlerinin arkasını öpün ve dudaklarınızla hafifçe ısırın. Erotik öpücükler ve nazik okşamalar heyecan verici olabilir.</string>
+    <string name="behind_the_knee_lick_action">%, %\'nin dizlerinin arkasını yalayarak hoş duygular yaratın.</string>
+    <string name="behind_the_knee_use_accessories_action">%, %\'nin dizlerinin arkasında bir tüy veya diğer yumuşak aksesuarları kullanarak ekstra zevk ve uyarım sağlayın.</string>
+    <string name="lips_massage_action">%, %\'nin dudaklarını parmak uçlarınla nazikçe okşa. Aynı zamanda meyve, dondurma vb. gibi yiyecekler de kullanabilirsin. Bir parça yiyeceği dudaklarının üzerinde gezdir ve partnerinin yemesine izin ver. Bu, onun yeni duyumlar ve heyecan yaşamasına olanak sağlar.</string>
+    <string name="lips_kiss_action">%, farklı öpücük türlerini dene – nazik, tutkulu, oyunbaz veya dudaklara hafifçe dokunuşlar. %\'yi heyecanlandırmak için yoğunluğu ve ritmi değiştir.</string>
+    <string name="lips_lick_action">%, %\'nin dudaklarını dilinin ucuyla okşa. Bu, hafif yalama, dairesel hareketler vb. içerebilir. Hangi hareketlerin ve dokunuşların ona daha fazla zevk verdiğini keşfet.</string>
+    <string name="lips_bite_action">%, %\'nin dudaklarını hafifçe ve dikkatlice ısırarak yeni duyumlar keşfet ve uyarıyı artır. Bazı insanlar için dudakları hafifçe ısırmak veya çimdiklemek heyecan verici olabilir.</string>
+    <string name="lips_ice_action">%, %\'nin dudaklarına bir buz küpü sür. Sıcaklıkla oynamak yeni duyumlar ve uyarılma sağlayabilir.</string>
+    <string name="neck_massage_0_action">%, %\'nin boynuna nazikçe masaj yapın. Partnerinizin kaslarını rahatlatmak ve keyifli duygular yaratmak için hafif bir basınç ve dairesel hareketler kullanın. Daha zevkli bir deneyim için yağ veya losyon kullanın.</string>
+    <string name="neck_massage_1_action">%, %\'nin tercihlerine göre dokunuşlarınızı ve basıncınızı değiştirin. Parmak uçlarınızı hafif okşamalar için kullanın veya boynunun farklı bölgelerine hafif bir basınç uygulayın. Uyarıyı artırmak için yağ veya losyon kullanmayı unutmayın.</string>
+    <string name="neck_kiss_action">%, %\'nin boynunu dudaklarınızla öpün veya hafifçe ısırın. Oyuncu öpücükler boynu boyunca keyifli duygular yaratabilir ve uyarıcı olabilir.</string>
+    <string name="neck_lick_action">%, %\'nin boynunu yalayın. Bu, erotik duyguları harekete geçirebilir ve uyarıyı artırabilir.</string>
+    <string name="neck_use_accessories_action">%, %\'nin boynunu uyarmak için tüyler veya diğer yumuşak aksesuarlar kullanın. Tüyleri boynu boyunca kaydırın veya yeni duygular yaratmak için yumuşak aksesuarlar kullanın.</string>
+    <string name="neck_ice_action">%, %\'nin boyun bölgesinde bir buz küpü kullanın. Sıcaklıkla oynamak yeni duygular ve uyarılma sağlayabilir.</string>
+    <string name="inner_thigh_massage_0_action">%, %\'nin uyluğunun iç kısmına nazikçe masaj yap. Nazik ve sevecen dokunuşlar hoş duygular ve uyarılma yaratabilir. Daha keyifli bir deneyim için yağ veya losyon kullan.</string>
+    <string name="inner_thigh_massage_1_action">%, %\'nin uyluğunun iç kısmında dokunuşlarını ve baskıyı değiştir. Bazı insanlar hafif ve nazik dokunuşları severken, bazıları daha yoğun ve enerjik hareketleri tercih edebilir. Uyarılmayı artırmak için yağ veya losyon kullanmayı unutma.</string>
+    <string name="inner_thigh_kiss_action">%, %\'nin uyluğunun iç kısmını dudaklarınla okşa, öp veya hafifçe ısır. Oyuncu öpücükler ve nazik okşamalar uyarıcı olabilir.</string>
+    <string name="inner_thigh_lick_action">%, %\'nin uyluğunun iç kısmını uyarmak için dilini kullan. İç uyluk boyunca hafif yalamalar hoş duygular ve uyarılma yaratabilir.</string>
+    <string name="inner_thigh_bite_action">%, ekstra uyarılma için %\'nin uyluğunun dış yüzeyini hafifçe ısır.</string>
+    <string name="inner_thigh_use_accessories_0_action">%, %\'nin uyluğunun iç kısmını uyarmak için tüy veya diğer yumuşak aksesuarlar kullan. Bu, deneyime çeşitlilik ve yeni duygular ekleyebilir.</string>
+    <string name="inner_thigh_use_accessories_1_action">%, %\'nin uyluğunun dış yüzeyinde ekstra uyarı için masaj aleti, titreşimli cihaz veya diğer aksesuarları kullan. Bu, partnerine unutulmaz duygular yaşatacak ve ekstra uyarılma sağlamasına yardımcı olacaktır.</string>
+    <string name="inner_thigh_ice_action">%, %\'nin uyluğunun iç kısmında ekstra uyarı için bir buz küpü kullan. Bu, ekstra heyecan yaratmaya yardımcı olacaktır.</string>
+    <string name="bottom_of_feet_and_toes_massage_0_action">%, %\'nin ayak tabanlarına dairesel hareketlerle, hafif bir baskı uygulayarak ve parmak uçlarından topuğa doğru ilerleyerek masaj yap. Ayaklarının farklı noktalarına odaklanarak onları rahatlat ve uyar. Yağ veya losyon kullanmak, partnerinin daha fazla rahatlama ve zevk yaşamasına yardımcı olur.</string>
+    <string name="bottom_of_feet_and_toes_massage_1_action">%, %\'nin ayaklarını ve ayak parmaklarını parmak uçlarınla okşa. Bu hoş ve rahatlatıcı bir his yaratabilir.</string>
+    <string name="bottom_of_feet_and_toes_kiss_action">%, %\'nin ayaklarını ve parmaklarını öperek ekstra uyarılma ve heyecan yaşat.</string>
+    <string name="bottom_of_feet_and_toes_lick_action">%, %\'nin ayaklarını ve parmaklarını uyarmak için dilini kullan. Onun ayaklarını ve parmaklarını yalamak hoş duyumlar yaratabilir.</string>
+    <string name="bottom_of_feet_and_toes_suck_action">%, %\'nin ayak parmaklarını em. Bu, partnerini rahatlatmaya ve ekstra zevk yaşatmaya yardımcı olabilir.</string>
+    <string name="bottom_of_feet_and_toes_use_accessories_action">%, %\'nin ayaklarına tüyler, masaj topları, masaj silindirleri veya özel aksesuarlar kullanarak masaj yap. Bu, duyumları artırmaya ve deneyime çeşitlilik katmaya yardımcı olabilir.</string>
+    <string name="bottom_of_feet_and_toes_ice_action">%, %\'nin ayaklarında ekstra uyarım için bir buz küpü kullan. Ayaklarının üzerinde buz küpünü gezdirerek, onları rahatlatmak ve uyarıcı etki yaratmak için farklı noktalara hafifçe baskı yap.</string>
+
     <string name="about_app_description">\t\tLoveIn\'e hoş geldiniz - hayatınıza zevk, mutluluk ve yeni deneyimler katmayı hedefleyen
         mobil bir uygulama! LoveIn, ilişkinizi güçlendirmek ve partnerinizle bağlantınızı geliştirmek isteyen çiftler
         için yeni duygusal yönleri ve özel anları keşfeden benzersiz bir deneyim sunuyor.\n\n
@@ -549,8 +218,7 @@
         deneyime dalın ve partneriniz veya arkadaşlarınızla tutku dolu ve samimi anları paylaşın. LoveIn ile ilişkinizde
         cesaret ve yenilik tadını çıkarın.
     </string>
-    <string name="game_over_description">Kullanıcı adı % olan oyuncunun tüm kartları tükendi. Bir adım geri gidip
-        yeniden başlayabilirsiniz.
-    </string>
+
+    <string name="game_over_description">Kullanıcı adı % olan oyuncunun tüm kartları tükendi. Bir adım geri gidip yeniden başlayabilirsiniz.</string>
     <string name="game_over_title">Oyun bitti.</string>
 </resources>
