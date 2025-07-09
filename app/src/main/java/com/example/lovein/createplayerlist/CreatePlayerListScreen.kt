@@ -45,7 +45,6 @@ import com.example.lovein.common.data.Gender
 import com.example.lovein.common.data.NavigationScreens
 import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
-import com.example.lovein.common.utils.showInterstitialAd
 import com.example.lovein.createplayerlist.components.CustomAlertDialog
 import com.example.lovein.createplayerlist.components.EroZoneListCard
 import com.example.lovein.createplayerlist.components.PlayerInputRow
@@ -201,7 +200,6 @@ fun CreatePlayerListScreen(
                             value = convertPlayerListToPlayerDTOList(playerList)
                         )
 
-                        showInterstitialAd(context)
                         navController.navigate(route = NavigationScreens.ERO_ZONE_EXPLORER_SCREEN.name)
                     }
                 },

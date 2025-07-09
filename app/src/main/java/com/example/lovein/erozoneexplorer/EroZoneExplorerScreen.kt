@@ -37,7 +37,6 @@ import com.example.lovein.common.dtos.PlayerDTO
 import com.example.lovein.common.models.EroZoneMutable
 import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
-import com.example.lovein.common.utils.showInterstitialAd
 import com.example.lovein.createplayerlist.components.CustomAlertDialog
 import com.example.lovein.erozoneexplorer.components.Stack
 import com.example.lovein.erozoneexplorer.models.Card
@@ -76,8 +75,6 @@ fun EroZoneExplorerScreen(
     val alertDialogText: MutableState<String> = remember { mutableStateOf("") }
 
     CommonContainer(navController = navController) { innerPadding ->
-        if (playerIndex.value != 0 && playerIndex.value % 5 == 0) showInterstitialAd(context)
-
         Column(
             modifier = Modifier
                 .fillMaxSize()

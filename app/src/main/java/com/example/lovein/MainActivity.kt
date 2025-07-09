@@ -4,8 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.core.view.WindowCompat
-import com.example.lovein.common.utils.loadInterstitialAd
-import com.example.lovein.common.utils.removeInterstitialAd
 import com.example.lovein.navigation.LoveInNavigation
 import com.example.lovein.ui.theme.LoveInTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,12 +20,5 @@ class MainActivity : ComponentActivity() {
                 LoveInNavigation()
             }
         }
-
-        loadInterstitialAd(this)
-    }
-
-    override fun onDestroy() {
-        removeInterstitialAd()
-        super.onDestroy()
     }
 }

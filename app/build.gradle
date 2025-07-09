@@ -78,9 +78,6 @@ dependencies {
     kapt "com.google.dagger:hilt-android-compiler:2.48"
     implementation "androidx.hilt:hilt-navigation-compose:1.2.0"
 
-    // Ads
-    implementation "com.google.android.gms:play-services-ads:23.6.0"
-
     // Kotlin Serialization
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3"
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.3"
