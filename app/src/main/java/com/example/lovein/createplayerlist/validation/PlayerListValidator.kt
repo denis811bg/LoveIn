@@ -17,16 +17,19 @@ fun validatePlayers(playerList: List<MutableState<Player>>): ValidationResult {
             titleResId = R.string.not_enough_players_alert_title,
             textResId = R.string.not_enough_players_alert_description
         )
+
         playerList.any { it.value.name.value.isBlank() } -> ValidationResult(
             isValid = false,
             titleResId = R.string.add_player_names_alert_title,
             textResId = R.string.add_player_names_alert_description
         )
+
         playerList.any { it.value.selectedEroZones.isEmpty() } -> ValidationResult(
             isValid = false,
             titleResId = R.string.add_player_ero_zones_alert_title,
             textResId = R.string.add_player_ero_zones_alert_description
         )
+
         else -> ValidationResult(isValid = true)
     }
 }
