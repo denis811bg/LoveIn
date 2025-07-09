@@ -142,6 +142,7 @@ fun EroZoneListCard(
 
                         Row(
                             modifier = Modifier
+                                .padding(horizontal = 4.dp)
                                 .background(
                                     color = if (player.value.selectedEroZones.contains(
                                             eroZoneMutable
