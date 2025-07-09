@@ -48,6 +48,7 @@ import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.createplayerlist.components.CustomAlertDialog
 import com.example.lovein.createplayerlist.components.EroZoneListCard
 import com.example.lovein.createplayerlist.components.PlayerInputRow
+import com.example.lovein.createplayerlist.validation.validatePlayers
 import com.example.lovein.ui.theme.helveticaFontFamily
 import com.example.lovein.utils.convertPlayerListToPlayerDTOList
 import kotlinx.coroutines.CoroutineScope
@@ -164,36 +165,12 @@ fun CreatePlayerListScreen(
                 icon = Icons.Default.PlayCircle,
                 iconContentDescription = "play_circle_icon",
                 onClick = {
-                    if (playerList.size < 2) {
+                    val result = validatePlayers(playerList)
+
+                    if (!result.isValid) {
                         isAlertDialogOpen.value = true
-                        alertDialogTitle.value = LocalizationManager.getLocalizedString(
-                            context = context,
-                            resourceId = R.string.not_enough_players_alert_title
-                        )
-                        alertDialogText.value = LocalizationManager.getLocalizedString(
-                            context = context,
-                            resourceId = R.string.not_enough_players_alert_description
-                        )
-                    } else if (playerList.any { player -> player.value.name.value == "" }) {
-                        isAlertDialogOpen.value = true
-                        alertDialogTitle.value = LocalizationManager.getLocalizedString(
-                            context = context,
-                            resourceId = R.string.add_player_names_alert_title
-                        )
-                        alertDialogText.value = LocalizationManager.getLocalizedString(
-                            context = context,
-                            resourceId = R.string.add_player_names_alert_description
-                        )
-                    } else if (playerList.any { player -> player.value.selectedEroZones.isEmpty() }) {
-                        isAlertDialogOpen.value = true
-                        alertDialogTitle.value = LocalizationManager.getLocalizedString(
-                            context = context,
-                            resourceId = R.string.add_player_ero_zones_alert_title
-                        )
-                        alertDialogText.value = LocalizationManager.getLocalizedString(
-                            context = context,
-                            resourceId = R.string.add_player_ero_zones_alert_description
-                        )
+                        alertDialogTitle.value = LocalizationManager.getLocalizedString(context, result.titleResId!!)
+                        alertDialogText.value = LocalizationManager.getLocalizedString(context, result.textResId!!)
                     } else {
                         navController.currentBackStackEntry?.savedStateHandle?.set(
                             key = "playerDTOList",
