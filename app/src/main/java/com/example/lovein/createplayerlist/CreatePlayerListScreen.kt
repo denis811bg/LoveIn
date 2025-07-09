@@ -1,9 +1,6 @@
 package com.example.lovein.createplayerlist
 
 import android.content.Context
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.indication
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -41,19 +38,17 @@ import androidx.navigation.NavController
 import com.example.lovein.R
 import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
-import com.example.lovein.common.data.Gender
 import com.example.lovein.common.data.NavigationScreens
 import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.createplayerlist.components.CustomAlertDialog
-import com.example.lovein.createplayerlist.components.EroZoneListCard
-import com.example.lovein.createplayerlist.components.PlayerInputRow
+import com.example.lovein.createplayerlist.components.PlayerCard
+import com.example.lovein.createplayerlist.utils.addRandomPlayer
+import com.example.lovein.createplayerlist.utils.showAlertDialog
 import com.example.lovein.createplayerlist.validation.validatePlayers
 import com.example.lovein.ui.theme.helveticaFontFamily
 import com.example.lovein.utils.convertPlayerListToPlayerDTOList
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
-import kotlin.random.Random
 
 @Composable
 fun CreatePlayerListScreen(
@@ -90,29 +85,7 @@ fun CreatePlayerListScreen(
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 itemsIndexed(items = playerList) { index, player ->
-                    val isExpanded: MutableState<Boolean> = remember { mutableStateOf(false) }
-                    val alpha = animateFloatAsState(
-                        targetValue = if (isExpanded.value) 1f else 0f,
-                        animationSpec = tween(durationMillis = 1000)
-                    )
-                    val rotateX = animateFloatAsState(
-                        targetValue = if (isExpanded.value) 0f else -90f,
-                        animationSpec = tween(durationMillis = 1000)
-                    )
-
-                    PlayerInputRow(
-                        playerList = playerList,
-                        index = index,
-                        isExpanded = isExpanded
-                    )
-
-                    AnimatedVisibility(visible = isExpanded.value) {
-                        EroZoneListCard(
-                            player = player,
-                            rotateX = rotateX,
-                            alpha = alpha
-                        )
-                    }
+                    PlayerCard(player = player, index = index, playerList = playerList)
                 }
 
                 item {
@@ -143,14 +116,7 @@ fun CreatePlayerListScreen(
                                 tint = Color.White
                             )
                         },
-                        onClick = {
-                            val gender = if (Random.nextBoolean()) Gender.MALE else Gender.FEMALE
-                            playerList.add(mutableStateOf(Player(gender)))
-
-                            coroutineScope.launch {
-                                listState.animateScrollToItem(playerList.size - 1)
-                            }
-                        },
+                        onClick = { addRandomPlayer(playerList, coroutineScope, listState) },
                         containerColor = Color.Transparent,
                         elevation = FloatingActionButtonDefaults.bottomAppBarFabElevation()
                     )
@@ -168,11 +134,13 @@ fun CreatePlayerListScreen(
                     val result = validatePlayers(playerList)
 
                     if (!result.isValid) {
-                        isAlertDialogOpen.value = true
-                        alertDialogTitle.value =
-                            LocalizationManager.getLocalizedString(context, result.titleResId!!)
-                        alertDialogText.value =
-                            LocalizationManager.getLocalizedString(context, result.textResId!!)
+                        showAlertDialog(
+                            context,
+                            result,
+                            isAlertDialogOpen,
+                            alertDialogTitle,
+                            alertDialogText
+                        )
                     } else {
                         navController.currentBackStackEntry?.savedStateHandle?.set(
                             key = "playerDTOList",
