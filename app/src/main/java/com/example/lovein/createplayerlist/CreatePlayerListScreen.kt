@@ -169,8 +169,10 @@ fun CreatePlayerListScreen(
 
                     if (!result.isValid) {
                         isAlertDialogOpen.value = true
-                        alertDialogTitle.value = LocalizationManager.getLocalizedString(context, result.titleResId!!)
-                        alertDialogText.value = LocalizationManager.getLocalizedString(context, result.textResId!!)
+                        alertDialogTitle.value =
+                            LocalizationManager.getLocalizedString(context, result.titleResId!!)
+                        alertDialogText.value =
+                            LocalizationManager.getLocalizedString(context, result.textResId!!)
                     } else {
                         navController.currentBackStackEntry?.savedStateHandle?.set(
                             key = "playerDTOList",
