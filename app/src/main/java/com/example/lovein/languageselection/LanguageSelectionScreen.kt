@@ -17,7 +17,6 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -33,9 +32,9 @@ import com.example.lovein.ui.theme.helveticaFontFamily
 
 @Composable
 fun LanguageSelectionScreen(navController: NavController) {
-    val context = LocalContext.current
+    val configuration = LocalConfiguration.current
 
-    CompositionLocalProvider(LocalConfiguration provides context.resources.configuration) {
+    CompositionLocalProvider(LocalConfiguration provides configuration) {
         CommonContainer(navController = navController) { innerPadding ->
             LazyColumn(
                 modifier = Modifier
@@ -60,7 +59,10 @@ fun LanguageSelectionScreen(navController: NavController) {
                             .padding(bottom = 8.dp)
                             .background(
                                 brush = Brush.linearGradient(
-                                    colors = listOf(BackgroundDarkPinkColor, BackgroundDarkBlueColor),
+                                    colors = listOf(
+                                        BackgroundDarkPinkColor,
+                                        BackgroundDarkBlueColor
+                                    ),
                                     start = Offset.Zero,
                                     end = Offset.Infinite
                                 ),

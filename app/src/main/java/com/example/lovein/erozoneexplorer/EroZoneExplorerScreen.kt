@@ -28,12 +28,12 @@ import androidx.navigation.compose.rememberNavController
 import com.example.lovein.R
 import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
-import com.example.lovein.common.data.Action
 import com.example.lovein.common.data.ActionType
 import com.example.lovein.common.data.EroZone
 import com.example.lovein.common.data.EroZoneType
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.dtos.PlayerDTO
+import com.example.lovein.common.models.ActionWithFeedback
 import com.example.lovein.common.models.EroZoneMutable
 import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
@@ -47,16 +47,6 @@ import com.example.lovein.ui.theme.BackgroundLightPinkColor
 import com.example.lovein.ui.theme.FemaleColor
 import com.example.lovein.ui.theme.MaleColor
 import com.example.lovein.utils.convertPlayerDTOListToPlayerList
-import kotlin.collections.List
-import kotlin.collections.MutableList
-import kotlin.collections.any
-import kotlin.collections.filter
-import kotlin.collections.firstOrNull
-import kotlin.collections.isNotEmpty
-import kotlin.collections.listOf
-import kotlin.collections.mutableListOf
-import kotlin.collections.randomOrNull
-import kotlin.collections.toMutableList
 
 @Composable
 fun EroZoneExplorerScreen(
@@ -68,7 +58,7 @@ fun EroZoneExplorerScreen(
     val playerList: List<Player> = convertPlayerDTOListToPlayerList(playerDTOList)
 
     val playerIndex: MutableState<Int> = remember { mutableIntStateOf(0) }
-    val actionCards: MutableList<Card> = initActionCards(context, playerList)
+    val actionCards: List<Pair<Player, Card>> = initActionCards(context, playerList)
 
     val isAlertDialogOpen: MutableState<Boolean> = remember { mutableStateOf(false) }
     val alertDialogTitle: MutableState<String> = remember { mutableStateOf("") }
@@ -195,28 +185,32 @@ fun EroZoneExplorerScreenPreview() {
     )
 }
 
-private fun initActionCards(context: Context, playerList: List<Player>): MutableList<Card> {
-    val actionCards: MutableList<Card> = mutableListOf()
+private fun initActionCards(
+    context: Context,
+    playerList: List<Player>
+): MutableList<Pair<Player, Card>> {
+    val actionCards: MutableList<Pair<Player, Card>> = mutableListOf()
 
     var playerIndex = 1
     while (true) {
-        if (playerList.isEmpty()) {
-            break
-        }
+        if (playerList.isEmpty()) break
 
-        val selectedEroZoneMutableList: MutableList<EroZoneMutable> =
-            playerList[(playerIndex % playerList.size)].selectedEroZones.toMutableList()
+        val passivePlayerIndex = playerIndex % playerList.size
+        val activePlayerIndex = (playerIndex - 1) % playerList.size
+
+        val selectedEroZoneMutableList =
+            playerList[passivePlayerIndex].selectedEroZones.toMutableList()
         val eroZoneMutable: EroZoneMutable? = getEroZone(selectedEroZoneMutableList)
 
         if (eroZoneMutable != null) {
-            actionCards.add(
-                card(
-                    context = context,
-                    eroZoneMutable = eroZoneMutable,
-                    activePlayer = playerList[((playerIndex - 1) % playerList.size)],
-                    passivePlayer = playerList[(playerIndex++ % playerList.size)]
-                )
+            val card = card(
+                context = context,
+                eroZoneMutable = eroZoneMutable,
+                activePlayer = playerList[activePlayerIndex],
+                passivePlayer = playerList[passivePlayerIndex]
             )
+            actionCards.add(playerList[passivePlayerIndex] to card)
+            playerIndex++
         } else break
     }
 
@@ -268,36 +262,44 @@ private fun card(
     eroZoneMutable: EroZoneMutable,
     activePlayer: Player,
     passivePlayer: Player
-) = createCard(
-    cardFrontContent = buildStylizedText(
+): Card {
+    val actionWithFeedback = getAction(eroZoneMutable) ?: return error("No action")
+
+    val cardFrontContent = buildStylizedText(
         simpleText = LocalizationManager.getLocalizedString(
             context = context,
-            resourceId = getAction(eroZoneMutable)?.resourceId ?: 0
-        )
-            .replaceFirst("%", activePlayer.name.value)
+            resourceId = actionWithFeedback.action.resourceId
+        ).replaceFirst("%", activePlayer.name.value)
             .replaceFirst("%", passivePlayer.name.value),
         stylizedTexts = listOf(activePlayer.name.value, passivePlayer.name.value),
         cardColor = if (passivePlayer.gender.value == Gender.MALE) MaleColor else FemaleColor
-    ),
-    gender = passivePlayer.gender.value
-)
+    )
+
+    return createCard(
+        cardFrontContent = cardFrontContent,
+        gender = passivePlayer.gender.value,
+        actionWithFeedback = actionWithFeedback
+    )
+}
 
 private fun createCard(
     cardFrontContent: AnnotatedString,
-    gender: Gender
+    gender: Gender,
+    actionWithFeedback: ActionWithFeedback
 ): Card {
     return Card(
         CardFront(
             content = cardFrontContent,
-            color = setBackgroundColor(gender)
+            color = setBackgroundColor(gender),
+            actionWithFeedback = actionWithFeedback
         ),
         CardBack(color = setBackgroundColor(gender))
     )
 }
 
-private fun getAction(eroZoneMutable: EroZoneMutable): Action? {
-    var action: Action? = eroZoneMutable.actionList
-        .filter { it.actionType == ActionType.SOFT }
+private fun getAction(eroZoneMutable: EroZoneMutable): ActionWithFeedback? {
+    var action: ActionWithFeedback? = eroZoneMutable.actionList
+        .filter { it.action.actionType == ActionType.SOFT }
         .randomOrNull()
 
     if (action != null) {
@@ -305,7 +307,9 @@ private fun getAction(eroZoneMutable: EroZoneMutable): Action? {
         return action
     }
 
-    action = eroZoneMutable.actionList.filter { it.actionType == ActionType.HOT }.randomOrNull()
+    action = eroZoneMutable.actionList
+        .filter { it.action.actionType == ActionType.HOT }
+        .randomOrNull()
     if (action != null) {
         eroZoneMutable.actionList.remove(action)
         return action

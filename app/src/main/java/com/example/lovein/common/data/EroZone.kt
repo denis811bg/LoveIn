@@ -1,346 +1,399 @@
 package com.example.lovein.common.data
 
 import com.example.lovein.R
+import com.example.lovein.common.models.ActionWithFeedback
 
 enum class EroZone(
     val gender: List<Gender>,
     val resourceId: Int,
     val eroZoneType: EroZoneType,
-    val actionList: List<Action>
+    val actionList: List<ActionWithFeedback>
 ) {
     SCALP_AND_HAIR(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.scalp_and_hair,
         EroZoneType.SOFT,
-        listOf(
-            Action.SCALP_AND_HAIR_MASSAGE_ACTION,
-            Action.SCALP_AND_HAIR_SCRATCH_ACTION,
-            Action.SCALP_AND_HAIR_PINCH_ACTION,
-            Action.SCALP_AND_HAIR_PULL_ACTION,
-            Action.SCALP_AND_HAIR_USE_ACCESSORIES_0_ACTION,
-            Action.SCALP_AND_HAIR_BLOW_WARM_AIR_ACTION,
-            Action.SCALP_AND_HAIR_USE_ACCESSORIES_1_ACTION,
-            Action.SCALP_AND_HAIR_USE_ACCESSORIES_2_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.SCALP_AND_HAIR_MASSAGE_ACTION,
+                Action.SCALP_AND_HAIR_SCRATCH_ACTION,
+                Action.SCALP_AND_HAIR_PINCH_ACTION,
+                Action.SCALP_AND_HAIR_PULL_ACTION,
+                Action.SCALP_AND_HAIR_USE_ACCESSORIES_0_ACTION,
+                Action.SCALP_AND_HAIR_BLOW_WARM_AIR_ACTION,
+                Action.SCALP_AND_HAIR_USE_ACCESSORIES_1_ACTION,
+                Action.SCALP_AND_HAIR_USE_ACCESSORIES_2_ACTION
+            )
         )
     ),
     EARS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.ears,
         EroZoneType.SOFT,
-        listOf(
-            Action.EARS_MASSAGE_ACTION,
-            Action.EARS_WHISPER_ACTION,
-            Action.EARS_BITE_ACTION,
-            Action.EARS_KISS_ACTION,
-            Action.EARS_SUCK_ACTION,
-            Action.EARS_USE_ACCESSORIES_ACTION,
-            Action.EARS_ICE_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.EARS_MASSAGE_ACTION,
+                Action.EARS_WHISPER_ACTION,
+                Action.EARS_BITE_ACTION,
+                Action.EARS_KISS_ACTION,
+                Action.EARS_SUCK_ACTION,
+                Action.EARS_USE_ACCESSORIES_ACTION,
+                Action.EARS_ICE_ACTION
+            )
         )
     ),
     NAVEL(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.navel,
         EroZoneType.HOT,
-        listOf(
-            Action.NAVEL_KISS_ACTION,
-            Action.NAVEL_LICK_ACTION,
-            Action.NAVEL_BLOW_WARM_AIR_ACTION,
-            Action.NAVEL_USE_ACCESSORIES_ACTION,
-            Action.NAVEL_ICE_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.NAVEL_KISS_ACTION,
+                Action.NAVEL_LICK_ACTION,
+                Action.NAVEL_BLOW_WARM_AIR_ACTION,
+                Action.NAVEL_USE_ACCESSORIES_ACTION,
+                Action.NAVEL_ICE_ACTION
+            )
         )
     ),
     LOWER_STOMACH(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.lower_stomach,
         EroZoneType.HOT,
-        listOf(
-            Action.LOWER_STOMACH_KISS_ACTION,
-            Action.LOWER_STOMACH_LICK_ACTION,
-            Action.LOWER_STOMACH_MASSAGE_ACTION,
-            Action.LOWER_STOMACH_SCRATCH_ACTION,
-            Action.LOWER_STOMACH_BLOW_WARM_AIR_ACTION,
-            Action.LOWER_STOMACH_USE_ACCESSORIES_ACTION,
-            Action.LOWER_STOMACH_ICE_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.LOWER_STOMACH_KISS_ACTION,
+                Action.LOWER_STOMACH_LICK_ACTION,
+                Action.LOWER_STOMACH_MASSAGE_ACTION,
+                Action.LOWER_STOMACH_SCRATCH_ACTION,
+                Action.LOWER_STOMACH_BLOW_WARM_AIR_ACTION,
+                Action.LOWER_STOMACH_USE_ACCESSORIES_ACTION,
+                Action.LOWER_STOMACH_ICE_ACTION
+            )
         )
     ),
     SMALL_OF_THE_BACK(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.small_of_the_back,
         EroZoneType.HOT,
-        listOf(
-            Action.SMALL_OF_THE_BACK_MASSAGE_ACTION,
-            Action.SMALL_OF_THE_BACK_KISS_ACTION,
-            Action.SMALL_OF_THE_BACK_USE_ACCESSORIES_ACTION,
-            Action.SMALL_OF_THE_BACK_ICE_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.SMALL_OF_THE_BACK_MASSAGE_ACTION,
+                Action.SMALL_OF_THE_BACK_KISS_ACTION,
+                Action.SMALL_OF_THE_BACK_USE_ACCESSORIES_ACTION,
+                Action.SMALL_OF_THE_BACK_ICE_ACTION
+            )
         )
     ),
     ARMPITS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.armpits,
         EroZoneType.SOFT,
-        listOf(
-            Action.ARMPITS_MASSAGE_ACTION,
-            Action.ARMPITS_KISS_ACTION,
-            Action.ARMPITS_USE_ACCESSORIES_ACTION,
-            Action.ARMPITS_ICE_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.ARMPITS_MASSAGE_ACTION,
+                Action.ARMPITS_KISS_ACTION,
+                Action.ARMPITS_USE_ACCESSORIES_ACTION,
+                Action.ARMPITS_ICE_ACTION
+            )
         )
     ),
     INNER_ARMS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.inner_arms,
         EroZoneType.SOFT,
-        listOf(
-            Action.INNER_ARMS_MASSAGE_ACTION,
-            Action.INNER_ARMS_KISS_ACTION,
-            Action.INNER_ARMS_LICK_ACTION,
-            Action.INNER_ARMS_USE_ACCESSORIES_ACTION,
-            Action.INNER_ARMS_ICE_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.INNER_ARMS_MASSAGE_ACTION,
+                Action.INNER_ARMS_KISS_ACTION,
+                Action.INNER_ARMS_LICK_ACTION,
+                Action.INNER_ARMS_USE_ACCESSORIES_ACTION,
+                Action.INNER_ARMS_ICE_ACTION
+            )
         )
     ),
     INNER_WRIST(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.inner_wrist,
         EroZoneType.SOFT,
-        listOf(
-            Action.INNER_WRIST_MASSAGE_ACTION,
-            Action.INNER_WRIST_KISS_ACTION,
-            Action.INNER_WRIST_LICK_ACTION,
-            Action.INNER_WRIST_USE_ACCESSORIES_ACTION,
-            Action.INNER_WRIST_ICE_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.INNER_WRIST_MASSAGE_ACTION,
+                Action.INNER_WRIST_KISS_ACTION,
+                Action.INNER_WRIST_LICK_ACTION,
+                Action.INNER_WRIST_USE_ACCESSORIES_ACTION,
+                Action.INNER_WRIST_ICE_ACTION
+            )
         )
     ),
     PALM_OF_HANDS_AND_FINGERTIPS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.palm_of_hands_and_fingertips,
         EroZoneType.SOFT,
-        listOf(
-            Action.PALM_OF_HANDS_AND_FINGERTIPS_MASSAGE_ACTION,
-            Action.PALM_OF_HANDS_AND_FINGERTIPS_KISS_ACTION,
-            Action.PALM_OF_HANDS_AND_FINGERTIPS_LICK_ACTION,
-            Action.PALM_OF_HANDS_AND_FINGERTIPS_SUCK_ACTION,
-            Action.PALM_OF_HANDS_AND_FINGERTIPS_USE_ACCESSORIES_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.PALM_OF_HANDS_AND_FINGERTIPS_MASSAGE_ACTION,
+                Action.PALM_OF_HANDS_AND_FINGERTIPS_KISS_ACTION,
+                Action.PALM_OF_HANDS_AND_FINGERTIPS_LICK_ACTION,
+                Action.PALM_OF_HANDS_AND_FINGERTIPS_SUCK_ACTION,
+                Action.PALM_OF_HANDS_AND_FINGERTIPS_USE_ACCESSORIES_ACTION
+            )
         )
     ),
     BEHIND_THE_KNEE(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.behind_the_knee,
         EroZoneType.SOFT,
-        listOf(
-            Action.BEHIND_THE_KNEE_MASSAGE_ACTION,
-            Action.BEHIND_THE_KNEE_KISS_ACTION,
-            Action.BEHIND_THE_KNEE_LICK_ACTION,
-            Action.BEHIND_THE_KNEE_USE_ACCESSORIES_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.BEHIND_THE_KNEE_MASSAGE_ACTION,
+                Action.BEHIND_THE_KNEE_KISS_ACTION,
+                Action.BEHIND_THE_KNEE_LICK_ACTION,
+                Action.BEHIND_THE_KNEE_USE_ACCESSORIES_ACTION
+            )
         )
     ),
     NIPPLES(
         listOf(Gender.MALE),
         R.string.nipples,
         EroZoneType.HOT,
-        listOf(
-            Action.NIPPLES_MASSAGE_ACTION,
-            Action.NIPPLES_KISS_ACTION,
-            Action.NIPPLES_LICK_ACTION,
-            Action.NIPPLES_BITE_ACTION,
-            Action.NIPPLES_ICE_ACTION,
-            Action.NIPPLES_USE_ACCESSORIES_0_ACTION,
-            Action.NIPPLES_USE_ACCESSORIES_1_ACTION,
-            Action.NIPPLES_SUCK_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.NIPPLES_MASSAGE_ACTION,
+                Action.NIPPLES_KISS_ACTION,
+                Action.NIPPLES_LICK_ACTION,
+                Action.NIPPLES_BITE_ACTION,
+                Action.NIPPLES_ICE_ACTION,
+                Action.NIPPLES_USE_ACCESSORIES_0_ACTION,
+                Action.NIPPLES_USE_ACCESSORIES_1_ACTION,
+                Action.NIPPLES_SUCK_ACTION
+            )
         )
     ),
     LIPS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.lips,
         EroZoneType.SOFT,
-        listOf(
-            Action.LIPS_MASSAGE_ACTION,
-            Action.LIPS_KISS_ACTION,
-            Action.LIPS_LICK_ACTION,
-            Action.LIPS_BITE_ACTION,
-            Action.LIPS_ICE_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.LIPS_MASSAGE_ACTION,
+                Action.LIPS_KISS_ACTION,
+                Action.LIPS_LICK_ACTION,
+                Action.LIPS_BITE_ACTION,
+                Action.LIPS_ICE_ACTION
+            )
         )
     ),
     NECK(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.neck,
         EroZoneType.SOFT,
-        listOf(
-            Action.NECK_MASSAGE_0_ACTION,
-            Action.NECK_MASSAGE_1_ACTION,
-            Action.NECK_KISS_ACTION,
-            Action.NECK_LICK_ACTION,
-            Action.NECK_USE_ACCESSORIES_ACTION,
-            Action.NECK_ICE_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.NECK_MASSAGE_0_ACTION,
+                Action.NECK_MASSAGE_1_ACTION,
+                Action.NECK_KISS_ACTION,
+                Action.NECK_LICK_ACTION,
+                Action.NECK_USE_ACCESSORIES_ACTION,
+                Action.NECK_ICE_ACTION
+            )
         )
     ),
     INNER_THIGH(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.inner_thigh,
         EroZoneType.HOT,
-        listOf(
-            Action.INNER_THIGH_MASSAGE_0_ACTION,
-            Action.INNER_THIGH_MASSAGE_1_ACTION,
-            Action.INNER_THIGH_KISS_ACTION,
-            Action.INNER_THIGH_LICK_ACTION,
-            Action.INNER_THIGH_BITE_ACTION,
-            Action.INNER_THIGH_USE_ACCESSORIES_0_ACTION,
-            Action.INNER_THIGH_USE_ACCESSORIES_1_ACTION,
-            Action.INNER_THIGH_ICE_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.INNER_THIGH_MASSAGE_0_ACTION,
+                Action.INNER_THIGH_MASSAGE_1_ACTION,
+                Action.INNER_THIGH_KISS_ACTION,
+                Action.INNER_THIGH_LICK_ACTION,
+                Action.INNER_THIGH_BITE_ACTION,
+                Action.INNER_THIGH_USE_ACCESSORIES_0_ACTION,
+                Action.INNER_THIGH_USE_ACCESSORIES_1_ACTION,
+                Action.INNER_THIGH_ICE_ACTION
+            )
         )
     ),
     BOTTOM_OF_FEET_AND_TOES(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.bottom_of_feet_and_toes,
         EroZoneType.SOFT,
-        listOf(
-            Action.BOTTOM_OF_FEET_AND_TOES_MASSAGE_0_ACTION,
-            Action.BOTTOM_OF_FEET_AND_TOES_MASSAGE_1_ACTION,
-            Action.BOTTOM_OF_FEET_AND_TOES_KISS_ACTION,
-            Action.BOTTOM_OF_FEET_AND_TOES_LICK_ACTION,
-            Action.BOTTOM_OF_FEET_AND_TOES_SUCK_ACTION,
-            Action.BOTTOM_OF_FEET_AND_TOES_USE_ACCESSORIES_ACTION,
-            Action.BOTTOM_OF_FEET_AND_TOES_ICE_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.BOTTOM_OF_FEET_AND_TOES_MASSAGE_0_ACTION,
+                Action.BOTTOM_OF_FEET_AND_TOES_MASSAGE_1_ACTION,
+                Action.BOTTOM_OF_FEET_AND_TOES_KISS_ACTION,
+                Action.BOTTOM_OF_FEET_AND_TOES_LICK_ACTION,
+                Action.BOTTOM_OF_FEET_AND_TOES_SUCK_ACTION,
+                Action.BOTTOM_OF_FEET_AND_TOES_USE_ACCESSORIES_ACTION,
+                Action.BOTTOM_OF_FEET_AND_TOES_ICE_ACTION
+            )
         )
     ),
     ANUS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.anus,
         EroZoneType.HARD,
-        listOf(
-            Action.ANUS_MASSAGE_ACTION,
-            Action.ANUS_USE_ACCESSORIES_0_ACTION,
-            Action.ANUS_USE_ACCESSORIES_1_ACTION,
-            Action.ANUS_KISS_ACTION,
-            Action.ANUS_LICK_ACTION,
-            Action.ANUS_ICE_ACTION,
-            Action.ANUS_ITSELF_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.ANUS_MASSAGE_ACTION,
+                Action.ANUS_USE_ACCESSORIES_0_ACTION,
+                Action.ANUS_USE_ACCESSORIES_1_ACTION,
+                Action.ANUS_KISS_ACTION,
+                Action.ANUS_LICK_ACTION,
+                Action.ANUS_ICE_ACTION,
+                Action.ANUS_ITSELF_ACTION
+            )
         )
     ),
     BUTTOCKS(
         listOf(Gender.MALE, Gender.FEMALE),
         R.string.buttocks,
         EroZoneType.HOT,
-        listOf(
-            Action.BUTTOCKS_MASSAGE_ACTION,
-            Action.BUTTOCKS_KISS_ACTION,
-            Action.BUTTOCKS_LICK_ACTION,
-            Action.BUTTOCKS_BITE_ACTION,
-            Action.BUTTOCKS_USE_ACCESSORIES_ACTION,
-            Action.BUTTOCKS_ICE_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.BUTTOCKS_MASSAGE_ACTION,
+                Action.BUTTOCKS_KISS_ACTION,
+                Action.BUTTOCKS_LICK_ACTION,
+                Action.BUTTOCKS_BITE_ACTION,
+                Action.BUTTOCKS_USE_ACCESSORIES_ACTION,
+                Action.BUTTOCKS_ICE_ACTION
+            )
         )
     ),
     AREOLA_AND_NIPPLES(
         listOf(Gender.FEMALE),
         R.string.areola_and_nipples,
         EroZoneType.HOT,
-        listOf(
-            Action.AREOLA_AND_NIPPLES_MASSAGE_ACTION,
-            Action.AREOLA_AND_NIPPLES_KISS_ACTION,
-            Action.AREOLA_AND_NIPPLES_LICK_ACTION,
-            Action.AREOLA_AND_NIPPLES_BITE_ACTION,
-            Action.AREOLA_AND_NIPPLES_USE_ACCESSORIES_0_ACTION,
-            Action.AREOLA_AND_NIPPLES_USE_ACCESSORIES_1_ACTION,
-            Action.AREOLA_AND_NIPPLES_ICE_ACTION,
-            Action.AREOLA_AND_NIPPLES_SUCK_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.AREOLA_AND_NIPPLES_MASSAGE_ACTION,
+                Action.AREOLA_AND_NIPPLES_KISS_ACTION,
+                Action.AREOLA_AND_NIPPLES_LICK_ACTION,
+                Action.AREOLA_AND_NIPPLES_BITE_ACTION,
+                Action.AREOLA_AND_NIPPLES_USE_ACCESSORIES_0_ACTION,
+                Action.AREOLA_AND_NIPPLES_USE_ACCESSORIES_1_ACTION,
+                Action.AREOLA_AND_NIPPLES_ICE_ACTION,
+                Action.AREOLA_AND_NIPPLES_SUCK_ACTION
+            )
         )
     ),
     PUBIC_MOUND(
         listOf(Gender.FEMALE),
         R.string.pubic_mound,
         EroZoneType.HOT,
-        listOf(
-            Action.PUBIC_MOUND_MASSAGE_ACTION,
-            Action.PUBIC_MOUND_KISS_ACTION,
-            Action.PUBIC_MOUND_LICK_ACTION,
-            Action.PUBIC_MOUND_USE_ACCESSORIES_0_ACTION,
-            Action.PUBIC_MOUND_USE_ACCESSORIES_1_ACTION,
-            Action.PUBIC_MOUND_ICE_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.PUBIC_MOUND_MASSAGE_ACTION,
+                Action.PUBIC_MOUND_KISS_ACTION,
+                Action.PUBIC_MOUND_LICK_ACTION,
+                Action.PUBIC_MOUND_USE_ACCESSORIES_0_ACTION,
+                Action.PUBIC_MOUND_USE_ACCESSORIES_1_ACTION,
+                Action.PUBIC_MOUND_ICE_ACTION
+            )
         )
     ),
     CLITORIS(
         listOf(Gender.FEMALE),
         R.string.clitoris,
         EroZoneType.HARD,
-        listOf(
-            Action.CLITORIS_MASSAGE_0_ACTION,
-            Action.CLITORIS_MASSAGE_1_ACTION,
-            Action.CLITORIS_KISS_ACTION,
-            Action.CLITORIS_LICK_ACTION,
-            Action.CLITORIS_BITE_ACTION,
-            Action.CLITORIS_USE_ACCESSORIES_ACTION,
-            Action.CLITORIS_ITSELF_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.CLITORIS_MASSAGE_0_ACTION,
+                Action.CLITORIS_MASSAGE_1_ACTION,
+                Action.CLITORIS_KISS_ACTION,
+                Action.CLITORIS_LICK_ACTION,
+                Action.CLITORIS_BITE_ACTION,
+                Action.CLITORIS_USE_ACCESSORIES_ACTION,
+                Action.CLITORIS_ITSELF_ACTION
+            )
         )
     ),
     G_SPOT(
         listOf(Gender.FEMALE),
         R.string.g_spot,
         EroZoneType.HARD,
-        listOf(
-            Action.G_SPOT_MASSAGE_ACTION,
-            Action.G_SPOT_ITSELF_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.G_SPOT_MASSAGE_ACTION,
+                Action.G_SPOT_ITSELF_ACTION
+            )
         )
     ),
     GLANS(
         listOf(Gender.MALE),
         R.string.glans,
         EroZoneType.HARD,
-        listOf(
-            Action.GLANS_MASSAGE_ACTION,
-            Action.GLANS_KISS_ACTION,
-            Action.GLANS_LICK_ACTION,
-            Action.GLANS_BITE_ACTION,
-            Action.GLANS_SUCK_ACTION,
-            Action.GLANS_USE_ACCESSORIES_ACTION,
-            Action.GLANS_ICE_ACTION,
-            Action.GLANS_ITSELF_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.GLANS_MASSAGE_ACTION,
+                Action.GLANS_KISS_ACTION,
+                Action.GLANS_LICK_ACTION,
+                Action.GLANS_BITE_ACTION,
+                Action.GLANS_SUCK_ACTION,
+                Action.GLANS_USE_ACCESSORIES_ACTION,
+                Action.GLANS_ICE_ACTION,
+                Action.GLANS_ITSELF_ACTION
+            )
         )
     ),
     SCROTUM_AND_TESTICLES(
         listOf(Gender.MALE),
         R.string.scrotum_and_testicles,
         EroZoneType.HARD,
-        listOf(
-            Action.SCROTUM_AND_TESTICLES_MASSAGE_ACTION,
-            Action.SCROTUM_AND_TESTICLES_KISS_ACTION,
-            Action.SCROTUM_AND_TESTICLES_LICK_ACTION,
-            Action.SCROTUM_AND_TESTICLES_BITE_ACTION,
-            Action.SCROTUM_AND_TESTICLES_SUCK_ACTION,
-            Action.SCROTUM_AND_TESTICLES_USE_ACCESSORIES_0_ACTION,
-            Action.SCROTUM_AND_TESTICLES_USE_ACCESSORIES_1_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.SCROTUM_AND_TESTICLES_MASSAGE_ACTION,
+                Action.SCROTUM_AND_TESTICLES_KISS_ACTION,
+                Action.SCROTUM_AND_TESTICLES_LICK_ACTION,
+                Action.SCROTUM_AND_TESTICLES_BITE_ACTION,
+                Action.SCROTUM_AND_TESTICLES_SUCK_ACTION,
+                Action.SCROTUM_AND_TESTICLES_USE_ACCESSORIES_0_ACTION,
+                Action.SCROTUM_AND_TESTICLES_USE_ACCESSORIES_1_ACTION
+            )
         )
     ),
     PERINEUM(
         listOf(Gender.MALE),
         R.string.perineum,
         EroZoneType.HARD,
-        listOf(
-            Action.PERINEUM_MASSAGE_ACTION,
-            Action.PERINEUM_LICK_ACTION,
-            Action.PERINEUM_USE_ACCESSORIES_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.PERINEUM_MASSAGE_ACTION,
+                Action.PERINEUM_LICK_ACTION,
+                Action.PERINEUM_USE_ACCESSORIES_ACTION
+            )
         )
     ),
     PROSTATE(
         listOf(Gender.MALE),
         R.string.prostate,
         EroZoneType.HARD,
-        listOf(
-            Action.PROSTATE_MASSAGE_ACTION,
-            Action.PROSTATE_USE_ACCESSORIES_ACTION,
-            Action.PROSTATE_ITSELF_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.PROSTATE_MASSAGE_ACTION,
+                Action.PROSTATE_USE_ACCESSORIES_ACTION,
+                Action.PROSTATE_ITSELF_ACTION
+            )
         )
     ),
     PENIS(
         listOf(Gender.MALE),
         R.string.penis,
         EroZoneType.HARD,
-        listOf(
-            Action.PENIS_MASSAGE_ACTION,
-            Action.PENIS_KISS_ACTION,
-            Action.PENIS_SUCK_ACTION,
-            Action.PENIS_LICK_ACTION,
-            Action.PENIS_USE_ACCESSORIES_0_ACTION,
-            Action.PENIS_USE_ACCESSORIES_1_ACTION,
-            Action.PENIS_ICE_ACTION,
-            Action.PENIS_ITSELF_ACTION
+        ActionWithFeedback.fromActions(
+            listOf(
+                Action.PENIS_MASSAGE_ACTION,
+                Action.PENIS_KISS_ACTION,
+                Action.PENIS_SUCK_ACTION,
+                Action.PENIS_LICK_ACTION,
+                Action.PENIS_USE_ACCESSORIES_0_ACTION,
+                Action.PENIS_USE_ACCESSORIES_1_ACTION,
+                Action.PENIS_ICE_ACTION,
+                Action.PENIS_ITSELF_ACTION
+            )
         )
     )
 }

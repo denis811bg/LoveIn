@@ -5,7 +5,12 @@ import androidx.compose.animation.core.animate
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
@@ -13,12 +18,13 @@ import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.lovein.common.models.Player
 import com.example.lovein.erozoneexplorer.models.Card
 import com.example.lovein.erozoneexplorer.models.StackViewModel
 
 @Composable
 fun Stack(
-    cards: List<Card>,
+    cards: List<Pair<Player, Card>>,
     position: Int
 ) {
     val viewModel = hiltViewModel<StackViewModel>()
@@ -32,10 +38,10 @@ fun Stack(
         StackLayout(
             flipCard = viewModel.flipCard,
             topStack = { modifier ->
-                CardFaceDisplay(cardFace = viewModel.leftStackTop?.back, modifier)
+                CardFaceDisplay(cardFace = viewModel.leftStackTop?.second?.back, modifier)
             },
             bottomStack = { modifier ->
-                CardFaceDisplay(cardFace = viewModel.rightStackTop?.front, modifier)
+                CardFaceDisplay(cardFace = viewModel.rightStackTop?.second?.front, modifier)
             },
             transitionTrigger = position,
             modifier = Modifier
@@ -51,8 +57,8 @@ private fun StackLayout(
     transitionTrigger: Int,
     modifier: Modifier = Modifier
 ) {
-    var offset by remember(transitionTrigger) { mutableStateOf(0f) }
-    var flipRotation by remember(transitionTrigger) { mutableStateOf(0f) }
+    var offset by remember(transitionTrigger) { mutableFloatStateOf(0f) }
+    var flipRotation by remember(transitionTrigger) { mutableFloatStateOf(0f) }
     val animationSpec = tween<Float>(1000, easing = CubicBezierEasing(0.4f, 0.0f, 0.8f, 0.8f))
     val animationSpecFlip = tween<Float>(1000, easing = CubicBezierEasing(0.4f, 0.0f, 0.8f, 0.8f))
 

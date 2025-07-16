@@ -1,10 +1,24 @@
 package com.example.lovein.erozoneexplorer.components
 
-import androidx.compose.foundation.*
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ThumbDown
+import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -21,12 +35,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lovein.R
+import com.example.lovein.common.models.FeedbackType
 import com.example.lovein.erozoneexplorer.models.CardBack
 import com.example.lovein.erozoneexplorer.models.CardFace
 import com.example.lovein.erozoneexplorer.models.CardFront
 import com.example.lovein.ui.theme.FemaleColor
 import com.example.lovein.ui.theme.MaleColor
 import com.example.lovein.ui.theme.helveticaFontFamily
+
 
 @Composable
 fun CardFaceDisplay(
@@ -55,29 +71,73 @@ fun CardFaceDisplay(
 @Composable
 private fun CardFrontContent(
     cardFace: CardFront,
-    color: Color
+    color: Color,
 ) {
     val scrollState = rememberScrollState()
+    val feedback = cardFace.actionWithFeedback.feedback
+
     CardContainer(color = color) {
-        Box(
+        Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(color = color),
-            contentAlignment = Alignment.Center
+                .padding(8.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.SpaceBetween
         ) {
-            Text(
-                text = cardFace.content,
+            Box(
                 modifier = Modifier
-                    .padding(8.dp)
+                    .fillMaxWidth()
+                    .weight(1f)
                     .verticalScroll(scrollState),
-                color = Color.White,
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Bold,
-                fontFamily = helveticaFontFamily,
-            )
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = cardFace.content,
+                    modifier = Modifier.padding(8.dp),
+                    color = Color.White,
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = helveticaFontFamily,
+                )
+            }
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 8.dp),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                IconButton(
+                    onClick = {
+                        cardFace.actionWithFeedback.feedback.value = FeedbackType.LIKE
+                    },
+                    modifier = Modifier.padding(horizontal = 8.dp)
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.ThumbUp,
+                        contentDescription = "Like",
+                        modifier = Modifier.size(48.dp),
+                        tint = if (feedback.value == FeedbackType.LIKE) Color.White else Color.Gray
+                    )
+                }
+                IconButton(
+                    onClick = {
+                        cardFace.actionWithFeedback.feedback.value = FeedbackType.DISLIKE
+                    },
+                    modifier = Modifier.padding(horizontal = 8.dp)
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.ThumbDown,
+                        contentDescription = "Dislike",
+                        modifier = Modifier.size(48.dp),
+                        tint = if (feedback.value == FeedbackType.DISLIKE) Color.White else Color.Gray
+                    )
+                }
+            }
         }
     }
 }
+
 
 @Composable
 private fun CardBackContent(color: Color) {

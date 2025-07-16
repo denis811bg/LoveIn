@@ -21,6 +21,7 @@ import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -43,11 +44,12 @@ import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.createplayerlist.components.CustomAlertDialog
 import com.example.lovein.createplayerlist.components.PlayerCard
-import com.example.lovein.createplayerlist.utils.addRandomPlayer
-import com.example.lovein.createplayerlist.utils.showAlertDialog
 import com.example.lovein.createplayerlist.validation.validatePlayers
 import com.example.lovein.ui.theme.helveticaFontFamily
+import com.example.lovein.utils.addRandomPlayer
+import com.example.lovein.utils.cleanupActionFeedback
 import com.example.lovein.utils.convertPlayerListToPlayerDTOList
+import com.example.lovein.utils.showAlertDialog
 import kotlinx.coroutines.CoroutineScope
 
 @Composable
@@ -56,6 +58,10 @@ fun CreatePlayerListScreen(
     playerList: MutableList<MutableState<Player>>
 ) {
     val context: Context = LocalContext.current
+
+    LaunchedEffect(Unit) {
+        cleanupActionFeedback(playerList)
+    }
 
     val coroutineScope: CoroutineScope = rememberCoroutineScope()
     val listState: LazyListState = rememberLazyListState()

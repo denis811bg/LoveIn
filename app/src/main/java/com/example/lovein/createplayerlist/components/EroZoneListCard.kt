@@ -7,6 +7,7 @@ import androidx.compose.foundation.indication
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -47,6 +48,7 @@ import com.example.lovein.ui.theme.BackgroundLightPinkColor
 import com.example.lovein.ui.theme.helveticaFontFamily
 import com.example.lovein.utils.convertEroZoneToEroZoneMutable
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun EroZoneListCard(
     player: MutableState<Player>,
