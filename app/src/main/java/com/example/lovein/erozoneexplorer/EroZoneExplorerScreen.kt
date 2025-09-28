@@ -43,6 +43,7 @@ import com.example.lovein.common.models.EroZoneMutable
 import com.example.lovein.common.models.Partner
 import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.erozoneexplorer.components.Stack
+import com.example.lovein.erozoneexplorer.dataclass.ZoneCounter
 import com.example.lovein.erozoneexplorer.models.Card
 import com.example.lovein.erozoneexplorer.models.CardBack
 import com.example.lovein.erozoneexplorer.models.CardFront
@@ -216,71 +217,65 @@ private fun initActionCards(
     context: Context,
     partnerList: List<Partner>
 ): MutableList<Pair<Partner, Card>> {
-    val actionCards: MutableList<Pair<Partner, Card>> = mutableListOf()
+    val actionCards = mutableListOf<Pair<Partner, Card>>()
+    if (partnerList.isEmpty()) return actionCards
+
+    val priority = listOf(EroZoneType.SOFT, EroZoneType.HOT, EroZoneType.HARD)
+
+    val countersByPartner: List<MutableList<ZoneCounter>> = partnerList.map { partner ->
+        partner.selectedEroZones
+            .filter { it.actionList.isNotEmpty() }
+            .map { ZoneCounter(it, it.actionList.size) }
+            .toMutableList()
+    }
+
+    val totalActions = countersByPartner.sumOf { zones -> zones.sumOf { it.remaining } }
+    if (totalActions == 0) return actionCards
 
     var partnerIndex = 1
-    while (true) {
-        if (partnerList.isEmpty()) break
+    var produced = 0
+    var spinsWithoutCard = 0
+    val maxSpins = partnerList.size * 2
 
-        val passivePartnerIndex = partnerIndex % partnerList.size
-        val activePartnerIndex = (partnerIndex - 1) % partnerList.size
+    while (produced < totalActions && spinsWithoutCard < maxSpins) {
+        val passiveIdx = partnerIndex % partnerList.size
+        val activeIdx = (partnerIndex - 1) % partnerList.size
 
-        val selectedEroZoneMutableList =
-            partnerList[passivePartnerIndex].selectedEroZones.toMutableList()
-        val eroZoneMutable: EroZoneMutable? = getEroZone(selectedEroZoneMutableList)
+        val zone = nextZoneForPartner(countersByPartner[passiveIdx], priority)
 
-        if (eroZoneMutable != null) {
+        if (zone != null) {
+            zone.remaining--
+
             val card = card(
                 context = context,
-                eroZoneMutable = eroZoneMutable,
-                activePartner = partnerList[activePartnerIndex],
-                passivePartner = partnerList[passivePartnerIndex]
+                eroZoneMutable = zone.zone,
+                activePartner = partnerList[activeIdx],
+                passivePartner = partnerList[passiveIdx]
             )
-            actionCards.add(partnerList[passivePartnerIndex] to card)
-            partnerIndex++
-        } else break
+
+            actionCards.add(partnerList[passiveIdx] to card)
+            produced++
+            spinsWithoutCard = 0
+        } else {
+            spinsWithoutCard++
+        }
+
+        partnerIndex++
     }
 
     return actionCards
 }
 
-private fun getEroZone(selectedEroZoneMutableList: MutableList<EroZoneMutable>): EroZoneMutable? {
-    var eroZoneMutable: EroZoneMutable? =
-        selectedEroZoneMutableList
-            .filter { it.eroZoneType == EroZoneType.SOFT }
-            .randomOrNull()
+private fun nextZoneForPartner(
+    counters: MutableList<ZoneCounter>,
+    priority: List<EroZoneType>
+): ZoneCounter? {
+    counters.removeAll { it.remaining <= 0 }
 
-    if (eroZoneMutable != null) {
-        if (eroZoneMutable.actionList.isNotEmpty()) {
-            return eroZoneMutable
-        } else {
-            selectedEroZoneMutableList.remove(eroZoneMutable)
-            getEroZone(selectedEroZoneMutableList)
-        }
+    for (type in priority) {
+        val candidates = counters.filter { it.remaining > 0 && it.zone.eroZoneType == type }
+        if (candidates.isNotEmpty()) return candidates.random()
     }
-
-    eroZoneMutable =
-        selectedEroZoneMutableList.filter { it.eroZoneType == EroZoneType.HOT }.randomOrNull()
-    if (eroZoneMutable != null) {
-        if (eroZoneMutable.actionList.isNotEmpty()) {
-            return eroZoneMutable
-        } else {
-            selectedEroZoneMutableList.remove(eroZoneMutable)
-            getEroZone(selectedEroZoneMutableList)
-        }
-    }
-
-    eroZoneMutable =
-        selectedEroZoneMutableList.filter { it.eroZoneType == EroZoneType.HARD }.randomOrNull()
-    if (eroZoneMutable != null) {
-        if (eroZoneMutable.actionList.isNotEmpty()) {
-            return eroZoneMutable
-        } else {
-            selectedEroZoneMutableList.remove(eroZoneMutable)
-            getEroZone(selectedEroZoneMutableList)
-        }
-    }
-
     return null
 }
 

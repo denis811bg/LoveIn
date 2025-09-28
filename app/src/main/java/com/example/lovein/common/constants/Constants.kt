@@ -37,9 +37,9 @@ object NavigationConstants {
 }
 
 object StackConstants {
-    const val FLIP_CARD_ID = "flip_card"
-    const val TOP_STACK_ID = "top_stack"
-    const val BOTTOM_STACK_ID = "bottom_stack"
+    const val FLIP_CARD_ID = "flipCard"
+    const val TOP_STACK_ID = "topStack"
+    const val BOTTOM_STACK_ID = "bottomStack"
 }
 
 object ExceptionConstants {
