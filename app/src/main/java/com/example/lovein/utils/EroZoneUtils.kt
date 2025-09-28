@@ -60,8 +60,7 @@ fun generateFeedbackReport(
         val action = card.front.actionWithFeedback.action
 
         val eroZoneName = LocalizationManager.getLocalizedString(context, action.nameResId)
-        val actionDescription =
-            LocalizationManager.getLocalizedString(context, action.descriptionResId)
+        val actionDescription = card.front.content.text
         val feedback = card.front.actionWithFeedback.feedback.value
 
         val partnerReport = report.getOrPut(partnerName) { mutableMapOf() }
