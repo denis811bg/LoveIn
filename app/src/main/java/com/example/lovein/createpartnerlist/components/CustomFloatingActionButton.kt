@@ -1,4 +1,4 @@
-package com.example.lovein.createplayerlist.components
+package com.example.lovein.createpartnerlist.components
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape

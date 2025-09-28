@@ -9,11 +9,12 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.lovein.common.constants.NavigationConstants
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.data.NavigationScreens
-import com.example.lovein.common.dtos.PlayerDTO
-import com.example.lovein.common.models.Player
-import com.example.lovein.createplayerlist.CreatePlayerListScreen
+import com.example.lovein.common.dtos.PartnerDTO
+import com.example.lovein.common.models.Partner
+import com.example.lovein.createpartnerlist.CreatePartnerListScreen
 import com.example.lovein.erozoneexplorer.EroZoneExplorerScreen
 import com.example.lovein.info.InfoScreen
 import com.example.lovein.languageselection.LanguageSelectionScreen
@@ -21,25 +22,25 @@ import com.example.lovein.languageselection.LanguageSelectionScreen
 @Composable
 fun LoveInNavigation() {
     val navController: NavHostController = rememberNavController()
-    val playerList: MutableList<MutableState<Player>> = remember {
+    val partnerList: MutableList<MutableState<Partner>> = remember {
         mutableStateListOf(
-            mutableStateOf(Player(Gender.MALE)),
-            mutableStateOf(Player(Gender.FEMALE))
+            mutableStateOf(Partner(Gender.MALE)),
+            mutableStateOf(Partner(Gender.FEMALE))
         )
     }
 
     NavHost(
         navController = navController,
-        startDestination = NavigationScreens.CREATE_PLAYER_LIST_SCREEN.name
+        startDestination = NavigationScreens.CREATE_PARTNER_LIST_SCREEN.name
     ) {
         composable(
-            route = NavigationScreens.CREATE_PLAYER_LIST_SCREEN.name,
+            route = NavigationScreens.CREATE_PARTNER_LIST_SCREEN.name,
             enterTransition = { null },
             exitTransition = { null }
         ) {
-            CreatePlayerListScreen(
+            CreatePartnerListScreen(
                 navController = navController,
-                playerList = playerList
+                partnerList = partnerList
             )
         }
 
@@ -48,11 +49,11 @@ fun LoveInNavigation() {
             enterTransition = { null },
             exitTransition = { null }
         ) {
-            val playerDTOList: List<PlayerDTO>? =
-                navController.previousBackStackEntry?.savedStateHandle?.get<List<PlayerDTO>>("playerDTOList")
+            val partnerDTOLists: List<PartnerDTO>? =
+                navController.previousBackStackEntry?.savedStateHandle?.get<List<PartnerDTO>>(NavigationConstants.PARTNER_DTO_LIST_KEY)
             EroZoneExplorerScreen(
                 navController = navController,
-                playerDTOList = playerDTOList ?: emptyList()
+                partnerDTOList = partnerDTOLists ?: emptyList()
             )
         }
 

@@ -5,10 +5,11 @@ import android.content.res.Configuration
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import com.example.lovein.common.data.Language
 import java.util.Locale
 
 object LocalizationManager {
-    private var currentLocale: Locale by mutableStateOf(Locale("en"))
+    private var currentLocale: Locale by mutableStateOf(Locale(Language.ENGLISH.langAbbrev))
 
     fun setCurrentLocale(language: String) {
         val locale = Locale(language)

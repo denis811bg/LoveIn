@@ -1,4 +1,4 @@
-package com.example.lovein.createplayerlist.components
+package com.example.lovein.createpartnerlist.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
@@ -7,13 +7,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import com.example.lovein.common.models.Player
+import com.example.lovein.common.models.Partner
 
 @Composable
-fun PlayerCard(
-    player: MutableState<Player>,
+fun PartnerCard(
+    partner: MutableState<Partner>,
     index: Int,
-    playerList: MutableList<MutableState<Player>>
+    partnerList: MutableList<MutableState<Partner>>
 ) {
     val isExpanded: MutableState<Boolean> = remember { mutableStateOf(false) }
     val alpha = animateFloatAsState(
@@ -25,15 +25,15 @@ fun PlayerCard(
         animationSpec = tween(durationMillis = 1000)
     )
 
-    PlayerInputRow(
-        playerList = playerList,
+    PartnerInputRow(
+        partnerList = partnerList,
         index = index,
         isExpanded = isExpanded
     )
 
     AnimatedVisibility(visible = isExpanded.value) {
         EroZoneListCard(
-            player = player,
+            partner = partner,
             rotateX = rotateX,
             alpha = alpha
         )

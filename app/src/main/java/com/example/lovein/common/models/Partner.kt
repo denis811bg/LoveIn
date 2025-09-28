@@ -13,7 +13,7 @@ import com.example.lovein.common.data.Gender
 import com.example.lovein.ui.theme.FemaleColor
 import com.example.lovein.ui.theme.MaleColor
 
-class Player(
+class Partner(
     var name: MutableState<String> = mutableStateOf(""),
     var gender: MutableState<Gender> = mutableStateOf(Gender.MALE),
     var selectedEroZones: SnapshotStateList<EroZoneMutable> = mutableStateListOf(),

@@ -31,15 +31,16 @@ import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
 import com.example.lovein.common.components.CustomAlertDialog
 import com.example.lovein.common.constants.CommonConstants
+import com.example.lovein.common.constants.DescriptionConstants
 import com.example.lovein.common.data.ActionType
 import com.example.lovein.common.data.EroZone
 import com.example.lovein.common.data.EroZoneType
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.data.NavigationScreens
-import com.example.lovein.common.dtos.PlayerDTO
+import com.example.lovein.common.dtos.PartnerDTO
 import com.example.lovein.common.models.ActionWithFeedback
 import com.example.lovein.common.models.EroZoneMutable
-import com.example.lovein.common.models.Player
+import com.example.lovein.common.models.Partner
 import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.erozoneexplorer.components.Stack
 import com.example.lovein.erozoneexplorer.models.Card
@@ -49,23 +50,23 @@ import com.example.lovein.ui.theme.BackgroundLightBlueColor
 import com.example.lovein.ui.theme.BackgroundLightPinkColor
 import com.example.lovein.ui.theme.FemaleColor
 import com.example.lovein.ui.theme.MaleColor
-import com.example.lovein.utils.convertPlayerDTOListToPlayerList
+import com.example.lovein.utils.convertPartnerDTOListToPartnerList
 import com.example.lovein.utils.generateFeedbackReport
 import com.example.lovein.utils.saveFeedbackReportToPdf
 
 @Composable
 fun EroZoneExplorerScreen(
     navController: NavController,
-    playerDTOList: List<PlayerDTO>
+    partnerDTOList: List<PartnerDTO>
 ) {
     val context: Context = LocalContext.current
 
     val snackbarHostState = remember { SnackbarHostState() }
 
-    val playerList: List<Player> = convertPlayerDTOListToPlayerList(playerDTOList)
+    val partnerList: List<Partner> = convertPartnerDTOListToPartnerList(partnerDTOList)
 
-    val playerIndex: MutableState<Int> = remember { mutableIntStateOf(0) }
-    val actionCards: List<Pair<Player, Card>> = initActionCards(context, playerList)
+    val partnerIndex: MutableState<Int> = remember { mutableIntStateOf(0) }
+    val actionCards: List<Pair<Partner, Card>> = initActionCards(context, partnerList)
 
     val isAlertDialogOpen: MutableState<Boolean> = remember { mutableStateOf(false) }
     val alertDialogTitle: MutableState<String> = remember { mutableStateOf("") }
@@ -97,7 +98,7 @@ fun EroZoneExplorerScreen(
                 ) {
                     Stack(
                         cards = actionCards,
-                        position = playerIndex.value
+                        position = partnerIndex.value
                     )
                 }
 
@@ -109,24 +110,23 @@ fun EroZoneExplorerScreen(
                     CommonNavigationButton(
                         text = LocalizationManager.getLocalizedString(
                             context = context,
-                            resourceId = R.string.play_button
+                            resourceId = R.string.open_next_card
                         ),
                         icon = Icons.Default.PlayCircle,
-                        iconContentDescription = "play_circle_icon",
+                        iconContentDescription = DescriptionConstants.PLAY_CIRCLE_ICON,
                         onClick = {
-                            playerIndex.value++
+                            partnerIndex.value++
 
-                            if (playerIndex.value >= actionCards.size) {
+                            if (partnerIndex.value >= actionCards.size) {
                                 isAlertDialogOpen.value = true
                                 alertDialogTitle.value = LocalizationManager.getLocalizedString(
                                     context = context,
-                                    resourceId = R.string.game_over_title
+                                    resourceId = R.string.finish_title
                                 )
                                 alertDialogText.value = LocalizationManager.getLocalizedString(
                                     context = context,
-                                    resourceId = R.string.game_over_description
+                                    resourceId = R.string.finish_description
                                 )
-                                    .replaceFirst("%", getPlayerNameWithEmptyActions(playerList))
                             }
                         },
                         modifier = Modifier.align(alignment = Alignment.BottomCenter)
@@ -155,7 +155,7 @@ fun EroZoneExplorerScreen(
                 isAlertDialogOpen.value = false
 
                 navController.popBackStack(
-                    route = NavigationScreens.CREATE_PLAYER_LIST_SCREEN.name,
+                    route = NavigationScreens.CREATE_PARTNER_LIST_SCREEN.name,
                     inclusive = false
                 )
             }
@@ -167,9 +167,9 @@ fun EroZoneExplorerScreen(
 @Composable
 fun EroZoneExplorerScreenPreview() {
     val navController: NavController = rememberNavController()
-    val playerDTOList: List<PlayerDTO> =
+    val partnerDTOLists: List<PartnerDTO> =
         listOf(
-            PlayerDTO(
+            PartnerDTO(
                 "Denis",
                 Gender.MALE,
                 listOf(
@@ -181,7 +181,7 @@ fun EroZoneExplorerScreenPreview() {
                     EroZone.PERINEUM
                 )
             ),
-            PlayerDTO(
+            PartnerDTO(
                 "Alena",
                 Gender.FEMALE,
                 listOf(
@@ -193,7 +193,7 @@ fun EroZoneExplorerScreenPreview() {
                     EroZone.ANUS
                 )
             ),
-            PlayerDTO(
+            PartnerDTO(
                 "Sofi",
                 Gender.FEMALE,
                 listOf(
@@ -208,36 +208,36 @@ fun EroZoneExplorerScreenPreview() {
 
     EroZoneExplorerScreen(
         navController = navController,
-        playerDTOList = playerDTOList
+        partnerDTOList = partnerDTOLists
     )
 }
 
 private fun initActionCards(
     context: Context,
-    playerList: List<Player>
-): MutableList<Pair<Player, Card>> {
-    val actionCards: MutableList<Pair<Player, Card>> = mutableListOf()
+    partnerList: List<Partner>
+): MutableList<Pair<Partner, Card>> {
+    val actionCards: MutableList<Pair<Partner, Card>> = mutableListOf()
 
-    var playerIndex = 1
+    var partnerIndex = 1
     while (true) {
-        if (playerList.isEmpty()) break
+        if (partnerList.isEmpty()) break
 
-        val passivePlayerIndex = playerIndex % playerList.size
-        val activePlayerIndex = (playerIndex - 1) % playerList.size
+        val passivePartnerIndex = partnerIndex % partnerList.size
+        val activePartnerIndex = (partnerIndex - 1) % partnerList.size
 
         val selectedEroZoneMutableList =
-            playerList[passivePlayerIndex].selectedEroZones.toMutableList()
+            partnerList[passivePartnerIndex].selectedEroZones.toMutableList()
         val eroZoneMutable: EroZoneMutable? = getEroZone(selectedEroZoneMutableList)
 
         if (eroZoneMutable != null) {
             val card = card(
                 context = context,
                 eroZoneMutable = eroZoneMutable,
-                activePlayer = playerList[activePlayerIndex],
-                passivePlayer = playerList[passivePlayerIndex]
+                activePartner = partnerList[activePartnerIndex],
+                passivePartner = partnerList[passivePartnerIndex]
             )
-            actionCards.add(playerList[passivePlayerIndex] to card)
-            playerIndex++
+            actionCards.add(partnerList[passivePartnerIndex] to card)
+            partnerIndex++
         } else break
     }
 
@@ -288,8 +288,8 @@ private fun getEroZone(selectedEroZoneMutableList: MutableList<EroZoneMutable>):
 private fun card(
     context: Context,
     eroZoneMutable: EroZoneMutable,
-    activePlayer: Player,
-    passivePlayer: Player
+    activePartner: Partner,
+    passivePartner: Partner
 ): Card {
     val actionWithFeedback = getAction(eroZoneMutable) ?: return error("No action")
 
@@ -297,15 +297,15 @@ private fun card(
         simpleText = LocalizationManager.getLocalizedString(
             context = context,
             resourceId = actionWithFeedback.action.descriptionResId
-        ).replaceFirst("%", activePlayer.name.value)
-            .replaceFirst("%", passivePlayer.name.value),
-        stylizedTexts = listOf(activePlayer.name.value, passivePlayer.name.value),
-        cardColor = if (passivePlayer.gender.value == Gender.MALE) MaleColor else FemaleColor
+        ).replaceFirst("%", activePartner.name.value)
+            .replaceFirst("%", passivePartner.name.value),
+        stylizedTexts = listOf(activePartner.name.value, passivePartner.name.value),
+        cardColor = if (passivePartner.gender.value == Gender.MALE) MaleColor else FemaleColor
     )
 
     return createCard(
         cardFrontContent = cardFrontContent,
-        gender = passivePlayer.gender.value,
+        gender = passivePartner.gender.value,
         actionWithFeedback = actionWithFeedback
     )
 }
@@ -379,13 +379,4 @@ private fun buildStylizedText(
         }
         append(remainingText)
     }
-}
-
-private fun getPlayerNameWithEmptyActions(playerList: List<Player>): String {
-    val playerWithEmptyActions: Player? = playerList.firstOrNull { player ->
-        player.selectedEroZones.any { eroZoneMutable ->
-            eroZoneMutable.actionList.isEmpty()
-        }
-    }
-    return playerWithEmptyActions?.name?.value ?: ""
 }

@@ -8,41 +8,41 @@ import androidx.compose.material.icons.filled.Male
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import com.example.lovein.common.data.Gender
-import com.example.lovein.common.dtos.PlayerDTO
+import com.example.lovein.common.dtos.PartnerDTO
 import com.example.lovein.common.models.FeedbackType
-import com.example.lovein.common.models.Player
+import com.example.lovein.common.models.Partner
 import com.example.lovein.common.objects.LocalizationManager
-import com.example.lovein.createplayerlist.validation.ValidationResult
+import com.example.lovein.createpartnerlist.validation.ValidationResult
 import com.example.lovein.ui.theme.FemaleColor
 import com.example.lovein.ui.theme.MaleColor
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import kotlin.random.Random
 
-fun convertPlayerListToPlayerDTOList(playerList: MutableList<MutableState<Player>>): List<PlayerDTO> {
-    return playerList.map { player ->
-        PlayerDTO(
-            name = player.value.name.value,
-            gender = player.value.gender.value,
-            selectedEroZoneList = convertEroZoneMutableListToEroZoneList(player.value.selectedEroZones)
+fun convertPartnerListToPartnerDTOList(partnerList: MutableList<MutableState<Partner>>): List<PartnerDTO> {
+    return partnerList.map { partner ->
+        PartnerDTO(
+            name = partner.value.name.value,
+            gender = partner.value.gender.value,
+            selectedEroZoneList = convertEroZoneMutableListToEroZoneList(partner.value.selectedEroZones)
         )
     }.toList()
 }
 
-fun convertPlayerDTOListToPlayerList(playerDTOList: List<PlayerDTO>): List<Player> {
-    return playerDTOList.map { playerDTO ->
-        Player(
-            name = mutableStateOf(playerDTO.name),
-            gender = mutableStateOf(playerDTO.gender),
-            selectedEroZones = convertEroZoneListToEroZoneMutableList(playerDTO.selectedEroZoneList),
+fun convertPartnerDTOListToPartnerList(partnerDTOList: List<PartnerDTO>): List<Partner> {
+    return partnerDTOList.map { partnerDTO ->
+        Partner(
+            name = mutableStateOf(partnerDTO.name),
+            gender = mutableStateOf(partnerDTO.gender),
+            selectedEroZones = convertEroZoneListToEroZoneMutableList(partnerDTO.selectedEroZoneList),
             icon = mutableStateOf(
-                if (playerDTO.gender == Gender.MALE)
+                if (partnerDTO.gender == Gender.MALE)
                     Icons.Default.Male
                 else
                     Icons.Default.Female
             ),
             color = mutableStateOf(
-                if (playerDTO.gender == Gender.MALE)
+                if (partnerDTO.gender == Gender.MALE)
                     MaleColor
                 else
                     FemaleColor
@@ -51,16 +51,16 @@ fun convertPlayerDTOListToPlayerList(playerDTOList: List<PlayerDTO>): List<Playe
     }
 }
 
-fun addRandomPlayer(
-    playerList: MutableList<MutableState<Player>>,
+fun addRandomPartner(
+    partnerList: MutableList<MutableState<Partner>>,
     coroutineScope: CoroutineScope,
     listState: LazyListState
 ) {
     val gender = if (Random.nextBoolean()) Gender.MALE else Gender.FEMALE
-    playerList.add(mutableStateOf(Player(gender)))
+    partnerList.add(mutableStateOf(Partner(gender)))
 
     coroutineScope.launch {
-        listState.animateScrollToItem(playerList.size - 1)
+        listState.animateScrollToItem(partnerList.size - 1)
     }
 }
 
@@ -76,15 +76,15 @@ fun showAlertDialog(
     alertDialogText.value = LocalizationManager.getLocalizedString(context, result.textResId!!)
 }
 
-fun cleanupActionFeedback(playerList: MutableList<MutableState<Player>>) {
-    playerList.forEach { player ->
-        player.value.selectedEroZones.forEach { eroZone ->
+fun cleanupActionFeedback(partnerList: MutableList<MutableState<Partner>>) {
+    partnerList.forEach { partner ->
+        partner.value.selectedEroZones.forEach { eroZone ->
             eroZone.actionList.forEach { it.feedback.value = FeedbackType.NONE }
         }
     }
 }
 
-fun formatName(input: String): String {
+fun formatPartnerName(input: String): String {
     val endsWithSpace = input.endsWith(' ')
     val parts = input.trim().lowercase()
         .split(Regex("\\s+"))

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">LoveIn</string>
-    <string name="play_button">Oyna</string>
-    <string name="players_name">Oyuncu adı</string>
-    <string name="add_next_player">Sonraki oyuncuyu ekle</string>
+    <string name="start_button">Başla</string>
+    <string name="partners_name">Partnerin adı</string>
+    <string name="add_partner">Partner ekle</string>
     <string name="erogenous_zones">Erojen bölgeler</string>
     <string name="clear">Temizle</string>
 
-    <string name="not_enough_players_alert_title">Yetersiz oyuncu sayısı</string>
-    <string name="not_enough_players_alert_description">Oyunu başlatmak için en az 2 oyuncuya ihtiyacınız var.</string>
-    <string name="add_player_names_alert_title">Oyuncu isimleri ekleyin</string>
-    <string name="add_player_names_alert_description">Oyunu başlatmak için oyuncu isimleri eklemeniz gerekiyor.</string>
-    <string name="add_player_ero_zones_alert_title">Oyuncu erojen bölgeleri ekleyin</string>
-    <string name="add_player_ero_zones_alert_description">Oyunu başlatmak için oyuncu erojen bölgeleri eklemeniz gerekiyor.</string>
+    <string name="not_enough_partners_alert_title">Yeterli partner yok</string>
+    <string name="not_enough_partners_alert_description">Erojen bölgeleri keşfetmeye başlamak için en az 2 partner gerekir.</string>
+    <string name="add_partner_name_alert_title">Partner adını ekle</string>
+    <string name="add_partner_name_alert_description">Erojen bölgeleri keşfetmeye başlamak için partnerinizin adını eklemeniz gerekir.</string>
+    <string name="add_partner_ero_zones_alert_title">Oyuncu erojen bölgeleri ekleyin</string>
+    <string name="add_partner_ero_zones_alert_description">Erojen bölgeleri keşfetmeye başlamak için her partner için erojen bölgeler eklemeniz gerekir.</string>
 
     <string name="scalp_and_hair">Kafa derisi ve saç</string>
     <string name="ears">Kulaklar</string>
@@ -219,8 +219,9 @@
         cesaret ve yenilik tadını çıkarın.
     </string>
 
-    <string name="game_over_description">Kullanıcı adı % olan oyuncunun tüm kartları tükendi. Bir adım geri gidip yeniden başlayabilirsiniz.</string>
-    <string name="game_over_title">Oyun bitti.</string>
+    <string name="finish_description">Erojen bölgelerin incelenmesi tamamlandı. Geri dönüp baştan başlayabilirsiniz.</string>
+    <string name="finish_title">Çalışma tamamlandı</string>
     <string name="ok_button">Tamam</string>
     <string name="download_body_map_and_rating">Vücut haritasını ve puanları indir</string>
+    <string name="open_next_card">Sonraki kartı aç</string>
 </resources>

@@ -31,10 +31,11 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.lovein.common.constants.DescriptionConstants
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.data.NavigationScreens
-import com.example.lovein.common.models.Player
-import com.example.lovein.createplayerlist.CreatePlayerListScreen
+import com.example.lovein.common.models.Partner
+import com.example.lovein.createpartnerlist.CreatePartnerListScreen
 import com.example.lovein.ui.theme.BackgroundDarkBlueColor
 import com.example.lovein.ui.theme.BackgroundDarkPinkColor
 import com.example.lovein.ui.theme.BackgroundLightBlueColor
@@ -97,7 +98,7 @@ fun CommonContainer(
                             IconButton(onClick = { navController.navigateUp() }) {
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                                    contentDescription = "arrow_back_icon",
+                                    contentDescription = DescriptionConstants.ARROW_BACK_ICON,
                                     tint = Color.White
                                 )
                             }
@@ -112,7 +113,7 @@ fun CommonContainer(
                             ) {
                                 Icon(
                                     imageVector = Icons.Default.Language,
-                                    contentDescription = "language_icon",
+                                    contentDescription = DescriptionConstants.LANGUAGE_ICON,
                                     tint = Color.White
                                 )
                             }
@@ -124,7 +125,7 @@ fun CommonContainer(
                             ) {
                                 Icon(
                                     imageVector = Icons.Default.Info,
-                                    contentDescription = "info_icon",
+                                    contentDescription = DescriptionConstants.INFO_ICON,
                                     tint = Color.White
                                 )
                             }
@@ -146,10 +147,10 @@ fun CommonContainer(
 fun CommonContainerPreview() {
     val navController: NavController = rememberNavController()
     val snackbarHostState = remember { SnackbarHostState() }
-    val playerList: MutableList<MutableState<Player>> = remember {
+    val partnerList: MutableList<MutableState<Partner>> = remember {
         mutableStateListOf(
-            mutableStateOf(Player(Gender.MALE)),
-            mutableStateOf(Player(Gender.FEMALE))
+            mutableStateOf(Partner(Gender.MALE)),
+            mutableStateOf(Partner(Gender.FEMALE))
         )
     }
 
@@ -157,9 +158,9 @@ fun CommonContainerPreview() {
         navController = navController,
         snackbarHostState = snackbarHostState
     ) {
-        CreatePlayerListScreen(
+        CreatePartnerListScreen(
             navController = navController,
-            playerList = playerList
+            partnerList = partnerList
         )
     }
 }

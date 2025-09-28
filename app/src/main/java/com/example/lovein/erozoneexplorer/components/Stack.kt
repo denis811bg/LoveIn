@@ -18,13 +18,14 @@ import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.lovein.common.models.Player
+import com.example.lovein.common.constants.StackConstants
+import com.example.lovein.common.models.Partner
 import com.example.lovein.erozoneexplorer.models.Card
 import com.example.lovein.erozoneexplorer.models.StackViewModel
 
 @Composable
 fun Stack(
-    cards: List<Pair<Player, Card>>,
+    cards: List<Pair<Partner, Card>>,
     position: Int
 ) {
     val viewModel = hiltViewModel<StackViewModel>()
@@ -82,8 +83,8 @@ private fun StackLayout(
     Layout(
         modifier = modifier.fillMaxSize(),
         content = {
-            topStack(Modifier.layoutId("topStack"))
-            bottomStack(Modifier.layoutId("bottomStack"))
+            topStack(Modifier.layoutId(StackConstants.TOP_STACK_ID))
+            bottomStack(Modifier.layoutId(StackConstants.BOTTOM_STACK_ID))
             flipCard?.let {
                 val cardFaceDisplayModifier = Modifier
                     .layoutId("flipCard")
@@ -103,9 +104,12 @@ private fun StackLayout(
         }
     ) { measurable, constraints ->
 
-        val flipCardPlaceable = measurable.firstOrNull { it.layoutId == "flipCard" }
-        val topStackPlaceable = measurable.firstOrNull { it.layoutId == "topStack" }
-        val bottomStackPlaceable = measurable.firstOrNull { it.layoutId == "bottomStack" }
+        val flipCardPlaceable =
+            measurable.firstOrNull { it.layoutId == StackConstants.FLIP_CARD_ID }
+        val topStackPlaceable =
+            measurable.firstOrNull { it.layoutId == StackConstants.TOP_STACK_ID }
+        val bottomStackPlaceable =
+            measurable.firstOrNull { it.layoutId == StackConstants.BOTTOM_STACK_ID }
 
         layout(constraints.maxWidth, constraints.maxHeight) {
             val cardSpacing = 16.dp.toPx()

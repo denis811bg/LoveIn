@@ -6,7 +6,7 @@ import com.example.lovein.common.data.Gender
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class PlayerDTO(
+data class PartnerDTO(
     val name: String,
     val gender: Gender,
     val selectedEroZoneList: List<EroZone>

@@ -5,11 +5,13 @@ import android.graphics.pdf.PdfDocument
 import android.net.Uri
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.toMutableStateList
+import com.example.lovein.common.constants.CommonConstants
+import com.example.lovein.common.constants.ExceptionConstants
 import com.example.lovein.common.constants.PDFDocumentConstants
 import com.example.lovein.common.data.EroZone
 import com.example.lovein.common.models.EroZoneMutable
 import com.example.lovein.common.models.FeedbackType
-import com.example.lovein.common.models.Player
+import com.example.lovein.common.models.Partner
 import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.erozoneexplorer.models.Card
 
@@ -49,12 +51,12 @@ fun convertEroZoneListToEroZoneMutableList(eroZoneList: List<EroZone>): Snapshot
 
 fun generateFeedbackReport(
     context: Context,
-    actionCards: List<Pair<Player, Card>>
+    actionCards: List<Pair<Partner, Card>>
 ): Map<String, Map<String, List<Pair<String, FeedbackType>>>> {
     val report = mutableMapOf<String, MutableMap<String, MutableList<Pair<String, FeedbackType>>>>()
 
-    actionCards.forEach { (player, card) ->
-        val playerName = player.name.value
+    actionCards.forEach { (partner, card) ->
+        val partnerName = partner.name.value
         val action = card.front.actionWithFeedback.action
 
         val eroZoneName = LocalizationManager.getLocalizedString(context, action.nameResId)
@@ -62,8 +64,8 @@ fun generateFeedbackReport(
             LocalizationManager.getLocalizedString(context, action.descriptionResId)
         val feedback = card.front.actionWithFeedback.feedback.value
 
-        val playerReport = report.getOrPut(playerName) { mutableMapOf() }
-        val zoneActions = playerReport.getOrPut(eroZoneName) { mutableListOf() }
+        val partnerReport = report.getOrPut(partnerName) { mutableMapOf() }
+        val zoneActions = partnerReport.getOrPut(eroZoneName) { mutableListOf() }
 
         zoneActions.add(actionDescription to feedback)
     }
@@ -108,9 +110,9 @@ fun saveFeedbackReportToPdf(
         y = PDFDocumentConstants.MARGIN_TOP
     }
 
-    report.forEach { (playerName, zones) ->
+    report.forEach { (partnerName, zones) ->
         if (y + PDFDocumentConstants.LINE_HEIGHT > PDFDocumentConstants.PAGE_HEIGHT) newPage()
-        canvas.drawText("👤 Player: $playerName", 20f, y, paint)
+        canvas.drawText("👤 Partner: $partnerName", 20f, y, paint)
         y += PDFDocumentConstants.LINE_HEIGHT
 
         zones.forEach { (eroZoneName, actions) ->
@@ -133,7 +135,7 @@ fun saveFeedbackReportToPdf(
     pdfDocument.finishPage(page)
 
     val filename = "ero_zone_feedback_report_${
-        java.text.SimpleDateFormat("yyyyMMdd_HHmmss", java.util.Locale.getDefault())
+        java.text.SimpleDateFormat(CommonConstants.TIMESTAMP_PATTERN, java.util.Locale.getDefault())
             .format(java.util.Date())
     }.pdf"
     val dirLabel = if (dest == Dest.Downloads) "Downloads" else "Documents"
@@ -158,11 +160,11 @@ fun saveFeedbackReportToPdf(
 
         val resolver = context.contentResolver
         val itemUri = resolver.insert(collectionUri, values)
-            ?: throw java.io.IOException("Failed to create file in MediaStore.")
+            ?: throw java.io.IOException(ExceptionConstants.CREATE_PDF_FILE_FAILED)
 
         resolver.openOutputStream(itemUri)?.use { os ->
             pdfDocument.writeTo(os)
-        } ?: throw java.io.IOException("Failed to open OutputStream.")
+        } ?: throw java.io.IOException(ExceptionConstants.OPEN_OUTPUT_STREAM_FAILED)
 
         pdfDocument.close()
         itemUri

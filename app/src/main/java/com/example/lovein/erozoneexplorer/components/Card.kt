@@ -35,6 +35,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lovein.R
+import com.example.lovein.common.constants.DescriptionConstants
 import com.example.lovein.common.models.FeedbackType
 import com.example.lovein.erozoneexplorer.models.CardBack
 import com.example.lovein.erozoneexplorer.models.CardFace
@@ -115,7 +116,7 @@ private fun CardFrontContent(
                 ) {
                     Icon(
                         imageVector = Icons.Filled.ThumbUp,
-                        contentDescription = "Like",
+                        contentDescription = DescriptionConstants.LIKE_ICON,
                         modifier = Modifier.size(48.dp),
                         tint = if (feedback.value == FeedbackType.LIKE) Color.White else Color.Gray
                     )
@@ -128,7 +129,7 @@ private fun CardFrontContent(
                 ) {
                     Icon(
                         imageVector = Icons.Filled.ThumbDown,
-                        contentDescription = "Dislike",
+                        contentDescription = DescriptionConstants.DISLIKE_ICON,
                         modifier = Modifier.size(48.dp),
                         tint = if (feedback.value == FeedbackType.DISLIKE) Color.White else Color.Gray
                     )
@@ -150,7 +151,7 @@ private fun CardBackContent(color: Color) {
         ) {
             Image(
                 painter = painterResource(R.drawable.bg_card_1),
-                contentDescription = "bg_card",
+                contentDescription = DescriptionConstants.BG_CARD,
                 contentScale = ContentScale.Inside,
                 colorFilter = ColorFilter.tint(color = Color.White)
             )
@@ -216,7 +217,7 @@ fun CardContainerPreview() {
                 ) {
                     Image(
                         painter = painterResource(R.drawable.bg_card_0),
-                        contentDescription = "bg_card",
+                        contentDescription = DescriptionConstants.BG_CARD,
                         contentScale = ContentScale.Inside
                     )
                 }

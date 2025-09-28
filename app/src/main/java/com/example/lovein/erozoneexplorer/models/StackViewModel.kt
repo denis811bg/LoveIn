@@ -1,19 +1,19 @@
 package com.example.lovein.erozoneexplorer.models
 
 import androidx.lifecycle.ViewModel
-import com.example.lovein.common.models.Player
+import com.example.lovein.common.models.Partner
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class StackViewModel @Inject constructor() : ViewModel() {
-    private var _cards: List<Pair<Player, Card>> = emptyList()
+    private var _cards: List<Pair<Partner, Card>> = emptyList()
     private var position: Int = 0
 
-    val leftStackTop: Pair<Player, Card>?
+    val leftStackTop: Pair<Partner, Card>?
         get() = _cards.getOrNull(position + 1)
 
-    val rightStackTop: Pair<Player, Card>?
+    val rightStackTop: Pair<Partner, Card>?
         get() = _cards.getOrNull(position - 1)
 
     val flipCard: Card?
@@ -23,7 +23,7 @@ class StackViewModel @Inject constructor() : ViewModel() {
         position = newPosition
     }
 
-    fun setCards(cards: List<Pair<Player, Card>>) {
+    fun setCards(cards: List<Pair<Partner, Card>>) {
         this._cards = cards
     }
 }

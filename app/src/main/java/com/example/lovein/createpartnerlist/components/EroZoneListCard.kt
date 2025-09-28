@@ -1,4 +1,4 @@
-package com.example.lovein.createplayerlist.components
+package com.example.lovein.createpartnerlist.components
 
 import android.content.Context
 import androidx.compose.foundation.background
@@ -7,7 +7,6 @@ import androidx.compose.foundation.indication
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -37,10 +36,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lovein.R
+import com.example.lovein.common.constants.DescriptionConstants
 import com.example.lovein.common.data.EroZone
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.models.EroZoneMutable
-import com.example.lovein.common.models.Player
+import com.example.lovein.common.models.Partner
 import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.ui.theme.BackgroundEroZoneUnselectColor
 import com.example.lovein.ui.theme.BackgroundLightBlueColor
@@ -48,10 +48,9 @@ import com.example.lovein.ui.theme.BackgroundLightPinkColor
 import com.example.lovein.ui.theme.helveticaFontFamily
 import com.example.lovein.utils.convertEroZoneToEroZoneMutable
 
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun EroZoneListCard(
-    player: MutableState<Player>,
+    partner: MutableState<Partner>,
     rotateX: State<Float>,
     alpha: State<Float>
 ) {
@@ -71,7 +70,7 @@ fun EroZoneListCard(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(color = player.value.color.value)
+                .background(color = partner.value.color.value)
         ) {
             Row(
                 modifier = Modifier
@@ -117,12 +116,12 @@ fun EroZoneListCard(
                     icon = {
                         Icon(
                             imageVector = Icons.Default.Cancel,
-                            contentDescription = "cancel_icon",
+                            contentDescription = DescriptionConstants.CANCEL_ICON,
                             tint = Color.White
                         )
                     },
                     onClick = {
-                        player.value.selectedEroZones.clear()
+                        partner.value.selectedEroZones.clear()
                     },
                     containerColor = Color.Transparent,
                     elevation = FloatingActionButtonDefaults.bottomAppBarFabElevation()
@@ -139,18 +138,18 @@ fun EroZoneListCard(
                     horizontalArrangement = Arrangement.Start,
                     verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    buildGenderErogenousZoneList(player.value.gender.value).forEach { eroZone ->
+                    buildGenderErogenousZoneList(partner.value.gender.value).forEach { eroZone ->
                         val eroZoneMutable: EroZoneMutable = convertEroZoneToEroZoneMutable(eroZone)
 
                         Row(
                             modifier = Modifier
                                 .padding(horizontal = 4.dp)
                                 .background(
-                                    color = if (player.value.selectedEroZones.contains(
+                                    color = if (partner.value.selectedEroZones.contains(
                                             eroZoneMutable
                                         )
                                     ) {
-                                        if (player.value.gender.value == Gender.MALE)
+                                        if (partner.value.gender.value == Gender.MALE)
                                             BackgroundLightBlueColor
                                         else
                                             BackgroundLightPinkColor
@@ -159,10 +158,10 @@ fun EroZoneListCard(
                                     shape = RoundedCornerShape(8.dp)
                                 )
                                 .clickable {
-                                    if (player.value.selectedEroZones.contains(eroZoneMutable)) {
-                                        player.value.selectedEroZones.remove(eroZoneMutable)
+                                    if (partner.value.selectedEroZones.contains(eroZoneMutable)) {
+                                        partner.value.selectedEroZones.remove(eroZoneMutable)
                                     } else {
-                                        player.value.selectedEroZones.add(eroZoneMutable)
+                                        partner.value.selectedEroZones.add(eroZoneMutable)
                                     }
                                 },
                             horizontalArrangement = Arrangement.Center,

@@ -1,4 +1,4 @@
-package com.example.lovein.createplayerlist.components
+package com.example.lovein.createpartnerlist.components
 
 import android.content.Context
 import androidx.compose.foundation.layout.Row
@@ -28,48 +28,48 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lovein.R
-import com.example.lovein.common.constants.IconConstants
-import com.example.lovein.common.constants.PlayerConstants
+import com.example.lovein.common.constants.DescriptionConstants
+import com.example.lovein.common.constants.PartnerConstants
 import com.example.lovein.common.data.Gender
-import com.example.lovein.common.models.Player
+import com.example.lovein.common.models.Partner
 import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.ui.theme.helveticaFontFamily
-import com.example.lovein.utils.formatName
+import com.example.lovein.utils.formatPartnerName
 
 @Composable
-fun PlayerInputRow(
-    playerList: MutableList<MutableState<Player>>,
+fun PartnerInputRow(
+    partnerList: MutableList<MutableState<Partner>>,
     index: Int,
     isExpanded: MutableState<Boolean>
 ) {
     val context: Context = LocalContext.current
     val keyboardController: SoftwareKeyboardController? = LocalSoftwareKeyboardController.current
 
-    var player: MutableState<Player> = playerList[index]
+    var partner: MutableState<Partner> = partnerList[index]
 
     Row(modifier = Modifier.fillMaxWidth()) {
         CustomFloatingActionButton(
             onClick = {
-                if (player.value.gender.value == Gender.MALE) {
-                    player = mutableStateOf(Player(Gender.FEMALE))
-                    playerList[index] = player
+                if (partner.value.gender.value == Gender.MALE) {
+                    partner = mutableStateOf(Partner(Gender.FEMALE))
+                    partnerList[index] = partner
                 } else {
-                    player = mutableStateOf(Player(Gender.MALE))
-                    playerList[index] = player
+                    partner = mutableStateOf(Partner(Gender.MALE))
+                    partnerList[index] = partner
                 }
             },
             leftShape = true,
             rightShape = false,
-            containerColor = player.value.color.value,
-            icon = player.value.icon.value,
-            iconContentDescriptor = IconConstants.MALE_FEMALE_ICON
+            containerColor = partner.value.color.value,
+            icon = partner.value.icon.value,
+            iconContentDescriptor = DescriptionConstants.MALE_FEMALE_ICON
         )
 
         TextField(
-            value = player.value.name.value,
+            value = partner.value.name.value,
             onValueChange = {
-                if (it.length <= PlayerConstants.MAX_NAME_LENGTH) {
-                    player.value.name.value = formatName(it)
+                if (it.length <= PartnerConstants.MAX_NAME_LENGTH) {
+                    partner.value.name.value = formatPartnerName(it)
                 }
             },
             modifier = Modifier.weight(0.7f),
@@ -81,7 +81,7 @@ fun PlayerInputRow(
                 Text(
                     text = LocalizationManager.getLocalizedString(
                         context = context,
-                        resourceId = R.string.players_name
+                        resourceId = R.string.partners_name
                     ),
                     fontSize = 16.sp,
                     fontFamily = helveticaFontFamily
@@ -112,21 +112,21 @@ fun PlayerInputRow(
             },
             leftShape = false,
             rightShape = false,
-            containerColor = player.value.color.value,
+            containerColor = partner.value.color.value,
             icon = if (isExpanded.value)
                 Icons.Default.ExpandLess
             else
                 Icons.Default.ExpandMore,
-            iconContentDescriptor = IconConstants.EXPAND_LESS_MORE_ICON
+            iconContentDescriptor = DescriptionConstants.EXPAND_LESS_MORE_ICON
         )
 
         CustomFloatingActionButton(
-            onClick = { if (playerList.size > 1) playerList.remove(player) },
+            onClick = { if (partnerList.size > 1) partnerList.remove(partner) },
             leftShape = false,
             rightShape = true,
-            containerColor = player.value.color.value,
+            containerColor = partner.value.color.value,
             icon = Icons.Default.DeleteForever,
-            iconContentDescriptor = IconConstants.DELETE_FOREVER_ICON
+            iconContentDescriptor = DescriptionConstants.DELETE_FOREVER_ICON
         )
     }
 }

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">LoveIn</string>
-    <string name="play_button">Spielen</string>
-    <string name="players_name">Spielername</string>
-    <string name="add_next_player">Nächsten Spieler hinzufügen</string>
+    <string name="start_button">Starten</string>
+    <string name="partners_name">Name des Partners</string>
+    <string name="add_partner">Partner hinzufügen</string>
     <string name="erogenous_zones">Erogene Zonen</string>
     <string name="clear">Zurücksetzen</string>
 
-    <string name="not_enough_players_alert_title">Nicht genügend Spieler</string>
-    <string name="not_enough_players_alert_description">Du benötigst mindestens 2 Spieler, um das Spiel zu starten.</string>
-    <string name="add_player_names_alert_title">Füge Spielernamen hinzu</string>
-    <string name="add_player_names_alert_description">Du musst Spielernamen hinzufügen, um das Spiel zu starten.</string>
-    <string name="add_player_ero_zones_alert_title">Füge erogene Zonen der Spieler hinzu</string>
-    <string name="add_player_ero_zones_alert_description">Du musst erogene Zonen der Spieler hinzufügen, um das Spiel zu starten.</string>
+    <string name="not_enough_partners_alert_title">Zu wenige Partner</string>
+    <string name="not_enough_partners_alert_description">Für die Erkundung erogener Zonen sind mindestens 2 Partner erforderlich.</string>
+    <string name="add_partner_name_alert_title">Partnernamen hinzufügen</string>
+    <string name="add_partner_name_alert_description">Um mit der Erkundung erogener Zonen zu beginnen, musst du den Namen deines Partners/deiner Partnerin hinzufügen.</string>
+    <string name="add_partner_ero_zones_alert_title">Füge erogene Zonen der Spieler hinzu</string>
+    <string name="add_partner_ero_zones_alert_description">Um mit der Erkundung erogener Zonen zu beginnen, musst du für jede Partnerin/jeden Partner erogene Zonen hinzufügen.</string>
 
     <string name="scalp_and_hair">Kopfhaut und Haare</string>
     <string name="ears">Ohren</string>
@@ -223,8 +223,9 @@
         in Ihrer Beziehung mit LoveIn.
     </string>
 
-    <string name="game_over_description">Dem Spieler mit dem Benutzernamen % sind alle Karten ausgegangen. Du kannst einen Schritt zurückgehen und neu beginnen.</string>
-    <string name="game_over_title">Spiel beendet.</string>
+    <string name="finish_description">Die Untersuchung der erogenen Zonen ist abgeschlossen. Du kannst zurückgehen und von vorn beginnen.</string>
+    <string name="finish_title">Die Studie ist abgeschlossen</string>
     <string name="ok_button">OK</string>
     <string name="download_body_map_and_rating">Körperkarte und Bewertungen herunterladen</string>
+    <string name="open_next_card">Nächste Karte öffnen</string>
 </resources>

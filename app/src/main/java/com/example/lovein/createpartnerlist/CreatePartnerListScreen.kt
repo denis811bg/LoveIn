@@ -1,4 +1,4 @@
-package com.example.lovein.createplayerlist
+package com.example.lovein.createpartnerlist
 
 import android.content.Context
 import androidx.compose.foundation.indication
@@ -44,24 +44,24 @@ import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
 import com.example.lovein.common.components.CustomAlertDialog
 import com.example.lovein.common.constants.CommonConstants
-import com.example.lovein.common.constants.IconConstants
+import com.example.lovein.common.constants.DescriptionConstants
 import com.example.lovein.common.constants.NavigationConstants
 import com.example.lovein.common.data.NavigationScreens
-import com.example.lovein.common.models.Player
+import com.example.lovein.common.models.Partner
 import com.example.lovein.common.objects.LocalizationManager
-import com.example.lovein.createplayerlist.components.PlayerCard
-import com.example.lovein.createplayerlist.validation.validatePlayers
+import com.example.lovein.createpartnerlist.components.PartnerCard
+import com.example.lovein.createpartnerlist.validation.validatePartners
 import com.example.lovein.ui.theme.helveticaFontFamily
-import com.example.lovein.utils.addRandomPlayer
+import com.example.lovein.utils.addRandomPartner
 import com.example.lovein.utils.cleanupActionFeedback
-import com.example.lovein.utils.convertPlayerListToPlayerDTOList
+import com.example.lovein.utils.convertPartnerListToPartnerDTOList
 import com.example.lovein.utils.showAlertDialog
 import kotlinx.coroutines.CoroutineScope
 
 @Composable
-fun CreatePlayerListScreen(
+fun CreatePartnerListScreen(
     navController: NavController,
-    playerList: MutableList<MutableState<Player>>
+    partnerList: MutableList<MutableState<Partner>>
 ) {
     val context: Context = LocalContext.current
 
@@ -72,7 +72,7 @@ fun CreatePlayerListScreen(
     val snackbarMessage by snackbarFlow.collectAsState()
 
     LaunchedEffect(Unit) {
-        cleanupActionFeedback(playerList)
+        cleanupActionFeedback(partnerList)
         if (snackbarMessage.isNotBlank()) {
             snackbarHostState.showSnackbar(snackbarMessage)
             navController.currentBackStackEntry
@@ -111,8 +111,8 @@ fun CreatePlayerListScreen(
                 state = listState,
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                itemsIndexed(items = playerList) { index, player ->
-                    PlayerCard(player = player, index = index, playerList = playerList)
+                itemsIndexed(items = partnerList) { index, partner ->
+                    PartnerCard(partner = partner, index = index, partnerList = partnerList)
                 }
 
                 item {
@@ -127,7 +127,7 @@ fun CreatePlayerListScreen(
                             Text(
                                 text = LocalizationManager.getLocalizedString(
                                     context = context,
-                                    resourceId = R.string.add_next_player
+                                    resourceId = R.string.add_partner
                                 ),
                                 color = Color.White,
                                 fontSize = 16.sp,
@@ -139,11 +139,11 @@ fun CreatePlayerListScreen(
                         icon = {
                             Icon(
                                 imageVector = Icons.Default.GroupAdd,
-                                contentDescription = IconConstants.GROUP_ADD_ICON,
+                                contentDescription = DescriptionConstants.GROUP_ADD_ICON,
                                 tint = Color.White
                             )
                         },
-                        onClick = { addRandomPlayer(playerList, coroutineScope, listState) },
+                        onClick = { addRandomPartner(partnerList, coroutineScope, listState) },
                         containerColor = Color.Transparent,
                         elevation = FloatingActionButtonDefaults.bottomAppBarFabElevation()
                     )
@@ -153,12 +153,12 @@ fun CreatePlayerListScreen(
             CommonNavigationButton(
                 text = LocalizationManager.getLocalizedString(
                     context = context,
-                    resourceId = R.string.play_button
+                    resourceId = R.string.start_button
                 ),
                 icon = Icons.Default.PlayCircle,
-                iconContentDescription = IconConstants.PLAY_CIRCLE_ICON,
+                iconContentDescription = DescriptionConstants.PLAY_CIRCLE_ICON,
                 onClick = {
-                    val result = validatePlayers(playerList)
+                    val result = validatePartners(partnerList)
 
                     if (!result.isValid) {
                         showAlertDialog(
@@ -170,8 +170,8 @@ fun CreatePlayerListScreen(
                         )
                     } else {
                         navController.currentBackStackEntry?.savedStateHandle?.set(
-                            key = NavigationConstants.PLAYER_DTO_LIST_KEY,
-                            value = convertPlayerListToPlayerDTOList(playerList)
+                            key = NavigationConstants.PARTNER_DTO_LIST_KEY,
+                            value = convertPartnerListToPartnerDTOList(partnerList)
                         )
 
                         navController.navigate(route = NavigationScreens.ERO_ZONE_EXPLORER_SCREEN.name)

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">LoveIn</string>
-    <string name="play_button">Jouer</string>
-    <string name="players_name">Nom du joueur</string>
-    <string name="add_next_player">Ajouter le joueur suivant</string>
+    <string name="start_button">Commencer</string>
+    <string name="partners_name">Nom du partenaire</string>
+    <string name="add_partner">Ajouter un partenaire</string>
     <string name="erogenous_zones">Zones érogènes</string>
     <string name="clear">Nettoyer</string>
 
-    <string name="not_enough_players_alert_title">Nombre de joueurs insuffisant</string>
-    <string name="not_enough_players_alert_description">Vous avez besoin d\'au moins 2 joueurs pour lancer le jeu.</string>
-    <string name="add_player_names_alert_title">Ajoutez les noms des joueurs</string>
-    <string name="add_player_names_alert_description">Vous devez ajouter les noms des joueurs pour lancer le jeu.</string>
-    <string name="add_player_ero_zones_alert_title">Ajoutez les zones érogènes des joueurs</string>
-    <string name="add_player_ero_zones_alert_description">Vous devez ajouter les zones érogènes des joueurs pour lancer le jeu.</string>
+    <string name="not_enough_partners_alert_title">Pas assez de partenaires</string>
+    <string name="not_enough_partners_alert_description">Pour commencer à explorer les zones érogènes, il vous faut au moins 2 partenaires.</string>
+    <string name="add_partner_name_alert_title">Ajouter le nom du partenaire</string>
+    <string name="add_partner_name_alert_description">Pour commencer à explorer les zones érogènes, vous devez ajouter le nom de votre partenaire.</string>
+    <string name="add_partner_ero_zones_alert_title">Ajoutez les zones érogènes des joueurs</string>
+    <string name="add_partner_ero_zones_alert_description">Pour commencer à explorer les zones érogènes, vous devez ajouter des zones érogènes pour chaque partenaire.</string>
 
     <string name="scalp_and_hair">Cuir chevelu et cheveux</string>
     <string name="ears">Oreilles</string>
@@ -223,8 +223,9 @@
         LoveIn.
     </string>
 
-    <string name="game_over_description">Le joueur avec le nom d\'utilisateur % n\'a plus de cartes. Vous pouvez revenir en arrière et recommencer.</string>
-    <string name="game_over_title">Partie terminée.</string>
+    <string name="finish_description">L’étude des zones érogènes est terminée. Vous pouvez revenir en arrière et recommencer.</string>
+    <string name="finish_title">L’étude est terminée</string>
     <string name="ok_button">OK</string>
     <string name="download_body_map_and_rating">Télécharger la carte du corps et les notes</string>
+    <string name="open_next_card">Ouvrir la carte suivante</string>
 </resources>
