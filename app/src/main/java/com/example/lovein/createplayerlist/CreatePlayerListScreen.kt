@@ -44,6 +44,8 @@ import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
 import com.example.lovein.common.components.CustomAlertDialog
 import com.example.lovein.common.constants.CommonConstants
+import com.example.lovein.common.constants.IconConstants
+import com.example.lovein.common.constants.NavigationConstants
 import com.example.lovein.common.data.NavigationScreens
 import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
@@ -137,7 +139,7 @@ fun CreatePlayerListScreen(
                         icon = {
                             Icon(
                                 imageVector = Icons.Default.GroupAdd,
-                                contentDescription = "group_add_icon",
+                                contentDescription = IconConstants.GROUP_ADD_ICON,
                                 tint = Color.White
                             )
                         },
@@ -154,7 +156,7 @@ fun CreatePlayerListScreen(
                     resourceId = R.string.play_button
                 ),
                 icon = Icons.Default.PlayCircle,
-                iconContentDescription = "play_circle_icon",
+                iconContentDescription = IconConstants.PLAY_CIRCLE_ICON,
                 onClick = {
                     val result = validatePlayers(playerList)
 
@@ -168,7 +170,7 @@ fun CreatePlayerListScreen(
                         )
                     } else {
                         navController.currentBackStackEntry?.savedStateHandle?.set(
-                            key = "playerDTOList",
+                            key = NavigationConstants.PLAYER_DTO_LIST_KEY,
                             value = convertPlayerListToPlayerDTOList(playerList)
                         )
 

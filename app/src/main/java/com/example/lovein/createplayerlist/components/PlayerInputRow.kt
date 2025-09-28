@@ -28,6 +28,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lovein.R
+import com.example.lovein.common.constants.IconConstants
 import com.example.lovein.common.constants.PlayerConstants
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.models.Player
@@ -61,7 +62,7 @@ fun PlayerInputRow(
             rightShape = false,
             containerColor = player.value.color.value,
             icon = player.value.icon.value,
-            iconContentDescriptor = "male_female_icon"
+            iconContentDescriptor = IconConstants.MALE_FEMALE_ICON
         )
 
         TextField(
@@ -116,7 +117,7 @@ fun PlayerInputRow(
                 Icons.Default.ExpandLess
             else
                 Icons.Default.ExpandMore,
-            iconContentDescriptor = "expand_less_more_icon"
+            iconContentDescriptor = IconConstants.EXPAND_LESS_MORE_ICON
         )
 
         CustomFloatingActionButton(
@@ -125,7 +126,7 @@ fun PlayerInputRow(
             rightShape = true,
             containerColor = player.value.color.value,
             icon = Icons.Default.DeleteForever,
-            iconContentDescriptor = "delete_forever_icon"
+            iconContentDescriptor = IconConstants.DELETE_FOREVER_ICON
         )
     }
 }

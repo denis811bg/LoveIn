@@ -85,11 +85,14 @@ fun cleanupActionFeedback(playerList: MutableList<MutableState<Player>>) {
 }
 
 fun formatName(input: String): String {
-    return input
-        .lowercase()
-        .split(" ")
+    val endsWithSpace = input.endsWith(' ')
+    val parts = input.trim().lowercase()
+        .split(Regex("\\s+"))
         .filter { it.isNotBlank() }
-        .joinToString(" ") { word ->
-            word.replaceFirstChar { c -> c.titlecase() }
-        }
+
+    val formatted = parts.joinToString(" ") { word ->
+        word.replaceFirstChar { it.titlecase() }
+    }
+
+    return if (endsWithSpace) "$formatted " else formatted
 }
