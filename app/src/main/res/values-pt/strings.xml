@@ -222,4 +222,6 @@
 
     <string name="game_over_description">O jogador com o nome de usuário % ficou sem cartas. Você pode voltar um passo atrás e começar novamente.</string>
     <string name="game_over_title">Fim de jogo.</string>
+    <string name="ok_button">OK</string>
+    <string name="download_body_map_and_rating">Baixar o mapa do corpo e as avaliações</string>
 </resources>

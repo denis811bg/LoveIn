@@ -223,4 +223,6 @@
 
     <string name="game_over_description">Al jugador con el nombre de usuario % se le han agotado todas las cartas. Puedes retroceder un paso y comenzar de nuevo.</string>
     <string name="game_over_title">Fin del juego.</string>
+    <string name="ok_button">Aceptar</string>
+    <string name="download_body_map_and_rating">Descargar el mapa corporal y las valoraciones</string>
 </resources>

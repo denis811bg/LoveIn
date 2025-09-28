@@ -83,3 +83,13 @@ fun cleanupActionFeedback(playerList: MutableList<MutableState<Player>>) {
         }
     }
 }
+
+fun formatName(input: String): String {
+    return input
+        .lowercase()
+        .split(" ")
+        .filter { it.isNotBlank() }
+        .joinToString(" ") { word ->
+            word.replaceFirstChar { c -> c.titlecase() }
+        }
+}

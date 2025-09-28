@@ -221,4 +221,6 @@
 
     <string name="game_over_title">Game over.</string>
     <string name="game_over_description">The player named % has used up all their cards. You can go back and start over.</string>
+    <string name="ok_button">OK</string>
+    <string name="download_body_map_and_rating">Download Body Map and Ratings</string>
 </resources>

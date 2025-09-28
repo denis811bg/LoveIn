@@ -2,183 +2,499 @@ package com.example.lovein.common.data
 
 import com.example.lovein.R
 
-enum class Action(val resourceId: Int, val actionType: ActionType) {
-    SCALP_AND_HAIR_MASSAGE_ACTION(R.string.scalp_and_hair_massage_action, ActionType.SOFT),
-    SCALP_AND_HAIR_SCRATCH_ACTION(R.string.scalp_and_hair_scratch_action, ActionType.SOFT),
-    SCALP_AND_HAIR_PINCH_ACTION(R.string.scalp_and_hair_pinch_action, ActionType.SOFT),
-    SCALP_AND_HAIR_PULL_ACTION(R.string.scalp_and_hair_pull_action, ActionType.SOFT),
-    SCALP_AND_HAIR_USE_ACCESSORIES_0_ACTION(R.string.scalp_and_hair_use_accessories_0_action, ActionType.SOFT),
-    SCALP_AND_HAIR_BLOW_WARM_AIR_ACTION(R.string.scalp_and_hair_blow_warm_air_action, ActionType.SOFT),
-    SCALP_AND_HAIR_USE_ACCESSORIES_1_ACTION(R.string.scalp_and_hair_use_accessories_1_action, ActionType.SOFT),
-    SCALP_AND_HAIR_USE_ACCESSORIES_2_ACTION(R.string.scalp_and_hair_use_accessories_2_action, ActionType.SOFT),
+enum class Action(val nameResId: Int, val descriptionResId: Int, val type: ActionType) {
+    SCALP_AND_HAIR_MASSAGE_ACTION(
+        R.string.scalp_and_hair,
+        R.string.scalp_and_hair_massage_action,
+        ActionType.SOFT
+    ),
+    SCALP_AND_HAIR_SCRATCH_ACTION(
+        R.string.scalp_and_hair,
+        R.string.scalp_and_hair_scratch_action,
+        ActionType.SOFT
+    ),
+    SCALP_AND_HAIR_PINCH_ACTION(
+        R.string.scalp_and_hair,
+        R.string.scalp_and_hair_pinch_action,
+        ActionType.SOFT
+    ),
+    SCALP_AND_HAIR_PULL_ACTION(
+        R.string.scalp_and_hair,
+        R.string.scalp_and_hair_pull_action,
+        ActionType.SOFT
+    ),
+    SCALP_AND_HAIR_USE_ACCESSORIES_0_ACTION(
+        R.string.scalp_and_hair,
+        R.string.scalp_and_hair_use_accessories_0_action,
+        ActionType.SOFT
+    ),
+    SCALP_AND_HAIR_BLOW_WARM_AIR_ACTION(
+        R.string.scalp_and_hair,
+        R.string.scalp_and_hair_blow_warm_air_action,
+        ActionType.SOFT
+    ),
+    SCALP_AND_HAIR_USE_ACCESSORIES_1_ACTION(
+        R.string.scalp_and_hair,
+        R.string.scalp_and_hair_use_accessories_1_action,
+        ActionType.SOFT
+    ),
+    SCALP_AND_HAIR_USE_ACCESSORIES_2_ACTION(
+        R.string.scalp_and_hair,
+        R.string.scalp_and_hair_use_accessories_2_action,
+        ActionType.SOFT
+    ),
 
-    EARS_MASSAGE_ACTION(R.string.ears_massage_action, ActionType.SOFT),
-    EARS_WHISPER_ACTION(R.string.ears_whisper_action, ActionType.SOFT),
-    EARS_BITE_ACTION(R.string.ears_bite_action, ActionType.HOT),
-    EARS_KISS_ACTION(R.string.ears_kiss_action, ActionType.HOT),
-    EARS_SUCK_ACTION(R.string.ears_suck_action, ActionType.HOT),
-    EARS_USE_ACCESSORIES_ACTION(R.string.ears_use_accessories_action, ActionType.SOFT),
-    EARS_ICE_ACTION(R.string.ears_ice_action, ActionType.SOFT),
+    EARS_MASSAGE_ACTION(R.string.ears, R.string.ears_massage_action, ActionType.SOFT),
+    EARS_WHISPER_ACTION(R.string.ears, R.string.ears_whisper_action, ActionType.SOFT),
+    EARS_BITE_ACTION(R.string.ears, R.string.ears_bite_action, ActionType.HOT),
+    EARS_KISS_ACTION(R.string.ears, R.string.ears_kiss_action, ActionType.HOT),
+    EARS_SUCK_ACTION(R.string.ears, R.string.ears_suck_action, ActionType.HOT),
+    EARS_USE_ACCESSORIES_ACTION(
+        R.string.ears,
+        R.string.ears_use_accessories_action,
+        ActionType.SOFT
+    ),
+    EARS_ICE_ACTION(R.string.ears, R.string.ears_ice_action, ActionType.SOFT),
 
-    NAVEL_KISS_ACTION(R.string.navel_kiss_action, ActionType.HOT),
-    NAVEL_LICK_ACTION(R.string.navel_lick_action, ActionType.HOT),
-    NAVEL_BLOW_WARM_AIR_ACTION(R.string.navel_blow_warm_air_action, ActionType.SOFT),
-    NAVEL_USE_ACCESSORIES_ACTION(R.string.navel_use_accessories_action, ActionType.SOFT),
-    NAVEL_ICE_ACTION(R.string.navel_ice_action, ActionType.SOFT),
+    NAVEL_KISS_ACTION(R.string.navel, R.string.navel_kiss_action, ActionType.HOT),
+    NAVEL_LICK_ACTION(R.string.navel, R.string.navel_lick_action, ActionType.HOT),
+    NAVEL_BLOW_WARM_AIR_ACTION(
+        R.string.navel,
+        R.string.navel_blow_warm_air_action,
+        ActionType.SOFT
+    ),
+    NAVEL_USE_ACCESSORIES_ACTION(
+        R.string.navel,
+        R.string.navel_use_accessories_action,
+        ActionType.SOFT
+    ),
+    NAVEL_ICE_ACTION(R.string.navel, R.string.navel_ice_action, ActionType.SOFT),
 
-    LOWER_STOMACH_KISS_ACTION(R.string.lower_stomach_kiss_action, ActionType.HOT),
-    LOWER_STOMACH_LICK_ACTION(R.string.lower_stomach_lick_action, ActionType.HOT),
-    LOWER_STOMACH_MASSAGE_ACTION(R.string.lower_stomach_massage_action, ActionType.SOFT),
-    LOWER_STOMACH_SCRATCH_ACTION(R.string.lower_stomach_scratch_action, ActionType.SOFT),
-    LOWER_STOMACH_BLOW_WARM_AIR_ACTION(R.string.lower_stomach_blow_warm_air_action, ActionType.SOFT),
-    LOWER_STOMACH_USE_ACCESSORIES_ACTION(R.string.lower_stomach_use_accessories_action, ActionType.SOFT),
-    LOWER_STOMACH_ICE_ACTION(R.string.lower_stomach_ice_action, ActionType.SOFT),
+    LOWER_STOMACH_KISS_ACTION(
+        R.string.lower_stomach,
+        R.string.lower_stomach_kiss_action,
+        ActionType.HOT
+    ),
+    LOWER_STOMACH_LICK_ACTION(
+        R.string.lower_stomach,
+        R.string.lower_stomach_lick_action,
+        ActionType.HOT
+    ),
+    LOWER_STOMACH_MASSAGE_ACTION(
+        R.string.lower_stomach,
+        R.string.lower_stomach_massage_action,
+        ActionType.SOFT
+    ),
+    LOWER_STOMACH_SCRATCH_ACTION(
+        R.string.lower_stomach,
+        R.string.lower_stomach_scratch_action,
+        ActionType.SOFT
+    ),
+    LOWER_STOMACH_BLOW_WARM_AIR_ACTION(
+        R.string.lower_stomach,
+        R.string.lower_stomach_blow_warm_air_action,
+        ActionType.SOFT
+    ),
+    LOWER_STOMACH_USE_ACCESSORIES_ACTION(
+        R.string.lower_stomach,
+        R.string.lower_stomach_use_accessories_action,
+        ActionType.SOFT
+    ),
+    LOWER_STOMACH_ICE_ACTION(
+        R.string.lower_stomach,
+        R.string.lower_stomach_ice_action,
+        ActionType.SOFT
+    ),
 
-    AREOLA_AND_NIPPLES_MASSAGE_ACTION(R.string.areola_and_nipples_massage_action, ActionType.SOFT),
-    AREOLA_AND_NIPPLES_KISS_ACTION(R.string.areola_and_nipples_kiss_action, ActionType.HOT),
-    AREOLA_AND_NIPPLES_LICK_ACTION(R.string.areola_and_nipples_lick_action, ActionType.HOT),
-    AREOLA_AND_NIPPLES_BITE_ACTION(R.string.areola_and_nipples_bite_action, ActionType.HOT),
-    AREOLA_AND_NIPPLES_USE_ACCESSORIES_0_ACTION(R.string.areola_and_nipples_use_accessories_0_action, ActionType.SOFT),
-    AREOLA_AND_NIPPLES_USE_ACCESSORIES_1_ACTION(R.string.areola_and_nipples_use_accessories_1_action, ActionType.SOFT),
-    AREOLA_AND_NIPPLES_ICE_ACTION(R.string.areola_and_nipples_ice_action, ActionType.SOFT),
-    AREOLA_AND_NIPPLES_SUCK_ACTION(R.string.areola_and_nipples_suck_action, ActionType.HOT),
+    AREOLA_AND_NIPPLES_MASSAGE_ACTION(
+        R.string.areola_and_nipples,
+        R.string.areola_and_nipples_massage_action,
+        ActionType.SOFT
+    ),
+    AREOLA_AND_NIPPLES_KISS_ACTION(
+        R.string.areola_and_nipples,
+        R.string.areola_and_nipples_kiss_action,
+        ActionType.HOT
+    ),
+    AREOLA_AND_NIPPLES_LICK_ACTION(
+        R.string.areola_and_nipples,
+        R.string.areola_and_nipples_lick_action,
+        ActionType.HOT
+    ),
+    AREOLA_AND_NIPPLES_BITE_ACTION(
+        R.string.areola_and_nipples,
+        R.string.areola_and_nipples_bite_action,
+        ActionType.HOT
+    ),
+    AREOLA_AND_NIPPLES_USE_ACCESSORIES_0_ACTION(
+        R.string.areola_and_nipples,
+        R.string.areola_and_nipples_use_accessories_0_action,
+        ActionType.SOFT
+    ),
+    AREOLA_AND_NIPPLES_USE_ACCESSORIES_1_ACTION(
+        R.string.areola_and_nipples,
+        R.string.areola_and_nipples_use_accessories_1_action,
+        ActionType.SOFT
+    ),
+    AREOLA_AND_NIPPLES_ICE_ACTION(
+        R.string.areola_and_nipples,
+        R.string.areola_and_nipples_ice_action,
+        ActionType.SOFT
+    ),
+    AREOLA_AND_NIPPLES_SUCK_ACTION(
+        R.string.areola_and_nipples,
+        R.string.areola_and_nipples_suck_action,
+        ActionType.HOT
+    ),
 
-    PUBIC_MOUND_MASSAGE_ACTION(R.string.pubic_mound_massage_action, ActionType.SOFT),
-    PUBIC_MOUND_KISS_ACTION(R.string.pubic_mound_kiss_action, ActionType.HOT),
-    PUBIC_MOUND_LICK_ACTION(R.string.pubic_mound_lick_action, ActionType.HOT),
-    PUBIC_MOUND_USE_ACCESSORIES_0_ACTION(R.string.pubic_mound_use_accessories_0_action, ActionType.SOFT),
-    PUBIC_MOUND_USE_ACCESSORIES_1_ACTION(R.string.pubic_mound_use_accessories_1_action, ActionType.SOFT),
-    PUBIC_MOUND_ICE_ACTION(R.string.pubic_mound_ice_action, ActionType.SOFT),
+    PUBIC_MOUND_MASSAGE_ACTION(
+        R.string.pubic_mound,
+        R.string.pubic_mound_massage_action,
+        ActionType.SOFT
+    ),
+    PUBIC_MOUND_KISS_ACTION(R.string.pubic_mound, R.string.pubic_mound_kiss_action, ActionType.HOT),
+    PUBIC_MOUND_LICK_ACTION(R.string.pubic_mound, R.string.pubic_mound_lick_action, ActionType.HOT),
+    PUBIC_MOUND_USE_ACCESSORIES_0_ACTION(
+        R.string.pubic_mound,
+        R.string.pubic_mound_use_accessories_0_action,
+        ActionType.SOFT
+    ),
+    PUBIC_MOUND_USE_ACCESSORIES_1_ACTION(
+        R.string.pubic_mound,
+        R.string.pubic_mound_use_accessories_1_action,
+        ActionType.SOFT
+    ),
+    PUBIC_MOUND_ICE_ACTION(R.string.pubic_mound, R.string.pubic_mound_ice_action, ActionType.SOFT),
 
-    CLITORIS_MASSAGE_0_ACTION(R.string.clitoris_massage_0_action, ActionType.SOFT),
-    CLITORIS_MASSAGE_1_ACTION(R.string.clitoris_massage_1_action, ActionType.SOFT),
-    CLITORIS_KISS_ACTION(R.string.clitoris_kiss_action, ActionType.HOT),
-    CLITORIS_LICK_ACTION(R.string.clitoris_lick_action, ActionType.HOT),
-    CLITORIS_BITE_ACTION(R.string.clitoris_bite_action, ActionType.HOT),
-    CLITORIS_USE_ACCESSORIES_ACTION(R.string.clitoris_use_accessories_action, ActionType.HOT),
-    CLITORIS_ITSELF_ACTION(R.string.clitoris_itself_action, ActionType.HOT),
+    CLITORIS_MASSAGE_0_ACTION(
+        R.string.clitoris,
+        R.string.clitoris_massage_0_action,
+        ActionType.SOFT
+    ),
+    CLITORIS_MASSAGE_1_ACTION(
+        R.string.clitoris,
+        R.string.clitoris_massage_1_action,
+        ActionType.SOFT
+    ),
+    CLITORIS_KISS_ACTION(R.string.clitoris, R.string.clitoris_kiss_action, ActionType.HOT),
+    CLITORIS_LICK_ACTION(R.string.clitoris, R.string.clitoris_lick_action, ActionType.HOT),
+    CLITORIS_BITE_ACTION(R.string.clitoris, R.string.clitoris_bite_action, ActionType.HOT),
+    CLITORIS_USE_ACCESSORIES_ACTION(
+        R.string.clitoris,
+        R.string.clitoris_use_accessories_action,
+        ActionType.HOT
+    ),
+    CLITORIS_ITSELF_ACTION(R.string.clitoris, R.string.clitoris_itself_action, ActionType.HOT),
 
-    G_SPOT_MASSAGE_ACTION(R.string.g_spot_massage_action, ActionType.SOFT),
-    G_SPOT_ITSELF_ACTION(R.string.g_spot_itself_action, ActionType.HOT),
+    G_SPOT_MASSAGE_ACTION(R.string.g_spot, R.string.g_spot_massage_action, ActionType.SOFT),
+    G_SPOT_ITSELF_ACTION(R.string.g_spot, R.string.g_spot_itself_action, ActionType.HOT),
 
-    ANUS_MASSAGE_ACTION(R.string.anus_massage_action, ActionType.SOFT),
-    ANUS_USE_ACCESSORIES_0_ACTION(R.string.anus_use_accessories_0_action, ActionType.HOT),
-    ANUS_USE_ACCESSORIES_1_ACTION(R.string.anus_use_accessories_1_action, ActionType.SOFT),
-    ANUS_KISS_ACTION(R.string.anus_kiss_action, ActionType.HOT),
-    ANUS_LICK_ACTION(R.string.anus_lick_action, ActionType.HOT),
-    ANUS_ICE_ACTION(R.string.anus_ice_action, ActionType.SOFT),
-    ANUS_ITSELF_ACTION(R.string.anus_itself_action, ActionType.HOT),
+    ANUS_MASSAGE_ACTION(R.string.anus, R.string.anus_massage_action, ActionType.SOFT),
+    ANUS_USE_ACCESSORIES_0_ACTION(
+        R.string.anus,
+        R.string.anus_use_accessories_0_action,
+        ActionType.HOT
+    ),
+    ANUS_USE_ACCESSORIES_1_ACTION(
+        R.string.anus,
+        R.string.anus_use_accessories_1_action,
+        ActionType.SOFT
+    ),
+    ANUS_KISS_ACTION(R.string.anus, R.string.anus_kiss_action, ActionType.HOT),
+    ANUS_LICK_ACTION(R.string.anus, R.string.anus_lick_action, ActionType.HOT),
+    ANUS_ICE_ACTION(R.string.anus, R.string.anus_ice_action, ActionType.SOFT),
+    ANUS_ITSELF_ACTION(R.string.anus, R.string.anus_itself_action, ActionType.HOT),
 
-    BUTTOCKS_MASSAGE_ACTION(R.string.buttocks_massage_action, ActionType.SOFT),
-    BUTTOCKS_KISS_ACTION(R.string.buttocks_kiss_action, ActionType.HOT),
-    BUTTOCKS_LICK_ACTION(R.string.buttocks_lick_action, ActionType.HOT),
-    BUTTOCKS_BITE_ACTION(R.string.buttocks_bite_action, ActionType.HOT),
-    BUTTOCKS_USE_ACCESSORIES_ACTION(R.string.buttocks_use_accessories_action, ActionType.SOFT),
-    BUTTOCKS_ICE_ACTION(R.string.buttocks_ice_action, ActionType.SOFT),
+    BUTTOCKS_MASSAGE_ACTION(R.string.buttocks, R.string.buttocks_massage_action, ActionType.SOFT),
+    BUTTOCKS_KISS_ACTION(R.string.buttocks, R.string.buttocks_kiss_action, ActionType.HOT),
+    BUTTOCKS_LICK_ACTION(R.string.buttocks, R.string.buttocks_lick_action, ActionType.HOT),
+    BUTTOCKS_BITE_ACTION(R.string.buttocks, R.string.buttocks_bite_action, ActionType.HOT),
+    BUTTOCKS_USE_ACCESSORIES_ACTION(
+        R.string.buttocks,
+        R.string.buttocks_use_accessories_action,
+        ActionType.SOFT
+    ),
+    BUTTOCKS_ICE_ACTION(R.string.buttocks, R.string.buttocks_ice_action, ActionType.SOFT),
 
-    GLANS_MASSAGE_ACTION(R.string.glans_massage_action, ActionType.SOFT),
-    GLANS_KISS_ACTION(R.string.glans_kiss_action, ActionType.HOT),
-    GLANS_LICK_ACTION(R.string.glans_lick_action, ActionType.HOT),
-    GLANS_BITE_ACTION(R.string.glans_bite_action, ActionType.HOT),
-    GLANS_SUCK_ACTION(R.string.glans_suck_action, ActionType.HOT),
-    GLANS_USE_ACCESSORIES_ACTION(R.string.glans_use_accessories_action, ActionType.HOT),
-    GLANS_ICE_ACTION(R.string.glans_ice_action, ActionType.SOFT),
-    GLANS_ITSELF_ACTION(R.string.glans_itself_action, ActionType.HOT),
+    GLANS_MASSAGE_ACTION(R.string.glans, R.string.glans_massage_action, ActionType.SOFT),
+    GLANS_KISS_ACTION(R.string.glans, R.string.glans_kiss_action, ActionType.HOT),
+    GLANS_LICK_ACTION(R.string.glans, R.string.glans_lick_action, ActionType.HOT),
+    GLANS_BITE_ACTION(R.string.glans, R.string.glans_bite_action, ActionType.HOT),
+    GLANS_SUCK_ACTION(R.string.glans, R.string.glans_suck_action, ActionType.HOT),
+    GLANS_USE_ACCESSORIES_ACTION(
+        R.string.glans,
+        R.string.glans_use_accessories_action,
+        ActionType.HOT
+    ),
+    GLANS_ICE_ACTION(R.string.glans, R.string.glans_ice_action, ActionType.SOFT),
+    GLANS_ITSELF_ACTION(R.string.glans, R.string.glans_itself_action, ActionType.HOT),
 
-    SCROTUM_AND_TESTICLES_MASSAGE_ACTION(R.string.scrotum_and_testicles_massage_action, ActionType.SOFT),
-    SCROTUM_AND_TESTICLES_KISS_ACTION(R.string.scrotum_and_testicles_kiss_action, ActionType.HOT),
-    SCROTUM_AND_TESTICLES_LICK_ACTION(R.string.scrotum_and_testicles_lick_action, ActionType.HOT),
-    SCROTUM_AND_TESTICLES_BITE_ACTION(R.string.scrotum_and_testicles_bite_action, ActionType.HOT),
-    SCROTUM_AND_TESTICLES_SUCK_ACTION(R.string.scrotum_and_testicles_suck_action, ActionType.HOT),
-    SCROTUM_AND_TESTICLES_USE_ACCESSORIES_0_ACTION(R.string.scrotum_and_testicles_use_accessories_0_action, ActionType.HOT),
-    SCROTUM_AND_TESTICLES_USE_ACCESSORIES_1_ACTION(R.string.scrotum_and_testicles_use_accessories_1_action, ActionType.SOFT),
+    SCROTUM_AND_TESTICLES_MASSAGE_ACTION(
+        R.string.scrotum_and_testicles,
+        R.string.scrotum_and_testicles_massage_action,
+        ActionType.SOFT
+    ),
+    SCROTUM_AND_TESTICLES_KISS_ACTION(
+        R.string.scrotum_and_testicles,
+        R.string.scrotum_and_testicles_kiss_action,
+        ActionType.HOT
+    ),
+    SCROTUM_AND_TESTICLES_LICK_ACTION(
+        R.string.scrotum_and_testicles,
+        R.string.scrotum_and_testicles_lick_action,
+        ActionType.HOT
+    ),
+    SCROTUM_AND_TESTICLES_BITE_ACTION(
+        R.string.scrotum_and_testicles,
+        R.string.scrotum_and_testicles_bite_action,
+        ActionType.HOT
+    ),
+    SCROTUM_AND_TESTICLES_SUCK_ACTION(
+        R.string.scrotum_and_testicles,
+        R.string.scrotum_and_testicles_suck_action,
+        ActionType.HOT
+    ),
+    SCROTUM_AND_TESTICLES_USE_ACCESSORIES_0_ACTION(
+        R.string.scrotum_and_testicles,
+        R.string.scrotum_and_testicles_use_accessories_0_action,
+        ActionType.HOT
+    ),
+    SCROTUM_AND_TESTICLES_USE_ACCESSORIES_1_ACTION(
+        R.string.scrotum_and_testicles,
+        R.string.scrotum_and_testicles_use_accessories_1_action,
+        ActionType.SOFT
+    ),
 
-    PERINEUM_MASSAGE_ACTION(R.string.perineum_massage_action, ActionType.SOFT),
-    PERINEUM_LICK_ACTION(R.string.perineum_lick_action, ActionType.HOT),
-    PERINEUM_USE_ACCESSORIES_ACTION(R.string.perineum_use_accessories_action, ActionType.SOFT),
+    PERINEUM_MASSAGE_ACTION(R.string.perineum, R.string.perineum_massage_action, ActionType.SOFT),
+    PERINEUM_LICK_ACTION(R.string.perineum, R.string.perineum_lick_action, ActionType.HOT),
+    PERINEUM_USE_ACCESSORIES_ACTION(
+        R.string.perineum,
+        R.string.perineum_use_accessories_action,
+        ActionType.SOFT
+    ),
 
-    PROSTATE_MASSAGE_ACTION(R.string.prostate_massage_action, ActionType.HOT),
-    PROSTATE_USE_ACCESSORIES_ACTION(R.string.prostate_use_accessories_action, ActionType.HOT),
-    PROSTATE_ITSELF_ACTION(R.string.prostate_itself_action, ActionType.HOT),
+    PROSTATE_MASSAGE_ACTION(R.string.prostate, R.string.prostate_massage_action, ActionType.HOT),
+    PROSTATE_USE_ACCESSORIES_ACTION(
+        R.string.prostate,
+        R.string.prostate_use_accessories_action,
+        ActionType.HOT
+    ),
+    PROSTATE_ITSELF_ACTION(R.string.prostate, R.string.prostate_itself_action, ActionType.HOT),
 
-    PENIS_MASSAGE_ACTION(R.string.penis_massage_action, ActionType.SOFT),
-    PENIS_KISS_ACTION(R.string.penis_kiss_action, ActionType.HOT),
-    PENIS_SUCK_ACTION(R.string.penis_suck_action, ActionType.HOT),
-    PENIS_LICK_ACTION(R.string.penis_lick_action, ActionType.HOT),
-    PENIS_USE_ACCESSORIES_0_ACTION(R.string.penis_use_accessories_0_action, ActionType.HOT),
-    PENIS_USE_ACCESSORIES_1_ACTION(R.string.penis_use_accessories_1_action, ActionType.SOFT),
-    PENIS_ICE_ACTION(R.string.penis_ice_action, ActionType.SOFT),
-    PENIS_ITSELF_ACTION(R.string.penis_itself_action, ActionType.HOT),
+    PENIS_MASSAGE_ACTION(R.string.penis, R.string.penis_massage_action, ActionType.SOFT),
+    PENIS_KISS_ACTION(R.string.penis, R.string.penis_kiss_action, ActionType.HOT),
+    PENIS_SUCK_ACTION(R.string.penis, R.string.penis_suck_action, ActionType.HOT),
+    PENIS_LICK_ACTION(R.string.penis, R.string.penis_lick_action, ActionType.HOT),
+    PENIS_USE_ACCESSORIES_0_ACTION(
+        R.string.penis,
+        R.string.penis_use_accessories_0_action,
+        ActionType.HOT
+    ),
+    PENIS_USE_ACCESSORIES_1_ACTION(
+        R.string.penis,
+        R.string.penis_use_accessories_1_action,
+        ActionType.SOFT
+    ),
+    PENIS_ICE_ACTION(R.string.penis, R.string.penis_ice_action, ActionType.SOFT),
+    PENIS_ITSELF_ACTION(R.string.penis, R.string.penis_itself_action, ActionType.HOT),
 
-    NIPPLES_MASSAGE_ACTION(R.string.nipples_massage_action, ActionType.SOFT),
-    NIPPLES_KISS_ACTION(R.string.nipples_kiss_action, ActionType.HOT),
-    NIPPLES_LICK_ACTION(R.string.nipples_lick_action, ActionType.HOT),
-    NIPPLES_BITE_ACTION(R.string.nipples_bite_action, ActionType.HOT),
-    NIPPLES_ICE_ACTION(R.string.nipples_ice_action, ActionType.SOFT),
-    NIPPLES_USE_ACCESSORIES_0_ACTION(R.string.nipples_use_accessories_0_action, ActionType.SOFT),
-    NIPPLES_USE_ACCESSORIES_1_ACTION(R.string.nipples_use_accessories_1_action, ActionType.SOFT),
-    NIPPLES_SUCK_ACTION(R.string.nipples_suck_action, ActionType.HOT),
+    NIPPLES_MASSAGE_ACTION(R.string.nipples, R.string.nipples_massage_action, ActionType.SOFT),
+    NIPPLES_KISS_ACTION(R.string.nipples, R.string.nipples_kiss_action, ActionType.HOT),
+    NIPPLES_LICK_ACTION(R.string.nipples, R.string.nipples_lick_action, ActionType.HOT),
+    NIPPLES_BITE_ACTION(R.string.nipples, R.string.nipples_bite_action, ActionType.HOT),
+    NIPPLES_ICE_ACTION(R.string.nipples, R.string.nipples_ice_action, ActionType.SOFT),
+    NIPPLES_USE_ACCESSORIES_0_ACTION(
+        R.string.nipples,
+        R.string.nipples_use_accessories_0_action,
+        ActionType.SOFT
+    ),
+    NIPPLES_USE_ACCESSORIES_1_ACTION(
+        R.string.nipples,
+        R.string.nipples_use_accessories_1_action,
+        ActionType.SOFT
+    ),
+    NIPPLES_SUCK_ACTION(R.string.nipples, R.string.nipples_suck_action, ActionType.HOT),
 
-    SMALL_OF_THE_BACK_MASSAGE_ACTION(R.string.small_of_the_back_massage_action, ActionType.SOFT),
-    SMALL_OF_THE_BACK_KISS_ACTION(R.string.small_of_the_back_kiss_action, ActionType.HOT),
-    SMALL_OF_THE_BACK_USE_ACCESSORIES_ACTION(R.string.small_of_the_back_use_accessories_action, ActionType.SOFT),
-    SMALL_OF_THE_BACK_ICE_ACTION(R.string.small_of_the_back_ice_action, ActionType.SOFT),
+    SMALL_OF_THE_BACK_MASSAGE_ACTION(
+        R.string.small_of_the_back,
+        R.string.small_of_the_back_massage_action,
+        ActionType.SOFT
+    ),
+    SMALL_OF_THE_BACK_KISS_ACTION(
+        R.string.small_of_the_back,
+        R.string.small_of_the_back_kiss_action,
+        ActionType.HOT
+    ),
+    SMALL_OF_THE_BACK_USE_ACCESSORIES_ACTION(
+        R.string.small_of_the_back,
+        R.string.small_of_the_back_use_accessories_action,
+        ActionType.SOFT
+    ),
+    SMALL_OF_THE_BACK_ICE_ACTION(
+        R.string.small_of_the_back,
+        R.string.small_of_the_back_ice_action,
+        ActionType.SOFT
+    ),
 
-    ARMPITS_MASSAGE_ACTION(R.string.armpits_massage_action, ActionType.SOFT),
-    ARMPITS_KISS_ACTION(R.string.armpits_kiss_action, ActionType.HOT),
-    ARMPITS_USE_ACCESSORIES_ACTION(R.string.armpits_use_accessories_action, ActionType.SOFT),
-    ARMPITS_ICE_ACTION(R.string.armpits_ice_action, ActionType.SOFT),
+    ARMPITS_MASSAGE_ACTION(R.string.armpits, R.string.armpits_massage_action, ActionType.SOFT),
+    ARMPITS_KISS_ACTION(R.string.armpits, R.string.armpits_kiss_action, ActionType.HOT),
+    ARMPITS_USE_ACCESSORIES_ACTION(
+        R.string.armpits,
+        R.string.armpits_use_accessories_action,
+        ActionType.SOFT
+    ),
+    ARMPITS_ICE_ACTION(R.string.armpits, R.string.armpits_ice_action, ActionType.SOFT),
 
-    INNER_ARMS_MASSAGE_ACTION(R.string.inner_arms_massage_action, ActionType.SOFT),
-    INNER_ARMS_KISS_ACTION(R.string.inner_arms_kiss_action, ActionType.HOT),
-    INNER_ARMS_LICK_ACTION(R.string.inner_arms_lick_action, ActionType.HOT),
-    INNER_ARMS_USE_ACCESSORIES_ACTION(R.string.inner_arms_use_accessories_action, ActionType.SOFT),
-    INNER_ARMS_ICE_ACTION(R.string.inner_arms_ice_action, ActionType.SOFT),
+    INNER_ARMS_MASSAGE_ACTION(
+        R.string.inner_arms,
+        R.string.inner_arms_massage_action,
+        ActionType.SOFT
+    ),
+    INNER_ARMS_KISS_ACTION(R.string.inner_arms, R.string.inner_arms_kiss_action, ActionType.HOT),
+    INNER_ARMS_LICK_ACTION(R.string.inner_arms, R.string.inner_arms_lick_action, ActionType.HOT),
+    INNER_ARMS_USE_ACCESSORIES_ACTION(
+        R.string.inner_arms,
+        R.string.inner_arms_use_accessories_action,
+        ActionType.SOFT
+    ),
+    INNER_ARMS_ICE_ACTION(R.string.inner_arms, R.string.inner_arms_ice_action, ActionType.SOFT),
 
-    INNER_WRIST_MASSAGE_ACTION(R.string.inner_wrist_massage_action, ActionType.SOFT),
-    INNER_WRIST_KISS_ACTION(R.string.inner_wrist_kiss_action, ActionType.HOT),
-    INNER_WRIST_LICK_ACTION(R.string.inner_wrist_lick_action, ActionType.HOT),
-    INNER_WRIST_USE_ACCESSORIES_ACTION(R.string.inner_wrist_use_accessories_action, ActionType.SOFT),
-    INNER_WRIST_ICE_ACTION(R.string.inner_wrist_ice_action, ActionType.SOFT),
+    INNER_WRIST_MASSAGE_ACTION(
+        R.string.inner_wrist,
+        R.string.inner_wrist_massage_action,
+        ActionType.SOFT
+    ),
+    INNER_WRIST_KISS_ACTION(R.string.inner_wrist, R.string.inner_wrist_kiss_action, ActionType.HOT),
+    INNER_WRIST_LICK_ACTION(R.string.inner_wrist, R.string.inner_wrist_lick_action, ActionType.HOT),
+    INNER_WRIST_USE_ACCESSORIES_ACTION(
+        R.string.inner_wrist,
+        R.string.inner_wrist_use_accessories_action,
+        ActionType.SOFT
+    ),
+    INNER_WRIST_ICE_ACTION(R.string.inner_wrist, R.string.inner_wrist_ice_action, ActionType.SOFT),
 
-    PALM_OF_HANDS_AND_FINGERTIPS_MASSAGE_ACTION(R.string.palm_of_hands_and_fingertips_massage_action, ActionType.SOFT),
-    PALM_OF_HANDS_AND_FINGERTIPS_KISS_ACTION(R.string.palm_of_hands_and_fingertips_kiss_action, ActionType.HOT),
-    PALM_OF_HANDS_AND_FINGERTIPS_LICK_ACTION(R.string.palm_of_hands_and_fingertips_lick_action, ActionType.HOT),
-    PALM_OF_HANDS_AND_FINGERTIPS_SUCK_ACTION(R.string.palm_of_hands_and_fingertips_suck_action, ActionType.HOT),
-    PALM_OF_HANDS_AND_FINGERTIPS_USE_ACCESSORIES_ACTION(R.string.palm_of_hands_and_fingertips_use_accessories_action, ActionType.SOFT),
+    PALM_OF_HANDS_AND_FINGERTIPS_MASSAGE_ACTION(
+        R.string.palm_of_hands_and_fingertips,
+        R.string.palm_of_hands_and_fingertips_massage_action,
+        ActionType.SOFT
+    ),
+    PALM_OF_HANDS_AND_FINGERTIPS_KISS_ACTION(
+        R.string.palm_of_hands_and_fingertips,
+        R.string.palm_of_hands_and_fingertips_kiss_action,
+        ActionType.HOT
+    ),
+    PALM_OF_HANDS_AND_FINGERTIPS_LICK_ACTION(
+        R.string.palm_of_hands_and_fingertips,
+        R.string.palm_of_hands_and_fingertips_lick_action,
+        ActionType.HOT
+    ),
+    PALM_OF_HANDS_AND_FINGERTIPS_SUCK_ACTION(
+        R.string.palm_of_hands_and_fingertips,
+        R.string.palm_of_hands_and_fingertips_suck_action,
+        ActionType.HOT
+    ),
+    PALM_OF_HANDS_AND_FINGERTIPS_USE_ACCESSORIES_ACTION(
+        R.string.palm_of_hands_and_fingertips,
+        R.string.palm_of_hands_and_fingertips_use_accessories_action,
+        ActionType.SOFT
+    ),
 
-    BEHIND_THE_KNEE_MASSAGE_ACTION(R.string.behind_the_knee_massage_action, ActionType.SOFT),
-    BEHIND_THE_KNEE_KISS_ACTION(R.string.behind_the_knee_kiss_action, ActionType.HOT),
-    BEHIND_THE_KNEE_LICK_ACTION(R.string.behind_the_knee_lick_action, ActionType.HOT),
-    BEHIND_THE_KNEE_USE_ACCESSORIES_ACTION(R.string.behind_the_knee_use_accessories_action, ActionType.SOFT),
+    BEHIND_THE_KNEE_MASSAGE_ACTION(
+        R.string.behind_the_knee,
+        R.string.behind_the_knee_massage_action,
+        ActionType.SOFT
+    ),
+    BEHIND_THE_KNEE_KISS_ACTION(
+        R.string.behind_the_knee,
+        R.string.behind_the_knee_kiss_action,
+        ActionType.HOT
+    ),
+    BEHIND_THE_KNEE_LICK_ACTION(
+        R.string.behind_the_knee,
+        R.string.behind_the_knee_lick_action,
+        ActionType.HOT
+    ),
+    BEHIND_THE_KNEE_USE_ACCESSORIES_ACTION(
+        R.string.behind_the_knee,
+        R.string.behind_the_knee_use_accessories_action,
+        ActionType.SOFT
+    ),
 
-    LIPS_MASSAGE_ACTION(R.string.lips_massage_action, ActionType.SOFT),
-    LIPS_KISS_ACTION(R.string.lips_kiss_action, ActionType.HOT),
-    LIPS_LICK_ACTION(R.string.lips_lick_action, ActionType.HOT),
-    LIPS_BITE_ACTION(R.string.lips_bite_action, ActionType.HOT),
-    LIPS_ICE_ACTION(R.string.lips_ice_action, ActionType.SOFT),
+    LIPS_MASSAGE_ACTION(R.string.lips, R.string.lips_massage_action, ActionType.SOFT),
+    LIPS_KISS_ACTION(R.string.lips, R.string.lips_kiss_action, ActionType.HOT),
+    LIPS_LICK_ACTION(R.string.lips, R.string.lips_lick_action, ActionType.HOT),
+    LIPS_BITE_ACTION(R.string.lips, R.string.lips_bite_action, ActionType.HOT),
+    LIPS_ICE_ACTION(R.string.lips, R.string.lips_ice_action, ActionType.SOFT),
 
-    NECK_MASSAGE_0_ACTION(R.string.neck_massage_0_action, ActionType.SOFT),
-    NECK_MASSAGE_1_ACTION(R.string.neck_massage_1_action, ActionType.SOFT),
-    NECK_KISS_ACTION(R.string.neck_kiss_action, ActionType.HOT),
-    NECK_LICK_ACTION(R.string.neck_lick_action, ActionType.HOT),
-    NECK_USE_ACCESSORIES_ACTION(R.string.neck_use_accessories_action, ActionType.SOFT),
-    NECK_ICE_ACTION(R.string.neck_ice_action, ActionType.SOFT),
+    NECK_MASSAGE_0_ACTION(R.string.neck, R.string.neck_massage_0_action, ActionType.SOFT),
+    NECK_MASSAGE_1_ACTION(R.string.neck, R.string.neck_massage_1_action, ActionType.SOFT),
+    NECK_KISS_ACTION(R.string.neck, R.string.neck_kiss_action, ActionType.HOT),
+    NECK_LICK_ACTION(R.string.neck, R.string.neck_lick_action, ActionType.HOT),
+    NECK_USE_ACCESSORIES_ACTION(
+        R.string.neck,
+        R.string.neck_use_accessories_action,
+        ActionType.SOFT
+    ),
+    NECK_ICE_ACTION(R.string.neck, R.string.neck_ice_action, ActionType.SOFT),
 
-    INNER_THIGH_MASSAGE_0_ACTION(R.string.inner_thigh_massage_0_action, ActionType.SOFT),
-    INNER_THIGH_MASSAGE_1_ACTION(R.string.inner_thigh_massage_1_action, ActionType.SOFT),
-    INNER_THIGH_KISS_ACTION(R.string.inner_thigh_kiss_action, ActionType.HOT),
-    INNER_THIGH_LICK_ACTION(R.string.inner_thigh_lick_action, ActionType.HOT),
-    INNER_THIGH_BITE_ACTION(R.string.inner_thigh_bite_action, ActionType.HOT),
-    INNER_THIGH_USE_ACCESSORIES_0_ACTION(R.string.inner_thigh_use_accessories_0_action, ActionType.SOFT),
-    INNER_THIGH_USE_ACCESSORIES_1_ACTION(R.string.inner_thigh_use_accessories_1_action, ActionType.SOFT),
-    INNER_THIGH_ICE_ACTION(R.string.inner_thigh_ice_action, ActionType.SOFT),
+    INNER_THIGH_MASSAGE_0_ACTION(
+        R.string.inner_thigh,
+        R.string.inner_thigh_massage_0_action,
+        ActionType.SOFT
+    ),
+    INNER_THIGH_MASSAGE_1_ACTION(
+        R.string.inner_thigh,
+        R.string.inner_thigh_massage_1_action,
+        ActionType.SOFT
+    ),
+    INNER_THIGH_KISS_ACTION(R.string.inner_thigh, R.string.inner_thigh_kiss_action, ActionType.HOT),
+    INNER_THIGH_LICK_ACTION(R.string.inner_thigh, R.string.inner_thigh_lick_action, ActionType.HOT),
+    INNER_THIGH_BITE_ACTION(R.string.inner_thigh, R.string.inner_thigh_bite_action, ActionType.HOT),
+    INNER_THIGH_USE_ACCESSORIES_0_ACTION(
+        R.string.inner_thigh,
+        R.string.inner_thigh_use_accessories_0_action,
+        ActionType.SOFT
+    ),
+    INNER_THIGH_USE_ACCESSORIES_1_ACTION(
+        R.string.inner_thigh,
+        R.string.inner_thigh_use_accessories_1_action,
+        ActionType.SOFT
+    ),
+    INNER_THIGH_ICE_ACTION(R.string.inner_thigh, R.string.inner_thigh_ice_action, ActionType.SOFT),
 
-    BOTTOM_OF_FEET_AND_TOES_MASSAGE_0_ACTION(R.string.bottom_of_feet_and_toes_massage_0_action, ActionType.SOFT),
-    BOTTOM_OF_FEET_AND_TOES_MASSAGE_1_ACTION(R.string.bottom_of_feet_and_toes_massage_1_action, ActionType.SOFT),
-    BOTTOM_OF_FEET_AND_TOES_KISS_ACTION(R.string.bottom_of_feet_and_toes_kiss_action, ActionType.HOT),
-    BOTTOM_OF_FEET_AND_TOES_LICK_ACTION(R.string.bottom_of_feet_and_toes_lick_action, ActionType.HOT),
-    BOTTOM_OF_FEET_AND_TOES_SUCK_ACTION(R.string.bottom_of_feet_and_toes_suck_action, ActionType.HOT),
-    BOTTOM_OF_FEET_AND_TOES_USE_ACCESSORIES_ACTION(R.string.bottom_of_feet_and_toes_use_accessories_action, ActionType.SOFT),
-    BOTTOM_OF_FEET_AND_TOES_ICE_ACTION(R.string.bottom_of_feet_and_toes_ice_action, ActionType.SOFT)
+    BOTTOM_OF_FEET_AND_TOES_MASSAGE_0_ACTION(
+        R.string.bottom_of_feet_and_toes,
+        R.string.bottom_of_feet_and_toes_massage_0_action,
+        ActionType.SOFT
+    ),
+    BOTTOM_OF_FEET_AND_TOES_MASSAGE_1_ACTION(
+        R.string.bottom_of_feet_and_toes,
+        R.string.bottom_of_feet_and_toes_massage_1_action,
+        ActionType.SOFT
+    ),
+    BOTTOM_OF_FEET_AND_TOES_KISS_ACTION(
+        R.string.bottom_of_feet_and_toes,
+        R.string.bottom_of_feet_and_toes_kiss_action,
+        ActionType.HOT
+    ),
+    BOTTOM_OF_FEET_AND_TOES_LICK_ACTION(
+        R.string.bottom_of_feet_and_toes,
+        R.string.bottom_of_feet_and_toes_lick_action,
+        ActionType.HOT
+    ),
+    BOTTOM_OF_FEET_AND_TOES_SUCK_ACTION(
+        R.string.bottom_of_feet_and_toes,
+        R.string.bottom_of_feet_and_toes_suck_action,
+        ActionType.HOT
+    ),
+    BOTTOM_OF_FEET_AND_TOES_USE_ACCESSORIES_ACTION(
+        R.string.bottom_of_feet_and_toes,
+        R.string.bottom_of_feet_and_toes_use_accessories_action,
+        ActionType.SOFT
+    ),
+    BOTTOM_OF_FEET_AND_TOES_ICE_ACTION(
+        R.string.bottom_of_feet_and_toes,
+        R.string.bottom_of_feet_and_toes_ice_action,
+        ActionType.SOFT
+    )
 }

@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PlayCircle
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableIntStateOf
@@ -28,16 +29,18 @@ import androidx.navigation.compose.rememberNavController
 import com.example.lovein.R
 import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
+import com.example.lovein.common.components.CustomAlertDialog
+import com.example.lovein.common.constants.CommonConstants
 import com.example.lovein.common.data.ActionType
 import com.example.lovein.common.data.EroZone
 import com.example.lovein.common.data.EroZoneType
 import com.example.lovein.common.data.Gender
+import com.example.lovein.common.data.NavigationScreens
 import com.example.lovein.common.dtos.PlayerDTO
 import com.example.lovein.common.models.ActionWithFeedback
 import com.example.lovein.common.models.EroZoneMutable
 import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
-import com.example.lovein.createplayerlist.components.CustomAlertDialog
 import com.example.lovein.erozoneexplorer.components.Stack
 import com.example.lovein.erozoneexplorer.models.Card
 import com.example.lovein.erozoneexplorer.models.CardBack
@@ -47,6 +50,8 @@ import com.example.lovein.ui.theme.BackgroundLightPinkColor
 import com.example.lovein.ui.theme.FemaleColor
 import com.example.lovein.ui.theme.MaleColor
 import com.example.lovein.utils.convertPlayerDTOListToPlayerList
+import com.example.lovein.utils.generateFeedbackReport
+import com.example.lovein.utils.saveFeedbackReportToPdf
 
 @Composable
 fun EroZoneExplorerScreen(
@@ -54,6 +59,8 @@ fun EroZoneExplorerScreen(
     playerDTOList: List<PlayerDTO>
 ) {
     val context: Context = LocalContext.current
+
+    val snackbarHostState = remember { SnackbarHostState() }
 
     val playerList: List<Player> = convertPlayerDTOListToPlayerList(playerDTOList)
 
@@ -64,7 +71,10 @@ fun EroZoneExplorerScreen(
     val alertDialogTitle: MutableState<String> = remember { mutableStateOf("") }
     val alertDialogText: MutableState<String> = remember { mutableStateOf("") }
 
-    CommonContainer(navController = navController) { innerPadding ->
+    CommonContainer(
+        navController = navController,
+        snackbarHostState = snackbarHostState
+    ) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -124,15 +134,32 @@ fun EroZoneExplorerScreen(
                 }
             }
         }
+    }
 
-        if (isAlertDialogOpen.value) {
-            CustomAlertDialog(
-                isAlertDialogOpen = isAlertDialogOpen,
-                title = alertDialogTitle.value,
-                text = alertDialogText.value,
-                navController = navController
-            )
-        }
+    if (isAlertDialogOpen.value) {
+        CustomAlertDialog(
+            isAlertDialogOpen = isAlertDialogOpen,
+            title = alertDialogTitle.value,
+            text = alertDialogText.value,
+            navController = navController,
+            onDownloadClick = {
+                val report = generateFeedbackReport(context, actionCards)
+                val result = saveFeedbackReportToPdf(context, report)
+
+                val message = "Report saved in ${result.directoryLabel}/${result.filename}"
+
+                navController.previousBackStackEntry
+                    ?.savedStateHandle
+                    ?.set(CommonConstants.SNACKBAR_MESSAGE, message)
+
+                isAlertDialogOpen.value = false
+
+                navController.popBackStack(
+                    route = NavigationScreens.CREATE_PLAYER_LIST_SCREEN.name,
+                    inclusive = false
+                )
+            }
+        )
     }
 }
 
@@ -257,6 +284,7 @@ private fun getEroZone(selectedEroZoneMutableList: MutableList<EroZoneMutable>):
     return null
 }
 
+@Suppress("UNREACHABLE_CODE")
 private fun card(
     context: Context,
     eroZoneMutable: EroZoneMutable,
@@ -268,7 +296,7 @@ private fun card(
     val cardFrontContent = buildStylizedText(
         simpleText = LocalizationManager.getLocalizedString(
             context = context,
-            resourceId = actionWithFeedback.action.resourceId
+            resourceId = actionWithFeedback.action.descriptionResId
         ).replaceFirst("%", activePlayer.name.value)
             .replaceFirst("%", passivePlayer.name.value),
         stylizedTexts = listOf(activePlayer.name.value, passivePlayer.name.value),
@@ -299,7 +327,7 @@ private fun createCard(
 
 private fun getAction(eroZoneMutable: EroZoneMutable): ActionWithFeedback? {
     var action: ActionWithFeedback? = eroZoneMutable.actionList
-        .filter { it.action.actionType == ActionType.SOFT }
+        .filter { it.action.type == ActionType.SOFT }
         .randomOrNull()
 
     if (action != null) {
@@ -308,7 +336,7 @@ private fun getAction(eroZoneMutable: EroZoneMutable): ActionWithFeedback? {
     }
 
     action = eroZoneMutable.actionList
-        .filter { it.action.actionType == ActionType.HOT }
+        .filter { it.action.type == ActionType.HOT }
         .randomOrNull()
     if (action != null) {
         eroZoneMutable.actionList.remove(action)

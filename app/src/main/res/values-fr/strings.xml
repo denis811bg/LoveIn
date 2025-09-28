@@ -225,4 +225,6 @@
 
     <string name="game_over_description">Le joueur avec le nom d\'utilisateur % n\'a plus de cartes. Vous pouvez revenir en arrière et recommencer.</string>
     <string name="game_over_title">Partie terminée.</string>
+    <string name="ok_button">OK</string>
+    <string name="download_body_map_and_rating">Télécharger la carte du corps et les notes</string>
 </resources>

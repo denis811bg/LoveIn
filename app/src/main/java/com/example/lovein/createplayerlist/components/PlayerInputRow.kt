@@ -28,10 +28,12 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lovein.R
+import com.example.lovein.common.constants.PlayerConstants
 import com.example.lovein.common.data.Gender
 import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
 import com.example.lovein.ui.theme.helveticaFontFamily
+import com.example.lovein.utils.formatName
 
 @Composable
 fun PlayerInputRow(
@@ -65,7 +67,9 @@ fun PlayerInputRow(
         TextField(
             value = player.value.name.value,
             onValueChange = {
-                if (it.length <= 15) player.value.name.value = it
+                if (it.length <= PlayerConstants.MAX_NAME_LENGTH) {
+                    player.value.name.value = formatName(it)
+                }
             },
             modifier = Modifier.weight(0.7f),
             textStyle = TextStyle.Default.copy(

@@ -223,4 +223,6 @@
 
     <string name="game_over_description">Il giocatore con il nome utente % ha esaurito tutte le carte. Puoi tornare indietro di un passaggio e ricominciare.</string>
     <string name="game_over_title">Fine del gioco.</string>
+    <string name="ok_button">OK</string>
+    <string name="download_body_map_and_rating">Scarica la mappa del corpo e le valutazioni</string>
 </resources>

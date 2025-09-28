@@ -225,4 +225,6 @@
 
     <string name="game_over_description">Dem Spieler mit dem Benutzernamen % sind alle Karten ausgegangen. Du kannst einen Schritt zurückgehen und neu beginnen.</string>
     <string name="game_over_title">Spiel beendet.</string>
+    <string name="ok_button">OK</string>
+    <string name="download_body_map_and_rating">Körperkarte und Bewertungen herunterladen</string>
 </resources>

@@ -7,8 +7,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.FloatingActionButtonDefaults
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
@@ -30,8 +32,12 @@ import com.example.lovein.ui.theme.helveticaFontFamily
 @Composable
 fun InfoScreen(navController: NavController) {
     val scrollState = rememberScrollState()
+    val snackbarHostState = remember { SnackbarHostState() }
 
-    CommonContainer(navController = navController) { innerPadding ->
+    CommonContainer(
+        navController = navController,
+        snackbarHostState = snackbarHostState
+    ) { innerPadding ->
         Box(
             modifier = Modifier
                 .fillMaxSize()

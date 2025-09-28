@@ -221,4 +221,6 @@
 
     <string name="game_over_description">Kullanıcı adı % olan oyuncunun tüm kartları tükendi. Bir adım geri gidip yeniden başlayabilirsiniz.</string>
     <string name="game_over_title">Oyun bitti.</string>
+    <string name="ok_button">Tamam</string>
+    <string name="download_body_map_and_rating">Vücut haritasını ve puanları indir</string>
 </resources>

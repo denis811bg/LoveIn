@@ -19,10 +19,13 @@ import androidx.compose.material.icons.filled.PlayCircle
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -39,10 +42,11 @@ import androidx.navigation.NavController
 import com.example.lovein.R
 import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
+import com.example.lovein.common.components.CustomAlertDialog
+import com.example.lovein.common.constants.CommonConstants
 import com.example.lovein.common.data.NavigationScreens
 import com.example.lovein.common.models.Player
 import com.example.lovein.common.objects.LocalizationManager
-import com.example.lovein.createplayerlist.components.CustomAlertDialog
 import com.example.lovein.createplayerlist.components.PlayerCard
 import com.example.lovein.createplayerlist.validation.validatePlayers
 import com.example.lovein.ui.theme.helveticaFontFamily
@@ -59,8 +63,20 @@ fun CreatePlayerListScreen(
 ) {
     val context: Context = LocalContext.current
 
+    val snackbarHostState = remember { SnackbarHostState() }
+    val snackbarFlow = navController.currentBackStackEntry!!
+        .savedStateHandle
+        .getStateFlow(CommonConstants.SNACKBAR_MESSAGE, "")
+    val snackbarMessage by snackbarFlow.collectAsState()
+
     LaunchedEffect(Unit) {
         cleanupActionFeedback(playerList)
+        if (snackbarMessage.isNotBlank()) {
+            snackbarHostState.showSnackbar(snackbarMessage)
+            navController.currentBackStackEntry
+                ?.savedStateHandle
+                ?.set(CommonConstants.SNACKBAR_MESSAGE, "")
+        }
     }
 
     val coroutineScope: CoroutineScope = rememberCoroutineScope()
@@ -70,7 +86,10 @@ fun CreatePlayerListScreen(
     val alertDialogTitle: MutableState<String> = remember { mutableStateOf("") }
     val alertDialogText: MutableState<String> = remember { mutableStateOf("") }
 
-    CommonContainer(navController = navController) { innerPadding ->
+    CommonContainer(
+        navController = navController,
+        snackbarHostState = snackbarHostState
+    ) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxWidth()

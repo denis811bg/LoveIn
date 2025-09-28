@@ -9,8 +9,20 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Language
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
@@ -32,6 +44,7 @@ import com.example.lovein.ui.theme.BackgroundLightPinkColor
 @Composable
 fun CommonContainer(
     navController: NavController,
+    snackbarHostState: SnackbarHostState,
     content: @Composable (contentPadding: PaddingValues) -> Unit
 ) {
     val isLanguageSelectionScreen = navController.currentBackStackEntry?.destination?.route ==
@@ -120,7 +133,8 @@ fun CommonContainer(
                     colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Transparent)
                 )
             },
-            containerColor = Color.Transparent
+            containerColor = Color.Transparent,
+            snackbarHost = { SnackbarHost(snackbarHostState) }
         ) { innerPadding ->
             content(innerPadding)
         }
@@ -131,6 +145,7 @@ fun CommonContainer(
 @Composable
 fun CommonContainerPreview() {
     val navController: NavController = rememberNavController()
+    val snackbarHostState = remember { SnackbarHostState() }
     val playerList: MutableList<MutableState<Player>> = remember {
         mutableStateListOf(
             mutableStateOf(Player(Gender.MALE)),
@@ -139,7 +154,8 @@ fun CommonContainerPreview() {
     }
 
     CommonContainer(
-        navController = navController
+        navController = navController,
+        snackbarHostState = snackbarHostState
     ) {
         CreatePlayerListScreen(
             navController = navController,
