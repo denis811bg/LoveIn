@@ -147,11 +147,22 @@ fun EroZoneExplorerScreen(
                 val report = generateFeedbackReport(context, actionCards)
                 val result = saveFeedbackReportToPdf(context, report)
 
-                val message = "Report saved in ${result.directoryLabel}/${result.filename}"
+                val message = LocalizationManager.getLocalizedString(
+                    context,
+                    R.string.report_saved_in_fmt,
+                    "${result.uri.path.toString()}/${result.filename}"
+                )
 
                 navController.previousBackStackEntry
                     ?.savedStateHandle
-                    ?.set(CommonConstants.SNACKBAR_MESSAGE, message)
+                    ?.apply {
+                        set(CommonConstants.SNACKBAR_MESSAGE, message)
+                        set(
+                            CommonConstants.SNACKBAR_ACTION,
+                            context.getString(R.string.open_report)
+                        )
+                        set(CommonConstants.SNACKBAR_URI, result.uri)
+                    }
 
                 isAlertDialogOpen.value = false
 

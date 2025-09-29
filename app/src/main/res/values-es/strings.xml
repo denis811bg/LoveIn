@@ -226,4 +226,8 @@
     <string name="ok_button">Aceptar</string>
     <string name="download_body_map_and_rating">Descargar el mapa corporal y las valoraciones</string>
     <string name="open_next_card">Abrir la siguiente tarjeta</string>
+    <string name="report_saved_in_fmt">Mapa corporal y evaluación guardado en %1$s</string>
+    <string name="body_map_and_ratings">mapa_corporal_y_valoraciones</string>
+    <string name="open_report">Abrir</string>
+    <string name="no_pdf_viewer">No se encontró ningún visor de PDF en este dispositivo.</string>
 </resources>

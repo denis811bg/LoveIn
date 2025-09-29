@@ -224,4 +224,8 @@
     <string name="ok_button">Tamam</string>
     <string name="download_body_map_and_rating">Vücut haritasını ve puanları indir</string>
     <string name="open_next_card">Sonraki kartı aç</string>
+    <string name="report_saved_in_fmt">Vücut haritası ve puanlama %1$s konumuna kaydedildi</string>
+    <string name="body_map_and_ratings">vucut_haritasi_ve_puanlar</string>
+    <string name="open_report">Aç</string>
+    <string name="no_pdf_viewer">Bu cihazda PDF görüntüleyici bulunamadı.</string>
 </resources>

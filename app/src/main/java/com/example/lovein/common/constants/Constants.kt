@@ -2,6 +2,8 @@ package com.example.lovein.common.constants
 
 object CommonConstants {
     const val SNACKBAR_MESSAGE = "snackbar_message"
+    const val SNACKBAR_ACTION = "snackbar_action"
+    const val SNACKBAR_URI = "snackbar_uri"
     const val TIMESTAMP_PATTERN = "yyyyMMdd_HHmmss"
 }
 

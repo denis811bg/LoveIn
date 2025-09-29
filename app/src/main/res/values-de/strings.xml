@@ -228,4 +228,8 @@
     <string name="ok_button">OK</string>
     <string name="download_body_map_and_rating">Körperkarte und Bewertungen herunterladen</string>
     <string name="open_next_card">Nächste Karte öffnen</string>
+    <string name="report_saved_in_fmt">Body-Map und Bewertung in %1$s gespeichert</string>
+    <string name="body_map_and_ratings">koerperkarte_und_bewertungen</string>
+    <string name="open_report">Öffnen</string>
+    <string name="no_pdf_viewer">Kein PDF-Viewer auf diesem Gerät installiert.</string>
 </resources>

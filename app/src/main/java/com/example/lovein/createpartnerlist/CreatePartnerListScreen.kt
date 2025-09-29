@@ -1,6 +1,6 @@
 package com.example.lovein.createpartnerlist
 
-import android.content.Context
+import android.net.Uri
 import androidx.compose.foundation.indication
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -19,7 +19,9 @@ import androidx.compose.material.icons.filled.PlayCircle
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -39,6 +41,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.lovein.R
 import com.example.lovein.common.components.CommonContainer
 import com.example.lovein.common.components.CommonNavigationButton
@@ -55,6 +58,7 @@ import com.example.lovein.ui.theme.helveticaFontFamily
 import com.example.lovein.utils.addRandomPartner
 import com.example.lovein.utils.cleanupActionFeedback
 import com.example.lovein.utils.convertPartnerListToPartnerDTOList
+import com.example.lovein.utils.openPdf
 import com.example.lovein.utils.showAlertDialog
 import kotlinx.coroutines.CoroutineScope
 
@@ -63,21 +67,43 @@ fun CreatePartnerListScreen(
     navController: NavController,
     partnerList: MutableList<MutableState<Partner>>
 ) {
-    val context: Context = LocalContext.current
-
+    val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
-    val snackbarFlow = navController.currentBackStackEntry!!
-        .savedStateHandle
-        .getStateFlow(CommonConstants.SNACKBAR_MESSAGE, "")
-    val snackbarMessage by snackbarFlow.collectAsState()
 
-    LaunchedEffect(Unit) {
-        cleanupActionFeedback(partnerList)
-        if (snackbarMessage.isNotBlank()) {
-            snackbarHostState.showSnackbar(snackbarMessage)
-            navController.currentBackStackEntry
-                ?.savedStateHandle
-                ?.set(CommonConstants.SNACKBAR_MESSAGE, "")
+    val backStackEntry by navController.currentBackStackEntryAsState()
+    val savedStateHandle = backStackEntry?.savedStateHandle
+
+    val messageFlow = remember(savedStateHandle) {
+        savedStateHandle?.getStateFlow(CommonConstants.SNACKBAR_MESSAGE, null as String?)
+    }
+    val actionFlow = remember(savedStateHandle) {
+        savedStateHandle?.getStateFlow(CommonConstants.SNACKBAR_ACTION, null as String?)
+    }
+    val uriFlow = remember(savedStateHandle) {
+        savedStateHandle?.getStateFlow(CommonConstants.SNACKBAR_URI, null as Uri?)
+    }
+
+    val message by (messageFlow?.collectAsState() ?: remember { mutableStateOf<String?>(null) })
+    val action by (actionFlow?.collectAsState() ?: remember { mutableStateOf<String?>(null) })
+    val uri by (uriFlow?.collectAsState() ?: remember { mutableStateOf<Uri?>(null) })
+
+    LaunchedEffect(Unit) { cleanupActionFeedback(partnerList) }
+
+    LaunchedEffect(message, action, uri) {
+        val msg = message
+        if (!msg.isNullOrBlank()) {
+            val result = snackbarHostState.showSnackbar(
+                message = msg,
+                actionLabel = action,
+                duration = SnackbarDuration.Short
+            )
+            if (result == SnackbarResult.ActionPerformed) {
+                uri?.let { openPdf(context, it) }
+            }
+
+            savedStateHandle?.set(CommonConstants.SNACKBAR_MESSAGE, null)
+            savedStateHandle?.set(CommonConstants.SNACKBAR_ACTION, null)
+            savedStateHandle?.set(CommonConstants.SNACKBAR_URI, null)
         }
     }
 
